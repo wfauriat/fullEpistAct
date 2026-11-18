@@ -21,3 +21,8 @@ variables:
   linkcolor: "black"
   urlcolor: "cFormel"
   citecolor: "cFormel"
+  # The Lua filter turns figures inside blocks into raw LaTeX, so pandoc sees no Image
+  # and would skip the template's graphics setup. Forcing it keeps
+  # \setkeys{Gin}{…,keepaspectratio}: pandoc writes width=…,height=\textheight for a
+  # width-only image, and without keepaspectratio the figure is stretched to page height.
+  graphics: true
