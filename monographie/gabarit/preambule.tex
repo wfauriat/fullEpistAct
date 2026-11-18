@@ -99,6 +99,15 @@
   \frontmatter
   \setcounter{page}{\pagereprise}}
 
+% ---------------------------------------------------------------- Parts
+% Pandoc loads French through \babelprovide (babel-fr.ini), whose \partname is « partie »:
+% the part page would read « partie I ». The HTML output writes « Partie I ».
+\renewcommand*{\partformat}{Partie~\thepart\autodot}
+% A part's introduction (parties/partie-N.md) follows its part page as ordinary text
+% (filter, pass 6), so its length is free; the part's first chapter opens a new page.
+\newenvironment{introductionpartie}{%
+  \thispagestyle{plain}\vspace*{3\baselineskip}}{\par}
+
 % ---------------------------------------------------------------- Layout
 \setcounter{tocdepth}{1}
 \setlength{\emergencystretch}{1.5em}  % absorbs near-miss overfull lines in narrow table columns

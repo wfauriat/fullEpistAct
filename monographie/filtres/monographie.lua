@@ -10,7 +10,8 @@ Responsibilities, in pass order:
   4. render          the six blocks, statements (with mandatory statut), cross-references
                      (@id, [-@id]), A-VERIFIER markers, missing figures, book structure markers
   5. typography      French spacing (non-breaking spaces before : ; ! ? » % and after «)
-  6. parts           LaTeX part pages with their introduction (KOMA \setpartpreamble)
+  6. parts           LaTeX part pages, each followed by its introduction (environment
+                     introductionpartie, gabarit/preambule.tex)
 
 Must run before citeproc (see gabarit/commun.yaml), so that cross-references and
 A-VERIFIER markers are never seen as bibliographic citations.
@@ -499,11 +500,15 @@ local parts = {
         local intro, j = pandoc.Blocks {}, i + 1
         while j <= #b and not (b[j].t == 'Header' and b[j].level == 1) do intro:insert(b[j]); j = j + 1 end
         if LATEX then
-          local tex = ''
+          -- The title gets KOMA's part page; the introduction follows as ordinary text, so it
+          -- may run over several pages (a \setpartpreamble box could not break and overflowed
+          -- the part page). The next \chapter starts a new page as usual.
+          out:insert(pandoc.RawBlock('latex', '\\part{' .. inlines_latex(el.content) .. '}\\label{' .. el.identifier .. '}'))
           if #intro > 0 then
-            tex = '\\setpartpreamble[c][0.75\\linewidth]{%\n' .. pandoc.write(pandoc.Pandoc(intro), 'latex') .. '}\n'
+            out:insert(pandoc.RawBlock('latex', '\\begin{introductionpartie}'))
+            out:extend(intro)
+            out:insert(pandoc.RawBlock('latex', '\\end{introductionpartie}'))
           end
-          out:insert(pandoc.RawBlock('latex', tex .. '\\part{' .. inlines_latex(el.content) .. '}\\label{' .. el.identifier .. '}'))
         else
           local r = REFS[el.identifier]
           el.content:insert(1, pandoc.Str('Partie ' .. (r and r.num or '') .. ' — '))
