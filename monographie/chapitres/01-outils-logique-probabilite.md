@@ -1,6 +1,6 @@
 # Boîte à outils : logique, conditionnement, probabilité {#sec:ch01}
 
-Ce chapitre ne suppose rien des autres. On peut le lire d’une traite en ouvrant la @sec:partie-1, ou n’y revenir qu’au besoin en suivant l’un des parcours proposés à la @sec:ch00-parcours. Il rappelle les outils de logique et de probabilité dont se sert tout le livre : déduction et induction, règles à conditions sous-entendues, probabilité et conditionnement, règle de Bayes, score logarithmique. Chacun est introduit par la question à laquelle il répond. Un même fil les relie : aucun ne livre de conclusion sans condition, et l’on apprendra à repérer, derrière chaque résultat, le « pourvu que » qui le fait tenir.
+Ce chapitre ne suppose rien des autres. On peut le lire d’une traite, à l’entrée de la @sec:partie-1, ou n’y revenir qu’au besoin en suivant l’un des parcours proposés à la @sec:ch00-parcours. Il rappelle les outils de logique et de probabilité dont se sert tout le livre : déduction et induction, règles à conditions sous-entendues, probabilité et conditionnement, règle de Bayes, score logarithmique. Chacun est introduit par la question à laquelle il répond. Un même fil les relie : aucun ne livre de conclusion sans condition, et l’on apprendra à repérer, derrière chaque résultat, le « pourvu que » qui le fait tenir.
 
 ## Déduction et induction {#sec:ch01-modes-inference}
 
@@ -64,7 +64,7 @@ Comment réviser le poids d’un événement $B$ lorsqu’on suppose, ou qu’on
 
 $$\Pr(B \mid A) = \frac{\Pr(A \cap B)}{\Pr(A)}$$ {#eq:ch01-cond}
 
-Cette formule se lit de façon très concrète, et cette lecture servira tout au long du livre. Voyons $\Omega$ comme l’ensemble des situations, ou des mondes, compatibles avec ce que l’on envisage, chacun muni de son poids. Conditionner par $A$, c’est ne garder que les mondes où $A$ est vrai, puis mesurer, parmi eux, la part de ceux où $B$ l’est aussi. Diviser par $\Pr(A)$ ne fait que renormaliser : les mondes retenus forment un nouvel univers, de poids total $1$.
+Cette formule se lit de façon très concrète, et cette lecture servira tout au long du livre. Représentons-nous $\Omega$ comme l’ensemble des situations, ou des mondes, compatibles avec ce que l’on envisage, chacun muni de son poids. Conditionner par $A$, c’est ne garder que les mondes où $A$ est vrai, puis mesurer, parmi eux, la part de ceux où $B$ l’est aussi. Diviser par $\Pr(A)$ ne fait que renormaliser : les mondes retenus forment un nouvel univers, de poids total $1$.
 
 Cette lecture rejoint les règles à conditions tues de l’@eq:ch01-regle. Si une règle s’écrit $A \cap (\dots) \rightarrow B$, $\Pr(B \mid A)$ mesure, parmi les situations où les conditions énoncées $A$ sont remplies, la part de celles où l’arrière-plan tu $(\dots)$ laisse effectivement $B$ se produire. Le @sec:ch03 fera de cette image des mondes le fondement du jugement probabiliste.
 
@@ -154,7 +154,7 @@ Deux prévisionnistes évaluent le risque de gel sur un verger : le premier l’
 On voit ainsi le lien entre les deux outils : la différence des surprises de deux prévisions est le logarithme de leur rapport de vraisemblance sur l’issue observée, et le rapport de vraisemblance est l’exponentielle de cette différence. Le @sec:ch03 se servira de ce couple pour comparer les estimations de deux navigateurs avant une même course, et pour examiner ce qu’une issue unique permet, ou non, de conclure à leur sujet.
 
 ::: {.formel titre="Score logarithmique et rapport de vraisemblance"}
-Pour toute issue ayant reçu une probabilité $p \in (0, 1]$, le score logarithmique $S(p) = -\ln p$ est positif ou nul ($S(1) = 0$) et strictement décroissant en $p$.
+Pour toute issue ayant reçu une probabilité $p \in \left]0, 1\right]$, le score logarithmique $S(p) = -\ln p$ est positif ou nul ($S(1) = 0$) et strictement décroissant en $p$.
 
 1. **Additivité sur des épreuves indépendantes.** Si deux issues successives $E_1$ et $E_2$ sont jugées indépendantes et reçoivent les probabilités $p_1$ et $p_2$, leur probabilité conjointe vaut $p_1 p_2$, et la surprise totale est la somme des surprises :
    $$S(p_1 p_2) = -\ln(p_1 p_2) = -\ln p_1 - \ln p_2 = S(p_1) + S(p_2).$$
