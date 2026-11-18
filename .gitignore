@@ -1,0 +1,33 @@
+# Monograph build outputs
+monographie/build/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+
+# LaTeX auxiliary files (outside build/)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.xdv
+
+# OS / editor files
+.DS_Store
+*~
+*.swp
+*.swo
