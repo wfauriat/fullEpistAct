@@ -1,0 +1,27 @@
+# Notes — Chapitre 02
+
+## Références à ajouter ou à vérifier
+- `[@fauriat2026frame]` (déjà vérifiée dans `commun/biblio.bib`) — structure cible–monde–écart, exemple du téléphone satellite, formulation probabiliste et circularité du cadre, relativité au cadre de la déduction et de l’induction, cas générique du modèle clinique sous changement de population, impossibilité de certifier le cadre par méta-formalisation (`#sec:ch02-monde-action`, `#sec:ch02-cadre-specification`, `#sec:ch02-rigueur-formelle`).
+- `[@korzybski1933]` (clé candidate dans `commun/biblio_a_verifier.bib`) — formulation exacte de « la carte n’est pas le territoire » (`#sec:ch02-monde-action`).
+- `[@pearl1988]` (clé candidate dans `commun/biblio_a_verifier.bib`) — analogie du champ de mines pour le raisonnement à exceptions (`#sec:ch02-pertinence-exceptions`), et fondements graphiques du calcul causal cités conjointement avec `pearl2009` (`#sec:ch02-rigueur-formelle`).
+- `[@pearl2009]` (clé candidate dans `commun/biblio_a_verifier.bib`) — *d*-séparation, *do*-calcul et théorèmes d’identification relatifs à un graphe causal donné (`#sec:ch02-rigueur-formelle`).
+- `[@vovk2005]`, `[@angelopoulos2023]` (clés candidates dans `commun/biblio_a_verifier.bib`) — garantie de couverture à échantillon fini de la prédiction conforme sous hypothèse d’échangeabilité (`#sec:ch02-rigueur-formelle`).
+- `[@mccarthy1969]` (clé candidate dans `commun/biblio_a_verifier.bib`) — origine du problème du cadre en logique de l’action et intelligence artificielle (`#sec:ch02-probleme-cadre`).
+- `[@dennett1984]` (clé candidate dans `commun/biblio_a_verifier.bib`) — apologue du robot et de la bombe sur le chariot (`#sec:ch02-probleme-cadre`).
+- Aucun marqueur `[@A-VERIFIER: …]` en texte libre n’a été laissé dans le chapitre : le cas clinique de la section 4 est traité de manière générique conformément à la spécification. Si le mainteneur souhaite néanmoins rattacher des références complémentaires issues de l’article source (`source/frame_problem_article_WF.tex`), les entrées correspondantes existent dans sa bibliographie (`Simon1982` pour la triade cible–monde–écart, `Pylyshyn1987` et `Shanahan2016` pour la littérature sur le problème du cadre, `Steyerberg2009` et `Riley2019` pour les modèles cliniques).
+
+## Termes proposés (absents du registre)
+- Aucun terme nouveau proposé. Les trois termes prévus pour le chapitre 2 dans `commun/registre_termes.md` — **représentation** (`#def:representation`), **cadre** (`#def:cadre`) et **problème du cadre** — ainsi que les notations $X, x$ ont été introduits en suivant exactement le registre.
+- Précaution d’ordre des dépendances respectée : *mondes possibles*, *calibration*, *décision unique*, *seuil $p^\ast$*, *incertitude ontologique*, *affirmation*, *contrôle*, *comparateur*, *dérive de distribution*, *angle mort*, *vérification* (comme substantif technique) et *validation* ne sont pas utilisés dans leur sens technique ; *jeu d’étalonnage* est employé à la place de *calibration* pour la prédiction conforme, et *gravité* à la place de *sévérité* dans le cas clinique.
+
+## Paramètres / figures demandés
+- **`ch02-cible-monde-action`** — `#sec:ch02-monde-action`, figure `figures/ch02-cible-monde-action.pdf` et `.svg` (étiquette `{#fig:ch02-cible-monde-action}`) : schéma conceptuel en boucle montrant les quatre pôles *Cible*, *Monde*, *Représentation (dans un cadre)* et *Action* — l’agent forme une représentation à partir d’observations partielles prélevées dans un cadre fini, puis engage une action sur le monde ; la flèche de réponse du monde repart de l’action (et non de la représentation), en soulignant ce qui demeure hors du cadre.
+- Note : le tableau progressif de l’ébullition de l’eau (`{#tbl:ch02-eau-bouillante}`, `#sec:ch02-pertinence-exceptions`) est un tableau qualitatif de raffinement de règle rédigé directement en Markdown et ne requiert pas d’entrée dans `commun/parametres.py`.
+
+## Écarts par rapport à la spec
+- **Répartition des blocs `.formel` :** les deux volets indiqués pour le *Noyau formel* (*conditionnement sur $X$* et *relativité au cadre des garanties déductives et inductives*) ont été présentés dans deux blocs `.formel` distincts, placés respectivement dans la section 3 (`#sec:ch02-cadre-specification`) et dans la section 4 (`#sec:ch02-rigueur-formelle`), tout en conservant le fil complet de l’argument dans le texte principal.
+- **Placement du bloc `.question` :** placé à la fin de la section 1 (`#sec:ch02-monde-action`), où il prolonge immédiatement l’opposition entre grandeurs mesurées du monde et jugement probabiliste interne au modèle, afin de laisser la section 5 strictement réduite à un paragraphe de mise au point sur le *problème du cadre*.
+
+## Incohérences repérées ailleurs
+- `monographie/commun/biblio_a_verifier.bib` (ligne 34) : le champ `averifier` de `pearl1988` mentionne uniquement l’analogie du champ de mines ; il conviendra de vérifier également cet ouvrage pour l’usage conjoint avec `pearl2009` sur le calcul causal relatif à un graphe au `#sec:ch02-rigueur-formelle`.
+- Compilation LaTeX (`build/apercu/ch-02.tex`) : avec `edition = {2}` dans `pearl2009`, `pandoc --citeproc` en français produit `2ᵉ éd.` avec le caractère Unicode `U+1D49` (`ᵉ`), absent de `TeXGyrePagella` (`Missing character: There is no ᵉ (U+1D49)`). Une adaptation du filtre Lua ou de la feuille CSL sur les exposants d’édition éliminera cet avertissement typographique.
