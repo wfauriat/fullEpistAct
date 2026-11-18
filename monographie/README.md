@@ -12,6 +12,7 @@ Sources in structured pandoc Markdown → PDF (LuaLaTeX), HTML, DOCX. Convention
 | `make verifier` | static checks: statuts, labels, internal-document leaks, `A-VERIFIER` markers, stubs, numbers in quantitative examples (exit code 1 on errors) |
 | `make essai` | toolchain self-test on `tests/essai.md` (exercises every convention) |
 | `make clean` | removes `build/` |
+| `… ECRAN=1` | option for every PDF target (`pdf`, `tout`, `chapitre`, `essai`): on-screen layout, one-sided, with the text block centred on every page whatever its parity and no blank pages. Written next to the print version with an `-ecran` suffix (`build/livre-ecran.pdf`, `build/apercu/ch-05-ecran.pdf`) |
 
 Requirements: pandoc ≥ 3.1, LuaLaTeX with KOMA-Script, tcolorbox, thmtools, babel-french and TeX Gyre fonts, latexmk, and Python with matplotlib (`PY=` overrides the interpreter; default `/opt/venvs/pyDS/bin/python` if present).
 

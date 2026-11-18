@@ -127,7 +127,7 @@ A figure or table you need that does not exist yet: reference it by its planned 
 
 **Workflow for a builder:**
 1. Write in `monographie/chapitres/NN-slug.md`, keeping the stub's heading line unchanged.
-2. From `monographie/`, run `make chapitre CH=NN` to preview (`CH` is a file-name prefix: `CH=00-a` for the preface, `CH=00-c` for chapter 0).
+2. From `monographie/`, run `make chapitre CH=NN` to preview (`CH` is a file-name prefix: `CH=00-a` for the preface, `CH=00-c` for chapter 0). Add `ECRAN=1` for a screen layout with centred pages (`ch-NN-ecran.pdf`).
 3. Run `make verifier` and fix every error in your chapter.
 
 ---

@@ -8,8 +8,17 @@
 \ifdefined\frenchsetup
   \frenchsetup{AutoSpacePunctuation=false, SmallCapsFigTabCaptions=false}
 \fi
+% citeproc's French locale writes ordinals with modifier letters (« 2ᵉ éd. », « 1ʳᵉ éd. »),
+% which TeX Gyre Pagella lacks (they would vanish from the PDF): set them as superscripts.
+\usepackage{newunicodechar}
+\newunicodechar{ᵉ}{\textsuperscript{e}}
+\newunicodechar{ʳ}{\textsuperscript{r}}
 
 % ---------------------------------------------------------------- Packages
+% Link anchors named by an internal counter, not by section numbers: the preface's sections
+% and chapter 0's both number 0.x, and with number-based names every link to a chapter 0
+% section (TOC, bookmarks, \ref) landed in the preface. hyperref is loaded after this file.
+\PassOptionsToPackage{hypertexnames=false}{hyperref}
 \usepackage{etoolbox}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
@@ -75,6 +84,20 @@
 \renewcommand*{\thetable}{\thechapter.\arabic{table}}
 \renewcommand*{\captionformat}{\nobreakspace:\ }
 \AtBeginDocument{\renewcommand{\tablename}{Tableau}\renewcommand{\figurename}{Figure}}
+
+% ---------------------------------------------------------------- Front matter
+% Pandoc's template opens the front matter before the title and closes it with \mainmatter
+% right after the table of contents. The preface (filter, class .avant-propos) reopens it
+% with \reprendreliminaires, which carries on the roman page numbers of the TOC; a second
+% \frontmatter would restart them at i (duplicate page numbers and PDF anchors).
+% KOMA's \frontmatter and \mainmatter clear the page, then call \pagenumbering, which
+% resets the counter: the hook keeps the number the next page would have had.
+\newcounter{pagesuivante}
+\AddToHook{cmd/pagenumbering/before}{\setcounter{pagesuivante}{\value{page}}}
+\newcommand{\reprendreliminaires}{%
+  \edef\pagereprise{\arabic{pagesuivante}}%
+  \frontmatter
+  \setcounter{page}{\pagereprise}}
 
 % ---------------------------------------------------------------- Layout
 \setcounter{tocdepth}{1}

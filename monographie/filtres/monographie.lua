@@ -403,7 +403,9 @@ local render = {
   Header = function(h)
     if LATEX then
       local before = nil
-      if h.classes:includes('avant-propos') then before = '\\frontmatter'
+      -- the template has already closed the front matter after the TOC: reopen it without
+      -- restarting the roman page numbers (\reprendreliminaires, gabarit/preambule.tex)
+      if h.classes:includes('avant-propos') then before = '\\reprendreliminaires'
       elseif h.classes:includes('corps') then before = '\\mainmatter\\setcounter{chapter}{-1}'
       elseif h.classes:includes('annexes') then before = '\\appendix'
       elseif h.classes:includes('fin') then before = '\\backmatter' end
