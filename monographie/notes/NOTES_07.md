@@ -1,5 +1,16 @@
 # Notes — Chapitre 07
 
+*Révision après relecture (deuxième passe).* Le chapitre a été relu contre `authoring_conventions.md` (§ 11), `content_spec/00_global.md`, `content_spec/part2.md`, le registre, la section « The meta-level no-free-lunch » de l’article et les chapitres 0 à 6, 8 et 9, puis corrigé en place. Toutes les étiquettes sont conservées (`sec:ch07`, `sec:ch07-mode-commun`, `sec:ch07-cause-commune`, `prop:cause-commune`, `fig:ch07-cause-commune`, `eq:ch07-vraisemblance`, `sec:ch07-observations`, `sec:ch07-regression`, `sec:ch07-deux-voies`). Corrections principales :
+- **Genre grammatical des renvois de section :** `au @sec:ch02-rigueur-formelle` (deux fois) et `dès le @sec:ch01-modes-inference` se rendaient en « au section 2.4 » et « dès le section 1.1 » ; corrigés en `à la @sec:ch02-rigueur-formelle` et `dès la @sec:ch01-modes-inference`.
+- **Terme réservé (« validation croisée ») :** *validation* étant réservé au `@sec:ch13` (*vérification, validation*), le texte parlait deux fois de « validation croisée ». Reformulé en « recoupement par partitions successives (souvent appelé *validation croisée*) » au premier passage, puis « partitions d’un tel recoupement » au second.
+- **Identification du modèle M3 et harmonisation avec les chapitres 5 et 12 :**
+  - le bloc `.formel` nomme désormais explicitement le « Modèle M3 » (dans le texte et dans son titre) ;
+  - le rappel de la ferrure mentionne le coefficient de sécurité de 1,8 (cohérent avec les chapitres 0, 5 et 8) ;
+  - la `.nuance` annonce le nom d’*omission de saillance* au `@sec:ch12` ;
+  - la phrase d’introduction de $z$ précise qu’il est « noté désormais formellement $z$, reprenant la lettre esquissée au @sec:ch05 » (sans annoncer sa notation au futur).
+- **Français :** dans le chapeau, « qui rejette le reste » devient « laissant le reste dans un arrière-plan $(\dots)$ », et « dans ce cadre » répété a été retiré ; suppression de la répétition « dans le cadre » à l’entrée de M3.
+- **Vérifié sans changement :** les deux termes du registre (**défaillance de mode commun**, **dérive de distribution**), le regroupement de `(a)` et `(b)` dans `@prop:cause-commune` avec `statut="résultat sous hypothèses"` et distinction dans le corps du bloc, la figure hors du bloc formel, le bloc `.cas` sur Google Flu Trends, l’argument de Hume, Goodman (« vleu ») et Wolpert & Macready, les deux voies extérieures avec renvoi au `@sec:ch17`, l’absence d’`agent`, et les points clés conformes à la spec.
+
 ## Références à ajouter ou à vérifier
 - `[@fauriat2026frame]` (vérifiée, `commun/biblio.bib`) — `#sec:ch07-regression` : caractère structurel de la régression à l’infini des méta-procédures, leçon générale des théorèmes *no free lunch*, portée non sceptique de l’argument.
 - `[@lazer2014]` (clé candidate, `commun/biblio_a_verifier.bib`) — `#sec:ch07-observations` (encadré `.cas` « Google Flu Trends et la dérive des requêtes »). Points à vérifier contre la source primaire (*Science*, 2014) : chronologie exacte (accord initial sur plusieurs années puis dérive marquée) et ampleur des erreurs de Google Flu Trends, ainsi que le rôle des changements d’habitudes de recherche et des mécanismes de suggestion du moteur. Le texte s’abstient de citer des pourcentages ou facteurs précis avant vérification.

@@ -1,5 +1,16 @@
 # Notes — Chapitre 09
 
+*Révision après relecture (deuxième passe).* Le chapitre a été relu contre `authoring_conventions.md` (§ 11), `content_spec/00_global.md`, `content_spec/part2.md`, le registre, les tableaux générés et les chapitres 0 à 8, puis corrigé en place. Toutes les étiquettes sont conservées (`sec:ch09`, `sec:ch09-taux-base-vpp`, `sec:ch09-severite`, `def:severite`, `eq:ch09-accord-cotes`, `sec:ch09-fausses-alertes`, `eq:ch09-vpp`, `sec:ch09-comportement-alertes`, `sec:ch09-risque-echappement`, `eq:ch09-risque`, `eq:ch09-sensibilite`, `eq:ch09-echappement`, `fig:ch09-echappement`). Corrections principales :
+- **Terminologie réservée (*complaisant*, *silencieux*) :**
+  - en `#sec:ch09-severite`, « trop complaisant » est remplacé par « trop indulgent », afin de réserver *complaisance* au sens technique du `@sec:ch15` (*sycophancy*) ;
+  - « rester silencieux » (trois occurrences) est remplacé par « ne signale rien / ne pas signaler d’erreur / n’émettre aucune alerte », pour éviter toute collision avec *erreur silencieuse* du `@sec:ch13`.
+- **Calculs dans le bloc `.exemple-quantitatif` :** la valeur intermédiaire `0,61538...` (absente du tableau généré `tableaux/ch09-echappement.md`) a été retirée du texte ; seules demeurent les valeurs exactes affichées au tableau.
+- **Précision de sens et de style :**
+  - à l’entrée de la `#sec:ch09-risque-echappement`, « un contrôle la contredit et l’arrête avant l’action » renvoie explicitement aux cinq conditions du `@sec:ch06` ;
+  - dans la discussion de l’`@eq:ch09-risque`, « les deux facteurs […] ne sont pas indépendants » (ambiguïté possible avec la factorisation $\Pr(E \cap \bar{C}) = \Pr(E)\Pr(\bar{C} \mid E)$) devient « l’abaissement de $P(E)$ et l’échappement ne sont pas indépendants » ;
+  - harmonisation des deux puces de l’exemple 1 % × 90 % contre 10 % × 1 % (« suivies d’effet » dans les deux cas) et de la clôture (« taux d’erreur par probabilité d’échappement », « édifiée hors de l’informatique récente »).
+- **Vérifié sans changement :** les 6 termes du registre introduits dans le chapitre (**taux de base**, **sensibilité**, **taux de fausses alertes**, **valeur prédictive positive (VPP)**, **sévérité**, **appariement des probabilités**), le modèle M1 complet avec ses trois hypothèses explicites, l’alignement de tous les nombres sur `tableaux/ch09-depistage.md`, `ch09-desaccords.md`, `ch09-taux-echappement.md` et `ch09-echappement.md`, la `.nuance` sur Bayes et l’UES, les renvois aux chapitres 1, 4, 6, 7, 8, 12, 16 et à la partie III, et les points clés conformes à la spec.
+
 Chapitre rédigé selon `BUILDER_START_HERE.md`, `authoring_conventions.md`, `content_spec/00_global.md` (§3, §4 M1, §7, §8, §9), `content_spec/part2.md` et `monographie/commun/registre_termes.md`. Toutes les étiquettes attendues ont été posées et conservées (`sec:ch09`, `sec:ch09-taux-base-vpp`, `sec:ch09-severite`, `def:severite`, `eq:ch09-accord-cotes`, `sec:ch09-fausses-alertes`, `eq:ch09-vpp`, `sec:ch09-comportement-alertes`, `sec:ch09-risque-echappement`, `eq:ch09-risque`, `eq:ch09-sensibilite`, `eq:ch09-echappement`, `fig:ch09-echappement`), ainsi que les quatre tableaux inclus (`tbl:ch09-depistage`, `tbl:ch09-desaccords`, `tbl:ch09-taux-echappement`, `tbl:ch09-echappement`).
 
 ## Références à ajouter ou à vérifier

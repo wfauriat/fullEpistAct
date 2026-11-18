@@ -1,5 +1,18 @@
 # Notes — Chapitre 05
 
+*Révision après relecture (deuxième passe).* Le chapitre a été relu contre `authoring_conventions.md` (§ 11), `content_spec/00_global.md`, `content_spec/part2.md`, le registre, la section « Three kinds of uncertainty » de l’article et les chapitres 0 à 4 et 6 à 9, puis corrigé en place. Toutes les étiquettes sont conservées (`sec:ch05`, `sec:ch05-variance-totale`, `sec:ch05-aleatoire-epistemique`, `sec:ch05-incertitude-ontologique`, `sec:ch05-barre-erreur-desaccord`, `sec:ch05-outils-robustesse`, `eq:ch05-variance-totale`, `prop:desaccord`, `fig:ch05-trois-incertitudes`, `fig:ch05-ferrure-marge`). Corrections principales, par ordre de gravité :
+- **Numéro tapé à la main :** le titre de section « Ce que mesure une barre d’erreur : la proposition 1 » figeait un numéro que le filtre attribue seul. Il devient « Une barre d’erreur mesure un désaccord » (étiquette inchangée).
+- **Exemple courant de l’eau :** « les 101 °C de l’eau salée » laissait croire que l’eau salée bout à 101 °C, alors qu’au @sec:ch02 elle reste calme à cette température. Devient « l’eau salée encore calme à 101 °C, ni l’ébullition vers 85 °C au sommet du mont Blanc ».
+- **Continuité avec le chapitre 0 :** la ferrure était présentée comme un exemple « que nous retrouverons plus loin », alors que le chapitre 0 l’a déjà esquissée (même coefficient de 1,8). Le texte renvoie désormais au @sec:ch00 et annonce les chapitres 7 et 8.
+- **Facteur omis $z$ :** il était introduit deux fois « de façon informelle » (texte et bloc formel). Une seule introduction subsiste ; le bloc reprend « le facteur omis $z$ introduit plus haut ». La formalisation reste annoncée pour le @sec:ch07.
+- **Provenance :** la date de l’accident (« le 28 janvier 1986 ») porte désormais sa citation (`rogers1986`).
+- **Français :**
+  - « n’ont pas averti les établissements en produisant de très larges intervalles » (calque de *did not warn by producing*) devient « n’ont pas signalé le danger […] par des intervalles de confiance très larges : ils ne produisaient tout simplement pas ce scénario » ;
+  - « Ils rappellent qu’un seul jeu de paramètres […] ajuste trop étroitement les observations » (contresens possible) devient « Ils évitent de tout miser sur un seul jeu de paramètres ou sur un seul modèle, trop étroitement ajusté aux observations passées » ;
+  - « la piqûration et la fissuration sous contrainte » devient « la corrosion par piqûres et la fissuration par corrosion sous contrainte » (termes usuels) ;
+  - la parenthèse floue « Nous verrons plus loin dans l’ouvrage que… » est reformulée ; le chapeau est découpé en phrases plus courtes.
+- **Vérifié sans changement :** statut de la @prop:desaccord, justification par la loi de la variance totale dans le texte principal, *nuance* de robustesse (facteur variable non attribué / facteur constant sans trace), *nuance* *Challenger* (23 vols antérieurs, harmonisée avec le chapitre 6), aucun terme employé avant son chapitre (ni *contrôle*, ni *comparateur*, ni *sensibilité*, ni *agent*), points clés conformes à la spec.
+
 ## Références à ajouter ou à vérifier
 - `[@fauriat2026frame]` (vérifiée, `commun/biblio.bib`) — partition aléatoire/épistémique comme choix de modélisation (`#sec:ch05-aleatoire-epistemique`), incertitude ontologique et exemple des modèles hypothécaires avant 2008 (`#sec:ch05-incertitude-ontologique`), outils classiques de robustesse restant dans le cadre (`#sec:ch05-outils-robustesse`).
 - `[@wynne1992]`, `[@walker2003]`, `[@lempert2003]`, `[@knight1921]` (clés candidates, `commun/biblio_a_verifier.bib`) — désignations et traditions relatives à l’incertitude ontologique, profonde et knightienne (`#sec:ch05-incertitude-ontologique`). Conformes aux champs `averifier`.
