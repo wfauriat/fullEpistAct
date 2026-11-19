@@ -84,6 +84,26 @@
 \renewcommand*{\thetable}{\thechapter.\arabic{table}}
 \renewcommand*{\captionformat}{\nobreakspace:\ }
 \AtBeginDocument{\renewcommand{\tablename}{Tableau}\renewcommand{\figurename}{Figure}}
+% Unnumbered chapters (preface, conclusion): the filter makes their sections unnumbered and
+% calls \numerotationlocale{<tag>} before the chapter, so figures, tables and equations are
+% numbered 1, 2… as in HTML (with distinct PDF anchors); \numerotationchapitre, called before
+% every numbered chapter, restores the chapter-prefixed numbering saved at \begin{document}.
+\makeatletter
+\AtBeginDocument{%
+  \let\mono@thefigure\thefigure \let\mono@thetable\thetable \let\mono@theequation\theequation
+  \let\mono@theHfigure\theHfigure \let\mono@theHtable\theHtable
+  \let\mono@theHequation\theHequation}
+\newcommand*{\numerotationlocale}[1]{%
+  \setcounter{figure}{0}\setcounter{table}{0}\setcounter{equation}{0}%
+  \renewcommand*{\thefigure}{\arabic{figure}}\renewcommand*{\thetable}{\arabic{table}}%
+  \renewcommand*{\theequation}{\arabic{equation}}%
+  \renewcommand*{\theHfigure}{#1.\arabic{figure}}\renewcommand*{\theHtable}{#1.\arabic{table}}%
+  \renewcommand*{\theHequation}{#1.\arabic{equation}}}
+\newcommand*{\numerotationchapitre}{%
+  \let\thefigure\mono@thefigure \let\thetable\mono@thetable \let\theequation\mono@theequation
+  \let\theHfigure\mono@theHfigure \let\theHtable\mono@theHtable
+  \let\theHequation\mono@theHequation}
+\makeatother
 
 % ---------------------------------------------------------------- Front matter
 % Pandoc's template opens the front matter before the title and closes it with \mainmatter

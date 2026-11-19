@@ -51,6 +51,7 @@ local STATUTS = {
 local PREFIXES = { sec = true, prop = true, def = true, fig = true, tbl = true, eq = true }
 
 local REFS = {}      -- id -> { kind = ..., num = ..., title = ... }
+local SANS_NUMERO = {} -- ids of sub-headings of unnumbered chapters (LaTeX must not number them)
 PREMIER = nil        -- first chapter number when previewing a single chapter (make chapitre)
 
 -- Keys of candidate (not yet verified) references: their citations are marked with an orange "?"
@@ -179,6 +180,7 @@ local collect = {
             end
           end
         elseif h.level == 2 then
+          if not chap and not unnumbered and h.identifier ~= '' then SANS_NUMERO[h.identifier] = true end
           if chap and not unnumbered then
             sect = sect + 1
             define(h.identifier, { kind = 'section', num = chap .. '.' .. sect })
@@ -186,6 +188,7 @@ local collect = {
             define(h.identifier, { kind = 'titre', title = h.content })
           end
         elseif h.identifier ~= '' then
+          if not chap and not unnumbered then SANS_NUMERO[h.identifier] = true end
           define(h.identifier, { kind = 'titre', title = h.content })
         end
       end,
@@ -410,8 +413,21 @@ local render = {
       elseif h.classes:includes('corps') then before = '\\mainmatter\\setcounter{chapter}{-1}'
       elseif h.classes:includes('annexes') then before = '\\appendix'
       elseif h.classes:includes('fin') then before = '\\backmatter' end
-      if before then return { pandoc.RawBlock('latex', before), h } end
-      return nil
+      local out = pandoc.Blocks {}
+      if before then out:insert(pandoc.RawBlock('latex', before)) end
+      if h.level == 1 and not h.classes:includes('partie') then
+        -- unnumbered chapter: floats numbered 1, 2… as in HTML (gabarit/preambule.tex)
+        if h.classes:includes('unnumbered') then
+          out:insert(pandoc.RawBlock('latex', '\\numerotationlocale{nn-' .. h.identifier:gsub('[^%w]', '-') .. '}'))
+        else
+          out:insert(pandoc.RawBlock('latex', '\\numerotationchapitre'))
+        end
+      elseif SANS_NUMERO[h.identifier] then
+        h.classes:insert('unnumbered') -- still listed in the TOC, without a number
+      end
+      if #out == 0 then return h end
+      out:insert(h)
+      return out
     end
     local r = REFS[h.identifier]
     if r and r.num and (r.kind == 'chapitre' or r.kind == 'annexe' or r.kind == 'section') then

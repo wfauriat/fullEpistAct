@@ -56,6 +56,12 @@ Chapitre 0 :
 - Points clés : la quatrième puce ne présente plus l'aisance des erreurs comme une conséquence de la dépense de la garantie.
 - Chapeau : une phrase signale que les mots employés seront définis dans leurs chapitres.
 
+## Harmonisation après la partie V et la conclusion
+- **Avant-propos, `#sec:avant-propos-posture`** : « quelles observations empiriques suffiraient à mettre l’argument en défaut » devient « pourraient mettre l’argument en défaut ». C’est la posture du livre et la formulation de `parties/partie-5.md`, que la conclusion (`#sec:conclusion-refutation`) reprend.
+- **Chapitre 0, « frontières de régime » (placement des contrôles et dernier point clé)** : remplacé par « points de passage vers l’action », la formule retenue au chapitre 18 (`#sec:ch18-placement-ou`). Il n’y a plus de collision avec le changement de régime du chapitre 12, et le livre n’emploie plus « frontière de régime » nulle part.
+- **Chapitre 0, `#tbl:ch00-parcours`, ligne « Parcours critique »** : ajout des encadrés *Nuance* des chapitres 7 et 16, qui portent des tensions recensées par la conclusion (omission de saillance ; corrélation et usure des alertes). **Écart** par rapport à `course_outline.md` § 5, qui reste à aligner.
+- **Chapitre 0, exemple des deux organisations** : « ne mesurent guère que le premier facteur » devient « notent le producteur seul : ils ne mesurent que le premier facteur ». La formulation porte désormais sur ce que mesure un test de référence par construction, et non sur un relevé empirique ; elle est alignée sur les chapitres 9 et 16.
+
 ## Incohérences repérées ailleurs
 - `content_spec/00_global.md` §7 et `tableaux/ch09-taux-echappement.md` : la spec indique que ce tableau peut servir aussi au chapitre 0, mais il porte en dur l'étiquette `{#tbl:ch09-taux-echappement}` ; l'inclure aux chapitres 0 et 9 provoquerait un avertissement d'étiquette en double. Il reste réservé au chapitre 9.
 - `content_spec/00_global.md` §8, `part3.md` (ch. 10) et champ `averifier` de `mco1999` : « SM_FORCES file » ; selon le rapport, `SM_FORCES` désigne le logiciel au sol, les données passant par un fichier de sortie distinct. À préciser pour les chapitres 8 et 10.
