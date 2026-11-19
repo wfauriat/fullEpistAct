@@ -9,7 +9,7 @@ Pour saisir ce que change le recours collectif à un même modèle, il faut main
 - du taux d’erreur $P(E)$ (noté $P(\text{faux})$ dans les tableaux et les figures), c’est-à-dire la probabilité qu’une affirmation produite soit fausse ;
 - et de la probabilité d’échappement $\Pr(\bar{C} \mid E)$ (@def:echappement), c’est-à-dire la probabilité qu’une affirmation fausse franchisse l’ensemble des contrôles jusqu’à l’acte.
 
-Le premier facteur mesure la fréquence de la faute à la source ; le second mesure ce que le dispositif de relecture, d’essai ou d’arbitrage laisse passer. Or, comme l’a souligné le @sec:ch09, les tests de référence, comme la plupart des tableaux de bord internes, ne mesurent que le premier facteur et laissent dans l’ombre l’évolution du second.
+Le premier facteur mesure la fréquence de la faute à la source ; le second mesure ce que le dispositif de relecture, d’essai ou d’arbitrage laisse passer. Or, comme l’a souligné le @sec:ch09, les tests de référence notent le producteur seul et ne mesurent donc que le premier facteur ; un tableau de bord qui s’en tient à ces scores laisse dans l’ombre l’évolution du second.
 
 Plaçons maintenant une communauté d’analystes, de juristes, de développeurs ou de chercheurs devant un outil partagé. Chacun possède ses propres angles morts (@def:angle-mort) : étourderies de calcul, lacunes d’une spécialité voisine, cas limites oubliés par habitude, fatigue de fin de journée. Supposons que tous — ceux qui rédigent ou conçoivent comme ceux qui relisent et contrôlent — consultent désormais le même modèle appris.
 
