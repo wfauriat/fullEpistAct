@@ -397,6 +397,14 @@ Plus the bibliography and an index.
 
 Readers on a path skip prerequisites. Each chapter therefore opens with its "keys in" stated in one or two lines, pointing back to the chapter that provides them.
 
+> **TODO (2026-11-19): "Parcours critique" extended in chapter 0.**
+> - **Change:** chapter 0 (`#tbl:ch00-parcours`) now also lists the *Nuance* blocks of **ch. 7** ("Portée réelle du conditionnement sur le cadre") and **ch. 16** ("Séparer la corrélation des causes et l'usure des alertes"). Both hold open tensions inventoried by the conclusion: salience omission and P3a; correlation of causes vs alarm fatigue.
+> - **Outline:** the row above has not been updated yet. Add 7 and 16 to it once the change is approved.
+> - **Possible building:** neither block is written to be read on its own.
+>   - The ch. 7 block assumes P3 and the conditioning vector $x$.
+>   - The ch. 16 block assumes PPV (ch. 9), the shared-cause share $c$, and the `escape-b` example just before it.
+>   - Check whether a reader who jumps straight to these blocks can follow them. If not, add a one-line lead-in with back-references (and check the other blocks on this path the same way). Then decide whether the ch. 18 *Nuance* (seeded errors measure only imaginable errors), also used by the conclusion, should join the path.
+
 ---
 
 ## 6. Coverage Check (all 50 map threads)
