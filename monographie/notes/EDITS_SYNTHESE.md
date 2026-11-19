@@ -1,0 +1,1014 @@
+# Corrections appliquées après la synthèse
+
+Corrections issues de `notes/SYNTHESE_A_TRANCHER.md` (groupe 1) et des décisions consignées dans `notes/DECISIONS_SYNTHESE.md`. Les points encore ouverts, ou réservés à la discussion, ne sont pas touchés ; ils sont listés en fin de fichier. Chaque entrée renvoie au repère de la synthèse.
+
+- **G1-5** (`chapitres/05-trois-incertitudes.md`) : P1 : le terme épistémique n'est plus appelé « désaccord », pour réserver le mot au sens large de la proposition.
+  - Avant : « de ce qui tient au désaccord entre les hypothèses ? »
+  - Après : « de ce qui tient à l’écart entre les prévisions des différentes hypothèses ? »
+- **G1-5** (`chapitres/05-trois-incertitudes.md`) : P1 : sens large de « désaccord » explicité après la proposition (SPEC P1, FD).
+  - Avant : « :::
+
+Examinons pourquoi cette proposition résulte »
+  - Après : « :::
+
+Le mot *désaccord* s’entend ici au sens large : l’écart entre les membres de l’ensemble admis, qu’il s’agisse de répliques tirées sous une même loi ou d’hypothèses rivales.
+
+Examinons pourquoi cette proposition résulte »
+- **ch5 T2** (`chapitres/05-trois-incertitudes.md`) : Un facteur omis est une variable, non une hypothèse de Θ.
+  - Avant : « ne figure pas dans $\Theta$ ne signifie pas »
+  - Après : « n’intervient dans aucune des alternatives de $\Theta$ ne signifie pas »
+- **ch5 T7** (`chapitres/05-trois-incertitudes.md`) : L'encadré qui suit traite déjà z formellement.
+  - Avant : « (son traitement formel attendra le @sec:ch07) »
+  - Après : « (son traitement complet attendra le @sec:ch07) »
+- **ch5 T4** (`chapitres/05-trois-incertitudes.md`) : Portée : un facteur omis qui a varié élargit bien les barres (nuance du même chapitre).
+  - Avant : « ne se traduit-il pas par des barres d’erreur prudemment élargies »
+  - Après : « ne se traduit-il pas, en général, par des barres d’erreur prudemment élargies »
+- **ch5 T5 (PC)** (`chapitres/05-trois-incertitudes.md`) : PC aligné sur le corps.
+  - Avant : « sans pouvoir être nommé ni extrapolé à un contexte nouveau. »
+  - Après : « sans pouvoir être nommé, et sans protéger contre un changement durable de ce facteur dans un contexte nouveau. »
+- **ch5 T6 (PC)** (`chapitres/05-trois-incertitudes.md`) : PC aligné sur le corps.
+  - Avant : « mais ils élargissent les alternatives à l’intérieur du cadre sans jamais le quitter. »
+  - Après : « mais ils élargissent ou repondèrent les alternatives admises, ou ménagent une marge, à l’intérieur du cadre sans jamais le quitter. »
+- **N1** (`chapitres/05-trois-incertitudes.md`) : Arrière-plan tacite nommé à la première mention.
+  - Avant : « sur les règles à arrière-plan ouvert $A \cap (\dots) \rightarrow B$ »
+  - Après : « sur les règles de la forme $A \cap (\dots) \rightarrow B$, dont l’arrière-plan tacite $\mathcal{T}$ reste ouvert »
+- **N1** (`chapitres/05-trois-incertitudes.md`) : Pas de (…) nu en prose.
+  - Avant : « demeurés cachés dans l’arrière-plan $(\dots)$ de l’@eq:ch01-regle »
+  - Après : « demeurés cachés dans l’arrière-plan tacite de l’@eq:ch01-regle »
+- **S5** (`chapitres/05-trois-incertitudes.md`) : 2008 : la quasi-indépendance était figée dans la structure (omission), non un paramètre incertain (cohérent avec le texte et ART). Faits à vérifier.
+  - Avant : « apparaissaient faiblement corrélées d’un État à l’autre, et cette quasi-indépendance était intégrée dans la structure même des modèles de portefeuille. »
+  - Après : « étaient restées faiblement corrélées d’un État à l’autre, faute de baisse nationale dans la période observée. Tirée de cette histoire sans retournement généralisé, la quasi-indépendance avait été figée dans la structure même des modèles de portefeuille, au lieu d’y figurer comme un paramètre incerta »
+- **G1-4 ®** (`chapitres/06-detecter-une-erreur.md`) : Définition de l'échappement : un désaccord exprimé mais ignoré (Challenger) compte comme échappement (FD § 3).
+  - Avant : « débouche sur une action sans avoir été contredite à temps.
+::: »
+  - Après : « débouche sur une action sans qu’un désaccord ait été détecté et pris en compte à temps.
+::: »
+- **G1-4** (`chapitres/06-detecter-une-erreur.md`) : Encadré aligné sur la définition ; une probabilité n'est pas un événement.
+  - Avant : « c’est-à-dire l’événement contraire $\overline{D}$, atteindre l’action sans avoir été contredite à temps — vaut donc »
+  - Après : « c’est-à-dire la probabilité de l’événement contraire $\overline{D}$ : atteindre l’action sans qu’un désaccord ait été détecté et pris en compte à temps — vaut donc »
+- **R11 ®** (`chapitres/06-detecter-une-erreur.md`) : Prise en compte : le désaccord doit parvenir à quelqu'un qui à la fois en prend acte et a l'autorité.
+  - Avant : « La **prise en compte** est le fait que quelqu’un prenne acte d’un désaccord et ait l’autorité pour agir en conséquence. »
+  - Après : « La **prise en compte** est le fait qu’un désaccord parvienne à quelqu’un qui à la fois en prend acte et a l’autorité pour agir en conséquence. »
+- **R11** (`chapitres/06-detecter-une-erreur.md`) : C5 aligné sur la définition.
+  - Avant : « et exerce l’autorité nécessaire pour suspendre »
+  - Après : « et ait l’autorité nécessaire pour suspendre »
+- **R10** (`chapitres/06-detecter-une-erreur.md`) : Recouvrement des familles 1 et 3 levé.
+  - Avant : « 3. *Une observation du monde.* On met »
+  - Après : « 3. *Une observation du monde*, c’est-à-dire le fait observé lui-même, non le rapport qui en rend compte. On met »
+- **V3** (`chapitres/06-detecter-une-erreur.md`) : Image de la signature glosée à sa première occurrence.
+  - Avant : « délivre une signature, non une preuve. »
+  - Après : « délivre une signature, non une preuve : comme une signature au bas d’un dossier, il engage ceux qui s’y fient sans rien établir. »
+- **S2 + V20** (`chapitres/06-detecter-une-erreur.md`) : La métaphore des barrages en série disait l'inverse (redondance) ; le signal de désaccord doit franchir les cinq conditions. Noms fixés des conditions.
+  - Avant : « représentées comme cinq barrages successifs entre l’affirmation et l’action : existence d’un comparateur, capacité à se tromper autrement, comparabilité des grandeurs et des conditions, arrivée à temps et prise en compte effective. Qu’un seul barrage cède pour une famille d’erreurs, et celles-ci tra »
+  - Après : « représentées comme cinq portes que le signal de désaccord doit toutes franchir entre l’affirmation et l’action : existence, différence (se tromper autrement), comparabilité des grandeurs et des conditions, arrivée à temps et prise en compte. Qu’une seule reste fermée devant une classe d’erreurs, et  »
+- **S2** (`chapitres/06-detecter-une-erreur.md`) : Idem dans le texte.
+  - Avant : « les cinq conditions agissent comme cinq barrages placés l’un derrière l’autre. »
+  - Après : « les cinq conditions jouent comme cinq portes que le signal de désaccord doit toutes franchir pour atteindre la décision. »
+- **S2** (`chapitres/06-detecter-une-erreur.md`) : Idem.
+  - Avant : « si un seul barrage manque ou cède devant un type d’erreur donné, toute erreur de ce type traverse le contrôle sans obstacle. »
+  - Après : « qu’une seule reste fermée devant une classe d’erreurs donnée, et toute erreur de cette classe parvient à l’action sans avoir été arrêtée. »
+- **V20** (`chapitres/06-detecter-une-erreur.md`) : Noms fixés des cinq conditions.
+  - Avant : « existence, capacité à se tromper autrement, comparabilité, arrivée à temps ou prise en compte »
+  - Après : « existence, différence (se tromper autrement), comparabilité, arrivée à temps ou prise en compte »
+- **S3** (`chapitres/06-detecter-une-erreur.md`) : Le passage des trois éléments de la proposition aux cinq conditions est dit.
+  - Avant : « D’après la @prop:comparateur, une détection suivie d’effet exige la réunion simultanée des cinq conditions »
+  - Après : « D’après la @prop:comparateur et les cinq conditions qui en découlent, une détection suivie d’effet exige la réunion simultanée de ces cinq conditions »
+- **ch6 T14** (`chapitres/06-detecter-une-erreur.md`) : Passage de trois familles à quatre sources annoncé.
+  - Avant : « et la détaillera en quatre sources distinctes de comparateurs. »
+  - Après : « et en détaillera quatre sources de comparateurs, qui recoupent ces trois familles. »
+- **N4** (`chapitres/06-detecter-une-erreur.md`) : Équivalence des notations posée à la première occurrence.
+  - Avant : « de probabilité $P(E) = \Pr(E) > 0$. »
+  - Après : « de probabilité $\Pr(E) > 0$ ; cette probabilité est le taux d’erreur, que nous noterons $P(E)$ (les tableaux des chapitres suivants l’affichent $P(\text{faux})$). »
+- **ch6 T8 (PC)** (`chapitres/06-detecter-une-erreur.md`) : PC aligné sur la force graduelle du corps.
+  - Avant : « un accord n’apporte aucune preuve si le comparateur n’avait aucune possibilité de contredire une affirmation fausse. »
+  - Après : « un accord n’apporte de preuve que dans la mesure où le comparateur aurait pu contredire une affirmation fausse. »
+- **V10** (`chapitres/06-detecter-une-erreur.md`) : « classe d'erreurs » (formulation de P4).
+  - Avant : « Considérons une famille particulière d’erreurs »
+  - Après : « Considérons une classe particulière d’erreurs »
+- **V10** (`chapitres/06-detecter-une-erreur.md`) : Idem.
+  - Avant : « fait défaut pour cette famille d’erreurs »
+  - Après : « fait défaut pour cette classe d’erreurs »
+- **V10** (`chapitres/06-detecter-une-erreur.md`) : « sous-classe » → « classe » dans l’encadré formel (4 occurrences ; $E_k \subseteq E$ reste une classe d’erreurs).
+- **S4** (`chapitres/07-cadre-cause-commune.md`) : Hypothèses du volet (b) énoncées (FD) ; « volet » partout.
+  - Avant : « Les deux parties de cet énoncé sont des résultats sous hypothèses ; la partie (b) est illustrée ci-dessous par des constats empiriques. »
+  - Après : « Les deux volets de cet énoncé sont des résultats sous hypothèses. Le volet (a) repose sur les hypothèses du modèle M3 ci-dessous. Le volet (b) suppose que les observations sont produites par le monde et non calculées dans le cadre, que $z$ a varié pendant leur collecte, et que son effet ne se lit qu »
+- **ch7 T1 (PC)** (`chapitres/07-cadre-cause-commune.md`) : PC aligné sur le corps : la dérive concerne un facteur resté constant pendant la collecte.
+  - Avant : « elles le montrent alors comme une dispersion inexpliquée, ou par une dérive de distribution lorsqu’il bouge après coup. »
+  - Après : « elles le montrent alors comme une dispersion inexpliquée. S’il n’a pas varié pendant la collecte et ne bouge qu’après la mise en service, on parle de dérive de distribution, invisible aux contrôles fondés sur ces données. »
+- **ch7 T2** (`chapitres/07-cadre-cause-commune.md`) : Les grandeurs enregistrées incluent l'issue ; le cas muet est celui d'un effet sur des grandeurs non enregistrées (FD).
+  - Avant : « Si $z$ varie sans toucher aux grandeurs mesurées, ou si »
+  - Après : « Si $z$ varie sans toucher à aucune grandeur enregistrée, parce qu’il n’agit que sur des issues que l’on ne mesure pas, ou si »
+- **ch7 T6 + N5** (`chapitres/07-cadre-cause-commune.md`) : Annonce explicite d'un terme introduit au ch. 12 ; portée du volet (a) par extension.
+  - Avant : « (une *omission de saillance*, par contraste avec l’omission d’un facteur absent de la représentation). Le volet (a) de la @prop:cause-commune ne s’applique alors qu’aux contrôles »
+  - Après : « (ce que le @sec:ch12 appellera une *omission de saillance*, par contraste avec l’omission d’un facteur absent de la représentation). Le volet (a) de la @prop:cause-commune ne vaut alors, par extension, que pour les contrôles »
+- **ch7 T7** (`chapitres/07-cadre-cause-commune.md`) : Le fil coupé se trouve être rouge, sans que la couleur soit enregistrée (FD § 8).
+  - Avant : « il peut couper le fil rouge au fil de mille essais simulés sans jamais rien apprendre de la couleur »
+  - Après : « il peut, au cours de mille essais simulés, couper le fil qui se trouve être rouge sans jamais rien apprendre de la couleur »
+- **S10** (`chapitres/07-cadre-cause-commune.md`) : Le rééchantillonnage compte parmi les contrôles internes parce qu'il recalcule le résultat (FD) ; la confrontation à des issues observées relève des observations.
+  - Avant : « ou rééchantillonner un jeu de données sont des pratiques »
+  - Après : « ou rééchantillonner un jeu de données pour recalculer le résultat sont des pratiques »
+- **N1** (`chapitres/07-cadre-cause-commune.md`) : Arrière-plan tacite nommé.
+  - Avant : « laissant le reste dans un arrière-plan $(\dots)$ ; »
+  - Après : « laissant le reste dans son arrière-plan tacite $\mathcal{T}$ ; »
+- **N3** (`chapitres/07-cadre-cause-commune.md`) : Le modèle situé dans la série.
+  - Avant : « Le bloc formel suivant (modèle M3) précise »
+  - Après : « Le bloc formel suivant, le modèle M3 (le troisième des modèles formels du livre, présentés au @sec:ch00-architecture), précise »
+- **G1-1** (`chapitres/08-independance-chaines.md`) : Contresens : la phrase décrivait l'échappement comme l'apparition d'un désaccord ; sens mathématique inchangé.
+  - Avant : « Un désaccord n’apparaît — et n’arrête une erreur, sous réserve de prise en compte (@def:prise-en-compte) — que si la cause échappe au producteur *et* si le contrôleur ou la comparaison échoue à la faire ressortir : »
+  - Après : « Une erreur passe au travers du contrôle croisé lorsque sa cause échappe au producteur *et* que le contrôleur ou la comparaison échoue à la faire ressortir (même un désaccord exprimé ne l’arrête que sous réserve de prise en compte, @def:prise-en-compte) : »
+- **ch8 T15** (`chapitres/08-independance-chaines.md`) : Prénoms permutés : Steven H. Orzack et Elliott Sober.
+  - Avant : « Mais Elliott Orzack et Steven Sober [@orzack1993] »
+  - Après : « Mais Steven Orzack et Elliott Sober [@orzack1993] »
+- **R7 ®** (`chapitres/08-independance-chaines.md`) : Une réunion n'est pas une somme.
+  - Avant : « et les angles morts s’additionnent. »
+  - Après : « et les angles morts se cumulent. »
+- **ch8 T19** (`chapitres/08-independance-chaines.md`) : La notation u n'est introduite qu'au ch. 9.
+  - Avant : « en supposant la comparaison fidèle et chaque désaccord suivi d’effet (prise en compte égale à $1$) : »
+  - Après : « en supposant la comparaison fidèle et chaque désaccord suivi d’effet : »
+- **ch8 T7 (PC)** (`chapitres/08-independance-chaines.md`) : PC aligné sur M1 : B1 ∩ (B2 ∪ Bcmp).
+  - Avant : « compte tenu des écarts que la comparaison ne sait pas exprimer. »
+  - Après : « augmentée des écarts que la comparaison ne sait pas exprimer. »
+- **N3** (`chapitres/08-independance-chaines.md`) : Le modèle situé dans la série.
+  - Avant : « Le modèle M1 rassemble sous forme algébrique »
+  - Après : « Le modèle M1, le premier des modèles formels du livre (@sec:ch00-architecture), rassemble sous forme algébrique »
+- **V10** (`chapitres/08-independance-chaines.md`) : « classe d'erreurs ».
+  - Avant : « par rapport à une famille d’erreurs précise »
+  - Après : « par rapport à une classe d’erreurs précise »
+- **N1** (`chapitres/08-independance-chaines.md`) : Arrière-plan tacite nommé.
+  - Avant : « a laissé dans l’arrière-plan $(\dots)$, »
+  - Après : « a laissé dans son arrière-plan tacite $\mathcal{T}$, »
+- **R4 ®** (`chapitres/09-severite-echappement.md`) : « contrôle réussi » lu « bien exécuté » ; formulation sans ambiguïté.
+  - Avant : « La **sévérité** exprime la valeur probante d’un contrôle réussi : un contrôle réussi n’est probant que dans la mesure où il aurait échoué si l’affirmation avait été fausse [@mayo1996; @mayo2018].
+::: »
+  - Après : « La **sévérité** exprime la valeur probante d’un contrôle passé sans alerte : un tel contrôle n’est probant que dans la mesure où il aurait donné l’alerte si l’affirmation avait été fausse [@mayo1996; @mayo2018].
+:::
+
+On la mesure par $\Pr(\bar{A} \mid E)$, la probabilité que le contrôle donne l’aler »
+- **R4** (`chapitres/09-severite-echappement.md`) : Idem dans le texte.
+  - Avant : « Inversement, un contrôle réussi ne déplace la confiance »
+  - Après : « Inversement, un contrôle passé sans alerte ne déplace la confiance »
+- **R4** (`chapitres/09-severite-echappement.md`) : Idem.
+  - Avant : « c’est-à-dire si l’échec du contrôle était probable dans l’hypothèse »
+  - Après : « c’est-à-dire si une alerte était probable dans l’hypothèse »
+- **R4 (PC)** (`chapitres/09-severite-echappement.md`) : Idem dans les Points clés.
+  - Avant : « - Un contrôle réussi n’est probant que dans la mesure où il aurait échoué si l’affirmation avait été fausse (sévérité) »
+  - Après : « - Un contrôle passé sans alerte n’est probant que dans la mesure où il aurait donné l’alerte si l’affirmation avait été fausse (sévérité) »
+- **G1-4** (`chapitres/09-severite-echappement.md`) : Définition de l'échappement alignée sur le ch. 6.
+  - Avant : « parvienne jusqu’à l’action sans avoir été contredite à temps. »
+  - Après : « parvienne jusqu’à l’action sans qu’un désaccord ait été détecté et pris en compte à temps. »
+- **G1-13** (`chapitres/09-severite-echappement.md`) : Écueil 5 de la spec : Bayes fixe la VPP, le comportement décide de la prise en compte.
+  - Avant : « un effondrement de la $\mathrm{VPP}$ pousse vers l’appariement des probabilités et l’érosion de la prise en compte. »
+  - Après : « un effondrement de la $\mathrm{VPP}$ expose à l’appariement des probabilités et à l’érosion de la prise en compte. »
+- **ch9 T3 (PC)** (`chapitres/09-severite-echappement.md`) : PC aligné sur le corps.
+  - Avant : « qui paie presque toujours devant des enjeux élevés et irréversibles. »
+  - Après : « qui paie lorsque les enjeux sont élevés (décision unique, perte très supérieure au coût de la contre-expertise). »
+- **G1-14** (`chapitres/09-severite-echappement.md`) : Sens de c conforme au calcul s = (1 − c)(1 − m).
+  - Avant : « la part des causes d’erreur que le producteur et le contrôleur partagent — celles qui relèvent »
+  - Après : « la part des erreurs du producteur dont la cause est partagée avec le contrôleur — causes qui relèvent »
+- **V9** (`chapitres/09-severite-echappement.md`) : Nom de la théorie harmonisé.
+  - Avant : « d’une théorie générale du contrôle des représentations finies »
+  - Après : « d’une théorie des contrôles des représentations finies »
+- **N4** (`chapitres/09-severite-echappement.md`) : Équivalence des notations rappelée à la première occurrence.
+  - Avant : « dont le taux d’erreur (introduit au @sec:ch06) vaut $P(E)$. »
+  - Après : « dont le taux d’erreur (introduit au @sec:ch06) vaut $P(E) = \Pr(E)$, noté $P(\text{faux})$ dans les tableaux et les graphiques. »
+- **V2** (`parties/partie-2.md`) : Statut épistémique des propositions glosé (p2 T6).
+  - Avant : « indique son statut et les hypothèses dont elle dépend. »
+  - Après : « indique son statut épistémique (définition, résultat sous hypothèses, hypothèse de travail ou constat empirique) et les hypothèses dont elle dépend. »
+- **R7** (`parties/partie-2.md`) : « se cumulent ».
+  - Avant : « les angles morts de toutes les étapes s’additionnent. »
+  - Après : « les angles morts de toutes les étapes se cumulent. »
+- **R4** (`parties/partie-2.md`) : Formulation de la sévérité (p2 T8).
+  - Avant : « Un contrôle réussi n’apporte une preuve que dans la mesure où il aurait échoué si l’affirmation avait été fausse. »
+  - Après : « Un contrôle passé sans alerte n’apporte une preuve que dans la mesure où il aurait donné l’alerte si l’affirmation avait été fausse. »
+- **R1 ®** (`commun/registre_termes.md`) : « ne valent que » lu comme validité.
+  - Avant : « L’une et l’autre ne valent que « pourvu que » leurs conditions soient remplies. »
+  - Après : « L’une et l’autre ne garantissent leur conclusion que « pourvu que » leurs conditions soient remplies. »
+- **R3 ®** (`commun/registre_termes.md`) : Critère discriminant de la décision unique.
+  - Avant : « Décision prise une seule fois, sans série d’essais, et dont la réponse du monde n’arrive qu’après l’acte. »
+  - Après : « Décision prise sans série d’essais comparables, si bien qu’une issue malheureuse ne peut être compensée par d’autres cas : la réponse du monde n’arrive qu’après l’acte, trop tard pour le corriger. »
+- **R11 ®** (`commun/registre_termes.md`) : Le désaccord doit parvenir à qui en prend acte et a l'autorité.
+  - Avant : « Fait que quelqu’un prenne acte d’un désaccord et ait l’autorité pour agir en conséquence. »
+  - Après : « Fait qu’un désaccord parvienne à quelqu’un qui à la fois en prend acte et a l’autorité pour agir en conséquence. »
+- **G1-4 ®** (`commun/registre_termes.md`) : Échappement : contradiction ignorée comprise.
+  - Avant : « Probabilité qu’une affirmation fausse débouche sur une action sans avoir été contredite à temps. »
+  - Après : « Probabilité qu’une affirmation fausse débouche sur une action sans qu’un désaccord ait été détecté et pris en compte à temps. »
+- **R7 ®** (`commun/registre_termes.md`) : « se cumulent ».
+  - Avant : « les angles morts s’additionnent. »
+  - Après : « les angles morts se cumulent. »
+- **R4 ®** (`commun/registre_termes.md`) : Sévérité.
+  - Avant : « Un contrôle réussi n’est probant que dans la mesure où il aurait échoué si l’affirmation avait été fausse (Mayo). »
+  - Après : « Un contrôle passé sans alerte n’est probant que dans la mesure où il aurait donné l’alerte si l’affirmation avait été fausse (Mayo). »
+- **R6 ®** (`commun/registre_termes.md`) : Vérification en amont : porte sur le composant, vaut dans la mesure de ce qu'elle établit.
+  - Avant : « Contrôle d’un composant fait une fois, par rapport à sa spécification, et valable pour toutes ses exécutions futures. »
+  - Après : « Contrôle d’un composant fait une fois, par rapport à sa spécification, et qui porte sur le composant plutôt que sur chacune de ses sorties : ce qu’il établit vaut pour toutes ses exécutions futures. »
+- **R8 ®** (`commun/registre_termes.md`) : « avant l'action ».
+  - Avant : « Erreur que contredit au moins un comparateur ; erreur que rien ne contredit. »
+  - Après : « Erreur que contredit au moins un comparateur avant l’action ; erreur que rien ne contredit avant l’action. »
+- **N1 ®** (`commun/registre_termes.md`) : nouveau terme « arrière-plan tacite » (ch. 1) ; ligne de notation $A \cap (\dots) \rightarrow B$ mise à jour ; notation $\mathcal{T}$ ajoutée.
+- **N1 ®** (`chapitres/01-outils-logique-probabilite.md`) : Introduction du terme « arrière-plan tacite » et de la lettre 𝒯.
+  - Avant : « La parenthèse $(\dots)$ désigne l’arrière-plan non énoncé, c’est-à-dire l’ensemble indéfini des circonstances ordinaires que l’on tient tacitement pour acquises en appliquant la règle. »
+  - Après : « La parenthèse $(\dots)$ désigne l’**arrière-plan tacite** de la règle, que nous noterons aussi $\mathcal{T}$ dans le texte : l’ensemble ouvert des circonstances ordinaires que l’on tient pour acquises en l’appliquant, et dont dépend sa vérité. »
+- **N1** (`chapitres/01-outils-logique-probabilite.md`) : Lettre là où la phrase manipule l'arrière-plan.
+  - Avant : « toutes les circonstances cachées dans $(\dots)$ sont réunies »
+  - Après : « toutes les circonstances cachées dans $\mathcal{T}$ sont réunies »
+- **N1 + V19 + ch1 T6** (`chapitres/01-outils-logique-probabilite.md`) : Terme fixé ; image de l'arrière-plan qui « laisse » B se produire précisée.
+  - Avant : « Cette lecture rejoint les règles à conditions tues de l’@eq:ch01-regle. Si une règle s’écrit $A \cap (\dots) \rightarrow B$, $\Pr(B \mid A)$ mesure, parmi les situations où les conditions énoncées $A$ sont remplies, la part de celles où l’arrière-plan tu $(\dots)$ laisse effectivement $B$ se produir »
+  - Après : « Cette lecture rejoint les règles à arrière-plan tacite de l’@eq:ch01-regle. Si une règle s’écrit $A \cap (\dots) \rightarrow B$, $\Pr(B \mid A)$ mesure, parmi les situations où les conditions énoncées $A$ sont remplies, la part de celles où les circonstances de l’arrière-plan tacite $\mathcal{T}$ so »
+- **V19** (`chapitres/01-outils-logique-probabilite.md`) : Titre de section harmonisé (étiquette inchangée).
+  - Avant : « ## Règles conditionnelles et conditions tues {#sec:ch01-regles-conditionnelles} »
+  - Après : « ## Règles conditionnelles et arrière-plan tacite {#sec:ch01-regles-conditionnelles} »
+- **V19 (PC)** (`chapitres/01-outils-logique-probabilite.md`) : Terme fixé.
+  - Avant : « cache un arrière-plan ouvert de conditions sous-entendues, que l’on note $A \cap (\dots) \rightarrow B$. »
+  - Après : « cache un arrière-plan tacite de conditions qu’elle n’énonce pas, ce que l’on note $A \cap (\dots) \rightarrow B$. »
+- **S14** (`chapitres/01-outils-logique-probabilite.md`) : Critère unique de la probabilité nulle (règle de Cromwell), aligné sur l'encadré.
+  - Avant : « ne donner une probabilité nulle qu’à ce qui est réellement impossible. »
+  - Après : « ne donner une probabilité nulle qu’à ce qui est logiquement impossible. »
+- **ch1 T5** (`chapitres/01-outils-logique-probabilite.md`) : Condition de l'additivité alignée sur l'encadré.
+  - Avant : « Sur une série de prévisions indépendantes, enfin, »
+  - Après : « Sur une série d’issues jugées indépendantes, enfin, »
+- **R1 + N1** (`chapitres/02-cadre.md`) : « ne garantissent leur conclusion » ; arrière-plan tacite nommé.
+  - Avant : « ne valent que « pourvu que » leurs conditions soient remplies, et que toute règle portant sur le monde s’écrit $A \cap (\dots) \rightarrow B$ (@eq:ch01-regle), la parenthèse désignant un arrière-plan non énoncé. »
+  - Après : « ne garantissent leur conclusion que « pourvu que » leurs conditions soient remplies, et que toute règle portant sur le monde s’écrit $A \cap (\dots) \rightarrow B$ (@eq:ch01-regle), la parenthèse désignant l’arrière-plan tacite $\mathcal{T}$ de la règle. »
+- **ch2 T4** (`chapitres/02-cadre.md`) : 5 % est le risque du voilier léger (ch. 4, EXP).
+  - Avant : « il estime à 5 % le risque de démâter s’il part sur un voilier léger plutôt que sur un voilier renforcé. »
+  - Après : « il hésite entre un voilier léger et un voilier renforcé, et estime à 5 % le risque de démâter s’il part sur le voilier léger. »
+- **N1 + V19** (`chapitres/02-cadre.md`) : En-tête du tableau.
+  - Avant : « | Conditions encore tues dans $(\dots)$ | »
+  - Après : « | Conditions encore tacites | »
+- **N1 + V19** (`chapitres/02-cadre.md`) : Légende du tableau.
+  - Avant : « fait passer une condition de l’arrière-plan $(\dots)$ dans la règle énoncée, sans que la liste des conditions tues se ferme jamais. »
+  - Après : « fait passer une condition de l’arrière-plan tacite dans la règle énoncée, sans que la liste des conditions tacites se ferme jamais. »
+- **V19** (`chapitres/02-cadre.md`) : Terme fixé.
+  - Avant : « réveille l’une des conditions tues, »
+  - Après : « réveille l’une des conditions tacites, »
+- **N1** (`chapitres/02-cadre.md`) : Pas de (…) nu en prose.
+  - Avant : « Le partage entre ce qui entre dans $A$ et ce qui reste dans $(\dots)$ ne concerne »
+  - Après : « Le partage entre ce qui entre dans $A$ et ce qui reste dans l’arrière-plan tacite $\mathcal{T}$ ne concerne »
+- **R2** (`chapitres/02-cadre.md`) : « finie » glosé : bornée, donc incomplète.
+  - Avant : « Un **cadre** est la spécification finie à l’intérieur de laquelle opère un raisonnement »
+  - Après : « Un **cadre** est la spécification finie, c’est-à-dire bornée et donc incomplète, à l’intérieur de laquelle opère un raisonnement »
+- **ch2 T6** (`chapitres/02-cadre.md`) : Les deux registres de l'article (lois conditionnelles, poids).
+  - Avant : « L’@eq:ch02-cond-cadre se lit à deux niveaux [@fauriat2026frame]. »
+  - Après : « L’@eq:ch02-cond-cadre se lit dans deux registres [@fauriat2026frame]. »
+- **ch2 T5** (`chapitres/02-cadre.md`) : C'est la justification du choix qui est circulaire (ART).
+  - Avant : « Ce choix précède toute inférence, et il est circulaire [@fauriat2026frame]. »
+  - Après : « Ce choix précède toute inférence, et sa justification ne peut éviter le cercle [@fauriat2026frame]. »
+- **ch2 T2** (`chapitres/02-cadre.md`) : Chez Dennett, la bombe est sur le chariot ; trois versions successives du robot (« modèle » évité).
+  - Avant : « posée sur un chariot à côté d’une bombe à retardement. Le premier modèle a tiré le chariot dehors : il savait la bombe posée dessus, mais n’avait pas compris qu’elle suivrait la batterie. Le deuxième, conçu pour déduire les conséquences de ses actes, était encore occupé à établir que tirer le chario »
+  - Après : « posée sur un chariot qui portait aussi une bombe à retardement. Dennett imagine trois versions successives de ce robot. La première a tiré le chariot dehors : elle savait la bombe posée dessus, mais n’avait pas compris qu’elle suivrait la batterie. La deuxième, conçue pour déduire les conséquences d »
+- **ch2 T3 (PC)** (`chapitres/02-cadre.md`) : Sens étroit, cohérent avec le § 5.
+  - Avant : « - Le problème du cadre, né en intelligence artificielle, est un cas particulier »
+  - Après : « - Le problème du cadre, au sens étroit où l’intelligence artificielle l’a posé, est un cas particulier »
+- **V19 (PC)** (`chapitres/02-cadre.md`) : Terme fixé.
+  - Avant : « cache un arrière-plan ouvert de conditions tues, $A \cap (\dots) \rightarrow B$, »
+  - Après : « cache un arrière-plan tacite de conditions, $A \cap (\dots) \rightarrow B$, »
+- **N1 + V19** (`chapitres/03-mondes-possibles.md`) : Arrière-plan tacite nommé à la première mention.
+  - Avant : « laisse ouvert un arrière-plan de conditions sous-entendues, noté $(\dots)$. »
+  - Après : « laisse ouvert un arrière-plan tacite $\mathcal{T}$, noté $(\dots)$ dans les formules. »
+- **N1** (`chapitres/03-mondes-possibles.md`) : Pas de (…) nu en prose.
+  - Avant : « c’est la part des situations cachées dans $(\dots)$ où la règle fonctionne. »
+  - Après : « c’est la part des situations cachées dans $\mathcal{T}$ où la règle fonctionne. »
+- **N1** (`chapitres/03-mondes-possibles.md`) : Idem.
+  - Avant : « tout ce que le cadre laisse dans $(\dots)$. »
+  - Après : « tout ce que le cadre laisse dans l’arrière-plan tacite. »
+- **N1** (`chapitres/03-mondes-possibles.md`) : Idem.
+  - Avant : « ceux où l’arrière-plan $(\dots)$ reste conforme »
+  - Après : « ceux où l’arrière-plan tacite reste conforme »
+- **N1** (`chapitres/03-mondes-possibles.md`) : Idem.
+  - Avant : « et l’on remonte vers $(\dots)$. »
+  - Après : « et l’on remonte vers l’arrière-plan tacite $\mathcal{T}$. »
+- **N1** (`chapitres/03-mondes-possibles.md`) : Idem.
+  - Avant : « Ils pèsent différemment le même arrière-plan $(\dots)$, »
+  - Après : « Ils pèsent différemment le même arrière-plan tacite, »
+- **N1** (`chapitres/03-mondes-possibles.md`) : Idem.
+  - Avant : « et reste cachée dans $(\dots)$. »
+  - Après : « et reste cachée dans l’arrière-plan tacite. »
+- **N1 (PC)** (`chapitres/03-mondes-possibles.md`) : Idem.
+  - Avant : « sur les états de l’arrière-plan $(\dots)$. »
+  - Après : « sur les états de l’arrière-plan tacite $\mathcal{T}$. »
+- **ch3 T1** (`chapitres/03-mondes-possibles.md`) : « juste » réintroduisait une valeur vraie que le chapitre écarte.
+  - Avant : « lorsque l’estimation est juste, »
+  - Après : « lorsque l’estimation est bien calibrée, »
+- **ch3 T2 (PC)** (`chapitres/03-mondes-possibles.md`) : PC aligné sur le corps et sur le garde-fou.
+  - Avant : « quelle variation plausible, ou impossible à écarter, de cet arrière-plan »
+  - Après : « quelle variation plausible, ou que l’on ne peut raisonnablement écarter, de cet arrière-plan »
+- **ch3 T3** (`chapitres/03-mondes-possibles.md`) : Le choix porte sur le voilier léger ou renforcé (ch. 4, EXP).
+  - Avant : « quel bateau il fallait choisir : »
+  - Après : « quel bateau il fallait choisir, du voilier léger ou du voilier renforcé (@sec:ch04) : »
+- **ch3 T7** (`chapitres/03-mondes-possibles.md`) : « Ni l'un ni l'autre » se lisait « tous deux ont tort » (EXP : « ni raison, ni tort »).
+  - Avant : « Ni l’un ni l’autre, et ce n’est pas faute de rigueur »
+  - Après : « Aucun des deux n’a raison, ni tort, et ce n’est pas faute de rigueur »
+- **ch3 T12** (`chapitres/03-mondes-possibles.md`) : Ordinal qui supposait de se rappeler le tableau du ch. 2.
+  - Avant : « chauffer une quatrième fois de l’eau pure »
+  - Après : « chauffer une fois de plus de l’eau pure »
+- **S14** (`chapitres/03-mondes-possibles.md`) : Ne pas examiner un monde n'est pas lui donner zéro (garde-fou concilié).
+  - Avant : « puisqu’aucune observation ne pourrait plus la relever (@sec:ch01-score-logarithmique). »
+  - Après : « puisqu’aucune observation ne pourrait plus la relever (@sec:ch01-score-logarithmique), et cela même lorsqu’on décide de ne pas examiner certains mondes : ne pas s’y attarder n’est pas leur donner zéro. »
+- **G1-2** (`chapitres/04-decider.md`) : Erreur logique : tout risque inférieur à quatre points ne suffirait pas ; il en faut à peine quatre. Aucun nombre nouveau.
+  - Avant : « un risque ignoré de moins de quatre points de pourcentage suffirait, s’il était connu, à changer sa décision ; pour le joueur de roulette russe, avec un rapport de 10 000, moins d’un centième de point suffirait. »
+  - Après : « il suffirait d’un risque ignoré d’à peine quatre points de pourcentage, s’il était connu, pour changer sa décision ; pour le joueur de roulette russe, avec un rapport de 10 000, d’un peu moins d’un centième de point. »
+- **R3 ®** (`chapitres/04-decider.md`) : Critère discriminant de la décision unique.
+  - Avant : « c’est-à-dire d’une décision prise une seule fois, sans série d’essais comparables, et dont la réponse du monde n’arrive qu’après l’acte. »
+  - Après : « c’est-à-dire d’une décision prise sans série d’essais comparables, si bien qu’une issue malheureuse ne peut être compensée par d’autres cas : la réponse du monde n’arrive qu’après l’acte, trop tard pour le corriger. »
+- **ch4 T6** (`chapitres/04-decider.md`) : « justes » → « bien calibrées » (cohérent avec le ch. 3).
+  - Avant : « et si ses estimations sont justes, »
+  - Après : « et si ses estimations sont bien calibrées, »
+- **N1** (`chapitres/04-decider.md`) : Arrière-plan tacite nommé.
+  - Avant : « pèsent différemment l’arrière-plan $(\dots)$ : »
+  - Après : « pèsent différemment l’arrière-plan tacite $\mathcal{T}$ : »
+- **N1** (`chapitres/04-decider.md`) : Idem.
+  - Avant : « a laissé tout le reste dans l’arrière-plan $(\dots)$. »
+  - Après : « a laissé tout le reste dans l’arrière-plan tacite. »
+- **N1** (`chapitres/04-decider.md`) : Idem.
+  - Avant : « avec tout ce que le cadre avait laissé dans $(\dots)$. »
+  - Après : « avec tout ce que le cadre avait laissé dans l’arrière-plan tacite. »
+- **R1** (`parties/partie-1.md`) : « ne vaut que si ses prémisses sont vraies » se lisait comme une condition de validité (p1 T1).
+  - Avant : « Une déduction ne vaut que si ses prémisses sont vraies, »
+  - Après : « Une déduction ne garantit sa conclusion que si ses prémisses sont vraies, »
+- **G1-6** (`chapitres/10-couches-basses.md`) : Lecture (a) établie par les sources : les règles sont le code ; le contrat peut être formulé après coup (FD § 9, ES § 5).
+  - Avant : « qu’on peut doter d’une spécification vérifiable, c’est-à-dire d’un contrat.
+::: »
+  - Après : « qu’on peut doter d’une spécification vérifiable, c’est-à-dire d’un contrat.
+:::
+
+Les règles dont il s’agit sont les instructions du programme elles-mêmes ; le contrat qui les énonce peut être écrit avant l’exécution, ou seulement formulé après coup. »
+- **R6 ®** (`chapitres/10-couches-basses.md`) : La vérification porte sur le composant ; elle vaut dans la mesure de ce qu'elle établit.
+  - Avant : « le contrôle d’un composant fait une fois, par rapport à sa spécification, et valable pour toutes ses exécutions futures. »
+  - Après : « le contrôle d’un composant fait une fois, par rapport à sa spécification, et qui porte sur le composant plutôt que sur chacune de ses sorties : ce qu’il établit vaut pour toutes ses exécutions futures. »
+- **R6 (PC)** (`chapitres/10-couches-basses.md`) : PC aligné sur le corps (« écrire n'est pas encore vérifier »).
+  - Avant : « contrôle le composant une fois pour toutes avant sa mise en service »
+  - Après : « peut contrôler le composant une fois pour toutes avant sa mise en service »
+- **ch10 T12** (`chapitres/10-couches-basses.md`) : Force alignée sur l'encadré des trois degrés.
+  - Avant : « dont les contrats écrits autorisent une vérification en amont »
+  - Après : « dont les contrats écrits rendent possible une vérification en amont »
+- **ch10 T4 (PC)** (`chapitres/10-couches-basses.md`) : Les cinq caractères du corps repris.
+  - Avant : « repose sur un énoncé écrit à l’avance, lisible par autrui, discutable et opposable à son exécution, »
+  - Après : « repose sur un énoncé écrit à l’avance, lisible par autrui, discutable, versionnable et violable, donc opposable à son exécution, »
+- **V8** (`chapitres/10-couches-basses.md`) : « consigne », terme du registre.
+  - Avant : « la sortie exacte de chaque requête, »
+  - Après : « la sortie exacte de chaque consigne, »
+- **V9 + V20** (`chapitres/10-couches-basses.md`) : Nom de la théorie ; noms des cinq conditions.
+  - Avant : « la théorie générale du contrôle exposée dans la @sec:partie-2, en particulier sur les cinq conditions nécessaires pour qu’un comparateur arrête une erreur (@sec:ch06, @prop:comparateur) »
+  - Après : « la théorie des contrôles exposée dans la @sec:partie-2, en particulier sur les cinq conditions de détection : existence, différence (se tromper autrement), comparabilité, arrivée à temps et prise en compte (@sec:ch06, @prop:comparateur) »
+- **ch10 T5** (`chapitres/10-couches-basses.md`) : Le facteur 4,45 porte sur les impulsions, non sur la trajectoire (corps du chapitre ; mco1999).
+  - Avant : « introduisant un écart d’un facteur voisin de 4,45 dans l’estimation de trajectoire »
+  - Après : « introduisant un écart d’un facteur voisin de 4,45 dans les impulsions prises en compte pour l’estimation de trajectoire »
+- **ch10 T6** (`chapitres/10-couches-basses.md`) : Des anomalies ont été vues sans être remontées (encadré, ES) : « alarme décisive » obscur.
+  - Avant : « a poursuivi ses calculs sans déclencher d’alarme décisive ni interrompre les opérations. »
+  - Après : « a poursuivi ses calculs sans qu’aucune alarme ne vienne interrompre les opérations. »
+- **ch10 T6 (PC)** (`chapitres/10-couches-basses.md`) : Idem.
+  - Avant : « en produisant des résultats faux sans alarme décisive, »
+  - Après : « en produisant des résultats faux sans qu’aucune alarme ne l’arrête, »
+- **ch11 T1 (PC) + p3 T4** (`chapitres/11-regle-tiree-des-donnees.md`) : Les tests de référence mesurent ; c'est l'optimisation de leurs scores qui oriente (corps, Goodhart ; ES § 3).
+  - Avant : « - Les consignes, l’ajustement sur des préférences humaines et les tests de référence orientent les distributions du modèle »
+  - Après : « - Les consignes, l’ajustement sur des préférences humaines et l’optimisation des scores aux tests de référence orientent les distributions du modèle »
+- **ch11 T2** (`chapitres/11-regle-tiree-des-donnees.md`) : À la lettre, la phrase décrivait un ajustement sur le jeu d'essai (faute de méthode).
+  - Avant : « — ainsi qu’aux échantillons d’essai tirés d’une source semblable —, »
+  - Après : « — que l’on contrôle ensuite sur des échantillons d’essai tirés d’une source semblable —, »
+- **ch11 T4 (PC)** (`chapitres/11-regle-tiree-des-donnees.md`) : Critère absent du corps.
+  - Avant : « n’obéit à aucune frontière nette ni prévisible, »
+  - Après : « n’obéit à aucune frontière nette, »
+- **ch11 T5 (PC)** (`chapitres/11-regle-tiree-des-donnees.md`) : Portée du corps : une réponse prise isolément.
+  - Avant : « n’a pas d’adresse de défaillance et ne porte en surface aucune marque d’erreur. »
+  - Après : « n’a pas d’adresse de défaillance et, prise isolément, ne porte en surface aucune marque d’erreur. »
+- **V8** (`chapitres/11-regle-tiree-des-donnees.md`) : « consigne ».
+  - Avant : « n’interdit l’invention sur la requête suivante. »
+  - Après : « n’interdit l’invention sur la consigne suivante. »
+- **V6** (`chapitres/11-regle-tiree-des-donnees.md`) : « invention » terme courant, nom usuel signalé une fois.
+  - Avant : « réduisent sensiblement la fréquence de ces inventions. »
+  - Après : « réduisent sensiblement la fréquence de ces inventions (ce qu’on appelle couramment des hallucinations). »
+- **V6** (`chapitres/11-regle-tiree-des-donnees.md`) : Idem.
+  - Avant : « dans les réponses fabriquées que dans »
+  - Après : « dans les réponses inventées que dans »
+- **V6** (`chapitres/11-regle-tiree-des-donnees.md`) : « modèle de récompense », comme l'encadré.
+  - Avant : « il procède en entraînant un modèle auxiliaire sur »
+  - Après : « il procède en entraînant un modèle de récompense sur »
+- **ch11 T10** (`chapitres/11-regle-tiree-des-donnees.md`) : Le procédé porte sur une phrase à compléter (ES § 4).
+  - Avant : « Lorsqu’on lui soumet le début d’une phrase demandant dans quelle ville se dresse la tour Eiffel, »
+  - Après : « Lorsqu’on lui soumet une phrase inachevée dont la suite attendue est la ville où se dresse la tour Eiffel, »
+- **G1-9** (`chapitres/12-autre-regime.md`) : La borne de Kalai est un minorant (encadré, ES).
+  - Avant : « engendrer des énoncés faux à un taux voisin de la proportion de singletons [@kalai2024]. »
+  - Après : « engendrer des énoncés faux à un taux au moins de l’ordre de la proportion de singletons [@kalai2024]. »
+- **G1-9 (PC)** (`chapitres/12-autre-regime.md`) : Idem.
+  - Avant : « à une fréquence comparable au taux de singletons »
+  - Après : « à une fréquence au moins de l’ordre du taux de singletons »
+- **G1-9** (`chapitres/12-autre-regime.md`) : Force alignée sur l'encadré : s'écarter de la calibration générative, notamment par l'abstention.
+  - Avant : « elle *entraîne* mathématiquement l’invention et doit être abandonnée [@kalai2024]. »
+  - Après : « elle *entraîne* mathématiquement l’invention, et il est recommandé de s’en écarter, notamment par l’abstention [@kalai2024]. »
+- **G1-10** (`chapitres/12-autre-regime.md`) : Citation sans source (phrase d'un texte interne) : guillemets retirés, renvoi au passage sur l'absence d'alarme.
+  - Avant : « La seconde confusion serait de conclure de façon trop absolue que « rien dans le modèle ne calcule de signal lorsqu’il quitte sa zone de compétence ». »
+  - Après : « La seconde confusion serait de conclure de façon trop absolue, de l’absence d’alarme relevée plus haut, que rien dans le modèle ne calcule de signal lorsqu’il quitte sa zone de compétence. »
+- **G1-11 + V18 + V8** (`chapitres/12-autre-regime.md`) : « à l'usage » (ES) ; « interne » contredisait l'encadré sur la dispersion ; « consigne ».
+  - Avant : « *L’indiscernabilité depuis l’intérieur.* Vue de l’interface conversationnelle, une réponse émise de chaque côté de la frontière garde la même aisance de ton. Aucune alarme interne n’informe l’utilisateur ou le programme appelant que la requête vient de tomber »
+  - Après : « *L’indiscernabilité à l’usage.* Vue de l’interface conversationnelle, une réponse émise de chaque côté de la frontière garde la même aisance de ton. Aucune alarme n’avertit l’utilisateur ou le programme appelant que la consigne vient de tomber »
+- **G1-11 (PC)** (`chapitres/12-autre-regime.md`) : Idem.
+  - Avant : « et indiscernable de l’intérieur de la conversation, »
+  - Après : « et invisible à l’usage, »
+- **ch12 T6** (`chapitres/12-autre-regime.md`) : Cinq réponses, et non six.
+  - Avant : « reposer la question 5 fois offre une sévérité de 99,9 % »
+  - Après : « tirer 5 réponses offre une sévérité de 99,9 % »
+- **ch12 T7** (`chapitres/12-autre-regime.md`) : Légende alignée sur le texte et le tableau.
+  - Avant : « taux d’alerte sur bonne réponse.](figures/ch12-plausibilite.pdf) »
+  - Après : « taux d’alerte à tort.](figures/ch12-plausibilite.pdf) »
+- **ch12 T9** (`chapitres/12-autre-regime.md`) : La formule donne la probabilité qu'au moins un tirage s'écarte de Mercure.
+  - Avant : « les tirages suivants rejoignent Vénus et le contrôle lève une alerte à tort »
+  - Après : « au moins un des tirages suivants s’écarte de Mercure, et le contrôle lève une alerte à tort »
+- **ch12 T12** (`chapitres/12-autre-regime.md`) : « compositionnel » a un sens technique précis ; ES : un modèle que n'importe quel logiciel appelle.
+  - Avant : « tient à la nature *compositionnelle* d’un grand modèle »
+  - Après : « tient à la nature *composable* d’un grand modèle »
+- **V7** (`chapitres/12-autre-regime.md`) : « orientation ».
+  - Avant : « chaque changement d’alignement ou d’outillage »
+  - Après : « chaque changement d’orientation ou d’outillage »
+- **V6** (`chapitres/12-autre-regime.md`) : « invention ».
+  - Avant : « entraîne mécaniquement la fabrication de faits rares. »
+  - Après : « entraîne mécaniquement l’invention de faits rares. »
+- **ch10 T5-T6 (ch12)** (`chapitres/12-autre-regime.md`) : Objet du facteur 4,45 ; « alarme décisive ».
+  - Avant : « introduisant un écart d’un facteur proche de $4{,}45$. Aucune alarme décisive n’a interrompu la mission »
+  - Après : « introduisant un écart d’un facteur proche de $4{,}45$ dans les impulsions transmises. Aucune alarme n’a interrompu la mission »
+- **ch12 T4** (`chapitres/12-autre-regime.md`) : Rappel du volet (a) avant l'encadré qui en dépend.
+  - Avant : « précise exactement le champ d’application du volet (a) de la @prop:cause-commune : »
+  - Après : « précise exactement le champ d’application du volet (a) de la @prop:cause-commune, selon lequel un comparateur calculé à partir du seul contenu du cadre ne peut pas détecter une erreur causée par un facteur que ce cadre omet : »
+- **V5** (`chapitres/12-autre-regime.md`) : « devinette » (calque de guess) → réponse hasardée.
+  - Avant : « tout en récompensant une devinette tombée juste par hasard. »
+  - Après : « tout en récompensant une réponse hasardée qui tombe juste. »
+- **V5** (`chapitres/12-autre-regime.md`) : Idem.
+  - Avant : « sélectionnent ainsi activement la devinette assurée »
+  - Après : « sélectionnent ainsi activement la réponse hasardée avec assurance »
+- **V5** (`chapitres/12-autre-regime.md`) : Idem.
+  - Avant : « *Les erreurs de devinette (dispersion).* »
+  - Après : « *Les erreurs hasardées (dispersion).* »
+- **V5** (`chapitres/12-autre-regime.md`) : Idem.
+  - Avant : « *La répétition attrape efficacement la devinette.* »
+  - Après : « *La répétition attrape efficacement les erreurs hasardées.* »
+- **V5** (`chapitres/12-autre-regime.md`) : Idem.
+  - Avant : « Pour les erreurs de devinette, l’étalement »
+  - Après : « Pour les erreurs hasardées, l’étalement »
+- **V5** (`chapitres/12-autre-regime.md`) : Idem.
+  - Avant : « partage entre devinette dispersée et erreur constante »
+  - Après : « partage entre erreur hasardée et erreur constante »
+- **V5 (PC)** (`chapitres/12-autre-regime.md`) : Idem.
+  - Avant : « sélectionnent la devinette assurée. »
+  - Après : « sélectionnent la réponse hasardée avec assurance. »
+- **V5 (PC)** (`chapitres/12-autre-regime.md`) : Idem.
+  - Avant : « contre les erreurs de devinette qui dispersent les réponses »
+  - Après : « contre les erreurs hasardées, qui dispersent les réponses »
+- **V5** (`chapitres/13-synthese-deux-axes.md`) : « erreurs de devinette » → « erreurs hasardées » (2 occurrence(s)).
+- **V5** (`chapitres/15-erosion-verifications.md`) : « erreurs de devinette » → « erreurs hasardées » (1 occurrence(s)).
+- **V5** (`chapitres/99-conclusion.md`) : « erreurs de devinette » → « erreurs hasardées » (1 occurrence(s)).
+- **G1-12** (`chapitres/13-synthese-deux-axes.md`) : L'apport extérieur fait d'abord passer l'erreur dans la colonne signalée ; la montée suppose de réviser le cadre (FD § 10).
+  - Avant : « ne fait remonter une erreur de la ligne du bas vers la ligne du haut. Une pertinence nouvelle ne peut entrer que du dehors, par l’avertissement d’un tiers ou par l’épreuve du réel (@sec:ch07-deux-voies). »
+  - Après : « ne fait passer la cause d’une erreur de la ligne du bas à la ligne du haut. Une pertinence nouvelle ne peut entrer que du dehors, par l’avertissement d’un tiers ou par l’épreuve du réel (@sec:ch07-deux-voies) : l’apport extérieur rend d’abord l’omission signalée, et c’est seulement en révisant le ca »
+- **G1-12 (PC)** (`chapitres/13-synthese-deux-axes.md`) : « les deux cas » ne pouvait désigner les composants appris, sans formalisme.
+  - Avant : « dans les deux cas, le formalisme déplace la colonne, jamais la ligne. »
+  - Après : « de manière générale, le formalisme, là où il existe, déplace la colonne, jamais la ligne. »
+- **ch13 T4 (PC)** (`chapitres/13-synthese-deux-axes.md`) : PC aligné sur le corps (deux voies extérieures ; la génération n'accélère pas l'épreuve).
+  - Avant : « ne s’automatise pas et reste liée au contact avec le monde. »
+  - Après : « ne s’accélère pas par la seule génération automatique et reste liée à un apport extérieur au cadre, celui d’une autre discipline ou le contact avec le monde. »
+- **R8 ®** (`chapitres/13-synthese-deux-axes.md`) : « avant l'action ».
+  - Avant : « On appelle **erreur signalée** une erreur que contredit au moins un comparateur, et **erreur silencieuse** une erreur que rien ne contredit. »
+  - Après : « On appelle **erreur signalée** une erreur que contredit au moins un comparateur avant l’action, et **erreur silencieuse** une erreur que rien ne contredit avant l’action. »
+- **ch13 T11** (`chapitres/13-synthese-deux-axes.md`) : Référent de « cette partie » ambigu.
+  - Avant : « en annonçant que la synthèse de cette partie déplierait »
+  - Après : « en annonçant que le présent chapitre déplierait »
+- **ch13 T14** (`chapitres/13-synthese-deux-axes.md`) : « contrôleur » est un terme du registre ; ici, l'organe de commande.
+  - Avant : « associe à un contrôleur complexe ou non certifié un petit module »
+  - Après : « associe à une loi de commande complexe ou non certifiée un petit module »
+- **ch13 T14** (`chapitres/13-synthese-deux-axes.md`) : Idem.
+  - Avant : « Tant que le contrôleur principal — »
+  - Après : « Tant que la loi de commande principale — »
+- **ch13 T14** (`chapitres/13-synthese-deux-axes.md`) : Idem.
+  - Avant : « les millions de paramètres du contrôleur appris »
+  - Après : « les millions de paramètres de la loi de commande apprise »
+- **V7** (`chapitres/13-synthese-deux-axes.md`) : « orientés ».
+  - Avant : « et alignés par les mêmes préférences »
+  - Après : « et orientés par les mêmes préférences »
+- **V9** (`chapitres/13-synthese-deux-axes.md`) : Nom de la théorie.
+  - Avant : « En appliquant la théorie générale des contrôles »
+  - Après : « En appliquant la théorie des contrôles »
+- **V18** (`chapitres/13-synthese-deux-axes.md`) : Référent de « l'intérieur ».
+  - Avant : « *La ligne est fixée par le cadre et ne se voit pas de l’intérieur.* »
+  - Après : « *La ligne est fixée par le cadre et ne se voit pas de l’intérieur du cadre.* »
+- **V18 (PC)** (`chapitres/13-synthese-deux-axes.md`) : Idem.
+  - Avant : « et ne peut être inspectée de l’intérieur ; »
+  - Après : « et ne peut être inspectée de l’intérieur du cadre ; »
+- **p3 T6 + R6** (`parties/partie-3.md`) : « appliquée mécaniquement » = respect vérifié par une machine (ch. 10) ; portée de la vérification en amont.
+  - Avant : « et pour peu qu’elle soit appliquée mécaniquement, on peut contrôler un composant une fois pour toutes, avant sa mise en service, et ce contrôle vaut pour toutes ses exécutions futures. »
+  - Après : « et pour peu que son respect soit vérifié mécaniquement, on peut contrôler un composant une fois pour toutes, avant sa mise en service, et ce que ce contrôle établit vaut pour toutes ses exécutions futures. »
+- **p3 T8** (`parties/partie-3.md`) : La cause de la perte, sans laquelle l'exemple n'illustre pas l'adresse.
+  - Avant : « comme lors de la perte de la sonde *Mars Climate Orbiter*. »
+  - Après : « comme lors de la perte de la sonde *Mars Climate Orbiter*, due à une confusion d’unités à une interface spécifiée. »
+- **p3 T4** (`parties/partie-3.md`) : Comme le PC du ch. 11.
+  - Avant : « Les consignes, l’ajustement sur des préférences humaines et les tests de référence orientent le modèle »
+  - Après : « Les consignes, l’ajustement sur des préférences humaines et l’optimisation des scores aux tests de référence orientent le modèle »
+- **p3 T7** (`parties/partie-3.md`) : « à défaut » : pour les autres tâches.
+  - Avant : « ou bien les placer sur chaque sortie, une à une. »
+  - Après : « ou bien, à défaut, contrôler chaque sortie, une à une. »
+- **p3 T3** (`parties/partie-3.md`) : Inventer lorsqu'on l'interroge sur des faits rares (FD § 10).
+  - Avant : « est conduit à inventer des faits rares. »
+  - Après : « est conduit à inventer lorsqu’on l’interroge sur des faits rares dans ses données. »
+- **p3 T1 + V18** (`parties/partie-3.md`) : De l'intérieur du cadre (FD).
+  - Avant : « et ne peut pas être examinée de l’intérieur ; »
+  - Après : « et ne peut pas être examinée de l’intérieur du cadre ; »
+- **p3 T2** (`parties/partie-3.md`) : Le superlatif n'est pas étayé ; FD : « new in kind ».
+  - Avant : « des erreurs du type le plus délicat : »
+  - Après : « des erreurs d’un type nouveau : »
+- **p3 T4 (ch13)** (`parties/partie-3.md`) : Comme le PC du ch. 13.
+  - Avant : « et qui ne s’automatise pas. »
+  - Après : « et que la seule génération automatique n’accélère pas. »
+- **G1-3** (`chapitres/14-chaines-qui-agissent.md`) : Le confinement tenait au lecteur ou au comparateur, non aux couches basses, qui exécutent tout ordre bien formé (ES § 7).
+  - Avant : « l’absence de contrat au sommet demeurait contenue par les couches situées juste au-dessous. »
+  - Après : « l’absence de contrat au sommet demeurait contenue par le lecteur humain ou par le comparateur placé entre ce sommet et les couches situées au-dessous. »
+- **ch14 T2** (`chapitres/14-chaines-qui-agissent.md`) : 42,2 % ne « domine » pas ; force alignée sur les PC.
+  - Avant : « *Le facteur partagé finit par dominer les défaillances restantes.* »
+  - Après : « *Le facteur partagé pèse lourd dans les défaillances restantes.* »
+- **ch14 T3 (PC)** (`chapitres/14-chaines-qui-agissent.md`) : PC aligné sur l'encadré : facteur partagé par l'agent et ses contrôleurs.
+  - Avant : « ils laissent intact tout facteur omis partagé par l’ensemble des maillons, »
+  - Après : « ils laissent intact tout facteur omis que partagent l’agent et ses contrôleurs, et qui pèse sur toute la trajectoire, »
+- **N1** (`chapitres/14-chaines-qui-agissent.md`) : Pas de (…) nu en prose.
+  - Avant : « dans les limites de $(\dots)$ »
+  - Après : « dans les limites de son arrière-plan tacite $\mathcal{T}$ »
+- **V20** (`chapitres/14-chaines-qui-agissent.md`) : Nom fixé de la grille ; conditions énumérées à la première mention.
+  - Avant : « Rapproché des cinq conditions nécessaires pour qu’un contrôle arrête une erreur (@sec:ch06-cinq-conditions, @prop:comparateur), »
+  - Après : « Rapproché des cinq conditions de détection (existence, différence, comparabilité, arrivée à temps, prise en compte ; @sec:ch06-cinq-conditions, @prop:comparateur), »
+- **N3** (`chapitres/14-chaines-qui-agissent.md`) : Modèle situé dans la série.
+  - Avant : « Au @sec:ch08, le modèle M1 avait déjà chiffré »
+  - Après : « Au @sec:ch08, le modèle M1, celui des angles morts et de l’échappement, avait déjà chiffré »
+- **ch15 T4** (`chapitres/15-erosion-verifications.md`) : L'ironie de Bainbridge éclaire la posture, elle n'en est pas la cause (FD § 9.2).
+  - Avant : « Cette dynamique générale explique pourquoi la posture »
+  - Après : « Cette dynamique générale éclaire aussi pourquoi la posture »
+- **ch15 T5** (`chapitres/15-erosion-verifications.md`) : La première condition découle du scénario du brouillon, non des pièges.
+  - Avant : « La conclusion pratique de ces deux pièges est nette : »
+  - Après : « La conclusion pratique de cette analyse est nette : »
+- **ch15 T8 (PC) + p4 T5** (`chapitres/15-erosion-verifications.md`) : Le corps attribue l'effet à la fluidité, sans en faire la cause unique (ES : « fluent output feels like progress »).
+  - Avant : « un modèle supprime le signe révélateur du doute à la surface de chaque sortie et peut tromper jusqu’aux experts sur leur propre efficacité, »
+  - Après : « un modèle supprime le signe révélateur du doute à la surface de chaque sortie, et cette fluidité peut tromper jusqu’aux experts sur leur propre productivité, »
+- **N1** (`chapitres/15-erosion-verifications.md`) : (…) nu lu comme un trou par les deux lecteurs.
+  - Avant : « ce que le cadre du modèle a laissé dans $(\dots)$ ou »
+  - Après : « ce que le cadre du modèle a laissé dans son arrière-plan tacite $\mathcal{T}$ ou »
+- **V12** (`chapitres/15-erosion-verifications.md`) : « arrêter » lu « cesser ».
+  - Avant : « S’il n’a pas préalablement arrêté sa propre estimation, »
+  - Après : « S’il n’a pas préalablement fixé sa propre estimation, »
+- **V12 (PC)** (`chapitres/15-erosion-verifications.md`) : Idem.
+  - Avant : « que si la personne arrête d’abord sa propre représentation »
+  - Après : « que si la personne se forme d’abord sa propre représentation »
+- **V7** (`chapitres/15-erosion-verifications.md`) : Moyen : ajustement sur des préférences humaines.
+  - Avant : « sur les modèles orientés par préférences humaines »
+  - Après : « sur les modèles orientés par un ajustement sur des préférences humaines »
+- **ch16 T5** (`chapitres/16-angles-morts-collectifs.md`) : Vrai sous appariement seulement (sous examen complet, 32 % des erreurs sont arrêtées).
+  - Avant : « Avec un risque de 1,93 % contre 2 % sans contrôleur, le contrôle croisé n’arrête presque plus rien. »
+  - Après : « Sous appariement des probabilités, avec un risque de 1,93 % contre 2 % sans contrôleur, le contrôle croisé n’arrête presque plus rien. »
+- **V11** (`chapitres/16-angles-morts-collectifs.md`) : Collocation.
+  - Avant : « comment trancher une décision unique à fort enjeu »
+  - Après : « comment prendre une décision unique à fort enjeu »
+- **V12** (`chapitres/16-angles-morts-collectifs.md`) : « arrêter » lu « cesser ».
+  - Avant : « arrêter d’abord leur propre jugement avant de consulter l’outil »
+  - Après : « se former d’abord leur propre jugement avant de consulter l’outil »
+- **V13** (`chapitres/16-angles-morts-collectifs.md`) : « lassitude face aux alertes » (alert fatigue).
+  - Avant : « la montée de la corrélation des causes d’erreur et l’usure des alertes lorsque »
+  - Après : « la montée de la corrélation des causes d’erreur et la lassitude face aux alertes lorsque »
+- **V13** (`chapitres/16-angles-morts-collectifs.md`) : Idem.
+  - Avant : « récupère une partie de l’échappement dû à l’usure des alertes »
+  - Après : « récupère une partie de l’échappement dû à la lassitude face aux alertes »
+- **V13** (`chapitres/16-angles-morts-collectifs.md`) : Idem (titre de bloc).
+  - Avant : « titre="Séparer la corrélation des causes et l’usure des alertes" »
+  - Après : « titre="Séparer la corrélation des causes et la lassitude face aux alertes" »
+- **V13** (`chapitres/16-angles-morts-collectifs.md`) : Idem.
+  - Avant : « et réduit nettement l’usure due aux fausses alertes »
+  - Après : « et réduit nettement la lassitude due aux fausses alertes »
+- **V18** (`chapitres/16-angles-morts-collectifs.md`) : Référent de « l'intérieur ».
+  - Avant : « ne peut garantir, de l’intérieur, qu’elle n’a rien omis. »
+  - Après : « ne peut garantir, de l’intérieur de son propre cadre, qu’elle n’a rien omis. »
+- **V7** (`chapitres/16-angles-morts-collectifs.md`) : Moyen : ajustement sur des préférences humaines.
+  - Avant : « un biais induit par l’orientation sur préférences humaines »
+  - Après : « un biais induit par l’ajustement sur des préférences humaines »
+- **V7** (`chapitres/16-angles-morts-collectifs.md`) : Idem.
+  - Avant : « ce que la consigne ou l’ajustement par préférences pousse à taire »
+  - Après : « ce que la consigne ou l’ajustement sur des préférences humaines pousse à taire »
+- **N3** (`chapitres/16-angles-morts-collectifs.md`) : Modèle situé.
+  - Avant : « Dans les paramètres du modèle M1 (@eq:ch09-sensibilite »
+  - Après : « Dans les paramètres du modèle M1, celui des angles morts et de l’échappement (@eq:ch09-sensibilite »
+- **R7** (`parties/partie-4.md`) : « se cumulent ».
+  - Avant : « dont les angles morts s’additionnent. »
+  - Après : « dont les angles morts se cumulent. »
+- **p4 T2** (`parties/partie-4.md`) : La couche nommée (ES § 7 : « the least-guaranteed layer »).
+  - Avant : « Donner le pouvoir d’agir à la couche qui offre le moins de garanties inverse ainsi l’architecture qui rendait la pile logicielle sûre. »
+  - Après : « Confier le pouvoir d’agir au modèle de langage, la couche de la pile qui offre le moins de garanties, inverse l’architecture qui la rendait sûre. »
+- **p4 T6** (`parties/partie-4.md`) : FD : « process diagram ».
+  - Avant : « que personne n’avait jamais dessinée sur un organigramme. »
+  - Après : « que personne n’avait jamais inscrite dans un schéma de procédure. »
+- **p4 T5** (`parties/partie-4.md`) : Aligné sur le corps du ch. 15.
+  - Avant : « et l’aisance trompe jusqu’aux experts sur leur propre efficacité. »
+  - Après : « et cette fluidité trompe jusqu’aux experts sur leur propre productivité. »
+- **V13** (`parties/partie-4.md`) : « lassitude face aux alertes ».
+  - Avant : « sépare cette corrélation de l’usure des alertes, »
+  - Après : « sépare cette corrélation de la lassitude face aux alertes, »
+- **p4 T3** (`parties/partie-4.md`) : Objet du prêt, mots du ch. 16.
+  - Avant : « est un prêteur unique pour tous les emprunteurs : »
+  - Après : « est un prêteur unique de savoir et de formulation pour tous ceux qui le consultent : »
+- **V11** (`parties/partie-4.md`) : Collocation.
+  - Avant : « comment trancher une décision qui ne se jouera qu’une fois »
+  - Après : « comment prendre une décision qui ne se jouera qu’une fois »
+- **G1-7** (`chapitres/17-decisions-sans-appel.md`) : Distinguer le poids du jugement de prudence (croît avec les enjeux ; ART) et la marge qui suffit à renverser la décision (décroît quand p* tend vers 0).
+  - Avant : « Ce jugement doit peser d’autant plus lourd que les enjeux sont élevés, »
+  - Après : « Ce jugement doit être d’autant plus exigeant que le rapport des enjeux est élevé, »
+- **G1-7** (`chapitres/17-decisions-sans-appel.md`) : Idem ; un seul nom pour L/ΔU.
+  - Avant : « *La marge a un prix, d’autant plus faible que les enjeux sont asymétriques.* »
+  - Après : « *La marge a un prix, d’autant plus faible, comparé à la perte évitée, que le rapport des enjeux est élevé.* »
+- **G1-7** (`chapitres/17-decisions-sans-appel.md`) : Idem.
+  - Avant : « *Plus les enjeux sont lourds, plus la marge nécessaire est mince.* »
+  - Après : « *Plus le rapport des enjeux est élevé, plus la marge qui suffit à renverser la décision est mince.* »
+- **G1-8** (`chapitres/17-decisions-sans-appel.md`) : Quatre issues annoncées : le cinquième libellé sort de l'item 3, dont il ne remplit pas la condition.
+  - Avant : « le renoncement évite un danger que le cadre ne voyait pas. Lorsque $p \ge p^\ast$ dès l’origine, comme pour M. X, on parlera simplement de *renoncement justifié*. »
+  - Après : « le renoncement évite un danger que le cadre ne voyait pas. »
+- **G1-8** (`chapitres/17-decisions-sans-appel.md`) : Idem : le cas M. X présenté après la liste (étiquette du tableau généré).
+  - Avant : « Ce manque à gagner est le prix visible de la marge d’humilité.
+
+Le bloc formel suivant »
+  - Après : « Ce manque à gagner est le prix visible de la marge d’humilité.
+
+Le troisième quadrant comprend aussi le cas où $p \ge p^\ast$ dès l’origine, comme pour M. X : on renonce alors sans avoir besoin de marge, et l’on parlera de *renoncement justifié*.
+
+Le bloc formel suivant »
+- **G1-8** (`chapitres/17-decisions-sans-appel.md`) : Légende : même quadrant.
+  - Avant : « à l’issue *sauvé par la marge*.](figures/ch17-decisions.pdf) »
+  - Après : « à l’issue *sauvé par la marge*, qui appartient au même quadrant que le *renoncement justifié*.](figures/ch17-decisions.pdf) »
+- **ch17 T3 (PC)** (`chapitres/17-decisions-sans-appel.md`) : Le corps rend la protection conditionnelle.
+  - Avant : « elle protège une décision unique du piège silencieux, »
+  - Après : « elle peut protéger une décision unique du piège silencieux, »
+- **ch17 T4 (PC)** (`chapitres/17-decisions-sans-appel.md`) : Le verrou s'ajoute à la marge, non à la calibration.
+  - Avant : « appelle en outre un verrou, »
+  - Après : « appelle, en plus d’une marge d’humilité, un verrou, »
+- **ch17 T5 (PC)** (`chapitres/17-decisions-sans-appel.md`) : Aligné sur l'encadré nuance.
+  - Avant : « qu’aucune règle interne ne sait lire. »
+  - Après : « qu’aucun contrôle interne ne sait lire. »
+- **ch17 T6** (`chapitres/17-decisions-sans-appel.md`) : Portée : dans ce modèle (verrous, comparateurs, bacs à sable viennent ensuite).
+  - Avant : « *La marge d’humilité est le seul levier du décideur contre ce que le cadre omet.* »
+  - Après : « *Dans ce modèle, la marge d’humilité est le seul levier du décideur contre ce que le cadre omet.* »
+- **G1-22 (PC)** (`chapitres/17-decisions-sans-appel.md`) : Étape manquante du raisonnement (FD § 9.4).
+  - Avant : « - Toute action étant aussi une question posée au monde, on explore librement dans un bac à sable, où la réponse est peu coûteuse et réversible, »
+  - Après : « - Toute action étant aussi une question posée au monde, mieux vaut la poser là où la réponse est peu coûteuse et réversible : on explore librement dans un bac à sable, »
+- **R9** (`chapitres/17-decisions-sans-appel.md`) : Une réponse ne s'« efface » pas ; mot du registre.
+  - Avant : « là où elle coûterait trop cher ou ne pourrait être effacée. »
+  - Après : « là où elle coûterait trop cher ou serait irréversible. »
+- **R9** (`chapitres/17-decisions-sans-appel.md`) : Idem.
+  - Avant : « coûterait trop cher ou ne pourrait plus être effacée. »
+  - Après : « coûterait trop cher ou serait irréversible. »
+- **R9** (`chapitres/17-decisions-sans-appel.md`) : Ce qu'interroge un bac à sable.
+  - Avant : « où l’on peut donc interroger le monde à peu de frais.
+::: »
+  - Après : « où l’on peut donc interroger le monde à peu de frais.
+:::
+
+Le monde qu’on y interroge est réel lorsqu’il est lui-même calculatoire (le compilateur, les tests, une base de données d’essai) ; ailleurs, le bac à sable n’interroge que ce qu’il reproduit. »
+- **V14** (`chapitres/17-decisions-sans-appel.md`) : Glose à la première occurrence.
+  - Avant : « et propose quatre questions à poser devant tout chiffre assuré. »
+  - Après : « et propose quatre questions à poser devant tout chiffre assuré, c’est-à-dire présenté avec assurance, sans ses conditions. »
+- **V4** (`chapitres/17-decisions-sans-appel.md`) : « couche » réservé à la pile ; la couche nommée.
+  - Avant : « confier l’autorité d’agir à la couche qui offre le moins de garanties, »
+  - Après : « confier l’autorité d’agir à la couche de la pile qui offre le moins de garanties, le modèle de langage, »
+- **V20** (`chapitres/17-decisions-sans-appel.md`) : Les cinq conditions énumérées (le lecteur cherchait la cinquième).
+  - Avant : « le verrou se lit à travers les cinq conditions du @sec:ch06 (@sec:ch06-cinq-conditions). »
+  - Après : « le verrou se lit à travers les cinq conditions de détection du @sec:ch06 : existence, différence, comparabilité, arrivée à temps et prise en compte (@sec:ch06-cinq-conditions). »
+- **N1** (`chapitres/17-decisions-sans-appel.md`) : (…) nu en prose.
+  - Avant : « La question fait réapparaître l’arrière-plan $(\dots)$ et »
+  - Après : « La question fait réapparaître l’arrière-plan tacite $\mathcal{T}$ et »
+- **N3** (`chapitres/17-decisions-sans-appel.md`) : Modèle situé dans la série.
+  - Avant : « que nous appellerons M2, avec ses hypothèses »
+  - Après : « que nous appellerons M2 (le deuxième des modèles formels du livre, présentés au @sec:ch00-architecture), avec ses hypothèses »
+- **V4** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « ### Qui : partager l’interface et comprendre une couche au-dessous { »
+  - Après : « ### Qui : partager l’interface et comprendre le niveau situé dessous { »
+- **V4** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « tout en *comprenant au moins une couche au-dessous*. »
+  - Après : « tout en *comprenant le niveau situé sous cette interface*. »
+- **V4** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « un contrôleur incapable de lire une couche au-dessous de ce qu’il approuve »
+  - Après : « un contrôleur incapable de lire le niveau situé sous ce qu’il approuve »
+- **V4** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « ne pratiquent plus la couche inférieure »
+  - Après : « ne pratiquent plus le niveau inférieur »
+- **V4** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « tant d’heures de spécialistes capables de lire une couche au-dessous. »
+  - Après : « tant d’heures de spécialistes capables de lire le niveau situé sous l’interface. »
+- **V4** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « maîtrise la couche au-dessous nécessaire »
+  - Après : « maîtrise le niveau sous-jacent nécessaire »
+- **V4** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « confiée à des contrôleurs incapables de lire une couche au-dessous. »
+  - Après : « confiée à des contrôleurs incapables de lire le niveau situé sous l’interface. »
+- **V4** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « parce qu’ils ne comprennent pas la couche située sous l’interface »
+  - Après : « parce qu’ils ne comprennent pas le niveau situé sous l’interface »
+- **V4** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « Une revue incapable de lire la couche inférieure »
+  - Après : « Une revue incapable de lire le niveau inférieur »
+- **V4 + ch18 T5** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « Il garantit la *différence* et la *comparabilité* en confiant le contrôle à des personnes qui partagent l’interface et lisent une couche au-dessous, »
+  - Après : « Il soutient la *différence* et la *comparabilité* en confiant le contrôle à des personnes qui partagent l’interface et lisent le niveau situé dessous, »
+- **V4** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « capable de comprendre la couche sous-jacente, »
+  - Après : « capable de comprendre le niveau sous-jacent, »
+- **V4 (PC)** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « quelqu’un qui partage l’interface et lit une couche au-dessous »
+  - Après : « quelqu’un qui partage l’interface et lit le niveau situé dessous »
+- **ch18 T7** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « *Les conditions sont-elles énoncées de sorte que les deux puissent être comparés ?* »
+  - Après : « *L’affirmation et le comparateur peuvent-ils être comparés : les conditions de l’affirmation sont-elles énoncées ?* »
+- **ch18 T7** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « 3. Les conditions sont-elles énoncées de sorte que les deux puissent être comparés ? »
+  - Après : « 3. L’affirmation et le comparateur peuvent-ils être comparés : les conditions de l’affirmation sont-elles énoncées ? »
+- **ch18 T18** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « ne fait pas sortir du cercle du prêteur unique (@sec:ch16-meme-preteur) »
+  - Après : « ne fait pas sortir du cercle du prêteur unique, le modèle commun auquel tous empruntent (@sec:ch16-meme-preteur) »
+- **V2** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « ### Exiger que toute affirmation porte son statut { »
+  - Après : « ### Exiger que toute affirmation porte son état de vérification { »
+- **V2** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « affiche son *statut*. Celui-ci dit au minimum »
+  - Après : « affiche son *état de vérification*. Celui-ci dit au minimum »
+- **V2** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « déclarer le statut de ses résultats »
+  - Après : « déclarer l’état de vérification de ses résultats »
+- **V2** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « le statut écrit glisse à son tour »
+  - Après : « l’état de vérification écrit glisse à son tour »
+- **V2** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « avec leur statut déclaré et leurs conditions »
+  - Après : « avec leur état de vérification déclaré et leurs conditions »
+- **V2** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « l’obligation de déclarer statut et conditions »
+  - Après : « l’obligation de déclarer état de vérification et conditions »
+- **V2** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « son statut et sa provenance jusqu’au point d’usage »
+  - Après : « son état de vérification et sa provenance jusqu’au point d’usage »
+- **V2 (PC)** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « en exigeant le statut de chaque résultat »
+  - Après : « en exigeant l’état de vérification de chaque résultat »
+- **V2** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « L’organisation : indépendance, statut, historique et mesure { »
+  - Après : « L’organisation : indépendance, état de vérification, historique et mesure { »
+- **V15** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « ne propose ni code de règles ni méta-procédure »
+  - Après : « ne propose ni recueil de règles ni méta-procédure »
+- **V16** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « alors que l’automatisation les enchaîne, les érode et les corrèle (@sec:partie-4) »
+  - Après : « alors que l’automatisation les met en chaîne, en retire certains et corrèle ceux qui restent (@sec:partie-4) »
+- **G1-19 (PC)** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « débordent le cadre de l’outil, jamais celui de la personne, »
+  - Après : « débordent le cadre de l’outil, jamais celui de la personne qui les forme, »
+- **V20 + S2** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « ne tient à lui seul les cinq barrages du @sec:ch06 »
+  - Après : « ne tient à lui seul les cinq conditions de détection du @sec:ch06 »
+- **V20 + S2** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « (existence d’un comparateur, capacité à se tromper autrement, comparabilité, arrivée à temps, prise en compte). Chaque niveau consolide plusieurs barrages »
+  - Après : « (existence, différence, comparabilité, arrivée à temps, prise en compte). Chaque niveau consolide plusieurs conditions »
+- **S2** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « Comme les cinq barrages qu’ils protègent, »
+  - Après : « Comme les cinq conditions qu’ils protègent, »
+- **S2 (PC)** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « disent lequel des cinq barrages fait défaut. »
+  - Après : « disent laquelle des cinq conditions fait défaut. »
+- **V20** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « Ce geste agit sur deux des cinq conditions (@sec:ch06-cinq-conditions). »
+  - Après : « Ce geste agit sur deux des cinq conditions de détection (existence, différence, comparabilité, arrivée à temps, prise en compte ; @sec:ch06-cinq-conditions). »
+- **N1** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « variation de l’arrière-plan $(\dots)$ (@eq:ch01-regle) »
+  - Après : « variation de l’arrière-plan tacite $\mathcal{T}$ (@eq:ch01-regle) »
+- **S1 (4e pratique)** (`chapitres/18-remede-trois-niveaux.md`) : voir DECISIONS_SYNTHESE / SYNTHESE (ch. 18)
+  - Avant : « la quatrième transpose des méthodes déjà pratiquées dans deux domaines. »
+  - Après : « la quatrième s’appuie sur des méthodes déjà pratiquées dans deux domaines, mais sa transposition ici reste une proposition. »
+- **V16** (`parties/partie-5.md`) : « enchaîner » lu « entraver » ; formule de la conclusion.
+  - Avant : « et l’automatisation enchaîne, érode et corrèle nos contrôles. »
+  - Après : « et l’automatisation met nos contrôles en chaîne, en retire certains et corrèle ceux qui restent. »
+- **V15** (`parties/partie-5.md`) : Calque de rulebook.
+  - Avant : « Elle ne propose ni code de règles ni procédure »
+  - Après : « Elle ne propose ni recueil de règles ni procédure »
+- **G1-22 + R9 + p5 T1** (`parties/partie-5.md`) : Étape manquante (FD § 9.4) ; « cette réponse » (ch. 17) ; « irréversible » (registre).
+  - Avant : « Comme toute action est aussi une question posée au monde, on peut explorer librement dans un bac à sable, où la réponse est rapide, peu coûteuse et réversible, et réserver les verrous aux frontières où elle coûterait trop cher ou ne pourrait être effacée. »
+  - Après : « Toute action étant aussi une question posée au monde, mieux vaut la poser là où la réponse est rapide, peu coûteuse et réversible : on peut explorer librement dans un bac à sable, et réserver les verrous aux frontières où cette réponse coûterait trop cher ou serait irréversible. »
+- **G1-19 + p5 T3** (`parties/partie-5.md`) : Forme explicite du corps du ch. 18.
+  - Avant : « Ces comparateurs débordent le cadre de l’outil, jamais celui de la personne. »
+  - Après : « Ces comparateurs débordent le cadre de l’outil, jamais celui de la personne qui les forme. »
+- **V4 + p5 T8** (`parties/partie-5.md`) : Niveau de compétence, non couche de la pile.
+  - Avant : « (quelqu’un qui comprend une couche au-dessous de ce qu’il approuve) »
+  - Après : « (quelqu’un qui partage l’interface et comprend le niveau situé sous ce qu’il approuve) »
+- **V2 + p5 T9** (`parties/partie-5.md`) : « état de vérification ».
+  - Avant : « exiger que chaque résultat déclare son statut, »
+  - Après : « exiger que chaque résultat déclare son état de vérification (exploratoire ou établi, ce qui a été contrôlé et par qui, sous quelles hypothèses), »
+- **V20** (`parties/partie-5.md`) : Nom fixé de la grille.
+  - Avant : « qui reprennent les cinq conditions de la détection. »
+  - Après : « qui reprennent les cinq conditions de détection. »
+- **p5 T6** (`parties/partie-5.md`) : « ces critères » sans antécédent (ch. 18 : « ces questions »).
+  - Avant : « Reste à soumettre le livre lui-même à ces critères : »
+  - Après : « Reste à poser ces questions au livre lui-même : »
+- **G1-19** (`chapitres/00-cartographier.md`) : Lecture concessive (FD § 11.1 ; corps du ch. 18).
+  - Avant : « notre expérience du monde déborde souvent le cadre du modèle que l’on consulte, à défaut de déborder le nôtre ; »
+  - Après : « notre expérience du monde déborde souvent le cadre du modèle que nous consultons, même si elle ne déborde jamais le nôtre ; »
+- **G1-20 + V2** (`chapitres/00-cartographier.md`) : Prescription (ES § 7, FD § 11.3) ; « état de vérification ».
+  - Avant : « protéger la capacité d’évaluation indépendante comme une ressource budgétaire propre qui plafonne le volume de production, exiger que toute affirmation soumise à la décision affiche son statut et ses hypothèses, »
+  - Après : « traiter la capacité d’évaluation indépendante comme une ligne budgétaire à part et ne pas produire plus que ce qu’elle permet de vérifier, exiger que toute affirmation soumise à la décision affiche son état de vérification (exploratoire ou établie, ce qui a été contrôlé de façon indépendante) et ses »
+- **G1-21 + V4** (`chapitres/00-cartographier.md`) : Le niveau situé sous l'interface (FD § 6, ES § 7).
+  - Avant : « et les confier à des relecteurs qui comprennent une couche en dessous de l’interface qu’ils contrôlent. »
+  - Après : « et les confier à des relecteurs qui partagent l’interface avec le producteur et comprennent par eux-mêmes le niveau situé dessous : le code sous le programme généré, la physique sous le nombre calculé. »
+- **G1-15** (`chapitres/00-cartographier.md`) : Le producteur est un humain assisté d'un modèle (FD § 9.3) ; tournure des PC. Nombres inchangés.
+  - Avant : « dans la seconde, le producteur ne se trompe plus que dans 1 % des cas, mais ses erreurs ont l’aisance de ses réussites, n’ont pas d’adresse, et ceux qui le relisent consultent le même outil que lui ; »
+  - Après : « dans la seconde, le producteur, désormais assisté d’un modèle, ne se trompe plus que dans 1 % des cas, mais ses erreurs se présentent avec la même aisance que ses réussites et n’ont pas d’adresse, et ceux qui le relisent consultent le même modèle ; »
+- **G1-17** (`chapitres/00-cartographier.md`) : « ambiante » lu « normale » ; aligné sur l'étape 3 du tableau du ch. 2.
+  - Avant : « l’eau pure, *à la pression atmosphérique ambiante*, bout à 100 °C. »
+  - Après : « l’eau pure, *portée à l’air libre*, bout à 100 °C. »
+- **G1-16** (`chapitres/00-cartographier.md`) : Chaînon du taux de base explicité (SPEC S9 : contrôleur fixe).
+  - Avant : « une part croissante des alertes d’un contrôleur imparfait sont de fausses alertes. »
+  - Après : « les vraies erreurs se raréfient alors que le taux de fausses alertes d’un contrôleur imparfait reste le même : une part croissante de ses alertes sont donc de fausses alertes. »
+- **G1-22** (`chapitres/00-cartographier.md`) : Référent : la seconde question.
+  - Avant : « Pour répondre à cette question, il faut repartir »
+  - Après : « Pour répondre à cette seconde question, il faut repartir »
+- **G1-22** (`chapitres/00-cartographier.md`) : Collision avec les propositions techniques.
+  - Avant : « Pour établir chacune de ces propositions sans pétition de principe »
+  - Après : « Pour établir chacune de ces thèses sans pétition de principe »
+- **G1-18** (`chapitres/00-cartographier.md`) : « garantie », comme le titre et les PC (SPEC S11).
+  - Avant : « la certitude préalable n’a pas été perdue par négligence »
+  - Après : « la garantie préalable n’a pas été perdue par négligence »
+- **G1-22** (`chapitres/00-cartographier.md`) : Symbole relié au seuil déjà écrit en toutes lettres.
+  - Avant : « établit le seuil de décision $p^\ast$ face à une décision unique. »
+  - Après : « établit le seuil de décision, noté $p^\ast$ (@eq:ch00-seuil), face à une décision unique. »
+- **G1-22** (`chapitres/00-cartographier.md`) : Étape manquante (FD § 9.4).
+  - Avant : « Puisque toute action sur le monde est en même temps une question posée au monde, il est fécond de laisser »
+  - Après : « Puisque toute action sur le monde est en même temps une question posée au monde, mieux vaut la poser là où la réponse coûte peu et peut être défaite : il est fécond de laisser »
+- **V16** (`chapitres/00-cartographier.md`) : Sujet explicite dans la table des matières ; « exécute les erreurs » ambigu.
+  - Avant : « ### Elle met les étapes en chaîne et exécute les erreurs { »
+  - Après : « ### L’automatisation met les étapes en chaîne et fait passer les erreurs à l’acte { »
+- **V16** (`chapitres/00-cartographier.md`) : Idem.
+  - Avant : « ### Elle érode les vérifications humaines { »
+  - Après : « ### L’automatisation érode les vérifications humaines { »
+- **V16** (`chapitres/00-cartographier.md`) : Idem.
+  - Avant : « ### Elle corrèle les angles morts à l’échelle collective { »
+  - Après : « ### L’automatisation corrèle les angles morts à l’échelle collective { »
+- **V16 (PC)** (`chapitres/00-cartographier.md`) : Idem.
+  - Avant : « - L’automatisation enchaîne les étapes jusqu’à l’action, »
+  - Après : « - L’automatisation met les étapes en chaîne jusqu’à l’action, »
+- **V17** (`chapitres/00-cartographier.md`) : Calque de running examples.
+  - Avant : « un petit nombre d’exemples courants qui »
+  - Après : « un petit nombre d’exemples récurrents qui »
+- **N1** (`chapitres/00-cartographier.md`) : Arrière-plan tacite nommé (sans définition formelle au ch. 0).
+  - Avant : « La parenthèse $(\dots)$ désigne cet arrière-plan ouvert d’exceptions possibles »
+  - Après : « La parenthèse $(\dots)$ désigne cet arrière-plan tacite, ouvert d’exceptions possibles »
+- **N1** (`chapitres/00-cartographier.md`) : Pas de (…) nu en prose.
+  - Avant : « relègue en silence dans $(\dots)$, »
+  - Après : « relègue en silence dans l’arrière-plan tacite, »
+- **N1** (`chapitres/00-cartographier.md`) : Idem.
+  - Avant : « tout ce que le cadre a laissé dans $(\dots)$. »
+  - Après : « tout ce que le cadre a laissé dans l’arrière-plan tacite. »
+- **N3 + V2** (`chapitres/00-cartographier.md`) : Série des modèles formels présentée ; statut épistémique.
+  - Avant : « portera explicitement son statut (*définition*, *résultat sous hypothèses*, *hypothèse de travail* ou *constat empirique*) et sera suivie d’un examen de ses limites de robustesse. »
+  - Après : « portera explicitement son statut épistémique (*définition*, *résultat sous hypothèses*, *hypothèse de travail* ou *constat empirique*) et sera suivie d’un examen de ses limites de robustesse. Trois modèles formels portent l’argument : le modèle M1, des angles morts et de l’échappement (chapitres [-@ »
+- **R4** (`chapitres/99-conclusion.md`) : Formulation de la sévérité.
+  - Avant : « Un contrôle réussi n’est probant que s’il aurait pu échouer ; »
+  - Après : « Un contrôle passé sans alerte n’est probant que s’il aurait pu donner l’alerte ; »
+- **V20 + S3** (`chapitres/99-conclusion.md`) : Les cinq conditions nommées une fois (Opus B2, Sonnet B1).
+  - Avant : « sa portée tient aux cinq conditions et à l’idée qu’elles cèdent séparément. »
+  - Après : « sa portée tient aux cinq conditions de détection (existence, différence, comparabilité, arrivée à temps, prise en compte) et à l’idée qu’elles cèdent séparément. »
+- **G1-12** (`chapitres/99-conclusion.md`) : Axes nommés (Opus B4, Sonnet B5).
+  - Avant : « la formalité déplace la colonne, non la ligne (@sec:ch13). »
+  - Après : « la formalité déplace la colonne (erreur signalée ou silencieuse), non la ligne (cause dans ou hors du cadre) (@sec:ch13). »
+- **G1-12** (`chapitres/99-conclusion.md`) : Idem.
+  - Avant : « puisque la formalité déplace la colonne et non la ligne (@sec:ch13-deux-axes). »
+  - Après : « puisque la formalité change le caractère signalé ou silencieux d’une erreur, non la place de sa cause dans ou hors du cadre (@sec:ch13-deux-axes). »
+- **N3** (`chapitres/99-conclusion.md`) : Un même modèle M1, étendu au ch. 9 (Opus B5, Sonnet C7).
+  - Avant : « Le modèle M1 a donc mis côte à côte deux politiques »
+  - Après : « Le même modèle M1, étendu au @sec:ch09, a ainsi mis côte à côte deux politiques »
+- **N3** (`chapitres/99-conclusion.md`) : Portée du statut (Opus C7).
+  - Avant : « *résultat sous hypothèses* pour le modèle M2 ; »
+  - Après : « *résultat sous hypothèses* pour la marge d’humilité (modèle M2) ; »
+- **V4** (`chapitres/99-conclusion.md`) : Niveau de compétence.
+  - Avant : « tout en comprenant au moins une couche au-dessous (@sec:ch18-placement-qui) »
+  - Après : « tout en comprenant le niveau situé sous cette interface (@sec:ch18-placement-qui) »
+- **V4** (`chapitres/99-conclusion.md`) : Idem.
+  - Avant : « une sortie qu’il ne sait pas lire une couche au-dessous. »
+  - Après : « une sortie dont il ne sait pas lire le niveau sous-jacent. »
+- **p3 T3 (conclusion)** (`chapitres/99-conclusion.md`) : Ellipse « inventer des faits rares ».
+  - Avant : « la calibration générative impose d’inventer des faits rares ; »
+  - Après : « la calibration générative impose d’inventer lorsque le modèle est interrogé sur des faits rares ; »
+- **N1** (`chapitres/99-conclusion.md`) : (…) nu en prose (Opus B1, Sonnet C1).
+  - Avant : « ce qui reste dans l’arrière-plan $(\dots)$ ; »
+  - Après : « ce qui reste dans l’arrière-plan tacite $\mathcal{T}$ ; »
+- **N2** (`chapitres/99-conclusion.md`) : Sigle développé à la première occurrence (Opus C2).
+  - Avant : « la VPP chute quand les erreurs se raréfient »
+  - Après : « la valeur prédictive positive (VPP) chute quand les erreurs se raréfient »
+- **N2** (`chapitres/99-conclusion.md`) : Lettres glosées (Opus B15, Sonnet B17).
+  - Avant : « les valeurs réelles des paramètres $c$, $m$, $f$ et $u$ »
+  - Après : « les valeurs réelles des paramètres $c$ (causes partagées), $m$ (oubli sur les autres causes), $f$ (fausses alertes) et $u$ (prise en compte) »
+- **V13 + Opus B8** (`chapitres/99-conclusion.md`) : Raccourci nommé ; « lassitude face aux alertes ».
+  - Avant : « ferment en outre la porte à un raccourci. »
+  - Après : « ferment en outre la porte à un raccourci : conclure que la seule lassitude face aux alertes suffit à rendre dangereux un producteur amélioré. »
+- **V13** (`chapitres/99-conclusion.md`) : Idem.
+  - Avant : « non sur la seule usure des alertes, »
+  - Après : « non sur la seule lassitude face aux alertes, »
+- **V2** (`chapitres/99-conclusion.md`) : « état de vérification » (sens 2).
+  - Avant : « l’affichage du statut, l’historique »
+  - Après : « l’affichage de l’état de vérification, l’historique »
+- **V2** (`chapitres/99-conclusion.md`) : Idem.
+  - Avant : « qu’une déclaration de statut peut redevenir »
+  - Après : « qu’une déclaration d’état de vérification peut redevenir »
+- **V2** (`chapitres/99-conclusion.md`) : Idem.
+  - Avant : « le pré-mortem ou l’affichage du statut »
+  - Après : « le pré-mortem ou l’affichage de l’état de vérification »
+- **Sonnet A1** (`chapitres/99-conclusion.md`) : « ce chapitre » ambigu dans une conclusion ; « même » mal placé.
+  - Avant : « Dans l’exemple illustratif de ce chapitre, le risque sous appariement des probabilités reste même plus bas »
+  - Après : « Dans l’exemple illustratif du @sec:ch16, le risque sous appariement des probabilités est même, au contraire, plus bas »
+- **Opus B3** (`chapitres/99-conclusion.md`) : Aligné sur le § sur l'omission de saillance.
+  - Avant : « les contrôles qui réemploient les mêmes paramètres et la même consigne. »
+  - Après : « les contrôles qui réemploient les mêmes paramètres et la même formulation de la consigne. »
+- **Opus B6** (`chapitres/99-conclusion.md`) : « prise en défaut dans l'usage » précisé (SPEC P2).
+  - Avant : « ne peut être prise en défaut que dans l’usage de la grille qu’elle déplie. »
+  - Après : « ne peut être prise en défaut que si la grille des cinq conditions qu’elle déplie se révèle inutile à l’usage. »
+- **Sonnet B7** (`chapitres/99-conclusion.md`) : Lien avec la proposition non démentable.
+  - Avant : « des défaillances de détection qui ne se laisseraient ranger sous aucune des cinq conditions (@sec:ch06) ; »
+  - Après : « des défaillances de détection qui ne se laisseraient ranger sous aucune des cinq conditions (@sec:ch06), ce qui ôterait à la grille son utilité sans réfuter la définition ; »
+- **Opus B7** (`chapitres/99-conclusion.md`) : Exemple rattaché à la ferrure ; tautologie retirée.
+  - Avant : « Traduire un taux d’attaque chimique en perte d’épaisseur, puis convaincre une équipe de rouvrir un plan bouclé, coûte moins en calcul qu’en traduction et en autorité. »
+  - Après : « Dans l’exemple de la ferrure (@sec:ch08), traduire un taux d’attaque chimique en perte d’épaisseur, puis convaincre une équipe de rouvrir un plan bouclé, coûte moins en calcul qu’en mise en correspondance et en autorité. »
+- **Sonnet B12** (`chapitres/99-conclusion.md`) : Le produit est positif ; c'est son sens de variation qui est en jeu (titre ; étiquette inchangée).
+  - Avant : « ### Le signe du produit entre taux d’erreur et échappement reste à mesurer { »
+  - Après : « ### Le sens de variation du produit entre taux d’erreur et échappement reste à mesurer { »
+- **Sonnet C3** (`chapitres/99-conclusion.md`) : Cohérent avec « ne réduisent jamais tout à fait ».
+  - Avant : « que le @sec:ch17 résout en articulant »
+  - Après : « que le @sec:ch17 atténue en articulant »
+- **Opus B10** (`chapitres/99-conclusion.md`) : « course » opaque hors contexte.
+  - Avant : « Une course sans incident ne juge guère un prévisionniste »
+  - Après : « Une traversée sans incident ne juge guère un prévisionniste »
+- **Sonnet B15** (`chapitres/99-conclusion.md`) : « prévoyait » maladroit.
+  - Avant : « ne prévoyait pas les erreurs qui atteignent réellement l’action »
+  - Après : « ne permettait pas de prédire la part des erreurs qui atteignent réellement l’action »
+- **Opus B11** (`chapitres/99-conclusion.md`) : Rattachement de « à un rythme ».
+  - Avant : « des relecteurs qui continueraient d’examiner des alertes de moins en moins souvent fondées à un rythme indépendant de leur valeur prédictive positive »
+  - Après : « des relecteurs qui, devant des alertes de moins en moins souvent fondées, continueraient de les examiner au même rythme, quelle que soit leur valeur prédictive positive »
+- **Sonnet B14** (`chapitres/99-conclusion.md`) : Logique du cas de 2025 explicitée.
+  - Avant : « faisant de l’étude de 2025 [@becker2025] un cas isolé »
+  - Après : « faisant de l’étude de 2025, où les développeurs s’estimaient plus rapides qu’ils ne l’étaient [@becker2025], un cas isolé »
+- **Opus B12** (`chapitres/99-conclusion.md`) : Référents flous.
+  - Avant : « Pour qu’elles l’éprouvent au lieu de le reconduire, »
+  - Après : « Pour que ces mesures mettent le livre à l’épreuve au lieu de reproduire son cadre, »
+- **Opus C15** (`chapitres/99-conclusion.md`) : « rien à ajouter » suivi d'un long rappel.
+  - Avant : « et il n’y a rien à ajouter à cette déclaration. »
+  - Après : « et on la rappelle ici sans rien y ajouter. »
+- **Opus B13** (`chapitres/99-conclusion.md`) : Référent de « elle » ; calque « témoigner que ».
+  - Avant : « il ne témoigne pas qu’elle soit juste, puisqu’il en partage le cadre. »
+  - Après : « il ne prouve pas que la thèse soit juste, puisqu’il en partage le cadre. »
+- **Sonnet B16** (`chapitres/99-conclusion.md`) : Ce sont les comparateurs qui se trompent autrement (titre ; étiquette inchangée).
+  - Avant : « ### Où ses affirmations peuvent se tromper autrement { »
+  - Après : « ### D’où peuvent venir des comparateurs qui se trompent autrement { »
+- **Opus B14** (`chapitres/99-conclusion.md`) : Renvoi exact.
+  - Avant : « Les observations recensées dans la section précédente. »
+  - Après : « Les observations recensées plus haut (@sec:conclusion-refutation). »
+- **Sonnet B18** (`chapitres/99-conclusion.md`) : Référent de « il ».
+  - Avant : « là où il engage une décision unique »
+  - Après : « là où l’argument engage une décision unique »
+- **C-4** (`chapitres/99-conclusion.md`) : Sens fixé par l'avant-propos (jugé sur ce qu'il énonce, non sur sa construction).
+  - Avant : « à être jugé sur ce qu’il énonce, et sur rien d’autre. »
+  - Après : « à être jugé sur ce qu’il énonce, confronté à ces comparateurs, et non sur la manière dont il a été construit. »
+- **Opus C4** (`chapitres/99-conclusion.md`) : Les hypothèses dites comme telles.
+  - Avant : « | Issue binaire, option sûre bien définie ; »
+  - Après : « | Suppose une issue binaire et une option sûre bien définie ; »
+- **Sonnet B12 (PC)** (`chapitres/99-conclusion.md`) : Comme le titre de section.
+  - Avant : « le signe du produit entre taux d’erreur et échappement, qui reste à mesurer ; »
+  - Après : « le sens de variation du produit entre taux d’erreur et échappement, qui reste à mesurer ; »
+- **Opus A3 (PC)** (`chapitres/99-conclusion.md`) : Les deux-points faisaient lire la suite comme une liste de risques.
+  - Avant : « retenue faute de mieux avec ses risques nommés : agir d’après des représentations finies, »
+  - Après : « retenue faute de mieux avec ses risques nommés. Il en découle une conduite : agir d’après des représentations finies, »
+- **Opus B6 (PC)** (`chapitres/99-conclusion.md`) : Comme le corps.
+  - Avant : « ne peut être prise en défaut que dans l’usage de la grille qu’elle déplie, »
+  - Après : « ne peut être prise en défaut que si la grille des cinq conditions qu’elle déplie se révèle inutile à l’usage, »
+- **N1** (`chapitres/02-cadre.md`) : Pas de (…) nu en prose.
+  - Avant : « la grandeur omise demeure dans l’arrière-plan $(\dots)$. »
+  - Après : « la grandeur omise demeure dans l’arrière-plan tacite $\mathcal{T}$. »
+- **N1** (`chapitres/02-cadre.md`) : Idem.
+  - Avant : « alors que la parenthèse $(\dots)$ reste aussi ouverte qu’avant. »
+  - Après : « alors que l’arrière-plan tacite reste aussi ouvert qu’avant. »
+- **N1** (`chapitres/02-cadre.md`) : Idem.
+  - Avant : « et laisser le reste dans un arrière-plan ouvert $(\dots)$, que le calcul ne peut pas nommer. »
+  - Après : « et laisser le reste dans un arrière-plan tacite, toujours ouvert, que le calcul ne peut pas nommer. »
+
+## Points laissés ouverts (non touchés)
+
+Ces points restent à discuter ; aucune correction ne les a anticipés. Les repères renvoient à `notes/SYNTHESE_A_TRANCHER.md` et à `notes/DECISIONS_SYNTHESE.md`.
+
+**Questions de fond (groupe 3)**
+- **D1. Indépendance et plancher d'échappement.** Ch. 8 T8 ; ch. 9 T1 et T2 (« indépendance » au sens de $s$, « plancher » égal à $c$) ; ch. 16 T1 et T2 (68,0 % attribués à $c$ seul ; scénario *Indépendant et précis*) ; page de la partie 4 (« plancher fixé par les causes partagées »).
+- **D2. Cadre et représentation.** Définitions du ch. 2 et du registre.
+- **D3. Portée du blanchiment.** Définition du ch. 8, PC du ch. 8, page de la partie 2, ch. 14 (« deux proches cousins »), ch. 16 (blanchiment de provenance).
+- **D4. *Challenger* et les cinq conditions.** Ch. 6, puces « différence » et « existence ».
+- **D5. Ce que coûte l'indépendance (P4).** Ch. 8 (énoncé, PC) ; page de la partie 2 (T3) ; conclusion (tableau, § « La tension entre coût et indépendance », PC 2).
+- **E1.** Ch. 13 : le monde présenté comme « seule source » d'une pertinence nouvelle ; reprise à la l. 123 de la conclusion.
+- **E2.** Ch. 0 : les « deux pièges » rattachés à la relecture humaine du brouillon.
+- **E3.** Ch. 15 : le texte déjà rédigé soumis au modèle (seconde condition) ; nombre de conditions annoncé au chapeau du ch. 15 et sur la page de la partie 4.
+
+**Arbitrages non tranchés (groupe 2)**
+- **R5.** « un texte fixé à l'avance » (registre, ch. 6, pages des parties 2 et 3, ch. 13), avec T5 de la page de la partie 3 (intitulés des sources de comparateurs).
+- **V1.** « précis », « dix fois plus précis », « 5 % de fausses alertes » (ch. 9, ch. 16).
+- **V21.** « comparabilité », « lisibilité », « comparaison fidèle », $B_{\text{cmp}}$ (ch. 14, 16, page de la partie 4).
+- **S6.** La roulette russe (ch. 4, § 3 et § 5 ; ch. 17).
+- **S1 (titre et synthèse du niveau 3) et S1b (limite de la 3e pratique), ch. 18.** Seul le statut de la 4e pratique a été corrigé.
+- **S7 à S9, S11 à S13, S15.** Points de construction du ch. 0 ; Vénus et Mercure ; typologie des sources au ch. 13 (« vos propres contrôles ») ; points locaux des ch. 1, 2, 8 et 16.
+- **Conclusion.** C-1 (statut de « le monde répond à l'action ») ; C-2 (rôle des constats empiriques, PC 1) ; C-3 (« hypothèse de travail » au sens large, conclusion et avant-propos) ; C-5 à C-7. Plus les trois questions éditoriales du § 6.3 de la synthèse.
+- **Points locaux de moindre importance** (§ 3.5 de la synthèse).
+- **Vérifications factuelles** (§ 5 de la synthèse). Ont été appliqués, parce qu'ils étaient établis : les prénoms d'Orzack et Sober, l'apologue de Dennett, l'objet du facteur 4,45 et la formulation de l'alarme pour *Mars Climate Orbiter*.
