@@ -1,0 +1,68 @@
+{
+  "lot": "style/lots/09-severite-echappement",
+  "chapitre": "09-severite-echappement",
+  "fichier": "monographie/chapitres/09-severite-echappement.md",
+  "tour": null,
+  "redacteur": "gemini",
+  "date": "2026-11-20T13:26:36",
+  "sha256_chapitre": "ec6e9ffaf6b0ba3305c501baacf6596eb3d361e8c7f7ecd6eb2f2065544f7c17",
+  "sha256_propositions": "eb7d7ca7b2da90e4e872371177f598dcbc18588032a7cf3e94da32742b44d400",
+  "modifications": [
+    {
+      "id": "001",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "Un second calcul mené par un collègue avec les mêmes hypothèses de la résistance des matériaux exerce un contrôle sévère contre les fautes d’algèbre ou d’unité, car il les aurait repérées ; sa sévérité est nulle contre un mécanisme de dégradation absent des deux cadres.",
+      "apres": "Un second calcul mené par un collègue avec les mêmes hypothèses de la résistance des matériaux exerce un contrôle sévère contre les fautes d’algèbre ou d’unité, car il les aurait repérées. Sa sévérité est en revanche nulle contre un mécanisme de dégradation absent des deux cadres.",
+      "debut": 8395,
+      "fin": 8665,
+      "ligne": 52,
+      "section": "sec:ch09-severite",
+      "titre_section": "Sévérité d’un contrôle"
+    },
+    {
+      "id": "002",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "Imaginons un producteur très fiable qui ne se trompe que dans 1 % des cas, et un relecteur humain ou logiciel qui commet une erreur d’appréciation dans 10 % des cas, indépendamment du producteur — c’est-à-dire qu’il se trompe dans 10 % des cas aussi bien lorsqu’il juge une affirmation juste (10 % de fausses alertes) que lorsqu’il examine une affirmation fausse (10 % d’oubli).",
+      "apres": "Imaginons un producteur très fiable qui ne se trompe que dans 1 % des cas, et un relecteur humain ou logiciel qui commet une erreur d’appréciation dans 10 % des cas, indépendamment du producteur. Il se trompe ainsi dans 10 % des cas aussi bien lorsqu’il juge une affirmation juste (10 % de fausses alertes) que lorsqu’il examine une affirmation fausse (10 % d’oubli).",
+      "debut": 8924,
+      "fin": 9302,
+      "ligne": 56,
+      "section": "sec:ch09-fausses-alertes",
+      "titre_section": "Le piège des fausses alertes"
+    },
+    {
+      "id": "003",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "James Bliss, Richard Gilson et John Deaton [@bliss1995] ont montré que, placés devant des alarmes dont la fiabilité varie, la plupart des opérateurs ajustent la fréquence à laquelle ils réagissent à la fiabilité perçue du signal : si une alarme ne correspond à un danger réel que dans une fraction modérée des cas, ils ne la vérifient qu’environ à cette fréquence.",
+      "apres": "James Bliss, Richard Gilson et John Deaton [@bliss1995] ont montré que, placés devant des alarmes dont la fiabilité varie, la plupart des opérateurs ajustent la fréquence à laquelle ils réagissent à la fiabilité perçue du signal. Ainsi, si une alarme ne correspond à un danger réel que dans une fraction modérée des cas, ils ne la vérifient qu’environ à cette fréquence.",
+      "debut": 12576,
+      "fin": 12940,
+      "ligne": 80,
+      "section": "sec:ch09-comportement-alertes",
+      "titre_section": "Ce que l’on fait des alertes"
+    },
+    {
+      "id": "004",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "- La règle de Bayes fixe la valeur prédictive positive, non la prise en compte : l’appariement des probabilités pousse les opérateurs à négliger des alertes peu fiables, alors que résoudre un désaccord par un tiers est une décision d’utilité espérée qui paie lorsque les enjeux sont élevés (décision unique, perte très supérieure au coût de la contre-expertise).",
+      "apres": "- La règle de Bayes fixe la valeur prédictive positive, non la prise en compte. L’appariement des probabilités pousse ainsi les opérateurs à négliger des alertes peu fiables, alors que résoudre un désaccord par un tiers est une décision d’utilité espérée qui paie lorsque les enjeux sont élevés (décision unique, perte très supérieure au coût de la contre-expertise).",
+      "debut": 30475,
+      "fin": 30837,
+      "ligne": 189,
+      "section": "titre:Points clés",
+      "titre_section": "Points clés"
+    }
+  ]
+}

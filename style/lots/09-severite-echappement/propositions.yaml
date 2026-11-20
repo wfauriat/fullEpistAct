@@ -1,0 +1,34 @@
+chapitre: 09-severite-echappement
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: phrase-longue
+    avant: |
+      Un second calcul mené par un collègue avec les mêmes hypothèses de la résistance des matériaux exerce un contrôle sévère contre les fautes d’algèbre ou d’unité, car il les aurait repérées ; sa sévérité est nulle contre un mécanisme de dégradation absent des deux cadres.
+    apres: |
+      Un second calcul mené par un collègue avec les mêmes hypothèses de la résistance des matériaux exerce un contrôle sévère contre les fautes d’algèbre ou d’unité, car il les aurait repérées. Sa sévérité est en revanche nulle contre un mécanisme de dégradation absent des deux cadres.
+    note: "Coupe au point-virgule avec « en revanche »."
+
+  - id: "002"
+    motif: phrase-longue
+    avant: |
+      Imaginons un producteur très fiable qui ne se trompe que dans 1 % des cas, et un relecteur humain ou logiciel qui commet une erreur d’appréciation dans 10 % des cas, indépendamment du producteur — c’est-à-dire qu’il se trompe dans 10 % des cas aussi bien lorsqu’il juge une affirmation juste (10 % de fausses alertes) que lorsqu’il examine une affirmation fausse (10 % d’oubli).
+    apres: |
+      Imaginons un producteur très fiable qui ne se trompe que dans 1 % des cas, et un relecteur humain ou logiciel qui commet une erreur d’appréciation dans 10 % des cas, indépendamment du producteur. Il se trompe ainsi dans 10 % des cas aussi bien lorsqu’il juge une affirmation juste (10 % de fausses alertes) que lorsqu’il examine une affirmation fausse (10 % d’oubli).
+    note: "Scinde une phrase de 66 mots en deux phrases."
+
+  - id: "003"
+    motif: phrase-longue
+    avant: |
+      James Bliss, Richard Gilson et John Deaton [@bliss1995] ont montré que, placés devant des alarmes dont la fiabilité varie, la plupart des opérateurs ajustent la fréquence à laquelle ils réagissent à la fiabilité perçue du signal : si une alarme ne correspond à un danger réel que dans une fraction modérée des cas, ils ne la vérifient qu’environ à cette fréquence.
+    apres: |
+      James Bliss, Richard Gilson et John Deaton [@bliss1995] ont montré que, placés devant des alarmes dont la fiabilité varie, la plupart des opérateurs ajustent la fréquence à laquelle ils réagissent à la fiabilité perçue du signal. Ainsi, si une alarme ne correspond à un danger réel que dans une fraction modérée des cas, ils ne la vérifient qu’environ à cette fréquence.
+    note: "Scinde une phrase de 58 mots au deux-points avec « Ainsi »."
+
+  - id: "004"
+    motif: phrase-longue
+    avant: |
+      - La règle de Bayes fixe la valeur prédictive positive, non la prise en compte : l’appariement des probabilités pousse les opérateurs à négliger des alertes peu fiables, alors que résoudre un désaccord par un tiers est une décision d’utilité espérée qui paie lorsque les enjeux sont élevés (décision unique, perte très supérieure au coût de la contre-expertise).
+    apres: |
+      - La règle de Bayes fixe la valeur prédictive positive, non la prise en compte. L’appariement des probabilités pousse ainsi les opérateurs à négliger des alertes peu fiables, alors que résoudre un désaccord par un tiers est une décision d’utilité espérée qui paie lorsque les enjeux sont élevés (décision unique, perte très supérieure au coût de la contre-expertise).
+    note: "Coupe articulée au deux-points dans les points clés."
