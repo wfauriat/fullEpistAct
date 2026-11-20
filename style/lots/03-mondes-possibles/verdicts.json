@@ -1,0 +1,10 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/03-mondes-possibles/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "Le deux-points aphoristique devient une phrase distincte articulée par « pour autant » : la phrase longue est allégée ; sens, portée (« ne… qu’à ce qui est logiquement exclu », « même lorsqu’on décide ») et renvoi inchangés."},
+    {"id": "002", "verdict": "rejete", "dimensions": ["argument", "francais", "gain"], "raison": "La phrase précédente commence déjà par « Mais elle pèse lentement » : deux « Mais » consécutifs en tête de phrase. De plus, « Or » introduisait la mineure d’un raisonnement (la condition posée n’est pas remplie), alors que « Mais » n’exprime qu’une opposition. Le tic est remplacé par une maladresse."},
+    {"id": "003", "verdict": "accepte", "dimensions": [], "raison": "Suppression d’un italique d’emphase. Le deux-points en fin de phrase suffit à mettre en relief « elle exige la répétition » ; sens et statut inchangés."},
+    {"id": "004", "verdict": "accepte", "dimensions": [], "raison": "La phrase longue est coupée et le deux-points remplacé par l’articulation explicite « en effet », conformément au profil visé ; l’énumération des trois cas, « qui n’ont lieu qu’une fois », « aucune série » et « ne juge qu’une prévision » sont conservés."}
+  ]
+}

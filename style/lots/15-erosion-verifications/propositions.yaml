@@ -1,0 +1,106 @@
+chapitre: 15-erosion-verifications
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: phrase-longue
+    avant: |
+      Rapportée aux cinq conditions de la @sec:ch06-cinq-conditions (@prop:comparateur), cette boucle informelle assurait à la fois l’*existence* d’un comparateur (@def:comparateur) au sein même du poste de travail et sa capacité à *se tromper autrement* que le résultat final : une erreur de saisie, un changement d’unité oublié, une variable mal recodée ou une inversion de tendance se heurtaient aussitôt aux repères accumulés pendant la préparation.
+    apres: |
+      Rapportée aux cinq conditions de la @sec:ch06-cinq-conditions (@prop:comparateur), cette boucle informelle assurait à la fois l’*existence* d’un comparateur (@def:comparateur) au sein même du poste de travail et sa capacité à *se tromper autrement* que le résultat final. Une erreur de saisie, un changement d’unité oublié, une variable mal recodée ou une inversion de tendance se heurtaient ainsi aussitôt aux repères accumulés pendant la préparation.
+    note: "Scinde une phrase de 64 mots au deux-points avec « ainsi »."
+
+  - id: "002"
+    motif: or-initial
+    avant: |
+      Or personne n’avait jamais dessiné cette boucle de rétroaction sur un organigramme ni dans une procédure qualité.
+    apres: |
+      Pourtant, personne n’avait jamais dessiné cette boucle de rétroaction sur un organigramme ni dans une procédure qualité.
+    note: "Remplace « Or » en tête de phrase par « Pourtant »."
+
+  - id: "003"
+    motif: or-initial
+    avant: |
+      Or ce qui caractérise un modèle de langage installé au sommet de la pile logicielle (@sec:ch11-plausibilite, @sec:ch12-trois-bascules), c’est l’uniformité parfaite de sa voix.
+    apres: |
+      Mais ce qui caractérise un modèle de langage installé au sommet de la pile logicielle (@sec:ch11-plausibilite, @sec:ch12-trois-bascules), c’est l’uniformité parfaite de sa voix.
+    note: "Remplace « Or » en tête de phrase par « Mais »."
+
+  - id: "004"
+    motif: phrase-longue
+    avant: |
+      Comme l’a montré l’analyse de la @sec:ch12-calibration-longue-traine, le signal interne d’incertitude n’a pas nécessairement disparu de la distribution du modèle : pour les erreurs hasardées, il s’est déplacé dans la dispersion entre plusieurs tirages indépendants ; mais à la surface de la réponse unique affichée devant l’utilisateur, le signe révélateur a entièrement disparu.
+    apres: |
+      Comme l’a montré l’analyse de la @sec:ch12-calibration-longue-traine, le signal interne d’incertitude n’a pas nécessairement disparu de la distribution du modèle : pour les erreurs hasardées, il s’est déplacé dans la dispersion entre plusieurs tirages indépendants. À la surface de la réponse unique affichée devant l’utilisateur, le signe révélateur a toutefois entièrement disparu.
+    note: "Scinde une phrase de 53 mots au point-virgule avec « toutefois »."
+
+  - id: "005"
+    motif: or-initial
+    avant: |
+      Or le temps passé ensuite à lire une sortie plausible mais étrangère, à corriger une consigne, à traquer une subtilité que l’on n’a pas soi-même écrite ou à renoncer à une piste engagée par l’outil se fond dans cette fluidité apparente.
+    apres: |
+      Mais le temps passé ensuite à lire une sortie plausible mais étrangère, à corriger une consigne, à traquer une subtilité que l’on n’a pas soi-même écrite ou à renoncer à une piste engagée par l’outil se fond dans cette fluidité apparente.
+    note: "Remplace « Or » en tête de phrase par « Mais »."
+
+  - id: "006"
+    motif: phrase-longue
+    avant: |
+      Dans les termes de la @sec:ch09-severite (@def:severite), la sévérité de la belle forme contre une affirmation infondée est tombée à près de zéro : une production inventée ou superficielle porte désormais la même tenue extérieure qu’une analyse mûrement contrôlée.
+    apres: |
+      Dans les termes de la @sec:ch09-severite (@def:severite), la sévérité de la belle forme contre une affirmation infondée est tombée à près de zéro. Une production inventée ou superficielle porte désormais la même tenue extérieure qu’une analyse mûrement contrôlée.
+    note: "Coupe au deux-points."
+
+  - id: "007"
+    motif: phrase-longue
+    avant: |
+      Tant que la rédaction soignée ou le code propre exigeaient l’investissement d’un travail réel, la forme fonctionnait comme un signal coûteux : l’auteur sérieux pouvait l’exhiber sans frais démesurés par rapport à son travail de fond, tandis que l’improvisateur ne pouvait l’imiter à bon compte.
+    apres: |
+      Tant que la rédaction soignée ou le code propre exigeaient l’investissement d’un travail réel, la forme fonctionnait comme un signal coûteux. L’auteur sérieux pouvait en effet l’exhiber sans frais démesurés par rapport à son travail de fond, tandis que l’improvisateur ne pouvait l’imiter à bon compte.
+    note: "Coupe articulée au deux-points avec « en effet »."
+
+  - id: "008"
+    motif: or-initial
+    avant: |
+      Or, aujourd’hui, l’apparence soignée est devenue pratiquement gratuite, tandis que le contrôle véritable sur le fond — contrôler chaque source dans les textes originaux, confronter les unités et les définitions, tester les cas limites, interroger les hypothèses omises par le cadre — demeure tout aussi lent et coûteux qu’auparavant.
+    apres: |
+      Aujourd’hui, pourtant, l’apparence soignée est devenue pratiquement gratuite, tandis que le contrôle véritable sur le fond — contrôler chaque source dans les textes originaux, confronter les unités et les définitions, tester les cas limites, interroger les hypothèses omises par le cadre — demeure tout aussi lent et coûteux qu’auparavant.
+    note: "Remplace « Or » en tête de phrase par « pourtant »."
+
+  - id: "009"
+    motif: phrase-longue
+    avant: |
+      Toutefois, lorsque la production de texte ne coûte presque plus rien, une simple étiquette déclarative rédigée par le producteur — « document contrôlé », « sources relues », liste de cases cochées en bas de page — devient elle-même une parole gratuite : n’importe qui, ou n’importe quelle consigne, peut joindre la même attestation soignée à un brouillon non lu.
+    apres: |
+      Toutefois, lorsque la production de texte ne coûte presque plus rien, une simple étiquette déclarative rédigée par le producteur — « document contrôlé », « sources relues », liste de cases cochées en bas de page — devient elle-même une parole gratuite. N’importe qui, ou n’importe quelle consigne, peut en effet joindre la même attestation soignée à un brouillon non lu.
+    note: "Scinde une phrase de 55 mots au deux-points avec « en effet »."
+
+  - id: "010"
+    motif: phrase-longue
+    avant: |
+      Lisanne Bainbridge l’avait décrit dès 1983, à propos de la conduite des procédés industriels automatisés, sous le nom d’*ironie de l’automatisation* [@bainbridge1983] : en confiant à la machine les opérations courantes et régulières tout en laissant à l’opérateur humain la charge de surveiller le flux et de reprendre la main sur les défaillances exceptionnelles, on crée une contradiction interne à deux faces.
+    apres: |
+      Lisanne Bainbridge l’avait décrit dès 1983, à propos de la conduite des procédés industriels automatisés, sous le nom d’*ironie de l’automatisation* [@bainbridge1983]. En confiant à la machine les opérations courantes et régulières tout en laissant à l’opérateur humain la charge de surveiller le flux et de reprendre la main sur les défaillances exceptionnelles, on crée en effet une contradiction interne à deux faces.
+    note: "Scinde une phrase de 59 mots au deux-points avec « en effet »."
+
+  - id: "011"
+    motif: phrase-longue
+    avant: |
+      D’autre part, la psychologie humaine est mal adaptée à la surveillance passive d’un système qui réussit presque toujours : lorsque le flux courant paraît fluide et sans heurt — et plus encore lorsqu’aucun signe révélateur ne distingue les réponses douteuses et que la fréquence des alertes fondées recule (@sec:ch09-fausses-alertes) —, la vigilance s’émousse.
+    apres: |
+      D’autre part, la psychologie humaine est mal adaptée à la surveillance passive d’un système qui réussit presque toujours. Lorsque le flux courant paraît fluide et sans heurt — et plus encore lorsqu’aucun signe révélateur ne distingue les réponses douteuses et que la fréquence des alertes fondées recule (@sec:ch09-fausses-alertes) —, la vigilance s’émousse.
+    note: "Scinde une phrase de 54 mots au deux-points."
+
+  - id: "012"
+    motif: or-initial
+    avant: |
+      Or, même dans ce sens, deux pièges liés au dialogue avec le modèle referment le contrôle sur lui-même.
+    apres: |
+      Mais, même dans ce sens, deux pièges liés au dialogue avec le modèle referment le contrôle sur lui-même.
+    note: "Remplace « Or » en tête de phrase par « Mais »."
+
+  - id: "013"
+    motif: phrase-longue
+    avant: |
+      Même lorsqu’un praticien isolé applique avec rigueur cette discipline du jugement préalable, une dernière dynamique de l’automatisation se déploie dès qu’une organisation ou une profession tout entière s’adresse aux mêmes quelques modèles : les taux d’erreur individuels peuvent reculer tandis que les angles morts restants se corrèlent entre producteurs et relecteurs, sujet qu’abordera le @sec:ch16.
+    apres: |
+      Même lorsqu’un praticien isolé applique avec rigueur cette discipline du jugement préalable, une dernière dynamique de l’automatisation se déploie dès qu’une organisation ou une profession tout entière s’adresse aux mêmes quelques modèles. Les taux d’erreur individuels peuvent alors reculer tandis que les angles morts restants se corrèlent entre producteurs et relecteurs, sujet qu’abordera le @sec:ch16.
+    note: "Scinde une phrase de 56 mots au deux-points avec « alors »."

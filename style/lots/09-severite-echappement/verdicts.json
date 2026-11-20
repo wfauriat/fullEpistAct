@@ -1,0 +1,10 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/09-severite-echappement/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "Coupe au point-virgule ; « en revanche » rend explicite le contraste déjà présent (sévère contre une classe d’erreurs, nulle contre une autre). Sens, portée (« nulle ») et termes inchangés."},
+    {"id": "002", "verdict": "rejete", "dimensions": ["argument", "terme"], "raison": "« c’est-à-dire qu’il se trompe » est une glose qui précise une hypothèse (taux d’erreur symétrique) ; « Il se trompe ainsi » en fait une conséquence de « commet une erreur dans 10 % des cas », alors que cette symétrie ne s’en déduit pas."},
+    {"id": "003", "verdict": "accepte", "dimensions": [], "raison": "Coupe d’une phrase longue au deux-points ; « Ainsi » introduit l’instanciation du résultat de [@bliss1995] sans changer le mécanisme ni la portée (« la plupart », « environ », « fraction modérée » conservés)."},
+    {"id": "004", "verdict": "rejete", "dimensions": ["argument", "sens"], "raison": "« pousse ainsi » fait de l’appariement des probabilités une conséquence de ce que fixe la règle de Bayes, alors que le chapitre insiste sur le fait qu’il s’agit d’un comportement qui n’en découle pas ; le deux-points marquait une explicitation, non un lien causal."}
+  ]
+}

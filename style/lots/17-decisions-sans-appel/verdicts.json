@@ -1,0 +1,10 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/17-decisions-sans-appel/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "« Or » initial remplacé par « Mais » : la phrase oppose bien la représentation inchangée de M. Y au mât réel éprouvé par la mer, l'adversatif est donc fidèle ; renvoi, sens et portée inchangés."},
+    {"id": "002", "verdict": "rejete", "dimensions": ["argument"], "raison": "Ici « Or » introduit la mineure d'un raisonnement (une règle n'opère que sur les nombres de la représentation ; or z est par définition hors du cadre ; donc z ne peut entrer dans la règle). « Mais » présente à tort cette prémisse comme une objection à la phrase précédente."},
+    {"id": "003", "verdict": "accepte", "dimensions": [], "raison": "Phrase longue coupée au deux-points, et le lien explicatif est conservé par « en effet » ; « peut », « ne promet rien » et les trois branches de l'énumération restent en place."},
+    {"id": "004", "verdict": "accepte", "dimensions": [], "raison": "Phrase longue coupée au deux-points ; « justement » maintient le lien avec la fragilité annoncée, et « tend à vider », la parenthèse et le renvoi sont inchangés."}
+  ]
+}

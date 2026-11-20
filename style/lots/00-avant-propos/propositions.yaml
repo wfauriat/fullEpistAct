@@ -1,0 +1,66 @@
+chapitre: 00-avant-propos
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: phrase-longue
+    avant: |
+      En déplaçant la spécification des règles vers les données d’entraînement, les modèles appris ont franchi un mur de complexité que les règles écrites à la main ne pouvaient pas traverser ; mais ils ont payé cette portée nouvelle en renonçant à la garantie préalable et à l’adresse précise des défaillances.
+    apres: |
+      En déplaçant la spécification des règles vers les données d’entraînement, les modèles appris ont franchi un mur de complexité que les règles écrites à la main ne pouvaient pas traverser. Ils ont toutefois payé cette portée nouvelle en renonçant à la garantie préalable et à l’adresse précise des défaillances.
+    note: "Coupe articulée au point-virgule."
+
+  - id: "002"
+    motif: phrase-longue
+    avant: |
+      Prétendre fournir une méta-procédure formelle garantissant la justesse de nos cadres de pensée contredirait d’ailleurs l’un des arguments centraux du livre, développé au @sec:ch07 : toute procédure chargée d’auditer un cadre repose elle-même sur une spécification finie, et ne fait que reporter le problème un cran plus haut.
+    apres: |
+      Prétendre fournir une méta-procédure formelle garantissant la justesse de nos cadres de pensée contredirait d’ailleurs l’un des arguments centraux du livre, développé au @sec:ch07, car toute procédure chargée d’auditer un cadre repose elle-même sur une spécification finie et ne fait que reporter le problème un cran plus haut.
+    note: "Remplace le deux-points explicatif par une articulation causale explicite (« car »)."
+
+  - id: "003"
+    motif: phrase-longue
+    avant: |
+      Il existe une tension réelle entre l’indépendance d’un contrôle et sa comparabilité avec l’affirmation qu’il vérifie : plus un regard extérieur est éloigné de nos hypothèses, mieux il peut percevoir nos omissions, mais plus il est en général difficile et coûteux de traduire son objection en une comparaison décisive (@sec:ch08).
+    apres: |
+      Il existe une tension réelle entre l’indépendance d’un contrôle et sa comparabilité avec l’affirmation qu’il vérifie. Car plus un regard extérieur est éloigné de nos hypothèses, mieux il peut percevoir nos omissions, mais plus il est en général difficile et coûteux de traduire son objection en une comparaison décisive (@sec:ch08).
+    note: "Coupe articulée après l'énoncé de la tension."
+
+  - id: "004"
+    motif: phrase-longue
+    avant: |
+      Ce livre a été conçu en premier lieu pour des professionnels de culture scientifique et technique — ingénieurs, analystes quantitatifs, praticiens de l’apprentissage automatique, architectes logiciels, responsables de recherche ou d’études — qui ont croisé le calcul des probabilités et la logique au cours de leur formation, mais n’ont pas toujours eu l’occasion de les pratiquer comme un instrument quotidien de raisonnement sur la décision, la fiabilité des contrôles et les modes de défaillance.
+    apres: |
+      Ce livre a été conçu en premier lieu pour des professionnels de culture scientifique et technique — ingénieurs, analystes quantitatifs, praticiens de l’apprentissage automatique, architectes logiciels, responsables de recherche ou d’études — qui ont croisé le calcul des probabilités et la logique au cours de leur formation. Ils n’ont toutefois pas toujours eu l’occasion de les pratiquer comme un instrument quotidien de raisonnement sur la décision, la fiabilité des contrôles et les modes de défaillance.
+    note: "Scinde une phrase de 72 mots avant la proposition adversative."
+
+  - id: "005"
+    motif: phrase-longue
+    avant: |
+      Un lecteur qui choisit de passer les encadrés d’approfondissement théorique ou critique (*Boîte à outils*, *Noyau formel*, *Nuance et discussion ouverte*, *Question à se poser*) ne perd aucun maillon du raisonnement : ces blocs éclairent et consolident l’argument, mais n’en portent jamais seuls une étape indispensable.
+    apres: |
+      Un lecteur qui choisit de passer les encadrés d’approfondissement théorique ou critique (*Boîte à outils*, *Noyau formel*, *Nuance et discussion ouverte*, *Question à se poser*) ne perd aucun maillon du raisonnement. Ces blocs éclairent et consolident en effet l’argument, mais n’en portent jamais seuls une étape indispensable.
+    note: "Remplace le deux-points explicatif par une coupe articulée."
+
+  - id: "006"
+    motif: italique
+    avant: |
+      Ces exemples ont une valeur strictement *illustrative* : les paramètres retenus (récapitulés dans l’annexe [-@sec:annexe-d]) sont choisis pour mettre une propriété structurelle à nu, non pour fournir l’estimation empirique d’une grandeur réelle.
+    apres: |
+      Ces exemples ont une valeur strictement illustrative. Les paramètres retenus (récapitulés dans l’annexe [-@sec:annexe-d]) sont en effet choisis pour mettre une propriété structurelle à nu, non pour fournir l’estimation empirique d’une grandeur réelle.
+    note: "Retire l'italique d'emphase et remplace le deux-points par une coupe articulée."
+
+  - id: "007"
+    motif: phrase-longue
+    avant: |
+      Lorsqu’une étude de cas porte sur des systèmes d’intelligence artificielle ou des expériences de terrain dont les mesures dépendent d’une génération particulière de modèles et d’outils, son titre mentionne explicitement son millésime : les chiffres datés illustrent un mécanisme durable, mais l’argument général du livre ne dépend jamais des performances transitoires d’une version donnée.
+    apres: |
+      Lorsqu’une étude de cas porte sur des systèmes d’intelligence artificielle ou des expériences de terrain dont les mesures dépendent d’une génération particulière de modèles et d’outils, son titre mentionne explicitement son millésime. Les chiffres datés illustrent ainsi un mécanisme durable, mais l’argument général du livre ne dépend jamais des performances transitoires d’une version donnée.
+    note: "Remplace le deux-points par une coupe articulée."
+
+  - id: "008"
+    motif: phrase-longue
+    avant: |
+      Ce terme est mis en caractères gras et défini lors de sa première introduction formelle dans le corps de l’ouvrage ; le glossaire de l’annexe [-@sec:annexe-b] et la table des notations de l’annexe [-@sec:annexe-c] permettent de retrouver à tout moment sa définition et le chapitre qui l’introduit.
+    apres: |
+      Ce terme est mis en caractères gras et défini lors de sa première introduction formelle dans le corps de l’ouvrage. Le glossaire de l’annexe [-@sec:annexe-b] et la table des notations de l’annexe [-@sec:annexe-c] permettent ainsi de retrouver à tout moment sa définition et le chapitre qui l’introduit.
+    note: "Coupe articulée au point-virgule."

@@ -1,0 +1,40 @@
+{
+  "lot": "style/lots/04-decider",
+  "chapitre": "04-decider",
+  "fichier": "monographie/chapitres/04-decider.md",
+  "tour": null,
+  "redacteur": "gemini",
+  "date": "2026-11-20T13:24:14",
+  "sha256_chapitre": "ff3ad48f5027e59a3f210fd467259264178830772ac02eece372bb4e63fc8389",
+  "sha256_propositions": "6ee7c3bed432166e2f91e9822214ae2447d76d6bbf96597549c66ca1f96c8129",
+  "modifications": [
+    {
+      "id": "001",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "Et si les probabilités annoncées sont trop optimistes, ou si le seuil est mal réglé, l’écart entre les prévisions consignées et les fréquences observées finit par apparaître dans l’historique : on peut alors recalibrer la règle pour les cas suivants.",
+      "apres": "Et si les probabilités annoncées sont trop optimistes, ou si le seuil est mal réglé, l’écart entre les prévisions consignées et les fréquences observées finit par apparaître dans l’historique. On peut alors recalibrer la règle pour les cas suivants.",
+      "debut": 17774,
+      "fin": 18024,
+      "ligne": 107,
+      "section": "sec:ch04-decision-unique",
+      "titre_section": "Décider une seule fois ou à répétition"
+    },
+    {
+      "id": "002",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "or-initial",
+      "avant": "Or le monde, une fois l’acte engagé, ne consulte pas nos probabilités (@sec:ch02-monde-action).",
+      "apres": "Mais le monde, une fois l’acte engagé, ne consulte pas nos probabilités (@sec:ch02-monde-action).",
+      "debut": 20942,
+      "fin": 21037,
+      "ligne": 121,
+      "section": "sec:ch04-question-ouverte",
+      "titre_section": "La question laissée ouverte"
+    }
+  ]
+}

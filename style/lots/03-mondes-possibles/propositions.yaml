@@ -1,0 +1,34 @@
+chapitre: 03-mondes-possibles
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: phrase-longue
+    avant: |
+      La prudence demande en outre de ne donner une probabilité nulle qu’à ce qui est logiquement exclu, puisqu’aucune observation ne pourrait plus la relever (@sec:ch01-score-logarithmique), et cela même lorsqu’on décide de ne pas examiner certains mondes : ne pas s’y attarder n’est pas leur donner zéro.
+    apres: |
+      La prudence demande en outre de ne donner une probabilité nulle qu’à ce qui est logiquement exclu, puisqu’aucune observation ne pourrait plus la relever (@sec:ch01-score-logarithmique), et cela même lorsqu’on décide de ne pas examiner certains mondes. Ne pas s’y attarder n’est pas pour autant leur donner zéro.
+    note: "Coupe au deux-points avec « pour autant »."
+
+  - id: "002"
+    motif: or-initial
+    avant: |
+      Or ce qui l’attend à la veille de Noël n’est pas un tirage quotidien.
+    apres: |
+      Mais ce qui l’attend à la veille de Noël n’est pas un tirage quotidien.
+    note: "Remplace « Or » en tête de phrase par « Mais »."
+
+  - id: "003"
+    motif: italique
+    avant: |
+      Même avec un historique bien tenu et une règle strictement propre, la calibration se heurte à une limite de principe, qui pèsera sur toute la suite du livre : *elle exige la répétition*.
+    apres: |
+      Même avec un historique bien tenu et une règle strictement propre, la calibration se heurte à une limite de principe, qui pèsera sur toute la suite du livre : elle exige la répétition.
+    note: "Retire l'italique d'emphase."
+
+  - id: "004"
+    motif: phrase-longue
+    avant: |
+      On ne calibre pas une traversée océanique, une opération chirurgicale exceptionnelle ou le lancement d’une sonde interplanétaire, qui n’ont lieu qu’une fois : il n’existe aucune série de cas semblables à laquelle confronter la probabilité annoncée, et l’issue, quand elle arrive, ne juge qu’une prévision.
+    apres: |
+      On ne calibre pas une traversée océanique, une opération chirurgicale exceptionnelle ou le lancement d’une sonde interplanétaire, qui n’ont lieu qu’une fois. Il n’existe en effet aucune série de cas semblables à laquelle confronter la probabilité annoncée, et l’issue, quand elle arrive, ne juge qu’une prévision.
+    note: "Coupe articulée au deux-points avec « en effet »."
