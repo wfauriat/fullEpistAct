@@ -130,11 +130,15 @@ def analyse_lines(text: str) -> list[dict]:
         elif dp.DIV_CLOSE_RE.match(line) and stack:
             stack.pop()
             why = "balise de bloc"
+        elif in_math:
+            # a display formula may close on a line that does not start with $$,
+            # e.g. "\end{aligned}$$ {#eq:…}"
+            if "$$" in s:
+                in_math = False
+            why = "formule centrée"
         elif s.startswith("$$"):
             if s.count("$$") == 1:
-                in_math = not in_math
-            why = "formule centrée"
-        elif in_math:
+                in_math = True
             why = "formule centrée"
         elif any(c & dp.PROTECTED for c in stack):
             why = "bloc protégé (" + ", ".join(sorted(set().union(*stack) & dp.PROTECTED)) + ")"
