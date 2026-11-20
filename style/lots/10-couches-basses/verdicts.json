@@ -1,0 +1,13 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/10-couches-basses/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "« Or » initial remplacé par « pourtant » ; la tension entre « aucun ingrédient mystérieux » et le risque des chaînes (@prop:chaines) est réelle, et la phrase garde son rôle : poser la difficulté que reprend la question suivante."},
+    {"id": "002", "verdict": "accepte", "dimensions": [], "raison": "Longue phrase coupée au deux-points ; « ainsi » rend le lien de conséquence implicite, et « peut », « sans alerte » et « même au cœur d’un logiciel parfaitement déterministe » sont conservés."},
+    {"id": "003", "verdict": "accepte", "dimensions": [], "raison": "Coupe au point-virgule d’un item très long ; l’exemple de rejet reste rattaché à la vérification du compilateur, et les modalités (« avant toute exécution », « avant même de pouvoir être exécuté ») sont intactes."},
+    {"id": "004", "verdict": "rejete", "dimensions": ["argument", "francais"], "raison": "« pourtant » oppose l’exigence de la spécification à la phrase précédente, qui ne dit rien des unités : aucune opposition n’y existe. De plus, il double l’opposition déjà portée par « alors que » dans la même phrase (« exigeait pourtant… alors que »). « Or », qui introduit ici le fait décisif du récit, était plus juste."},
+    {"id": "005", "verdict": "accepte", "dimensions": [], "raison": "« ; mais » devient « . Elles n’ont toutefois pas » : la concession est conservée, et le contenu factuel du rapport reste inchangé."},
+    {"id": "006", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points d’une phrase de bilan très longue, dans un paragraphe qui contient déjà un autre deux-points ; « rendent possible » et « garantissent » sont conservés tels quels."},
+    {"id": "007", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points dans un point clé chargé ; les trois degrés, « seul le premier » et « faute de quoi » sont intacts."}
+  ]
+}
