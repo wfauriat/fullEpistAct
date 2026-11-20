@@ -13,6 +13,7 @@
 \usepackage{newunicodechar}
 \newunicodechar{ᵉ}{\textsuperscript{e}}
 \newunicodechar{ʳ}{\textsuperscript{r}}
+\newunicodechar{𝒯}{\ensuremath{\mathcal{T}}}
 
 % ---------------------------------------------------------------- Packages
 % Link anchors named by an internal counter, not by section numbers: the preface's sections
@@ -127,6 +128,13 @@
 % (filter, pass 6), so its length is free; the part's first chapter opens a new page.
 \newenvironment{introductionpartie}{%
   \thispagestyle{plain}\vspace*{3\baselineskip}}{\par}
+% Close a part's scope in the TOC and PDF bookmarks before standalone back-matter chapters
+% (Conclusion, Appendices, Bibliography).
+\AddToHook{package/hyperref/after}{\usepackage{bookmark}}
+\newcommand{\clorepartie}{%
+  \cleardoublepage
+  \addtocontents{toc}{\protect\addvspace{1em}}%
+  \ifdefined\bookmarksetup\bookmarksetup{startatroot}\fi}
 
 % ---------------------------------------------------------------- Layout
 \setcounter{tocdepth}{1}

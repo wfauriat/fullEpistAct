@@ -101,15 +101,15 @@ Les identifiants entre crochets indiquent la lignée de chaque point :
 
 ### Priorité 3 — Corrections techniques de compilation, renvois `@sec:` et gabarit LaTeX/Lua
 
-*(Peut être exécuté immédiatement après la fusion de `style-pass` dans `main`, indépendamment des arbitrages de fond.)*
+*(Terminé sur `main` après la fusion de `style-pass` ; vérifié sur `build/livre-ecran.pdf` et `build/livre.html`.)*
 
-- [ ] **P3.1 — `[REV-5.1]` : Réparation des renvois de sections (`@sec:` / `\nameref`) en français**
-  - Corriger l’accord « au section 0.7 » $\to$ « à la section 0.7 » (`chapitres/07-cadre-cause-commune.md`, `chapitres/17-decisions-sans-appel.md` ou filtre Lua).
-  - Corriger les renvois vers des sous-sections non numérotées qui injectent le titre nu après un article (« à la *Le monde : rapide…* », « de la *Vos propres contrôles…* », « la *Un danger structurel…* ») ou entre parenthèses dans les ch. 14 à 18 et la conclusion (`monographie/filtres/` et fichiers chapitres concernés).
-- [ ] **P3.2 — `[REV-5.2]` : En-têtes courants (`\markboth`) et coupure visuelle de la Conclusion**
-  - Corriger l’en-tête courant de l’*Avant-propos* (qui affiche *Table des matières*), de la *Conclusion* (qui conserve *18 Un remède à trois niveaux* et s’enchaîne dans la Partie V sans coupure de partie) et de la *Bibliographie* (qui conserve *D Paramètres des exemples quantitatifs*) dans `monographie/gabarit/` et `monographie/filtres/`.
-- [ ] **P3.3 — `[REV-5.3]` : Glyphe manquant (`□`) pour $\mathcal{T}$ dans les annexes B et C**
-  - Corriger le rendu de $\mathcal{T}$ dans `annexes/B-glossaire.md`, `annexes/C-notation.md` et le script/gabarit de génération du glossaire.
+- [x] **P3.1 — `[REV-5.1]` : Réparation des renvois de sections (`@sec:` / `\nameref`) en français**
+  - Corrigé l’accord « au section 0.7 » $\to$ « à la section 0.7 » (`chapitres/07-cadre-cause-commune.md`, `chapitres/17-decisions-sans-appel.md`).
+  - Numéroté les sous-sections de niveau 3 (`h.level == 3`, `chap.sect.subsect`) dans `filtres/monographie.lua` pour les aligner sur la numérotation LaTeX (`section 13.2.1`, `section 13.2.4`, `section 14.2.1`, `section 18.1.4`, etc.) et préfixé les renvois aux sections non numérotées (Avant-propos, Conclusion) par `section « … »`.
+- [x] **P3.2 — `[REV-5.2]` : En-têtes courants (`\markboth`) et coupure visuelle de la Conclusion**
+  - Ajouté `\markboth` explicite pour les chapitres non numérotés (*Avant-propos*, *Conclusion : la méthode appliquée à elle-même*, *Bibliographie*) et `\clorepartie` (espacement de table des matières + remise à la racine des signets PDF via `bookmark`) avant la Conclusion, les Annexes et la Bibliographie (`filtres/monographie.lua`, `gabarit/preambule.tex`).
+- [x] **P3.3 — `[REV-5.3]` : Glyphe manquant (`□`) pour $\mathcal{T}$ dans les annexes B et C**
+  - Déclaré `\newunicodechar{𝒯}{\ensuremath{\mathcal{T}}}` dans `gabarit/preambule.tex` (0 caractère manquant dans `build/livre-ecran.log`).
 
 ---
 
