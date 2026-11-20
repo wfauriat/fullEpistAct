@@ -1,0 +1,9 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/12-autre-regime/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "Le deux-points explicatif devient une coupe articulée par « en effet », qui garde le lien de justification. « demeurait », « aurait pu » et « une fois pour toutes » sont conservés, et la phrase d’environ 50 mots est allégée."},
+    {"id": "002", "verdict": "accepte", "dimensions": [], "raison": "La phrase d’environ 70 mots est coupée au deux-points, et « en effet » garde le lien explicatif. La condition « Tant que » porte toujours sur l’angle mort hérité. La phrase détachée, qui décrit l’interface lisse et la garantie retirée, n’était pas conditionnelle dans l’original, car elle explique cet angle mort."},
+    {"id": "003", "verdict": "accepte", "dimensions": [], "raison": "La coupe au point-virgule sépare la définition de la calibration générative de sa conséquence. Le contraste « Alors que », le terme en gras, « mécaniquement » et « faits rares » sont intacts, et la phrase d’environ 60 mots gagne en lisibilité."}
+  ]
+}

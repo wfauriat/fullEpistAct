@@ -1,0 +1,58 @@
+chapitre: 08-independance-chaines
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: phrase-longue
+    avant: |
+      La comparabilité est parfaite — les résultats se superposent bit à bit —, mais la capacité à se tromper autrement est nulle : les deux exécutions partagent tout, jusqu’à la moindre omission de cadre, et ne contrôlent rien l’une chez l’autre (tout au plus une panne matérielle fugitive).
+    apres: |
+      La comparabilité est parfaite — les résultats se superposent bit à bit —, mais la capacité à se tromper autrement est nulle. Les deux exécutions partagent en effet tout, jusqu’à la moindre omission de cadre, et ne contrôlent rien l’une chez l’autre (tout au plus une panne matérielle fugitive).
+    note: "Coupe articulée au deux-points avec « en effet »."
+
+  - id: "002"
+    motif: phrase-longue
+    avant: |
+      Mais précisément parce qu’il partage très peu avec votre représentation, ses objections peinent à mordre sur vos chiffres : elles ne parlent pas des mêmes grandeurs, ne se traduisent pas sans effort dans votre modèle et risquent d’être écartées faute de terrain commun ou de prise en compte (@def:prise-en-compte).
+    apres: |
+      Mais précisément parce qu’il partage très peu avec votre représentation, ses objections peinent à mordre sur vos chiffres. Elles ne parlent pas en effet des mêmes grandeurs, ne se traduisent pas sans effort dans votre modèle et risquent d’être écartées faute de terrain commun ou de prise en compte (@def:prise-en-compte).
+    note: "Scinde une phrase de 50 mots au deux-points avec « en effet »."
+
+  - id: "003"
+    motif: phrase-longue
+    avant: |
+      - Tout en haut du tableau se tient une seconde exécution du même calcul par éléments finis : la comparaison est immédiate, gratuite, et parfaitement aveugle à la corrosion ; un contrôle analytique rapide reposant sur les mêmes idéalisations géométriques (@sec:ch07) demeure, lui aussi, bloqué au niveau des méthodes partageant le même modèle.
+    apres: |
+      - Tout en haut du tableau se tient une seconde exécution du même calcul par éléments finis : la comparaison est immédiate, gratuite, et parfaitement aveugle à la corrosion. Un contrôle analytique rapide reposant sur les mêmes idéalisations géométriques (@sec:ch07) demeure, lui aussi, bloqué au niveau des méthodes partageant le même modèle.
+    note: "Scinde une phrase de 54 mots au point-virgule."
+
+  - id: "004"
+    motif: phrase-longue
+    avant: |
+      - Au milieu du tableau figure le modèle d’un collègue appartenant à une autre équipe de mécanique, bâti avec d’autres approximations de géométrie ou d’encastrement : ce comparateur peut repérer une mauvaise hypothèse mécanique dans les variables partagées, mais tant que le cadre demeure purement mécanique, la corrosion lui échappe encore.
+    apres: |
+      - Au milieu du tableau figure le modèle d’un collègue appartenant à une autre équipe de mécanique, bâti avec d’autres approximations de géométrie ou d’encastrement. Ce comparateur peut repérer une mauvaise hypothèse mécanique dans les variables partagées, mais tant que le cadre demeure purement mécanique, la corrosion lui échappe encore.
+    note: "Scinde une phrase de 51 mots au deux-points."
+
+  - id: "005"
+    motif: phrase-longue
+    avant: |
+      Dans une chaîne à quatre étapes — par exemple mesure, lissage, calcul thermique, calcul mécanique —, chaque maillon se fie à ce qu’il reçoit pour se concentrer sur sa propre tâche : il suffit qu’un seul maillon laisse passer une cause d’erreur qu’il ne sait pas voir, ou que le passage d’un maillon au suivant introduise une erreur de raccordement, pour que le résultat final soit faussé.
+    apres: |
+      Dans une chaîne à quatre étapes — par exemple mesure, lissage, calcul thermique, calcul mécanique —, chaque maillon se fie à ce qu’il reçoit pour se concentrer sur sa propre tâche. Il suffit alors qu’un seul maillon laisse passer une cause d’erreur qu’il ne sait pas voir, ou que le passage d’un maillon au suivant introduise une erreur de raccordement, pour que le résultat final soit faussé.
+    note: "Scinde une phrase de 65 mots au deux-points avec « alors »."
+
+  - id: "006"
+    motif: phrase-longue
+    avant: |
+      Vis-à-vis de son propre angle mort, c’est en réalité une copie : le contrôleur partage le même cadre, les mêmes variables et les mêmes omissions que le producteur, de sorte que l’intersection de leurs angles morts redonne l’angle mort initial tout entier (@sec:ch07).
+    apres: |
+      Vis-à-vis de son propre angle mort, c’est en réalité une copie. Car le contrôleur partage le même cadre, les mêmes variables et les mêmes omissions que le producteur, de sorte que l’intersection de leurs angles morts redonne l’angle mort initial tout entier (@sec:ch07).
+    note: "Coupe articulée au deux-points avec « Car »."
+
+  - id: "007"
+    motif: or-initial
+    avant: |
+      Or les nombres franchissaient l’interface nus, dépourvus de toute mention d’unité à l’intérieur même du fichier transmis.
+    apres: |
+      Mais les nombres franchissaient l’interface nus, dépourvus de toute mention d’unité à l’intérieur même du fichier transmis.
+    note: "Remplace « Or » en tête de phrase par « Mais »."

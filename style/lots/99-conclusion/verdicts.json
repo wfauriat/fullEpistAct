@@ -1,0 +1,7 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/99-conclusion/",
+  "verdicts": [
+    {"id": "001", "verdict": "rejete", "dimensions": ["argument", "gain"], "raison": "« Or » enchaîne ici une mineure (le poids pratique repose sur les ponts ; ces ponts sont des hypothèses de travail ; donc le poids pratique repose sur des hypothèses de travail, conclusion reprise dans les Points clés). « Mais » remplace ce lien d’inférence par une opposition, et l’échange d’un connecteur contre un autre, pour un « Or » isolé qui n’ouvre pas une série, n’apporte pas de gain net."}
+  ]
+}

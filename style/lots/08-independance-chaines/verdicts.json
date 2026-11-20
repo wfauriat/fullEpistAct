@@ -1,0 +1,13 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/08-independance-chaines/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "Le deux-points explicatif devient un point suivi de « en effet », ce qui allège un paragraphe déjà chargé en deux-points. Le sens, la portée (« nulle », « tout », « rien », « tout au plus ») et la parenthèse sont conservés."},
+    {"id": "002", "verdict": "rejete", "dimensions": ["francais"], "raison": "« Elles ne parlent pas en effet des mêmes grandeurs » : l’adverbe pris entre « pas » et son complément, sans virgules, est maladroit et peut se lire comme une négation de « en effet ». L’ordre attendu serait « ne parlent en effet pas » ou une incise entre virgules."},
+    {"id": "003", "verdict": "accepte", "dimensions": [], "raison": "Le point-virgule devient un point et sépare deux comparateurs distincts dans un item de liste trop long. « lui aussi », le renvoi et le niveau du tableau sont conservés."},
+    {"id": "004", "verdict": "accepte", "dimensions": [], "raison": "Le deux-points devient un point, ce qui coupe un item long. Le modal « peut », la restriction « dans les variables partagées » et la condition « tant que » restent intacts."},
+    {"id": "005", "verdict": "accepte", "dimensions": [], "raison": "Le deux-points devient un point suivi de « alors », qui explicite le lien de conséquence que portait le deux-points. La condition « il suffit qu’un seul… ou que… » est intacte, et les deux sources d’erreur sont conservées."},
+    {"id": "006", "verdict": "rejete", "dimensions": ["francais", "registre"], "raison": "« Car » en tête de phrase, après un point, est une construction critiquée en prose académique. La retouche remplace un deux-points par un tic plus visible, sans gain net."},
+    {"id": "007", "verdict": "rejete", "dimensions": ["argument"], "raison": "« Or » introduit ici la prémisse qui, combinée à l’erreur d’unité, explique pourquoi elle est passée inaperçue. « Mais » pose à la place une opposition avec la phrase précédente, alors qu’il n’y en a pas : le lien logique change."}
+  ]
+}

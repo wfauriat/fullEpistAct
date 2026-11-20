@@ -1,0 +1,15 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/16-angles-morts-collectifs/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "« Or » initial retiré au profit de « pourtant », qui rend le contraste attendu (deux facteurs distingués, un seul mesuré) ; coupe au point-virgule articulée par « ainsi » ; sens, portée et renvois inchangés."},
+    {"id": "002", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points articulée par « ainsi » ; la condition « si les opérateurs réagissent par appariement des probabilités » reste dans la même phrase et porte sur le même segment."},
+    {"id": "003", "verdict": "rejete", "dimensions": ["portee", "argument"], "raison": "La coupe fait sortir « le contrôleur ne sert presque plus, mais le risque total continue de suivre la baisse du taux d’erreur » de la portée de « tant que les paramètres du contrôleur ($c$, $m$, $f$) restent inchangés » ; le paragraphe suivant montre justement que cette conclusion tombe quand $c$ bouge."},
+    {"id": "004", "verdict": "rejete", "dimensions": ["argument"], "raison": "« pourtant » introduit une opposition absente : le grand modèle de langage prolonge et industrialise le mécanisme de la phrase précédente (réutiliser un contact avec le monde payé par d’autres), il ne le contredit pas. Le lien logique change."},
+    {"id": "005", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points d’une phrase longue qui introduit la scène ; contenu, exemple et incise intacts."},
+    {"id": "006", "verdict": "rejete", "dimensions": ["argument", "gain"], "raison": "Le deux-points introduisait la glose de $\\Pr(A \\mid E)$ voisine de $1$ ; « en effet » la présente comme une justification de la phrase précédente, ce qui inverse le rapport entre énoncé formel et lecture. Le gain reste faible pour une phrase de longueur raisonnable."},
+    {"id": "007", "verdict": "accepte", "dimensions": [], "raison": "« Or » initial remplacé par « Mais », qui rend fidèlement le contraste entre le basculement décrit et l’inertie des incitations ; « la plupart des » conservé."},
+    {"id": "008", "verdict": "accepte", "dimensions": [], "raison": "Coupe d’une phrase très longue ; « Cette situation » reprend sans ambiguïté l’ensemble de ce que les évaluateurs n’ont plus le temps de faire, et « tandis que » ainsi que le terme « prise en compte » avec son renvoi sont conservés."},
+    {"id": "009", "verdict": "accepte", "dimensions": [], "raison": "Coupe aux points-virgules d’une phrase de plus de soixante-dix mots ; les trois verbes en italique, l’ordre « d’abord, ensuite, enfin », tous les éléments de l’énumération et les renvois sont conservés."}
+  ]
+}

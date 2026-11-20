@@ -1,0 +1,11 @@
+{
+  "lot": "style/lots/01-outils-logique-probabilite",
+  "chapitre": "01-outils-logique-probabilite",
+  "fichier": "monographie/chapitres/01-outils-logique-probabilite.md",
+  "tour": null,
+  "redacteur": "gemini",
+  "date": "2026-11-20T13:22:39",
+  "sha256_chapitre": "c20870e31f23b4a3b2f803a5f2309e6d4639afe4b1ead2dc5959e2687dba59fa",
+  "sha256_propositions": "93d1e2b2796731600c2fbb71db4f75fa06d89d2f920fb07e0812cbaefd3af91e",
+  "modifications": []
+}

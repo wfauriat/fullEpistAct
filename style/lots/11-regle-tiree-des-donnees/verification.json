@@ -1,0 +1,68 @@
+{
+  "lot": "style/lots/11-regle-tiree-des-donnees",
+  "chapitre": "11-regle-tiree-des-donnees",
+  "fichier": "monographie/chapitres/11-regle-tiree-des-donnees.md",
+  "tour": null,
+  "redacteur": "gemini",
+  "date": "2026-11-20T13:28:42",
+  "sha256_chapitre": "338585e440ca39c0b0c85a3cd8f1c7dbcc29329d37ad5c41dd4c5fe316b77fc1",
+  "sha256_propositions": "89810cf582ddb49d3e3bc9367e9107b755ce374d0ba6ad3dce437b9bf09beefa",
+  "modifications": [
+    {
+      "id": "001",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "En premier lieu disparaît la garantie préalable qu’offrait un composant conforme à la @def:composant-specifie : l’ajustement numérique contraint les paramètres à s’accorder aux exemples d’entraînement — que l’on contrôle ensuite sur des échantillons d’essai tirés d’une source semblable —, et non à satisfaire un invariant démontré pour toute entrée concevable.",
+      "apres": "En premier lieu disparaît la garantie préalable qu’offrait un composant conforme à la @def:composant-specifie, car l’ajustement numérique contraint les paramètres à s’accorder aux exemples d’entraînement — que l’on contrôle ensuite sur des échantillons d’essai tirés d’une source semblable —, et non à satisfaire un invariant démontré pour toute entrée concevable.",
+      "debut": 3269,
+      "fin": 3630,
+      "ligne": 19,
+      "section": "sec:ch11-donnees",
+      "titre_section": "La spécification passe dans les données"
+    },
+    {
+      "id": "002",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "formule-creuse",
+      "avant": "Il serait erroné de voir dans ce déplacement une négligence ou un abandon de rigueur.",
+      "apres": "Ce déplacement ne relève ni d’une négligence ni d’un abandon de rigueur.",
+      "debut": 5436,
+      "fin": 5521,
+      "ligne": 23,
+      "section": "sec:ch11-donnees",
+      "titre_section": "La spécification passe dans les données"
+    },
+    {
+      "id": "003",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "Personne n’a programmé cet escalier de représentations, ni posé entre ces couches des contrats comparables à ceux qui séparent un système de fichiers d’un programme utilisateur (@sec:ch10) : cette organisation a été retenue par l’optimisation uniquement parce qu’elle réduisait l’erreur de prédiction.",
+      "apres": "Personne n’a programmé cet escalier de représentations, ni posé entre ces couches des contrats comparables à ceux qui séparent un système de fichiers d’un programme utilisateur (@sec:ch10). Cette organisation a été retenue par l’optimisation uniquement parce qu’elle réduisait l’erreur de prédiction.",
+      "debut": 7929,
+      "fin": 8230,
+      "ligne": 31,
+      "section": "sec:ch11-moteur",
+      "titre_section": "Le moteur à prédire le fragment suivant"
+    },
+    {
+      "id": "004",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "Une réponse prise isolément ne porte en surface aucune marque indiquant que le modèle vient de sortir de son domaine de maîtrise — le @sec:ch12 montrera dans quelles limites la comparaison de plusieurs tirages répétés (plusieurs réponses obtenues pour la même consigne) permet, pour certaines erreurs mais non pour toutes, de repérer une réponse hasardeuse.",
+      "apres": "Une réponse prise isolément ne porte en surface aucune marque indiquant que le modèle vient de sortir de son domaine de maîtrise. Le @sec:ch12 montrera dans quelles limites la comparaison de plusieurs tirages répétés (plusieurs réponses obtenues pour la même consigne) permet, pour certaines erreurs mais non pour toutes, de repérer une réponse hasardeuse.",
+      "debut": 12424,
+      "fin": 12781,
+      "ligne": 51,
+      "section": "sec:ch11-plausibilite",
+      "titre_section": "Fluide et faux sans enfreindre aucune règle"
+    }
+  ]
+}

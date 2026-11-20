@@ -1,0 +1,50 @@
+chapitre: 06-detecter-une-erreur
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: phrase-longue
+    avant: |
+      Le @sec:ch05 a distingué trois sortes d’incertitudes — aléatoire, épistémique et ontologique — et montré qu’une barre d’erreur ne mesure jamais que l’ampleur du désaccord à l’intérieur d’un ensemble d’alternatives admises à l’avance (@prop:desaccord) : ce que le cadre omet, et sur quoi toutes les alternatives admises gardent donc le silence, ne laisse aucune trace chiffrée.
+    apres: |
+      Le @sec:ch05 a distingué trois sortes d’incertitudes — aléatoire, épistémique et ontologique — et montré qu’une barre d’erreur ne mesure jamais que l’ampleur du désaccord à l’intérieur d’un ensemble d’alternatives admises à l’avance (@prop:desaccord). Ce que le cadre omet, et sur quoi toutes les alternatives admises gardent donc le silence, ne laisse aucune trace chiffrée.
+    note: "Coupe au deux-points dans le chapeau."
+
+  - id: "002"
+    motif: or-initial
+    avant: |
+      Or chacune de ces cinq conditions obéit à des mécanismes qui lui sont propres, et elles peuvent céder séparément.
+    apres: |
+      Chacune de ces cinq conditions obéit pourtant à des mécanismes qui lui sont propres, et elles peuvent céder séparément.
+    note: "Remplace « Or » en tête de phrase par « pourtant »."
+
+  - id: "003"
+    motif: phrase-longue
+    avant: |
+      Une équipe ou un système dont le taux d’erreur est modeste peut néanmoins causer de graves dommages si ses erreurs franchissent tous les contrôles sans être arrêtées ; à l’inverse, un outil sujet à des erreurs fréquentes, mais aussitôt interceptées avant la décision, expose à moins de risque qu’un outil plus exact dont les fautes passent sans contradiction.
+    apres: |
+      Une équipe ou un système dont le taux d’erreur est modeste peut néanmoins causer de graves dommages si ses erreurs franchissent tous les contrôles sans être arrêtées. À l’inverse, un outil sujet à des erreurs fréquentes, mais aussitôt interceptées avant la décision, expose à moins de risque qu’un outil plus exact dont les fautes passent sans contradiction.
+    note: "Scinde une phrase de 55 mots au point-virgule."
+
+  - id: "004"
+    motif: phrase-longue
+    avant: |
+      Si l’une quelconque des cinq conditions fait défaut pour cette classe d’erreurs, le contrôle n’a aucune chance d’arrêter les erreurs de cette famille avant qu’elles ne se traduisent en acte : devant lui, leur probabilité d’échappement est égale à $1$, soit 100 %.
+    apres: |
+      Si l’une quelconque des cinq conditions fait défaut pour cette classe d’erreurs, le contrôle n’a aucune chance d’arrêter les erreurs de cette famille avant qu’elles ne se traduisent en acte. Devant lui, leur probabilité d’échappement est alors égale à $1$, soit 100 %.
+    note: "Coupe articulée au deux-points avec « alors »."
+
+  - id: "005"
+    motif: italique
+    avant: |
+      Pris tel quel, *il ne prouve rien*, à moins que le comparateur n’ait eu une véritable possibilité de contredire l’affirmation si celle-ci avait été fausse.
+    apres: |
+      Pris tel quel, il ne prouve rien, à moins que le comparateur n’ait eu une véritable possibilité de contredire l’affirmation si celle-ci avait été fausse.
+    note: "Retire l'italique d'emphase."
+
+  - id: "006"
+    motif: phrase-longue
+    avant: |
+      Un désaccord établi entre grandeurs comparables oblige à chercher l’erreur, puisqu’il démontre qu’un des deux côtés au moins est erroné ; un accord, lui, n’apporte un véritable appui à l’affirmation que dans la mesure où le contrôle courait réellement le risque d’échouer si l’affirmation avait été fausse.
+    apres: |
+      Un désaccord établi entre grandeurs comparables oblige à chercher l’erreur, puisqu’il démontre qu’un des deux côtés au moins est erroné. Un accord, lui, n’apporte un véritable appui à l’affirmation que dans la mesure où le contrôle courait réellement le risque d’échouer si l’affirmation avait été fausse.
+    note: "Scinde une phrase de 49 mots au point-virgule."

@@ -1,0 +1,12 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/05-trois-incertitudes/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "Les tirets et le « et sur » lèvent l’ambiguïté qui laissait lire « la formule des probabilités totales » dans la relative ; prérequis, renvois et sens inchangés."},
+    {"id": "002", "verdict": "accepte", "dimensions": [], "raison": "Retrait d’une italique d’emphase portant sur toute une proposition ; le texte, la portée de la négation et le statut de l’énoncé sont inchangés."},
+    {"id": "003", "verdict": "accepte", "dimensions": [], "raison": "La phrase longue est coupée au deux-points. « En effet » rend explicite le lien de justification que portait déjà le deux-points ; « seul », « toujours » et la parenthèse sur le protocole sont conservés."},
+    {"id": "004", "verdict": "rejete", "dimensions": ["francais", "gain"], "raison": "Une fois la retouche 003 acceptée, « en effet » reviendrait deux phrases plus loin dans ce court paragraphe (« ne laisse en effet… », « sous-estimera en effet… ») : on remplacerait un tic par un autre. Dans la phrase d’origine, le deux-points introduisait clairement la précision."},
+    {"id": "005", "verdict": "rejete", "dimensions": ["francais", "registre"], "raison": "Une phrase autonome ouverte par « Car » après un point est maladroite en prose académique. La coupe isole la justification de l’affirmation qu’elle fonde, et le deux-points d’origine faisait déjà ce travail sans heurt."},
+    {"id": "006", "verdict": "accepte", "dimensions": [], "raison": "La phrase d’environ 45 mots est coupée au point-virgule. « Pourtant » explicite une concession déjà contenue dans « passer outre » ; acteurs, faits et source sont inchangés."}
+  ]
+}

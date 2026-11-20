@@ -1,0 +1,34 @@
+chapitre: 11-regle-tiree-des-donnees
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: phrase-longue
+    avant: |
+      En premier lieu disparaît la garantie préalable qu’offrait un composant conforme à la @def:composant-specifie : l’ajustement numérique contraint les paramètres à s’accorder aux exemples d’entraînement — que l’on contrôle ensuite sur des échantillons d’essai tirés d’une source semblable —, et non à satisfaire un invariant démontré pour toute entrée concevable.
+    apres: |
+      En premier lieu disparaît la garantie préalable qu’offrait un composant conforme à la @def:composant-specifie, car l’ajustement numérique contraint les paramètres à s’accorder aux exemples d’entraînement — que l’on contrôle ensuite sur des échantillons d’essai tirés d’une source semblable —, et non à satisfaire un invariant démontré pour toute entrée concevable.
+    note: "Remplace le deux-points explicatif par une articulation causale explicite (« car »)."
+
+  - id: "002"
+    motif: formule-creuse
+    avant: |
+      Il serait erroné de voir dans ce déplacement une négligence ou un abandon de rigueur.
+    apres: |
+      Ce déplacement ne relève ni d’une négligence ni d’un abandon de rigueur.
+    note: "Remplace une formule diplomatique creuse par une assertion directe."
+
+  - id: "003"
+    motif: phrase-longue
+    avant: |
+      Personne n’a programmé cet escalier de représentations, ni posé entre ces couches des contrats comparables à ceux qui séparent un système de fichiers d’un programme utilisateur (@sec:ch10) : cette organisation a été retenue par l’optimisation uniquement parce qu’elle réduisait l’erreur de prédiction.
+    apres: |
+      Personne n’a programmé cet escalier de représentations, ni posé entre ces couches des contrats comparables à ceux qui séparent un système de fichiers d’un programme utilisateur (@sec:ch10). Cette organisation a été retenue par l’optimisation uniquement parce qu’elle réduisait l’erreur de prédiction.
+    note: "Coupe au deux-points après le renvoi."
+
+  - id: "004"
+    motif: phrase-longue
+    avant: |
+      Une réponse prise isolément ne porte en surface aucune marque indiquant que le modèle vient de sortir de son domaine de maîtrise — le @sec:ch12 montrera dans quelles limites la comparaison de plusieurs tirages répétés (plusieurs réponses obtenues pour la même consigne) permet, pour certaines erreurs mais non pour toutes, de repérer une réponse hasardeuse.
+    apres: |
+      Une réponse prise isolément ne porte en surface aucune marque indiquant que le modèle vient de sortir de son domaine de maîtrise. Le @sec:ch12 montrera dans quelles limites la comparaison de plusieurs tirages répétés (plusieurs réponses obtenues pour la même consigne) permet, pour certaines erreurs mais non pour toutes, de repérer une réponse hasardeuse.
+    note: "Scinde une phrase de 53 mots au tiret cadratin."
