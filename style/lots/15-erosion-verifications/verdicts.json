@@ -1,0 +1,19 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/15-erosion-verifications/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "Phrase-tunnel coupée au deux-points ; « ainsi » rend explicite le lien entre la boucle et le heurt des erreurs contre les repères. Sens, portée et termes inchangés."},
+    {"id": "002", "verdict": "accepte", "dimensions": [], "raison": "« Or » initial remplacé par « Pourtant », qui rend bien la concession (la boucle jouait un rôle décisif, mais elle ne figurait nulle part). Sens conservé."},
+    {"id": "003", "verdict": "accepte", "dimensions": [], "raison": "« Or » initial remplacé par « Mais » : le contraste entre la fonction du signe révélateur et la voix uniforme du modèle est conservé, et le tic disparaît."},
+    {"id": "004", "verdict": "accepte", "dimensions": [], "raison": "Coupe d’une phrase très longue au point-virgule ; « toutefois » reprend le « mais ». « nécessairement » et la restriction « pour les erreurs hasardées » restent attachés au même segment."},
+    {"id": "005", "verdict": "rejete", "dimensions": ["francais", "gain"], "raison": "« Mais le temps passé ensuite à lire une sortie plausible mais étrangère » : deux « mais » dans la même phrase, juste après le « Mais » de tête retenu au paragraphe précédent (003). La lecture n’y gagne pas."},
+    {"id": "006", "verdict": "accepte", "dimensions": [], "raison": "Deux-points remplacé par un point. La seconde phrase se lit toujours comme la traduction concrète de la sévérité devenue presque nulle ; « près de zéro » et « désormais » sont conservés."},
+    {"id": "007", "verdict": "accepte", "dimensions": [], "raison": "Le deux-points explicatif devient un point suivi de « en effet », articulation explicite conforme au registre. Condition « Tant que » et modaux inchangés."},
+    {"id": "008", "verdict": "accepte", "dimensions": [], "raison": "« Or, aujourd’hui » devient « Aujourd’hui, pourtant », qui garde l’opposition entre l’époque du signal coûteux et la gratuité présente. Énumération et contenu intacts."},
+    {"id": "009", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points avec « en effet », qui explicite pourquoi l’étiquette devient une parole gratuite ; « peut » et « presque » sont conservés."},
+    {"id": "010", "verdict": "rejete", "dimensions": ["argument", "fait"], "raison": "Le deux-points introduisait le contenu même de l’« ironie de l’automatisation » telle que Bainbridge l’a décrite (fonction définitoire). Avec la coupe et « en effet », ce contenu devient une justification de l’auteur et se trouve moins clairement attribué à la source."},
+    {"id": "011", "verdict": "accepte", "dimensions": [], "raison": "Phrase longue coupée au deux-points. « presque toujours » et la condition « Lorsque… » restent sur le même segment, et la seconde phrase reste l’explication de la première."},
+    {"id": "012", "verdict": "accepte", "dimensions": [], "raison": "« Or » initial remplacé par « Mais », naturel pour répondre à « On pourrait croire… ». Sens et rôle argumentatif inchangés."},
+    {"id": "013", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points ; « alors » rattache la dynamique à la situation où tous s’adressent aux mêmes modèles, et le modal « peuvent » porte toujours sur le même segment. Renvoi conservé."}
+  ]
+}
