@@ -1,0 +1,74 @@
+chapitre: 14-chaines-qui-agissent
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: phrase-longue
+    avant: |
+      Mais cette division du travail se heurte immédiatement à la même tension que celle observée dans les grands ensembles d’ingénierie (@sec:ch08-composer), portée ici à un degré supérieur : plus l’objectif assigné au *pipeline* se situe haut dans la hiérarchie des finalités — « refactoriser ce dépôt logiciel », « instruire et régler ce litige client », « préparer ce dossier réglementaire à partir d’une liasse de pièces » —, moins cet objectif se laisse enfermer dans un énoncé formel vérifiable d’avance.
+    apres: |
+      Mais cette division du travail se heurte immédiatement à la même tension que celle observée dans les grands ensembles d’ingénierie (@sec:ch08-composer), portée ici à un degré supérieur. Plus l’objectif assigné au *pipeline* se situe haut dans la hiérarchie des finalités — « refactoriser ce dépôt logiciel », « instruire et régler ce litige client », « préparer ce dossier réglementaire à partir d’une liasse de pièces » —, moins cet objectif se laisse en effet enfermer dans un énoncé formel vérifiable d’avance.
+    note: "Scinde une phrase de 72 mots au deux-points avec « en effet »."
+
+  - id: "002"
+    motif: phrase-longue
+    avant: |
+      Entre deux étapes d’un *pipeline* d’intelligence artificielle, aucune spécification formelle n’encadre le sens de la sortie produite par l’étape qui extrait ou par celle qui résume : le premier module livre un texte plausible (@sec:ch11), et le second l’accepte tant qu’il paraît grammaticalement et syntaxiquement bien formé.
+    apres: |
+      Entre deux étapes d’un *pipeline* d’intelligence artificielle, aucune spécification formelle n’encadre le sens de la sortie produite par l’étape qui extrait ou par celle qui résume. Le premier module livre ainsi un texte plausible (@sec:ch11), et le second l’accepte tant qu’il paraît grammaticalement et syntaxiquement bien formé.
+    note: "Coupe articulée au deux-points avec « ainsi »."
+
+  - id: "003"
+    motif: formule-creuse
+    avant: |
+      Il serait toutefois inexact d’affirmer que tout *pipeline* est condamné par nature à demeurer une chaîne aveugle.
+    apres: |
+      Tout *pipeline* n’est toutefois pas condamné par nature à demeurer une chaîne aveugle.
+    note: "Remplace une formule diplomatique creuse par une assertion directe."
+
+  - id: "004"
+    motif: or-initial
+    avant: |
+      Or, d’après l’@eq:ch08-chaine-angle-mort, l’angle mort d’une chaîne contient la réunion des angles morts de toutes ses étapes, augmentée des défauts qui naissent aux interfaces.
+    apres: |
+      Mais, d’après l’@eq:ch08-chaine-angle-mort, l’angle mort d’une chaîne contient la réunion des angles morts de toutes ses étapes, augmentée des défauts qui naissent aux interfaces.
+    note: "Remplace « Or » en tête de phrase par « Mais »."
+
+  - id: "005"
+    motif: phrase-longue
+    avant: |
+      L’épisode isole néanmoins dans toute sa pureté le mécanisme opérationnel à l’œuvre ici : dès qu’un logiciel agit directement à la vitesse de la machine sur un environnement réel, le décalage entre la cadence d’exécution et le délai de prise en compte humaine suffit à rendre les dégâts massifs avant qu’un contrôle extérieur n’intervienne.
+    apres: |
+      L’épisode isole néanmoins dans toute sa pureté le mécanisme opérationnel à l’œuvre ici. Dès qu’un logiciel agit directement à la vitesse de la machine sur un environnement réel, le décalage entre la cadence d’exécution et le délai de prise en compte humaine suffit en effet à rendre les dégâts massifs avant qu’un contrôle extérieur n’intervienne.
+    note: "Scinde une phrase de 51 mots au deux-points avec « en effet »."
+
+  - id: "006"
+    motif: phrase-longue
+    avant: |
+      Dans les *pipelines* et les boucles d’agents fondés sur des modèles de langage, le blanchiment change de matière première et devient presque systématique : ce ne sont plus seulement des tableaux de flottants qui traversent les frontières sans étiquettes, mais des *chaînes de caractères nues* — des paragraphes de texte libre, des résumés ou des champs textuels — qui voyagent d’une étape à l’autre dépouillés de leurs hypothèses, de leur origine et de leur incertitude.
+    apres: |
+      Dans les *pipelines* et les boucles d’agents fondés sur des modèles de langage, le blanchiment change de matière première et devient presque systématique. Ce ne sont plus seulement des tableaux de flottants qui traversent les frontières sans étiquettes, mais des *chaînes de caractères nues* — des paragraphes de texte libre, des résumés ou des champs textuels — qui voyagent d’une étape à l’autre dépouillés de leurs hypothèses, de leur origine et de leur incertitude.
+    note: "Scinde une phrase de 69 mots au deux-points."
+
+  - id: "007"
+    motif: phrase-longue
+    avant: |
+      Entraîné à produire une prose fluide, cohérente et plausible (@sec:ch11), le modèle lisse les aspérités : il gomme les réserves (« valable uniquement avant la version 3 », « sous réserve de vérification comptable »), efface les désaccords entre deux pièces en choisissant une formulation médiane qui paraît consensuelle, et omet d’indiquer si telle affirmation était directement écrite dans la source ou reconstruite par conjecture (@sec:ch12).
+    apres: |
+      Entraîné à produire une prose fluide, cohérente et plausible (@sec:ch11), le modèle lisse les aspérités. Il gomme ainsi les réserves (« valable uniquement avant la version 3 », « sous réserve de vérification comptable »), efface les désaccords entre deux pièces en choisissant une formulation médiane qui paraît consensuelle, et omet d’indiquer si telle affirmation était directement écrite dans la source ou reconstruite par conjecture (@sec:ch12).
+    note: "Scinde une phrase de 63 mots au deux-points avec « ainsi »."
+
+  - id: "008"
+    motif: or-initial
+    avant: |
+      Or ce passage en texte nu détruit la *comparabilité* entre étapes.
+    apres: |
+      Ce passage en texte nu détruit pourtant la *comparabilité* entre étapes.
+    note: "Remplace « Or » en tête de phrase par « pourtant »."
+
+  - id: "009"
+    motif: phrase-longue
+    avant: |
+      - Même lorsque des contrôles croisés indépendants à chaque étape réduisent fortement les erreurs locales le long d’une longue trajectoire, ils laissent intact tout facteur omis que partagent l’agent et ses contrôleurs, et qui pèse sur toute la trajectoire, qui finit par intervenir dans une large part des défaillances restantes.
+    apres: |
+      - Même lorsque des contrôles croisés indépendants à chaque étape réduisent fortement les erreurs locales le long d’une longue trajectoire, ils laissent intact tout facteur omis que partagent l’agent et ses contrôleurs et qui pèse sur toute la trajectoire ; ce facteur finit alors par intervenir dans une large part des défaillances restantes.
+    note: "Allège la cascade de relatives « qui ... qui » dans les points clés."

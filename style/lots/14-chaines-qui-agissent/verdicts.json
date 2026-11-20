@@ -1,0 +1,15 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/14-chaines-qui-agissent/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points d’une phrase longue chargée d’une énumération entre tirets ; « en effet » rend explicite le lien explicatif que portait le deux-points ; corrélation « plus… moins » et renvoi intacts."},
+    {"id": "002", "verdict": "rejete", "dimensions": ["argument", "gain"], "raison": "« Le premier module livre ainsi un texte plausible » présente la plausibilité de la sortie comme une conséquence de l’absence de spécification, alors qu’elle tient à la nature du composant appris (@sec:ch11) ; la phrase d’origine, de longueur raisonnable, fonctionnait déjà."},
+    {"id": "003", "verdict": "accepte", "dimensions": [], "raison": "Retire la formule creuse « Il serait inexact d’affirmer que » ; la négation partielle « Tout pipeline n’est pas » conserve la portée, et « toutefois » maintient la concession."},
+    {"id": "004", "verdict": "rejete", "dimensions": ["argument"], "raison": "« Or » introduit ici la prémisse qui applique l’@eq:ch08-chaine-angle-mort à l’agent ; « Mais » en fait une objection au fait que l’agent allonge la chaîne, ce qui change le lien logique pour un simple échange de connecteur."},
+    {"id": "005", "verdict": "rejete", "dimensions": ["argument"], "raison": "Le deux-points énonçait le mécanisme lui-même ; avec « suffit en effet », la phrase suivante devient la justification de « L’épisode isole… », ce qui déplace son rôle, pour un gain de lecture faible."},
+    {"id": "006", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points d’une phrase longue ; « presque systématique », « seulement » et la triade « hypothèses, origine, incertitude » sont conservés."},
+    {"id": "007", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points ; « ainsi » marque la manière dont le modèle « lisse les aspérités » sans ajouter de cause ; les trois effets énumérés et les renvois sont intacts."},
+    {"id": "008", "verdict": "rejete", "dimensions": ["argument"], "raison": "« pourtant » introduit une opposition absente : une interface permissive qui laisse tout passer et la destruction de la comparabilité vont dans le même sens, la seconde prolongeant la première."},
+    {"id": "009", "verdict": "accepte", "dimensions": [], "raison": "Corrige la double relative fautive (« et qui pèse…, qui finit par ») ; « alors » renvoie à la condition « Même lorsque… réduisent fortement », et « tout », « large part » et « défaillances restantes » sont conservés."}
+  ]
+}
