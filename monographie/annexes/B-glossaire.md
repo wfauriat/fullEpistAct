@@ -26,7 +26,7 @@ Termes définis dans l’ouvrage, avec leur équivalent anglais usuel et le chap
 :   Environnement isolé où les actions n’ont aucun effet extérieur, et où l’on peut donc interroger le monde à peu de frais. Voir le chapitre [-@sec:ch17].
 
 **blanchiment** (angl. *laundering*)
-:   Perte des conditions d’un résultat au moment où il change de mains : un résultat conditionnel arrive en aval comme un fait établi. Voir le chapitre [-@sec:ch08].
+:   Perte des conditions d’un résultat (hypothèses, unités, définitions) au moment où il change de mains : un résultat conditionnel arrive en aval comme un fait établi. Voir le chapitre [-@sec:ch08].
 
 **blanchiment de provenance** (angl. *provenance laundering*)
 :   Perte de l’origine d’une information, si bien que des copies d’une même source passent pour des témoignages indépendants. Voir le chapitre [-@sec:ch16].
@@ -47,7 +47,7 @@ Termes définis dans l’ouvrage, avec leur équivalent anglais usuel et le chap
 :   Basculement simultané, au sommet de la pile, de ce qui est promis, de la forme de l’échec et de ce que trouve l’enquête. Voir le chapitre [-@sec:ch12].
 
 **comparateur** (angl. *comparator*)
-:   Ce à quoi l’on confronte une affirmation : une autre affirmation, un texte fixé à l’avance ou une observation du monde. Voir le chapitre [-@sec:ch06].
+:   Ce à quoi l’on confronte une affirmation : une autre affirmation, un énoncé fixé à l’avance ou une observation du monde. Voir le chapitre [-@sec:ch06].
 
 **complaisance** (angl. *sycophancy*)
 :   Tendance d’un modèle à adopter les présupposés de son interlocuteur. Voir le chapitre [-@sec:ch15].

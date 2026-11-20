@@ -50,7 +50,7 @@ Soit une grandeur réelle $Y = g(x, z)$, où $x$ désigne la valeur des variable
 *Hypothèses.*
 
 1. *Dépendance aux seules variables du cadre* : $f_1$ et $f_2$ sont des fonctions de $x$ seul, éventuellement perturbées par des tirages aléatoires internes (graines, rééchantillonnage dans le modèle) conditionnellement indépendants de $z$ sachant $X = x$.
-2. *Omission de $z$* : $z$ n’est pas enregistré dans $x$, et aucune variable retenue dans $X$ ne varie avec $z$ au-delà de ce que $x$ fixe déjà.
+2. *Omission de $z$* : $z$ n’est pas enregistré dans $X$, de sorte que fixer les variables retenues à la valeur observée $X = x$ laisse $z$ libre de varier.
 3. *Conditionnement sur $X = x$* : l’accord $A$ est examiné à configuration représentée $x$ donnée.
 
 *Argument.* Soient, sachant $X = x$, deux hypothèses portant sur l’ampleur de l’erreur : $H_{\text{grand}}$ (l’erreur $|e(x, z)|$ dépasse un seuil fixé) et $H_{\text{petit}}$ (elle reste en deçà). Comme $z$ n’intervient ni dans $f_1(x)$ ni dans $f_2(x)$ et que d’éventuels aléas internes sont indépendants de $z$ sachant $X = x$, l’événement $A$ est conditionnellement indépendant de $z$ sachant $X = x$, donc de la valeur prise par $e(x, z)$ :

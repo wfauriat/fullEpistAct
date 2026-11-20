@@ -36,7 +36,7 @@ Source unique de la terminologie et des notations de la monographie. Le glossair
 | ensemble des alternatives admises | admitted set | Ensemble des hypothèses ou modèles sur lequel une incertitude est calculée ; ce qui n’y figure pas ne pèse pas. | sec:ch05 | |
 | affirmation | claim | Énoncé portant sur un fait : réponse d’un modèle, prévision, rapport de mesure. | sec:ch06 | def:affirmation |
 | contrôle | check | Confrontation d’une affirmation à un comparateur censé concorder avec elle. | sec:ch06 | def:controle |
-| comparateur | comparator | Ce à quoi l’on confronte une affirmation : une autre affirmation, un texte fixé à l’avance ou une observation du monde. | sec:ch06 | def:comparateur |
+| comparateur | comparator | Ce à quoi l’on confronte une affirmation : une autre affirmation, un énoncé fixé à l’avance ou une observation du monde. | sec:ch06 | def:comparateur |
 | se tromper autrement | fail differently | Pour une cause d’erreur donnée, un comparateur se trompe autrement qu’une affirmation si cette cause ne les fausse pas tous deux de la même manière. | sec:ch06 | |
 | prise en compte | uptake | Fait qu’un désaccord parvienne à quelqu’un qui à la fois en prend acte et a l’autorité pour agir en conséquence. | sec:ch06 | def:prise-en-compte |
 | taux d’erreur | error rate | Probabilité qu’une affirmation soit fausse. | sec:ch06 | |
@@ -46,7 +46,7 @@ Source unique de la terminologie et des notations de la monographie. Le glossair
 | angle mort | blind spot | Ensemble des causes d’erreur qu’un composant (personne, équipe, programme, modèle) est incapable de percevoir. | sec:ch08 | def:angle-mort |
 | chaîne | chain | Composition en série : chaque composant tient pour acquis le résultat du précédent ; les angles morts se cumulent. | sec:ch08 | |
 | contrôle croisé | cross-check | Composition en parallèle : deux composants se prononcent sur la même affirmation et l’on relève leurs désaccords ; seul l’angle mort commun subsiste. | sec:ch08 | |
-| blanchiment | laundering | Perte des conditions d’un résultat au moment où il change de mains : un résultat conditionnel arrive en aval comme un fait établi. | sec:ch08 | def:blanchiment |
+| blanchiment | laundering | Perte des conditions d’un résultat (hypothèses, unités, définitions) au moment où il change de mains : un résultat conditionnel arrive en aval comme un fait établi. | sec:ch08 | def:blanchiment |
 | producteur, contrôleur | producer, checker | Celui qui produit une affirmation ; celui qui la contrôle. | sec:ch08 | |
 | sévérité | severity | Un contrôle passé sans alerte n’est probant que dans la mesure où il aurait donné l’alerte si l’affirmation avait été fausse (Mayo). | sec:ch09 | def:severite |
 | taux de base | base rate | Fréquence d’une condition dans la population examinée, avant tout test. | sec:ch09 | |
