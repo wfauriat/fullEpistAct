@@ -1,0 +1,68 @@
+{
+  "lot": "style/lots/03-mondes-possibles",
+  "chapitre": "03-mondes-possibles",
+  "fichier": "monographie/chapitres/03-mondes-possibles.md",
+  "tour": null,
+  "redacteur": "gemini",
+  "date": "2026-11-20T13:24:07",
+  "sha256_chapitre": "6cc0fadc25d78c5a790014fae02d199f841769801a39aff23e7fcadffc7ecf25",
+  "sha256_propositions": "97356f6fd910f54d2c6c4902c8940f1957d5a4da2cc7593402c86128d67f62ac",
+  "modifications": [
+    {
+      "id": "001",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "La prudence demande en outre de ne donner une probabilité nulle qu’à ce qui est logiquement exclu, puisqu’aucune observation ne pourrait plus la relever (@sec:ch01-score-logarithmique), et cela même lorsqu’on décide de ne pas examiner certains mondes : ne pas s’y attarder n’est pas leur donner zéro.",
+      "apres": "La prudence demande en outre de ne donner une probabilité nulle qu’à ce qui est logiquement exclu, puisqu’aucune observation ne pourrait plus la relever (@sec:ch01-score-logarithmique), et cela même lorsqu’on décide de ne pas examiner certains mondes. Ne pas s’y attarder n’est pas pour autant leur donner zéro.",
+      "debut": 8451,
+      "fin": 8751,
+      "ligne": 33,
+      "section": "sec:ch03-raisonner-envers",
+      "titre_section": "Raisonner à l’envers"
+    },
+    {
+      "id": "002",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "or-initial",
+      "avant": "Or ce qui l’attend à la veille de Noël n’est pas un tirage quotidien.",
+      "apres": "Mais ce qui l’attend à la veille de Noël n’est pas un tirage quotidien.",
+      "debut": 16135,
+      "fin": 16204,
+      "ligne": 67,
+      "section": "sec:ch03-prevision-previsionniste",
+      "titre_section": "Prévision et prévisionniste"
+    },
+    {
+      "id": "003",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "italique",
+      "avant": "Même avec un historique bien tenu et une règle strictement propre, la calibration se heurte à une limite de principe, qui pèsera sur toute la suite du livre : *elle exige la répétition*.",
+      "apres": "Même avec un historique bien tenu et une règle strictement propre, la calibration se heurte à une limite de principe, qui pèsera sur toute la suite du livre : elle exige la répétition.",
+      "debut": 23217,
+      "fin": 23403,
+      "ligne": 103,
+      "section": "sec:ch03-calibration-historique",
+      "titre_section": "Calibration et historique des prévisions"
+    },
+    {
+      "id": "004",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "On ne calibre pas une traversée océanique, une opération chirurgicale exceptionnelle ou le lancement d’une sonde interplanétaire, qui n’ont lieu qu’une fois : il n’existe aucune série de cas semblables à laquelle confronter la probabilité annoncée, et l’issue, quand elle arrive, ne juge qu’une prévision.",
+      "apres": "On ne calibre pas une traversée océanique, une opération chirurgicale exceptionnelle ou le lancement d’une sonde interplanétaire, qui n’ont lieu qu’une fois. Il n’existe en effet aucune série de cas semblables à laquelle confronter la probabilité annoncée, et l’issue, quand elle arrive, ne juge qu’une prévision.",
+      "debut": 23598,
+      "fin": 23903,
+      "ligne": 103,
+      "section": "sec:ch03-calibration-historique",
+      "titre_section": "Calibration et historique des prévisions"
+    }
+  ]
+}
