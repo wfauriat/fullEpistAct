@@ -47,7 +47,8 @@ SEU_SCENARIOS = [  # (key, label, L/dU, p, b, z) — seu-a uses the rows with b 
     ('fissure', 'M. Y, fissure non repérée', 25, 0.001, 0.0, 0.08),
     ('marge', '… avec une marge', 25, 0.001, 0.04, 0.08),
     ('prudence', 'Prudence superflue', 25, 0.001, 0.04, 0.0),
-    ('roulette', 'Roulette russe', 10_000, 0.00001, 0.0, 1 / 6),
+    ('roulette', 'Roulette russe', 10_000, 0.00001, 0.0, 0.0),
+    ('vol', 'Vol de nuit en montagne', 10_000, 0.00001, 0.0, 1 / 6),
 ]
 
 
@@ -125,7 +126,7 @@ PLAUSIBILITE = {  # mode -> (question, [(answer, probability in %, right?)])
               [('Paris', 97, True), ('Lyon', 2, False), ('Marseille', 1, False)]),
     'arbitraire': ('Quand est née une personne obscure, mentionnée une seule fois dans le corpus ?',
                    [('14 mai', 22, False), ('3 août', 20, False), ('22 nov.', 18, True),
-                    ('9 janv.', 16, False), ('17 oct.', 14, False), ('une autre date', 10, False)]),
+                    ('9 janv.', 16, False), ('17 oct.', 14, False), ('5 mars', 10, False)]),
     'idee_recue': ('Quelle planète est, en moyenne, la plus proche de la Terre ?',
                    [('Vénus', 88, False), ('Mercure', 9, True), ('Mars', 3, False)]),
 }

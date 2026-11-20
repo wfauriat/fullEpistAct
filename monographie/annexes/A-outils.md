@@ -1,6 +1,6 @@
 # Outils de référence {#sec:annexe-a .annexes}
 
-Cette annexe rassemble sous forme d’aide-mémoire les outils formels et les trois modèles (M1, M2, M3) mobilisés au fil de l’ouvrage. Elle reprend, sans élément nouveau, les définitions, les formules et les hypothèses exposées au @sec:ch01 et dans les encadrés *Boîte à outils* et *Noyau formel* des chapitres suivants. Les termes techniques sont définis dans le glossaire (annexe [-@sec:annexe-b]) et les symboles sont récapitulés dans la table des notations (annexe [-@sec:annexe-c]).
+Cette annexe rassemble sous forme d’aide-mémoire les outils formels et les trois modèles mobilisés au fil de l’ouvrage (M2 sur la décision et la marge d’humilité, M3 sur le cadre comme cause commune, M1 sur les chaînes et l’échappement). Elle reprend, sans élément nouveau, les définitions, les formules et les hypothèses exposées au @sec:ch01 et dans les encadrés *Boîte à outils* et *Noyau formel* des chapitres suivants. Les termes techniques sont définis dans le glossaire (annexe [-@sec:annexe-b]) et les principaux symboles sont récapitulés dans la table des notations (annexe [-@sec:annexe-c]). *(Convention de portée locale : certaines lettres réutilisées entre chapitres — comme $E$, $A$, $D$, $B$, $c$, $f$, $m$ ou $z$ — prennent le sens précisé dans chaque section.)*
 
 ## Logique et règles à arrière-plan tacite {#sec:annexe-a-logique}
 
@@ -20,7 +20,7 @@ Lorsque $\Pr(A) > 0$, la probabilité conditionnelle de $B$ sachant $A$ (@eq:ch0
 
 $$\Pr(B \mid A) = \frac{\Pr(A \cap B)}{\Pr(A)}, \qquad \Pr(B) = \sum_{i=1}^{k} \Pr(B \mid H_i)\,\Pr(H_i).$$
 
-Dans un cadre retenant un vecteur de variables représentées $X = (X_1, \dots, X_k)$ observé à la valeur $x$ (@def:cadre, @sec:ch02-cadre-specification), décomposer la prévision d’une grandeur $Y$ selon des hypothèses $H_i$ conditionnellement à $X = x$ s’écrit (@eq:ch02-cond-cadre) :
+Dans un cadre retenant un vecteur de variables représentées $X = (X_1, \dots, X_k)$ observé à la valeur $x$ (@def:cadre, @sec:ch02-cadre-specification), décomposer la prévision d’une grandeur $Y$ sur une partition d’hypothèses $H_1, \dots, H_m$ conditionnellement à $X = x$ s’écrit (@eq:ch02-cond-cadre) :
 
 $$\Pr(Y \mid X = x) = \sum_{i=1}^{m} \Pr(Y \mid X = x, H_i)\,\Pr(H_i \mid X = x).$$
 
@@ -40,7 +40,7 @@ Si deux observations $E_1$ et $E_2$ sont conditionnellement indépendantes tant 
 
 ### Taux de base, sensibilité et valeur prédictive positive {#sec:annexe-a-vpp}
 
-Pour un contrôle ou un test de dépistage (@sec:ch09-taux-base-vpp) portant sur un état ou une erreur d’occurrence *a priori* (taux de base) $P(E) = \Pr(E)$, de sensibilité $s = \Pr(\text{alerte} \mid E)$ et de taux de fausses alertes $f = \Pr(\text{alerte} \mid \bar{E})$, la valeur prédictive positive (proportion des alertes qui correspondent à de vraies erreurs) vaut :
+Pour un contrôle ou un test de dépistage (@sec:ch09-taux-base-vpp) portant sur un état ou une erreur de taux de base $P(E) = \Pr(E)$, de sensibilité $s = \Pr(\text{alerte} \mid E)$ et de taux de fausses alertes $f = \Pr(\text{alerte} \mid \bar{E})$, la valeur prédictive positive (proportion des alertes qui correspondent à de vraies erreurs) vaut :
 
 $$\mathrm{VPP} = \Pr(E \mid \text{alerte}) = \frac{P(E)\,s}{P(E)\,s + \bigl(1 - P(E)\bigr)\,f}.$$
 
@@ -62,7 +62,7 @@ $$S(p_2) - S(p_1) = \ln\left(\frac{p_1}{p_2}\right) = \ln \Lambda.$$
 
 ## Utilité espérée subjective, seuil de décision et modèle M2 {#sec:annexe-a-seu}
 
-Dans le formalisme de Savage (@sec:ch04-ues), un décideur choisit parmi des actes $a \in \mathcal{A}$ celui qui maximise l’utilité espérée $\mathrm{UE}(a) = \sum_{\omega \in \Omega} \Pr(\omega)\,U\bigl(c(a, \omega)\bigr)$ calculée avec ses propres probabilités $\Pr(\omega)$ à l’intérieur de son cadre.
+Dans le formalisme de Savage (@sec:ch04-ues), un décideur choisit parmi des actes $a \in \mathcal{A}$ celui qui maximise l’utilité espérée subjective $\mathrm{UES}(a) = \sum_{\omega \in \Omega} \Pr(\omega)\,U\bigl(\text{cons}(a, \omega)\bigr)$ calculée avec ses propres probabilités $\Pr(\omega)$ à l’intérieur de son cadre (où $\text{cons}(a, \omega)$ désigne l’issue de l’acte $a$ dans l’état $\omega$).
 
 ### Seuil de décision de base {#sec:annexe-a-seuil}
 
@@ -78,12 +78,14 @@ Le modèle M2 (@sec:ch17-course-revisitee) prolonge ce schéma lorsqu’un facte
 
 $$p_w = 1 - (1 - p)(1 - z) = p + z - pz \ge \max(p, z).$$
 
-Le décideur n’a pas accès à $z$. S’il applique une marge d’humilité délibérée $b \ge 0$ relevant d’un jugement de prudence hors du calcul d’utilité espérée interne au cadre, sa règle de départ devient $p + b < p^\ast$ (@eq:ch17-regle-marge). Croiser la décision prise sur $p + b$ et la position du risque réel $p_w$ par rapport au seuil $p^\ast$ fait apparaître quatre régimes :
+Le décideur n’a pas accès à $z$. S’il applique une marge d’humilité délibérée $b \ge 0$ relevant d’un jugement de prudence hors du calcul d’utilité espérée interne au cadre, sa règle de départ devient $p + b < p^\ast$ (@eq:ch17-regle-marge). Croiser la décision prise d’après $p + b$ et la position du risque réel $p_w$ par rapport au seuil $p^\ast$ fait apparaître quatre régimes :
 
 1. *Départ justifié* : $p + b < p^\ast$ et $p_w < p^\ast$.
 2. *Piège silencieux* : $p + b < p^\ast$ mais $p_w \ge p^\ast$ (le facteur omis $z$ fait basculer le risque réel au-dessus du seuil sans que la représentation en avertisse).
 3. *Sauvé par la marge* : $p < p^\ast \le p + b$ et $p_w \ge p^\ast$ (la marge $b$ retient une action que le risque réel rendait perdante en espérance).
-4. *Prudence superflue* (ou renoncement justifié si $p \ge p^\ast$) : $p < p^\ast \le p + b$ et $p_w < p^\ast$ (prix de la marge lorsque $z$ est nul ou bénin : le gain $\Delta U$ est délaissé au profit de l’option sûre).
+4. *Prudence superflue* : $p < p^\ast \le p + b$ et $p_w < p^\ast$ (prix de la marge lorsque $z$ est nul ou bénin : le gain $\Delta U$ est délaissé au profit de l’option sûre).
+
+Le cas où $p \ge p^\ast$ dès l’origine (comme M. X) relève du *renoncement justifié* sans recours à la marge.
 
 ## Décomposition de la variance sur un ensemble d’alternatives admises {#sec:annexe-a-variance}
 
@@ -97,7 +99,7 @@ Le premier terme (moyenne des variances conditionnelles internes à chaque alter
 
 Dans le modèle M3 (@sec:ch07-cause-commune, @prop:cause-commune), l’issue réelle produite par le monde s’écrit $Y = g(x, z)$, où $x$ est la valeur des variables représentées $X$ et $z$ un facteur extérieur omis. Une affirmation $f_1(x)$ et un comparateur interne $f_2(x)$ sont tous deux calculés à partir du seul contenu du cadre.
 
-Sous les trois hypothèses du modèle — (1) $f_1$ et $f_2$ ne dépendent que de $x$ et d’éventuels tirages internes indépendants de $z$ sachant $X = x$, (2) $z$ n’est pas enregistré dans $X$, et (3) on conditionne sur la valeur observée $X = x$ —, l’événement $A$ (« $f_1(x)$ et $f_2(x)$ concordent ») est conditionnellement indépendant de $z$ sachant $X = x$, donc indépendant de l’erreur $e(x, z) = g(x, z) - f_1(x)$. Pour deux hypothèses $H_{\text{grand}}$ et $H_{\text{petit}}$ portant sur l’ampleur de $|e(x, z)|$, le rapport de vraisemblance de l’accord interne vaut (@eq:ch07-vraisemblance) :
+Sous les trois hypothèses du modèle — (1) $f_1$ et $f_2$ ne dépendent que de $x$ et d’éventuels tirages internes indépendants de $z$ sachant $X = x$, (2) $z$ n’est pas enregistré dans $X$, et (3) on conditionne sur la valeur observée $X = x$ —, l’événement $A$ (« $f_1(x)$ et $f_2(x)$ concordent ») est conditionnellement indépendant de $z$ sachant $X = x$, donc indépendant de l’erreur $e(x, z) = g(x, z) - f_1(x)$ dès que $f_1(x)$ est déterministe sachant $x$ (ou conditionnellement au tirage interne de $f_1$). Pour deux hypothèses $H_{\text{grand}}$ et $H_{\text{petit}}$ portant sur l’ampleur de $|e(x, z)|$, le rapport de vraisemblance de l’accord interne vaut (@eq:ch07-vraisemblance) :
 
 $$\Lambda(A \mid X = x) = \frac{\Pr(A \mid X = x, H_{\text{grand}})}{\Pr(A \mid X = x, H_{\text{petit}})} = 1.$$
 
@@ -119,7 +121,7 @@ En notant $B_i$ l’angle mort structurel du composant $i$ (@def:angle-mort), $B
 
 $$B_{\text{chaîne}} \supseteq \left(\bigcup_{i=1}^{N} B_i\right) \cup B_{\text{interfaces}}, \qquad B_{\text{croisé}} = B_1 \cap (B_2 \cup B_{\text{cmp}}) = (B_1 \cap B_2) \cup (B_1 \cap B_{\text{cmp}}).$$
 
-Dans une chaîne de $N$ étapes ayant chacune une probabilité d’erreur indépendante $p$ et exposées ensemble à un facteur omis partagé de probabilité $q$ (@sec:ch08-chaines-controles, @sec:ch14-trajectoire-longue), la probabilité d’échec sans contrôle et la probabilité d’échec lorsque chaque étape est doublée d’un contrôleur indépendant de même taux d’oubli $p$ valent :
+Dans une chaîne de $N$ étapes ayant chacune une probabilité d’erreur indépendante $p$ et exposées ensemble à un facteur omis partagé de probabilité $q$ (@sec:ch08-chaines-controles, @sec:ch14-trajectoire-longue), la probabilité d’échec sans contrôle et la probabilité d’échec lorsque chaque étape est doublée d’un contrôleur indépendant de taux d’oubli $m = p$ valent :
 
 $$\Pr(\text{échec, chaîne non contrôlée}) = 1 - (1 - p)^N (1 - q),$$
 
@@ -133,7 +135,7 @@ Dans le modèle du contrôleur du @sec:ch09 (@sec:ch09-risque-echappement) et du
 
 $$s = (1 - c)(1 - m).$$
 
-Lorsque l’affirmation est juste, le contrôleur déclenche une fausse alerte avec probabilité $f$. La proportion d’alertes suivies d’un examen effectif est la prise en compte $u \in [0, 1]$ : sous examen systématique de chaque alerte, $u = 1$ ; sous l’hypothèse comportementale d’appariement des probabilités (@sec:ch09-fausses-alertes), $u = \mathrm{VPP}$. La probabilité d’échappement et le risque résiduel (probabilité qu’une affirmation fausse atteigne l’action sans être arrêtée) s’écrivent (@eq:ch09-echappement, @eq:ch09-risque) :
+Lorsque l’affirmation est juste, le contrôleur déclenche une fausse alerte avec probabilité $f$. La proportion d’alertes suivies d’un examen effectif est la prise en compte $u \in [0, 1]$ : sous examen systématique de chaque alerte, $u = 1$ ; sous l’hypothèse comportementale d’appariement des probabilités (@sec:ch09-fausses-alertes), $u = \mathrm{VPP}$. La probabilité d’échappement (conditionnelle à une affirmation fausse) et le risque résiduel (proportion de toutes les affirmations qui sont fausses et atteignent l’action sans être arrêtées) s’écrivent (@eq:ch09-echappement, @eq:ch09-risque) :
 
 $$\Pr(\text{échappement}) = 1 - s\,u, \qquad R = P(E)\,(1 - s\,u).$$
 
@@ -167,4 +169,4 @@ En économie de l’information asymétrique (@sec:ch15-effondrement-signal), un
 
 $$c(\text{signal} \mid H) < \text{bénéfice du crédit accordé} < c(\text{signal} \mid B).$$
 
-Lorsque l’automatisation abaisse le coût de mise en forme $c(\text{signal} \mid B)$ à près de zéro tandis que le coût du contrôle de fond reste élevé, tous les producteurs émettent le même signal formel : l’équilibre séparateur fait place à un équilibre mélangeant (au sens d’Akerlof), dans lequel la forme cesse de constituer un comparateur sévère de la solidité du fond.
+Lorsque l’automatisation abaisse le coût de mise en forme $c(\text{signal} \mid B)$ à près de zéro tandis que le coût du contrôle de fond reste élevé, tous les producteurs émettent le même signal formel : l’équilibre séparateur fait place à un équilibre mélangeant (comme dans le marché des « citrons » d’Akerlof), dans lequel la forme cesse de constituer un comparateur sévère de la solidité du fond.

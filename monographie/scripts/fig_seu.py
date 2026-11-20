@@ -40,7 +40,7 @@ for k in ('y', 'x', 'roulette'):
     s = P.seu(rr, p, 0.0, 0.0)
     rows.append([lab, fr(rr, 0), pct_in(p), pct(s['seuil']), 'on part' if s['go'] else 'on renonce'])
 tableau('ch04-seuil', ['Situation', 'L/ΔU', 'p estimé', 'Seuil p∗', 'Décision'], rows,
-        'Seuil de décision et choix de chaque décideur (sans facteur omis).', ['l', 'r', 'r', 'r', 'l'])
+        'Seuil de décision et choix de chaque décideur.', ['l', 'r', 'r', 'r', 'l'])
 
 # ---------------------------------------------------------------- seu-b: four outcomes
 fig, ax = plt.subplots(figsize=(LARGEUR, 4.4))
@@ -54,11 +54,13 @@ quadrants = [((0.0065, 0.0065), 'départ justifié'), ((0.0065, 3.8e3), 'piège 
 for (qx, qy), t in quadrants:
     ax.text(qx, qy, t, fontsize=8.5, color=MUET, style='italic',
             ha='left' if qx < 1 else 'right', va='bottom' if qy < 1 else 'top')
+ordre = ('y', 'x', 'fissure', 'marge', 'prudence', 'vol')
 pts = {}
-for k, (lab, rr, p, b, z) in SC.items():
+for k in ordre:
+    lab, rr, p, b, z = SC[k]
     s = P.seu(rr, p, b, z)
     pts[k] = (s['decide'] / s['seuil'], s['monde'] / s['seuil'], s)
-offsets = {'y': (8, 4), 'x': (9, -12), 'fissure': (-4, 9), 'marge': (9, 6), 'prudence': (9, 4), 'roulette': (9, -3)}
+offsets = {'y': (8, 4), 'x': (9, -12), 'fissure': (-4, 9), 'marge': (9, 6), 'prudence': (9, 4), 'vol': (9, -3)}
 for k, (xv, yv, s) in pts.items():
     col = ORANGE if s['issue'] == 'piège silencieux' else BLEU
     ax.plot([xv], [yv], 'o', color=col, mec='white', mew=1.2, ms=7, zorder=3)
@@ -76,11 +78,10 @@ ax.set_xlim(lo, hi)
 ax.set_ylim(lo, hi)
 ax.xaxis.set_major_formatter(NOMBRE_AXE)
 ax.yaxis.set_major_formatter(NOMBRE_AXE)
-ax.set_xlabel('(p + b) / p∗ : ce sur quoi l’on décide, rapporté au seuil')
+ax.set_xlabel('(p + b) / p∗ : ce d’après quoi l’on décide, rapporté au seuil')
 ax.set_ylabel('risque réel / p∗ : ce que le monde réserve')
 sauver(fig, 'ch17-decisions')
 
-ordre = ('y', 'x', 'fissure', 'marge', 'prudence', 'roulette')
 rows = []
 for k in ordre:
     lab, rr, p, b, z = SC[k]
@@ -94,6 +95,6 @@ for k in ordre:
     s = P.seu(rr, p, b, z)
     rows.append([lab, pct_in(s['decide']), pct(s['seuil']), 'on part' if s['go'] else 'on renonce',
                  pct(s['monde']), s['issue']])
-tableau('ch17-decisions', ['Situation', 'On décide sur p + b', 'Seuil p∗', 'Décision', 'Risque réel', 'Issue'],
-        rows, 'Décider sur ce que l’on croit quand le monde ajoute un risque omis.',
+tableau('ch17-decisions', ['Situation', 'Décision d’après p + b', 'Seuil p∗', 'Choix', 'Risque réel', 'Issue'],
+        rows, 'Décider d’après ce que l’on croit quand le monde ajoute un risque omis.',
         ['l', 'r', 'r', 'l', 'r', 'l'])

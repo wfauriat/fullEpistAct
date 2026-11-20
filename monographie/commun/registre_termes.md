@@ -16,7 +16,7 @@ Source unique de la terminologie et des notations de la monographie. Le glossair
 | Terme | Anglais | Définition | Introduit | Étiquette |
 | :-- | :-- | :-- | :-- | :-- |
 | représentation | picture | Construction (mesures, catégories, équations, probabilités) d’après laquelle un agent agit ; c’est à l’action que le monde répond, non à la représentation. | sec:ch02 | def:representation |
-| cadre | frame | Spécification finie à l’intérieur de laquelle un raisonnement opère : variables, catégories, classe de modèles et objectif retenus. Il est choisi avant toute inférence. | sec:ch02 | def:cadre |
+| cadre | frame | Spécification finie à l’intérieur de laquelle un raisonnement opère : variables, catégories, classe de modèles et objectif retenus. Il est choisi en amont de l’inférence qu’il encadre. | sec:ch02 | def:cadre |
 | problème du cadre | frame problem | Impossibilité de spécifier à l’avance tout ce qui est pertinent ; né en intelligence artificielle, il est pris ici dans un sens épistémologique général. | sec:ch02 | |
 | déduction, induction | deduction, induction | Inférence nécessaire à partir de prémisses ; généralisation à partir de régularités observées. L’une et l’autre ne garantissent leur conclusion que « pourvu que » leurs conditions soient remplies. | sec:ch01 | |
 | arrière-plan tacite | background (unstated conditions) | Ensemble ouvert des conditions qu’une règle n’énonce pas et dont dépend sa vérité ; noté (…) dans les formules, 𝒯 dans le texte. | sec:ch01 | |
@@ -42,7 +42,7 @@ Source unique de la terminologie et des notations de la monographie. Le glossair
 | taux d’erreur | error rate | Probabilité qu’une affirmation soit fausse. | sec:ch06 | |
 | probabilité d’échappement | escape probability | Probabilité qu’une affirmation fausse débouche sur une action sans qu’un désaccord ait été détecté et pris en compte à temps. | sec:ch06 | def:echappement |
 | défaillance de mode commun | common-mode failure | Défaillance simultanée de protections redondantes, sous l’effet d’une cause qu’elles partagent. | sec:ch07 | |
-| dérive de distribution | distribution shift | Changement, en exploitation, d’un facteur resté constant pendant la collecte des données ; les contrôles fondés sur ces données ne pouvaient pas le voir. | sec:ch07 | |
+| dérive de distribution | distribution shift | Au sens restreint retenu ici, changement, en exploitation, d’un facteur omis resté constant pendant la collecte des données ; les contrôles fondés sur ces données ne pouvaient pas le voir. | sec:ch07 | |
 | angle mort | blind spot | Ensemble des causes d’erreur qu’un composant (personne, équipe, programme, modèle) est incapable de percevoir. | sec:ch08 | def:angle-mort |
 | chaîne | chain | Composition en série : chaque composant tient pour acquis le résultat du précédent ; les angles morts se cumulent. | sec:ch08 | |
 | contrôle croisé | cross-check | Composition en parallèle : deux composants se prononcent sur la même affirmation et l’on relève leurs désaccords ; seul l’angle mort commun subsiste. | sec:ch08 | |
@@ -89,15 +89,17 @@ Source unique de la terminologie et des notations de la monographie. Le glossair
 | A ∩ (…) → B | règle à arrière-plan tacite : A rassemble les conditions énoncées, (…) l’arrière-plan tacite | sec:ch01 |
 | 𝒯 | arrière-plan tacite, désigné dans le texte (noté (…) dans les formules) | sec:ch01 |
 | X, x | variables représentées dans le cadre ; leurs valeurs | sec:ch02 |
-| p | probabilité d’échec estimée par le décideur | sec:ch04 |
-| L, ΔU | perte en cas d’échec ; gain en cas de succès (par rapport à l’option sûre) | sec:ch04 |
+| Λ(E), S(p) | rapport de vraisemblance ; règle de score (logarithmique ou quadratique) | sec:ch01 |
+| p | probabilité (d’un événement au ch. 1 ; probabilité d’échec estimée par le décideur au ch. 4) | sec:ch01 |
+| L, ΔU, U_sûr | perte en cas d’échec ; gain en cas de succès ; utilité certaine de l’option sûre | sec:ch04 |
 | p∗ | seuil de décision ΔU / (ΔU + L) | sec:ch04 |
-| Θ, θ | ensemble des hypothèses admises ; une hypothèse | sec:ch05 |
-| z | facteur omis, hors du cadre | sec:ch07 |
-| P(E) | taux d’erreur : probabilité qu’une affirmation soit fausse | sec:ch06 |
+| Θ, θ | ensemble des alternatives admises ; une alternative | sec:ch05 |
+| z | facteur omis hors du cadre (grandeur au ch. 5 et 7 ; probabilité d’échec associée au ch. 17) | sec:ch05 |
+| P(E), P(faux) | taux d’erreur : probabilité qu’une affirmation soit fausse | sec:ch06 |
+| D, C, C̄ | détection prise en compte avant l’action (ch. 6) ; arrêt de l’erreur par un contrôle et événement contraire d’échappement (ch. 9) | sec:ch06 |
 | B_i, B_cmp | angle mort du composant i ; angle mort de la comparaison | sec:ch08 |
 | N, q | nombre d’étapes d’une chaîne ; facteur omis partagé par toutes les étapes | sec:ch08 |
 | c, m, f, s | part des causes d’erreur partagées ; taux d’oubli sur les autres erreurs ; taux de fausses alertes ; sensibilité | sec:ch09 |
-| u | prise en compte : proportion des alertes suivies d’effet | sec:ch09 |
+| VPP, u, R | valeur prédictive positive ; prise en compte (proportion d’alertes suivies d’effet) ; risque résiduel P(E)(1 − su) | sec:ch09 |
 | b | marge d’humilité | sec:ch17 |
 | p_w | risque réel : 1 − (1 − p)(1 − z) | sec:ch17 |

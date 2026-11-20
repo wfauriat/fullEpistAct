@@ -4,4 +4,4 @@
 | M. X | 25 | 5 % | 3,85 % | on renonce |
 | Roulette russe | 10 000 | 0,001 % | 0,0100 % | on part |
 
-Table: Seuil de décision et choix de chaque décideur (sans facteur omis). {#tbl:ch04-seuil}
+Table: Seuil de décision et choix de chaque décideur. {#tbl:ch04-seuil}

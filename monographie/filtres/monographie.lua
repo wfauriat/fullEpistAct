@@ -46,6 +46,7 @@ local BLOCS = {
 local STATUTS = {
   ['définition'] = true, ['résultat sous hypothèses'] = true,
   ['hypothèse de travail'] = true, ['constat empirique'] = true,
+  ['composite'] = true,
 }
 -- Reference prefixes handled as cross-references (never as citations)
 local PREFIXES = { sec = true, prop = true, def = true, fig = true, tbl = true, eq = true }

@@ -19,7 +19,7 @@ import re
 import sys
 from pathlib import Path
 
-STATUTS = {'définition', 'résultat sous hypothèses', 'hypothèse de travail', 'constat empirique'}
+STATUTS = {'définition', 'résultat sous hypothèses', 'hypothèse de travail', 'constat empirique', 'composite'}
 PREFIXES = ('sec', 'prop', 'def', 'fig', 'tbl', 'eq')
 FORBIDDEN = [
     (re.compile(r'\b(TK|WG|FD|CR|RV)\b'), 'étiquette de source interne'),

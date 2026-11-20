@@ -6,7 +6,7 @@
 | Taux de fausses alertes f | 5 % | 0,5 % |
 | Sensibilité (1 − c)(1 − m) | 72 % | 81 % |
 | Alertes qui sont de vraies erreurs (VPP) | 61,5 % | 76,8 % |
-| Alertes par vraie erreur attrapée (1/VPP) | 1,6 | 1,3 |
+| Alertes par vraie erreur interceptée (1/VPP) | 1,6 | 1,3 |
 | Échappement, alertes suivies à hauteur de la VPP | 55,7 % | 37,8 % |
 | Échappement, chaque alerte examinée | 28,0 % | 19,0 % |
 | Risque, alertes suivies à hauteur de la VPP | 5,57 % | 0,756 % |

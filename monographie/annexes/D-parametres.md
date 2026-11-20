@@ -1,6 +1,6 @@
 # Paramètres des exemples quantitatifs {#sec:annexe-d}
 
-Tous les exemples quantitatifs de l’ouvrage ont une vocation strictement illustrative : leurs paramètres sont choisis pour mettre à nu un mécanisme, un seuil ou un changement de régime, et non pour estimer une grandeur empirique réelle. Conformément au principe de source unique posé dans l’avant-propos, l’ensemble des figures et des tableaux chiffrés des chapitres [-@sec:ch01], [-@sec:ch03], [-@sec:ch04], [-@sec:ch08], [-@sec:ch09], [-@sec:ch12], [-@sec:ch14], [-@sec:ch16] et [-@sec:ch17] sont engendrés mécaniquement à partir des jeux de paramètres canoniques et des fonctions récapitulés ci-dessous.
+Tous les exemples quantitatifs de l’ouvrage ont une vocation strictement illustrative : leurs paramètres sont choisis pour mettre à nu un mécanisme, un seuil ou un changement de régime, et non pour estimer une grandeur empirique réelle. L’ensemble des figures et des tableaux chiffrés des chapitres [-@sec:ch01], [-@sec:ch03], [-@sec:ch04], [-@sec:ch08], [-@sec:ch09], [-@sec:ch12], [-@sec:ch14], [-@sec:ch16] et [-@sec:ch17] sont engendrés mécaniquement à partir des jeux de paramètres canoniques et des fonctions récapitulés ci-dessous.
 
 ## Révision bayésienne par cotes (chapitre [-@sec:ch01]) {#sec:annexe-d-bayes}
 
@@ -33,13 +33,13 @@ Table: Paramètres et surprises de l’exemple du score logarithmique du @sec:ch
 
 ## Seuil de décision, risque omis et marge d’humilité — modèle M2 (chapitres [-@sec:ch04] et [-@sec:ch17]) {#sec:annexe-d-seu}
 
-Les exemples de décision de la course à la voile et de la roulette russe sont régis par le modèle M2 (@sec:ch04-course-voile, @sec:ch17-course-revisitee) :
+Les exemples de décision de la course à la voile et des situations à enjeu extrême sont régis par le modèle M2 (@sec:ch04-course-voile, @sec:ch17-course-revisitee) :
 
 - seuil de décision (@eq:ch04-seuil) : $p^\ast = \Delta U / (\Delta U + L) = 1 / (1 + L/\Delta U)$, soit $p^\ast = 1/26 \approx 3{,}85\,\%$ pour $L/\Delta U = 25$, et $p^\ast = 1/10\,001 \approx 0{,}0100\,\%$ pour $L/\Delta U = 10\,000$ ;
 - règle de décision avec marge d’humilité $b$ (@eq:ch17-regle-marge) : on part si $p + b < p^\ast$, on renonce si $p + b \ge p^\ast$ ;
-- risque réel dans le monde en présence d’un facteur omis $z$ indépendant de $p$ (@eq:ch17-risque-reel) : $p_w = 1 - (1 - p)(1 - z)$.
+- risque réel dans le monde en présence d’une probabilité d’échec omise $z$ indépendante de $p$ (@eq:ch17-risque-reel) : $p_w = 1 - (1 - p)(1 - z)$.
 
-Le @sec:ch04 (@fig:ch04-seuil, @tbl:ch04-seuil) utilise les trois situations sans facteur omis ni marge ($b = 0$, $z = 0$) ; le @sec:ch17 (@fig:ch17-decisions, @tbl:ch17-scenarios, @tbl:ch17-decisions) déploie l’ensemble des six situations.
+Le @sec:ch04 (@fig:ch04-seuil, @tbl:ch04-seuil) utilise les trois situations de base sans marge ni facteur omis dans le cadre ($b = 0$, $z = 0$ : *M. Y*, *M. X* et *Roulette russe*) ; le @sec:ch17 (@fig:ch17-decisions, @tbl:ch17-scenarios, @tbl:ch17-decisions) déploie les six situations du tableau ci-dessous en remplaçant à $L/\Delta U = 10\,000$ la roulette russe par le *Vol de nuit en montagne*, afin de garder $p$ et $z$ rigoureusement disjoints.
 
 | Situation | $L/\Delta U$ | $p$ estimé | Marge $b$ | Facteur omis $z$ | $p + b$ | Seuil $p^\ast$ | Décision | Risque réel $p_w$ | Issue |
 | :-- | --: | --: | --: | --: | --: | --: | :-- | --: | :-- |
@@ -48,16 +48,18 @@ Le @sec:ch04 (@fig:ch04-seuil, @tbl:ch04-seuil) utilise les trois situations san
 | M. Y, fissure non repérée | 25 | 0,1 % | 0 % | 8 % | 0,1 % | 3,85 % | on part | 8,09 % | piège silencieux |
 | … avec une marge | 25 | 0,1 % | 4 % | 8 % | 4,1 % | 3,85 % | on renonce | 8,09 % | sauvé par la marge |
 | Prudence superflue | 25 | 0,1 % | 4 % | 0 % | 4,1 % | 3,85 % | on renonce | 0,100 % | prudence superflue |
-| Roulette russe | 10 000 | 0,001 % | 0 % | $1/6 \approx 16{,}7\,\%$ | 0,001 % | 0,0100 % | on part | 16,7 % | piège silencieux |
+| Vol de nuit en montagne | 10 000 | 0,001 % | 0 % | $1/6 \approx 16{,}7\,\%$ | 0,001 % | 0,0100 % | on part | 16,7 % | piège silencieux |
 
 Table: Paramètres et résultats des scénarios de décision des chapitres [-@sec:ch04] (@tbl:ch04-seuil) et [-@sec:ch17] (@tbl:ch17-scenarios et @tbl:ch17-decisions). {#tbl:annexe-d-seu}
+
+*(Légende et précision du @tbl:annexe-d-seu : $p$ désigne la probabilité d’échec estimée par le décideur, $L/\Delta U$ le rapport des enjeux, $b$ et $z$ sont exprimés en points de probabilité — $z$ représente ici une fissure cachée de $8\,\%$ pour « M. Y, fissure non repérée » ou un régime de givrage non modélisé de $1/6$ pour le « Vol de nuit en montagne » — et les résultats calculés $p^\ast$ et $p_w$ sont affichés à trois chiffres significatifs.)*
 
 ## Chaînes en série et contrôles croisés — modèle M1 (chapitres [-@sec:ch08] et [-@sec:ch14]) {#sec:annexe-d-chaines}
 
 Les exemples de chaîne à $N = 4$ étapes (@sec:ch08-chaines-controles, @fig:ch08-chaine, @tbl:ch08-chaine) et de trajectoire d’agent en $N = 12$ étapes (@sec:ch14-trajectoire-longue, @fig:ch14-chaine-agent, @tbl:ch14-chaine-agent) partagent les paramètres suivants :
 
 - probabilité d’erreur indépendante par étape : $p = 6\,\%$ ;
-- probabilité d’oubli du contrôleur pair lors d’un contrôle croisé à chaque étape : $p = 6\,\%$ (d’où une probabilité $p^2 = 0{,}36\,\%$ qu’une erreur indépendante d’une étape échappe à la fois au producteur et au pair) ;
+- probabilité d’oubli du contrôleur pair lors d’un contrôle croisé à chaque étape : $m = p = 6\,\%$ (d’où une probabilité $p^2 = 0{,}36\,\%$ qu’une erreur indépendante d’une étape échappe à la fois au producteur et au pair) ;
 - probabilité d’un facteur omis partagé affectant l’ensemble des étapes : $q = 0\,\%$ (absence de facteur partagé) ou $q = 3\,\%$.
 
 | $N$ | Facteur partagé $q$ | Chaîne sans contrôle | Contrôle croisé à chaque étape | Part indépendante (sans $\rightarrow$ avec contrôle) | Part des défaillances restantes où intervient $q$ |
@@ -68,6 +70,8 @@ Les exemples de chaîne à $N = 4$ étapes (@sec:ch08-chaines-controles, @fig:ch
 | 12 | 3 % | 53,8 % | 7,11 % | 52,4 % $\rightarrow$ 4,24 % | 42,2 % |
 
 Table: Paramètres et résultats du modèle de chaîne et de contrôle croisé aux chapitres [-@sec:ch08] (@tbl:ch08-chaine, $N = 4$) et [-@sec:ch14] (@tbl:ch14-chaine-agent, $N = 12$). {#tbl:annexe-d-chaines}
+
+*(Dans le @tbl:annexe-d-chaines, « Part indépendante » désigne la probabilité d’échec due aux seules erreurs locales lorsque le facteur partagé est nul, $q = 0\,\%$.)*
 
 ## Sensibilité, fausses alertes, échappement et modèle partagé — modèle M1 (chapitres [-@sec:ch09] et [-@sec:ch16]) {#sec:annexe-d-echappement}
 
@@ -88,7 +92,7 @@ Le @sec:ch09 met en regard *Contrôle entre pairs* et *Indépendant et précis* 
 | Taux de fausses alertes $f$ | 5 % | 5 % | 0,5 % | 0,5 % |
 | Sensibilité $s = (1 - c)(1 - m)$ | 72 % | 32 % | 32 % | 81 % |
 | Alertes qui sont de vraies erreurs (VPP) | 61,5 % | 11,6 % | 56,6 % | 76,8 % |
-| Alertes par vraie erreur attrapée ($1/\mathrm{VPP}$) | 1,6 | 8,7 | 1,8 | 1,3 |
+| Alertes par vraie erreur interceptée ($1/\mathrm{VPP}$) | 1,6 | 8,7 | 1,8 | 1,3 |
 | Échappement, alertes suivies à hauteur de la VPP | 55,7 % | 96,3 % | 81,9 % | 37,8 % |
 | Échappement, chaque alerte examinée ($u = 1$) | 28,0 % | 68,0 % | 68,0 % | 19,0 % |
 | Risque, alertes suivies à hauteur de la VPP | 5,57 % | 1,93 % | 1,64 % | 0,756 % |
@@ -113,10 +117,10 @@ Table: Paramètres et résultats des trois exemples arithmétiques des chapitres
 
 L’exemple du @sec:ch12 (@sec:ch12-calibration-longue-traine, @fig:ch12-plausibilite, @tbl:ch12-plausibilite) évalue un contrôle consistant à poser $k = 5$ fois indépendamment la même question à un modèle génératif et à signaler une alerte dès que les cinq réponses ne sont pas toutes identiques.
 
-| Régime | Distribution des réponses ($\checkmark$ = juste) | Réponse fausse $p_{\text{faux}}$ | Sévérité (5 tirages divergent $\mid$ 1re fausse) | Alerte à tort (5 tirages divergent $\mid$ 1re juste) |
+| Régime | Distribution des réponses ($\checkmark$ = juste) | Réponse fausse $p_{\text{faux}}$ | Sévérité (5 tirages divergent $\mid$ 1re fausse) | Fausse alerte (5 tirages divergent $\mid$ 1re juste) |
 | :-- | :-- | --: | --: | --: |
 | Fait bien connu (tour Eiffel) | Paris $\checkmark$ 97 %, Lyon 2 %, Marseille 1 % | 3 % | $> 99{,}9\,\%$ | 11,5 % |
-| Fait rare et arbitraire (date de naissance) | 14 mai 22 %, 3 août 20 %, 22 nov. $\checkmark$ 18 %, 9 janv. 16 %, 17 oct. 14 %, 6e date 10 % | 82 % | 99,9 % | 99,9 % |
+| Fait rare et arbitraire (date de naissance) | 14 mai 22 %, 3 août 20 %, 22 nov. $\checkmark$ 18 %, 9 janv. 16 %, 17 oct. 14 %, 5 mars 10 % | 82 % | 99,9 % | 99,9 % |
 | Idée reçue répandue (planète la plus proche en moyenne) | Vénus 88 %, Mercure $\checkmark$ 9 %, Mars 3 % | 91 % | 42,0 % | $> 99{,}9\,\%$ |
 
 Table: Distributions et résultats de l’exemple de réinterrogatoire à $k = 5$ tirages du @sec:ch12 (@tbl:ch12-plausibilite). {#tbl:annexe-d-plausibilite}
