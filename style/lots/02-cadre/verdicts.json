@@ -1,0 +1,10 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/02-cadre/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "Retire un « Or » initial ; « pourtant » rend la nuance adversative déjà présente après « Encore faut-il savoir », et la portée de « jamais » est intacte."},
+    {"id": "002", "verdict": "rejete", "dimensions": ["argument", "gain"], "raison": "Ici, « Or » introduit la mineure d’un raisonnement (la garantie vaut pourvu que les axiomes décrivent la situation ; or choisir ces axiomes, c’est poser un cadre). « Mais » en fait une opposition et répète le « Mais la garantie est conditionnelle » qui précède de deux phrases."},
+    {"id": "003", "verdict": "rejete", "dimensions": ["argument", "gain"], "raison": "Même structure que dans 002 : « Or » amène la mineure dont « Déduction et induction reposent donc… » tire la conclusion. « Mais » remplace ce lien par une opposition que le texte ne contient pas."},
+    {"id": "004", "verdict": "accepte", "dimensions": [], "raison": "Supprime une italique d’emphase. La phrase reste claire et le sens ne change pas ; l’expression revient d’ailleurs sans italique dans les points clés."}
+  ]
+}
