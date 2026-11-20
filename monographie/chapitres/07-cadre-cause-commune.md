@@ -42,7 +42,7 @@ Pour comprendre le mécanisme du volet (a) de la @prop:cause-commune, suivons le
 
 ![Schéma causal du cadre comme cause commune. Les valeurs $x$ des variables représentées alimentent à la fois l’affirmation $f_1(x)$, le comparateur interne $f_2(x)$ et l’issue réelle $g(x, z)$. Le facteur omis $z$ agit uniquement sur $g(x, z)$ : conditionnellement à $x$, l’accord entre $f_1(x)$ et $f_2(x)$ ne porte aucune information sur l’erreur due à $z$.](figures/ch07-cause-commune.pdf){#fig:ch07-cause-commune width=85%}
 
-Le bloc formel suivant, le modèle M3 (le troisième des modèles formels du livre, présentés au @sec:ch00-architecture), précise cet argument et énonce explicitement les hypothèses sur lesquelles il repose.
+Le bloc formel suivant, le modèle M3 (le troisième des modèles formels du livre, présentés à la @sec:ch00-architecture), précise cet argument et énonce explicitement les hypothèses sur lesquelles il repose.
 
 ::: {.formel titre="Modèle M3 : le cadre comme cause commune"}
 Soit une grandeur réelle $Y = g(x, z)$, où $x$ désigne la valeur des variables représentées $X$ et $z$ un facteur extérieur omis. Une affirmation $f_1(x)$ et un comparateur $f_2(x)$ sont calculés à l’intérieur du cadre. L’erreur de l’affirmation vaut $e(x, z) = g(x, z) - f_1(x)$. Fixons une configuration d’entrée $X = x$ et notons $A$ l’événement « $f_1(x)$ et $f_2(x)$ concordent » (au sens d’une tolérance convenue).

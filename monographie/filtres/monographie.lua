@@ -147,7 +147,7 @@ local collect = {
     -- single-chapter preview (make chapitre CH=NN): keep the real chapter number
     local first = doc.meta['premier-chapitre'] and tonumber(stringify(doc.meta['premier-chapitre']))
     if first then chapnum = first - 1; PREMIER = first end
-    local chap, sect, fig, tab, eq, prop, def = nil, 0, 0, 0, 0, 0, 0
+    local chap, sect, subsect, fig, tab, eq, prop, def = nil, 0, 0, 0, 0, 0, 0, 0
     local in_appendix = false
     local function define(id, entry)
       if id == nil or id == '' then return end
@@ -166,7 +166,7 @@ local collect = {
           end
           if h.classes:includes('corps') then chapnum = -1 end
           if h.classes:includes('annexes') then in_appendix = true end
-          fig, tab, eq, sect = 0, 0, 0, 0
+          fig, tab, eq, sect, subsect = 0, 0, 0, 0, 0
           if unnumbered then
             chap = nil
             define(h.identifier, { kind = 'titre', title = h.content })
@@ -181,15 +181,24 @@ local collect = {
           end
         elseif h.level == 2 then
           if not chap and not unnumbered and h.identifier ~= '' then SANS_NUMERO[h.identifier] = true end
+          subsect = 0
           if chap and not unnumbered then
             sect = sect + 1
             define(h.identifier, { kind = 'section', num = chap .. '.' .. sect })
           else
-            define(h.identifier, { kind = 'titre', title = h.content })
+            define(h.identifier, { kind = 'section-titre', title = h.content })
+          end
+        elseif h.level == 3 then
+          if not chap and not unnumbered and h.identifier ~= '' then SANS_NUMERO[h.identifier] = true end
+          if chap and not unnumbered then
+            subsect = subsect + 1
+            define(h.identifier, { kind = 'section', num = chap .. '.' .. sect .. '.' .. subsect })
+          else
+            define(h.identifier, { kind = 'section-titre', title = h.content })
           end
         elseif h.identifier ~= '' then
           if not chap and not unnumbered then SANS_NUMERO[h.identifier] = true end
-          define(h.identifier, { kind = 'titre', title = h.content })
+          define(h.identifier, { kind = 'section-titre', title = h.content })
         end
       end,
       Figure = function(f)
@@ -241,11 +250,23 @@ local function reference(id, bare)
     STATS.refs_manquantes = STATS.refs_manquantes + 1
     return { pandoc.Strong({ pandoc.Str('??' .. id) }) }
   end
-  if r.kind == 'titre' then -- unnumbered target: use its title
+  if r.kind == 'titre' then -- unnumbered chapter target: use its title
     if LATEX then
       return { pandoc.RawInline('latex', '\\hyperref[' .. id .. ']{' .. inlines_latex(r.title) .. '}') }
     end
     return { pandoc.Link(r.title, '#' .. id) }
+  end
+  if r.kind == 'section-titre' then -- unnumbered section target: prefix with "section « … »"
+    if LATEX then
+      local lbl = (bare and '' or 'section~') .. '«~' .. inlines_latex(r.title) .. '~»'
+      return { pandoc.RawInline('latex', '\\hyperref[' .. id .. ']{' .. lbl .. '}') }
+    end
+    local inl = pandoc.Inlines {}
+    if not bare then inl:insert(pandoc.Str('section\u{00A0}')) end
+    inl:insert(pandoc.Str('«\u{00A0}'))
+    inl:extend(r.title)
+    inl:insert(pandoc.Str('\u{00A0}»'))
+    return { pandoc.Link(inl, '#' .. id) }
   end
   local num = r.kind == 'equation' and ('(' .. r.num .. ')') or r.num
   if LATEX then
@@ -411,22 +432,27 @@ local render = {
       -- restarting the roman page numbers (\reprendreliminaires, gabarit/preambule.tex)
       if h.classes:includes('avant-propos') then before = '\\reprendreliminaires'
       elseif h.classes:includes('corps') then before = '\\mainmatter\\setcounter{chapter}{-1}'
-      elseif h.classes:includes('annexes') then before = '\\appendix'
-      elseif h.classes:includes('fin') then before = '\\backmatter' end
-      local out = pandoc.Blocks {}
+      elseif h.identifier == 'sec:conclusion' then before = '\\clorepartie'
+      elseif h.classes:includes('annexes') then before = '\\clorepartie\\appendix'
+      elseif h.classes:includes('fin') then before = '\\clorepartie\\backmatter' end
+      local out, after = pandoc.Blocks {}, nil
       if before then out:insert(pandoc.RawBlock('latex', before)) end
       if h.level == 1 and not h.classes:includes('partie') then
-        -- unnumbered chapter: floats numbered 1, 2… as in HTML (gabarit/preambule.tex)
+        -- unnumbered chapter: floats numbered 1, 2… as in HTML (gabarit/preambule.tex),
+        -- and explicit \markboth since \chapter* leaves the previous chapter's running header.
         if h.classes:includes('unnumbered') then
           out:insert(pandoc.RawBlock('latex', '\\numerotationlocale{nn-' .. h.identifier:gsub('[^%w]', '-') .. '}'))
+          local t = inlines_latex(h.content)
+          after = pandoc.RawBlock('latex', '\\markboth{' .. t .. '}{' .. t .. '}')
         else
           out:insert(pandoc.RawBlock('latex', '\\numerotationchapitre'))
         end
       elseif SANS_NUMERO[h.identifier] then
         h.classes:insert('unnumbered') -- still listed in the TOC, without a number
       end
-      if #out == 0 then return h end
+      if #out == 0 and not after then return h end
       out:insert(h)
+      if after then out:insert(after) end
       return out
     end
     local r = REFS[h.identifier]
