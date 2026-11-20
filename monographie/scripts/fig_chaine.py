@@ -45,7 +45,7 @@ def table(n_cle, nom, legende):
                      f"{pct(r['part_indep_non_controle'])} → {pct(r['part_indep_controle'])}",
                      pct(r['part_q']) if q > 0 else '—'])
     tableau(nom, ['N', 'Facteur partagé q', 'Chaîne sans contrôle', 'Contrôle croisé à chaque étape',
-                  'Part indépendante (sans → avec contrôle)', 'Part des défaillances restantes due à q'],
+                  'Part indépendante (sans → avec contrôle)', 'Part des défaillances restantes où intervient q'],
             rows, legende)
 
 
