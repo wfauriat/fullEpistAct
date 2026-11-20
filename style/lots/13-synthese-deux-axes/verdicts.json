@@ -1,0 +1,14 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/13-synthese-deux-axes/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points d’une phrase longue ; « il faut encore » garde le lien explicatif, et le sens, la portée et les renvois restent inchangés."},
+    {"id": "002", "verdict": "rejete", "dimensions": ["argument"], "raison": "« Or » introduit une nouvelle prémisse ; « pourtant » ajoute une concession, alors que rien dans le paragraphe précédent (concentration des défaillances dans la colonne de droite) n’est contredit par l’opposition des règles de maîtrise."},
+    {"id": "003", "verdict": "rejete", "dimensions": ["argument", "gain"], "raison": "« ainsi » présente comme une conséquence ce qui précisait le mécanisme en deux temps, et le cumul « ainsi d’abord » alourdit une phrase déjà lisible ; le gain est faible."},
+    {"id": "004", "verdict": "accepte", "dimensions": [], "raison": "Coupe d’une phrase longue ; « en effet » restitue le lien justificatif du deux-points, et le modal « peut » ainsi que la restriction « couvertes par le contrat » sont conservés."},
+    {"id": "005", "verdict": "accepte", "dimensions": [], "raison": "Coupe au point-virgule ; « déjà » et « plus étroite encore » maintiennent le raisonnement a fortiori, et les faits rapportés de Knight et Leveson sont inchangés."},
+    {"id": "006", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points d’une phrase longue ; « alors » reste rattaché au cas des erreurs constantes, et le renvoi à la sévérité est intact."},
+    {"id": "007", "verdict": "accepte", "dimensions": [], "raison": "Coupe au point-virgule ; « en revanche » explicite l’opposition déjà présente entre composants spécifiés et composants appris, et la restriction « ne subsiste que là où » est conservée."},
+    {"id": "008", "verdict": "rejete", "dimensions": ["portee", "francais"], "raison": "L’incise « , en revanche, » s’insère entre « ne s’accélère pas » et « par la seule génération automatique » : la restriction se détache et la phrase peut se lire comme une négation absolue (« la validation ne s’accélère pas »). Dans un point clé, ce risque n’est pas acceptable."}
+  ]
+}
