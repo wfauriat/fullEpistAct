@@ -1,0 +1,1110 @@
+[
+  {
+    "grappe": "V2-001",
+    "constats": [
+      "P2-001"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/parties/partie-2.md",
+    "ligne": 3,
+    "passage": "C’est pourquoi ses exemples sont délibérément choisis hors de l’intelligence artificielle",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "structure",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "La page d'ouverture promet des exemples choisis hors de l'IA, mais la partie II cite l'automate d'essais et d'erreurs et Sutton & Barto (ch. 7), Google Flu Trends (ch. 7), les grands modèles statistiques et l'omission de saillance (ch. 7), ainsi que des relecteurs logiciels ou modèles (ch. 9).",
+    "correction": {
+      "avant": "C’est pourquoi ses exemples sont délibérément choisis hors de l’intelligence artificielle",
+      "apres": "C’est pourquoi ses principaux exemples sont délibérément choisis hors de l’intelligence artificielle"
+    },
+    "justification": "La nuance (« principaux exemples » ou « pour l'essentiel ») aligne la promesse d'ouverture sur le contenu réel des chapitres 5 à 9."
+  },
+  {
+    "grappe": "V2-002",
+    "constats": [
+      "T1-005"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/parties/partie-2.md",
+    "ligne": 9,
+    "passage": "permet de rattraper des fautes d’exécution, mais jamais de découvrir un facteur que le cadre a omis.",
+    "verdict": "CONFIRME",
+    "reference": "RAPPORT_AUDIT_CALQUES § 4 (partie-2:9)",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G2",
+    "probleme": "La page de partie énonce le volet (a) de la proposition 3 sans réserve (« jamais »), alors que la proposition 3 est un résultat sous hypothèses (modèle M3) et que la nuance du chapitre 7 précise que les comparateurs réels conditionnent rarement sur le seul vecteur x.",
+    "correction": {
+      "avant": "mais jamais de découvrir un facteur que le cadre a omis.",
+      "apres": "mais non, tant qu’ils restent dans le même cadre, de découvrir un facteur que celui-ci a omis."
+    },
+    "justification": "La reformulation évite l'absolu « jamais » et rappelle la condition du modèle M3. Le calque « rattraper » est déjà relevé dans RAPPORT_AUDIT_CALQUES § 4."
+  },
+  {
+    "grappe": "V2-003",
+    "constats": [
+      "C-054"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/parties/partie-2.md",
+    "ligne": 11,
+    "passage": "et si le coût direct d’un contrôle tend à croître avec son indépendance, les comparateurs indépendants et peu coûteux reportent ce prix sur le travail de traduction et de prise en compte.",
+    "verdict": "PLAUSIBLE",
+    "reference": "ARBITRAGES P1.6",
+    "categorie": "clarte",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "La seconde moitié de la phrase (issue de P1.6) reste elliptique pour un lecteur qui n'a pas encore lu le chapitre 8, car les comparateurs « indépendants et peu coûteux » et le report du prix sur la traduction n'ont pas encore été illustrés.",
+    "correction": {
+      "avant": "et si le coût direct d’un contrôle tend à croître avec son indépendance, les comparateurs indépendants et peu coûteux reportent ce prix sur le travail de traduction et de prise en compte.",
+      "apres": "et l’indépendance se paie toujours, soit en coût direct de production, soit en effort de traduction et de prise en compte."
+    },
+    "justification": "La formulation plus concise reste fidèle à P1.6 tout en étant lisible avant le chapitre 8."
+  },
+  {
+    "grappe": "V2-004",
+    "constats": [
+      "T5-002"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/parties/partie-2.md",
+    "ligne": 5,
+    "passage": "Le chapitre [-@sec:ch05] part de ce que mesure une incertitude chiffrée.",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "repetition",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G3",
+    "probleme": "La page d'ouverture de la partie II compte environ 1 000 mots et résume en détail les trois incertitudes, les cinq conditions de détection, le blanchiment et la décomposition du risque, créant une redite immédiate avec les chapitres 5 à 9.",
+    "correction": null,
+    "justification": "Choix éditorial de structure pour les pages de partie. Options : (a) conserver la synthèse détaillée comme carte d'orientation ; (b) réduire chaque paragraphe de chapitre à deux ou trois phrases."
+  },
+  {
+    "grappe": "V2-005",
+    "constats": [
+      "C-012",
+      "P2-003",
+      "T1-032",
+      "T2-006"
+    ],
+    "lecteurs_distincts": 4,
+    "fichier": "monographie/chapitres/05-trois-incertitudes.md",
+    "ligne": 65,
+    "passage": "Tout énoncé quantitatif d’incertitude résume à quel point les membres d’un ensemble spécifié d’alternatives admises sont en désaccord. Une alternative qui n’a jamais été admise ne produit aucun désaccord.",
+    "verdict": "CONFIRME",
+    "reference": "00_global.md § 3 (P1)",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G3",
+    "probleme": "Quatre lecteurs distincts relèvent deux faiblesses dans la Proposition 1 (statut « résultat sous hypothèses ») : (1) l'énoncé encadré est universel et omet les hypothèses (calcul sur Θ, moments finis, facteur omis constant ou non attribué), reléguées dans les blocs facultatifs ; (2) le mot « désaccord » ne couvre qu'un des deux termes de l'équation (5.1), le premier terme mesurant la dispersion interne à chaque alternative.",
+    "correction": null,
+    "justification": "Le statut « résultat sous hypothèses » exige que les conditions figurent dans l'énoncé principal (règle de l'avant-propos sur les blocs facultatifs). Options : (a) reformuler la proposition en « résume la dispersion calculée à l'intérieur d'un ensemble spécifié Θ d'alternatives admises (dispersion interne et désaccord entre alternatives) » et mentionner la réserve sur un facteur omis variable ; (b) conserver « désaccord » au sens large en ajoutant explicitement les hypothèses dans l'énoncé."
+  },
+  {
+    "grappe": "V2-006",
+    "constats": [
+      "P2-004",
+      "T2-007"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/05-trois-incertitudes.md",
+    "ligne": 91,
+    "passage": "intervalle inter-quantiles, entropie prédictive, région de prédiction conforme ou borne au pire cas sur $\\Theta$ — reste par construction une fonctionnelle définie sur le seul ensemble $\\Theta$ des alternatives admises, et partage donc la même cécité envers ce qui n’appartient pas à $\\Theta$.",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P1.8",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "La correction décidée (ARBITRAGES P1.8) ne suffit pas et introduit une inexactitude : elle range la prédiction conforme parmi les fonctionnelles définies sur un ensemble Θ de modèles, alors que le chapitre 2 (§ 2.4) la présente sans loi ni ensemble Θ, sous la seule hypothèse d'échangeabilité.",
+    "correction": {
+      "avant": "intervalle inter-quantiles, entropie prédictive, région de prédiction conforme ou borne au pire cas sur $\\Theta$ — reste par construction une fonctionnelle définie sur le seul ensemble $\\Theta$ des alternatives admises, et partage donc la même cécité envers ce qui n’appartient pas à $\\Theta$.",
+      "apres": "intervalle inter-quantiles, entropie prédictive ou borne au pire cas sur $\\Theta$ — reste par construction une fonctionnelle définie sur le seul ensemble $\\Theta$ des alternatives admises (de même qu’une région de prédiction conforme reste relative à l’hypothèse d’échangeabilité retenue dans le cadre, @sec:ch02-garanties-conditionnelles), et partage donc la même cécité envers ce qui est laissé hors du cadre."
+    },
+    "justification": "La retouche corrige l'erreur mathématique sur la prédiction conforme tout en conservant la généralisation demandée par P1.8."
+  },
+  {
+    "grappe": "V2-007",
+    "constats": [
+      "P2-005"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/05-trois-incertitudes.md",
+    "ligne": 91,
+    "passage": "Deux propriétés découlent immédiatement de cette expression.",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P1.8",
+    "categorie": "clarte",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "Le Noyau formel annonce « Deux propriétés » mais en énumère trois (« D'abord… Ensuite… Enfin… ») depuis l'ajout de la phrase issue de P1.8. De plus, la phrase d'ouverture de la section 5.4 (l. 63) est alourdie par une double interrogation.",
+    "correction": {
+      "avant": "Deux propriétés découlent immédiatement de cette expression.",
+      "apres": "Trois conséquences découlent immédiatement de cette expression."
+    },
+    "justification": "Discordance numérique directe entre l'annonce (« Deux ») et les trois points qui suivent."
+  },
+  {
+    "grappe": "V2-008",
+    "constats": [
+      "C-013"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/05-trois-incertitudes.md",
+    "ligne": 73,
+    "passage": "l’incertitude ontologique n’est pas une troisième quantité numérique qui attendrait encore une formule plus savante.",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G3",
+    "probleme": "Le texte ne répond pas à l'objection classique consistant à inclure dans Θ une hypothèse « fourre-tout » (« autre chose que nos modèles ») dotée d'un poids a priori, ni ne la distingue explicitement de la marge d'humilité b introduite au chapitre 17.",
+    "correction": null,
+    "justification": "Question de fond utile à traiter en Nuance au ch. 5 ou au ch. 17. Options : (a) ajouter un court paragraphe expliquant qu'une hypothèse fourre-tout n'a pas de fonction de vraisemblance calculable et ne produit donc aucun désaccord mesurable ni révision bayésienne ; (b) laisser en l'état."
+  },
+  {
+    "grappe": "V2-009",
+    "constats": [
+      "C-017"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/05-trois-incertitudes.md",
+    "ligne": 52,
+    "passage": "la quasi-indépendance avait été figée dans la structure même des modèles de portefeuille, au lieu d’y figurer comme un paramètre incertain.",
+    "verdict": "DEJA_TRANCHE",
+    "reference": "DECISIONS_SYNTHESE S5",
+    "categorie": "fait",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G3",
+    "probleme": "Le lecteur objecte que de nombreux modèles de portefeuille d'avant 2008 (copules) comportaient un paramètre de corrélation, simplement estimé trop bas sur un historique sans baisse nationale, ce qui en ferait une incertitude épistémique plutôt qu'ontologique.",
+    "correction": null,
+    "justification": "Point déjà tranché par DECISIONS_SYNTHESE S5 (qui a réécrit l'encadré en ce sens) et vérifié dans TODO_ETAT_ACTUEL P5.1a (@fcic2011; @coval2009). À noter toutefois que le paragraphe précédent (l. 49) cite encore @fauriat2026frame plutôt que les sources historiques."
+  },
+  {
+    "grappe": "V2-010",
+    "constats": [
+      "P2-002"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/05-trois-incertitudes.md",
+    "ligne": 29,
+    "passage": "une distinction devenue classique en ingénierie de la fiabilité, en analyse des risques et en statistique prédictive [@fauriat2026frame].",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "fait",
+    "gravite": "B",
+    "rang": 2,
+    "groupe": "G2",
+    "probleme": "Une distinction présentée comme classique dans trois disciplines est appuyée uniquement sur l'article de l'auteur (@fauriat2026frame), tout comme plusieurs affirmations de fond des lignes 35, 43, 49, 104 et 106.",
+    "correction": null,
+    "justification": "Renvoyer à @fauriat2026frame pour une distinction présentée comme classique empêche le lecteur de retrouver les références fondatrices (ex. Der Kiureghian & Ditlevsen 2009, Hora 1996). Il faut ajouter des références de fiabilité/risque pour la distinction classique et réserver @fauriat2026frame aux apports propres."
+  },
+  {
+    "grappe": "V2-011",
+    "constats": [
+      "P2-006"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/05-trois-incertitudes.md",
+    "ligne": 79,
+    "passage": "ni l’eau salée encore calme à 101 °C",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "clarte",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "La formulation « encore calme à 101 °C » est elliptique pour un lecteur qui ne se rappelle pas l'élévation ébullioscopique de l'eau salée vue au chapitre 2.",
+    "correction": {
+      "avant": "ni l’eau salée encore calme à 101 °C",
+      "apres": "ni l’eau salée qui ne bout pas encore à 101 °C"
+    },
+    "justification": "La valeur 101 °C est physiquement exacte (l'eau salée saturée bout vers 108 °C), mais la formule « qui ne bout pas encore à 101 °C » est plus explicite."
+  },
+  {
+    "grappe": "V2-012",
+    "constats": [
+      "T5-015"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/05-trois-incertitudes.md",
+    "ligne": 116,
+    "passage": "une nuance s’impose sur un accident célèbre souvent lu trop vite comme un pur défaut de cadre.",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "repetition",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G3",
+    "probleme": "Le cas Challenger est exposé dans une Nuance en fin de chapitre 5 (l. 118-122) avant d'être repris en détail au chapitre 6 (§ 6.3). Contrairement à ce que craint le lecteur, la Nuance du chapitre 5 n'emploie toutefois pas les termes techniques « comparabilité » ni « prise en compte ».",
+    "correction": null,
+    "justification": "Répétition modérée (6 mentions au ch. 5 contre 14 au ch. 6 selon repetitions.md). Options : (a) conserver la Nuance du ch. 5 comme garde-fou immédiat contre la lecture « pur défaut de cadre » ; (b) la réduire à un renvoi d'une phrase vers la section 6.3."
+  },
+  {
+    "grappe": "V2-013",
+    "constats": [
+      "P2-007"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/06-detecter-une-erreur.md",
+    "ligne": 3,
+    "passage": "Ce que le cadre omet, et sur quoi toutes les alternatives admises gardent donc le silence, ne laisse aucune trace chiffrée.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Le chapeau du chapitre 6 efface la nuance du chapitre 5 (Nuance du § 5.4) selon laquelle un facteur omis qui a varié sans être mesuré laisse bien une trace chiffrée dans la dispersion résiduelle, sans être attribué.",
+    "correction": {
+      "avant": "Ce que le cadre omet, et sur quoi toutes les alternatives admises gardent donc le silence, ne laisse aucune trace chiffrée.",
+      "apres": "Ce que le cadre omet, et sur quoi toutes les alternatives admises gardent donc le silence, ne laisse aucune trace attribuable (et, s’il est resté constant, aucune trace du tout)."
+    },
+    "justification": "Aligne exactement le résumé d'ouverture du chapitre 6 sur la proposition 1 et sa nuance au chapitre 5."
+  },
+  {
+    "grappe": "V2-014",
+    "constats": [
+      "C-023",
+      "P2-008",
+      "T1-003"
+    ],
+    "lecteurs_distincts": 3,
+    "fichier": "monographie/chapitres/06-detecter-une-erreur.md",
+    "ligne": 35,
+    "passage": "Une erreur n’est détectée que lorsqu’une affirmation est confrontée à un comparateur censé concorder avec elle, que cette comparaison fait apparaître un désaccord et que quelqu’un en prend acte.",
+    "verdict": "CONFIRME",
+    "reference": "00_global.md § 3 (P2)",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G3",
+    "probleme": "Trois lecteurs distincts relèvent que la Proposition 2 (statut « définition ») ne mentionne que trois éléments (comparateur, désaccord, prise d'acte), mais que le texte (l. 39, l. 88) en fait « découler » cinq conditions dont trois (se tromper autrement, comparabilité, arrivée à temps) ne figurent pas dans la définition, et dont le statut propre (analyse / hypothèse de travail) n'est pas affiché.",
+    "correction": null,
+    "justification": "La tension entre le statut « définition » de P2 et la thèse substantielle selon laquelle les cinq conditions peuvent céder séparément est réelle. Options : (a) conserver P2 comme définition à 3 éléments et présenter explicitement la grille des cinq conditions et l'énoncé « si une condition manque, l'échappement vaut 1 » comme une analyse distincte sous hypothèses ; (b) intégrer les cinq éléments dans l'énoncé de P2 en la passant en statut composite."
+  },
+  {
+    "grappe": "V2-015",
+    "constats": [
+      "C-028",
+      "P2-010",
+      "T2-015"
+    ],
+    "lecteurs_distincts": 3,
+    "fichier": "monographie/chapitres/06-detecter-une-erreur.md",
+    "ligne": 86,
+    "passage": "quelqu’un prend acte d’un éventuel désaccord et ait l’autorité nécessaire pour suspendre ou corriger l’action.",
+    "verdict": "CONFIRME",
+    "reference": "DECISIONS_SYNTHESE R11",
+    "categorie": "francais",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "Faute de concordance de mode introduite lors de l'application de DECISIONS_SYNTHESE R11 : « prend acte » (indicatif) est coordonné à « ait l'autorité » (subjonctif). (P2-010 signale aussi la triple notation P(E), Pr(E), P(faux), déjà tranchée par DECISIONS_SYNTHESE N4.)",
+    "correction": {
+      "avant": "quelqu’un prend acte d’un éventuel désaccord et ait l’autorité nécessaire pour suspendre ou corriger l’action.",
+      "apres": "quelqu’un prend acte d’un éventuel désaccord et a l’autorité nécessaire pour suspendre ou corriger l’action."
+    },
+    "justification": "Correction grammaticale directe."
+  },
+  {
+    "grappe": "V2-016",
+    "constats": [
+      "C-037",
+      "P2-011",
+      "P2-012"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/06-detecter-une-erreur.md",
+    "ligne": 117,
+    "passage": "même si le comparateur complet — la série confrontant température et présence ou absence d’incident — n’a pas été assemblé sur la table de décision.",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P1.5",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G3",
+    "probleme": "La correction décidée (ARBITRAGES P1.5) ne suffit pas : les lecteurs butent encore sur l'analyse de Challenger selon les cinq conditions. Déclarer l'existence remplie tout en disant que le comparateur complet n'a pas été assemblé paraît contradictoire, et ranger l'omission des 16 vols sans dommage sous « Différence » (« partageait le cadrage même de l'affirmation ») semble forcé alors qu'il s'agit d'un défaut de construction ou de comparabilité du comparateur.",
+    "correction": null,
+    "justification": "Signal important sur ARBITRAGES P1.5. Options : (a) désigner explicitement le comparateur (la série complète des 23 vols documentés) et rattacher sa non-construction à l'existence (en puissance dans les archives, mais non assemblé en séance) et à la comparabilité, en réservant la différence aux calculs/hypothèses initiaux de qualification des joints (option (b) de P1.5) ; (b) clarifier que le graphique des 7 vols était le comparateur produit en séance et expliquer en quoi il relevait de la comparabilité."
+  },
+  {
+    "grappe": "V2-017",
+    "constats": [
+      "P2-014"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/06-detecter-une-erreur.md",
+    "ligne": 121,
+    "passage": "La cinquième condition a subi une double rupture disjointe dans la salle de décision :",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P1.5",
+    "categorie": "francais",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "L'expression « double rupture disjointe » (issue d'ARBITRAGES P1.5) est obscure et peu idiomatique pour désigner deux défauts distincts de prise en compte.",
+    "correction": {
+      "avant": "La cinquième condition a subi une double rupture disjointe dans la salle de décision :",
+      "apres": "La cinquième condition a subi une double rupture dans la salle de décision :"
+    },
+    "justification": "Les mots « d'une part… d'autre part… » qui suivent suffisent à marquer la distinction sans l'adjectif « disjointe »."
+  },
+  {
+    "grappe": "V2-018",
+    "constats": [
+      "P2-009"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/06-detecter-une-erreur.md",
+    "ligne": 58,
+    "passage": "La @prop:comparateur porte le statut de *définition* parce qu’elle énonce presque ce que signifie le mot même de détection.",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "repetition",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "L'explication du caractère « presque définitionnel » de la proposition 2 (l. 39) est reprise presque dans les mêmes termes au début de l'encadré Nuance (l. 58).",
+    "correction": null,
+    "justification": "La nuance peut s'ouvrir directement sur son apport propre (« Aucune expérience empirique ne saurait la démentir… ») pour éviter l'écho avec la ligne 39."
+  },
+  {
+    "grappe": "V2-019",
+    "constats": [
+      "T1-021"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/06-detecter-une-erreur.md",
+    "ligne": 42,
+    "passage": "2. *Différence.* Il faut ensuite que le comparateur puisse **se tromper autrement** que l’affirmation",
+    "verdict": "DEJA_TRANCHE",
+    "reference": "DECISIONS_SYNTHESE V20",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Le lecteur relève l'alternance entre « différence » et « se tromper autrement » pour la deuxième condition.",
+    "correction": null,
+    "justification": "Déjà tranché par DECISIONS_SYNTHESE V20 : les noms fixes des cinq conditions sont « existence, différence, comparabilité, arrivée à temps, prise en compte », avec la glose « différence (se tromper autrement) » à la première mention."
+  },
+  {
+    "grappe": "V2-020",
+    "constats": [
+      "T1-027"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/06-detecter-une-erreur.md",
+    "ligne": 29,
+    "passage": "le @sec:ch13 reprendra cette classification et en détaillera quatre sources de comparateurs, qui recoupent ces trois familles.",
+    "verdict": "REJETE",
+    "reference": "",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Le lecteur demande d'expliciter le lien entre les trois familles du ch. 6 et les quatre sources du ch. 13.",
+    "correction": null,
+    "justification": "La ligne 29 annonce explicitement cette articulation vers le chapitre 13 ; T1 n'a lu que des extraits. (L'usage de « vos propres contrôles » au ch. 13 est déjà relevé dans RAPPORT_AUDIT_CALQUES § 1.)"
+  },
+  {
+    "grappe": "V2-021",
+    "constats": [
+      "P2-015"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "ligne": 56,
+    "passage": "l’événement $A$ est conditionnellement indépendant de $z$ sachant $X = x$, donc de la valeur prise par $e(x, z)$",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "A",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "Défaut réel dans la preuve du modèle M3 : l'erreur e(x, z) = g(x, z) − f_1(x) dépend de f_1(x). Si f_1 comporte des tirages aléatoires internes (autorisés par l'hypothèse 1), l'accord A entre f_1(x) et f_2(x) dépend de f_1(x) et donc de e(x, z) même lorsque A est indépendant de z sachant X = x.",
+    "correction": {
+      "avant": "1. *Dépendance aux seules variables du cadre* : $f_1$ et $f_2$ sont des fonctions de $x$ seul, éventuellement perturbées par des tirages aléatoires internes (graines, rééchantillonnage dans le modèle) conditionnellement indépendants de $z$ sachant $X = x$.",
+      "apres": "1. *Dépendance aux seules variables du cadre* : $f_1$ est une fonction déterministe de $x$ seul, et $f_2$ est une fonction de $x$ seul éventuellement perturbée par des tirages aléatoires internes (graines, rééchantillonnage dans le modèle) conditionnellement indépendants de $z$ sachant $X = x$."
+    },
+    "justification": "Rendre f_1 déterministe (ou définir e par rapport à la moyenne de f_1, ou supposer les aléas de f_1 indépendants de e) rend l'implication mathématique exacte."
+  },
+  {
+    "grappe": "V2-022",
+    "constats": [
+      "C-014",
+      "P2-016"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "ligne": 38,
+    "passage": "Le volet (b) suppose que les observations sont produites par le monde et non calculées dans le cadre, que $z$ a varié pendant leur collecte, et que son effet ne se lit que sur les grandeurs enregistrées, issue comprise, sous la forme d’une dispersion que rien n’attribue",
+    "verdict": "CONFIRME",
+    "reference": "DECISIONS_SYNTHESE S4",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G3",
+    "probleme": "La correction décidée (DECISIONS_SYNTHESE S4) ne suffit pas : deux lecteurs relèvent que le volet (b) de la proposition 3 est affiché « résultat sous hypothèses » sans aucune dérivation formelle (M3 ne démontre que (a)), et que les hypothèses ajoutées par S4 reprennent presque la conclusion.",
+    "correction": null,
+    "justification": "Signal sur DECISIONS_SYNTHESE S4. Options : (a) donner au volet (b) le statut « hypothèse de travail » (ou « constat analytique illustré par des cas ») au ch. 7 et dans le Tableau 1 de la conclusion ; (b) ajouter une courte dérivation formelle dans le prolongement du modèle de variance du § 5.4."
+  },
+  {
+    "grappe": "V2-023",
+    "constats": [
+      "C-007"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "ligne": 85,
+    "passage": "On appelle **dérive de distribution** le changement, en exploitation, d’un facteur resté constant pendant la collecte des données ; les contrôles fondés sur ces données ne pouvaient pas le voir.",
+    "verdict": "CONFIRME",
+    "reference": "monographie/commun/registre_termes.md",
+    "categorie": "terminologie",
+    "gravite": "B",
+    "rang": 4,
+    "groupe": "G3",
+    "probleme": "En apprentissage automatique, « dérive de distribution » (distribution shift) désigne tout changement de distribution entre entraînement et exploitation, y compris sur des variables enregistrées. Le définir exclusivement par le changement d'un facteur omis resté constant heurte l'usage des praticiens visés.",
+    "correction": null,
+    "justification": "Définition du registre. Options : (a) préciser dans la phrase qu'on l'entend ici au sens spécifique du changement d'un facteur omis resté constant pendant la collecte ; (b) renommer le terme du registre en « dérive d'un facteur omis »."
+  },
+  {
+    "grappe": "V2-024",
+    "constats": [
+      "C-043",
+      "P2-019"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "ligne": 98,
+    "passage": "tandis que le dispositif continuait d’appliquer la même méthode et de passer ses propres contrôles internes.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "fait",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "Deux lecteurs relèvent que Google Flu Trends a été révisé après 2009 et en 2013 (donc n'appliquait pas « la même méthode »), que Lazer et al. (2014) insistent aussi sur le surajustement aux requêtes (« big data hubris ») et que la remarque sur les contrôles internes n'est pas sourcée. (Le calque « passer ses propres contrôles » est par ailleurs dans RAPPORT_AUDIT_CALQUES.)",
+    "correction": {
+      "avant": "tandis que le dispositif continuait d’appliquer la même méthode et de passer ses propres contrôles internes.",
+      "apres": "tandis que l’analyse interne des seules séries de requêtes — déjà exposées au surajustement lors de la conception [@lazer2014] — ne suffisait pas à déceler la dérive."
+    },
+    "justification": "Évite l'inexactitude sur « la même méthode » et l'affirmation non sourcée sur les contrôles internes tout en supprimant le calque « passer ses contrôles »."
+  },
+  {
+    "grappe": "V2-025",
+    "constats": [
+      "P2-017"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "ligne": 27,
+    "passage": "Les deux calculs s’accordent jusqu’à la troisième décimale.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "chiffres",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Un calcul par éléments finis et un calcul analytique approché à la main ne s'accordent pratiquement jamais à la troisième décimale, ce qui nuit à la vraisemblance technique de l'exemple.",
+    "correction": {
+      "avant": "Les deux calculs s’accordent jusqu’à la troisième décimale.",
+      "apres": "Les deux calculs s’accordent à quelques pour cent près."
+    },
+    "justification": "Correction directe de vraisemblance technique."
+  },
+  {
+    "grappe": "V2-026",
+    "constats": [
+      "P2-018"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "ligne": 66,
+    "passage": "où $Z$ aurait varié.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "La limite du modèle M3 passe sans raison de z minuscule à Z majuscule (3 occurrences à la ligne 66). Le lecteur signale aussi l'annonce des trois précisions à la ligne 69 reprise immédiatement dans la Nuance (l. 71-77).",
+    "correction": {
+      "avant": "Le raisonnement suppose que ni $f_1$ ni $f_2$ ne dépendent d’observations réelles où $Z$ aurait varié. Dès qu’un modèle est ajusté ou confronté à des mesures issues de $g(X, Z)$ pendant que $Z$ variait, l’effet de $Z$ se glisse dans la dispersion des observations conditionnellement à $X = x$",
+      "apres": "Le raisonnement suppose que ni $f_1$ ni $f_2$ ne dépendent d’observations réelles où $z$ aurait varié. Dès qu’un modèle est ajusté ou confronté à des mesures issues de $g(X, z)$ pendant que $z$ variait, l’effet de $z$ se glisse dans la dispersion des observations conditionnellement à $X = x$"
+    },
+    "justification": "Uniformisation typographique de la notation z (conforme à l'annexe C)."
+  },
+  {
+    "grappe": "V2-027",
+    "constats": [
+      "P2-020"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "ligne": 109,
+    "passage": "donnent une expression mathématique précise à une partie de cette contrainte dans le domaine de l’optimisation.",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "Les théorèmes « no free lunch » portent sur la performance moyenne sur toutes les fonctions objectif possibles, non sur la régression des méta-procédures d'audit d'un cadre : le rapprochement est une analogie plutôt qu'une expression mathématique de la contrainte.",
+    "correction": null,
+    "justification": "Présenter les théorèmes comme une analogie ou un parallèle dans le domaine de l'optimisation éviterait de surinterpréter leur portée."
+  },
+  {
+    "grappe": "V2-028",
+    "constats": [
+      "P2-021"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "ligne": 121,
+    "passage": "dégage les deux seules voies par lesquelles une pertinence nouvelle entre de l’extérieur",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "L'exclusivité (« deux seules voies ») néglige l'innovation conceptuelle par réflexion théorique ou expérience de pensée (alors que Goodman est cité juste avant), et la ligne 126 ramène finalement la première voie à la seconde (« être averti revient à découvrir par procuration »).",
+    "correction": null,
+    "justification": "Dire « deux voies principales par lesquelles une pertinence nouvelle entre de l'extérieur » (en § 7.5 et Point clé 5) atténuerait l'exclusivité sans affaiblir la thèse."
+  },
+  {
+    "grappe": "V2-029",
+    "constats": [
+      "C-002",
+      "P2-023",
+      "T1-002"
+    ],
+    "lecteurs_distincts": 3,
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "ligne": 49,
+    "passage": "::: {.proposition #prop:independance titre=\"L’indépendance est relative, et se paie en comparabilité\" statut=\"hypothèse de travail\"}",
+    "verdict": "CONFIRME",
+    "reference": "00_global.md § 3 (P4)",
+    "categorie": "statut",
+    "gravite": "A",
+    "rang": 3,
+    "groupe": "G3",
+    "probleme": "Contradiction directe sur le statut épistémique de la Proposition 4 : l'en-tête affiche « hypothèse de travail », la note entre parenthèses la déclare « composite » (en rangeant la tension structurelle sous « définition »), et le Tableau 1 de la conclusion range cette même tension sous « résultat sous hypothèses ».",
+    "correction": null,
+    "justification": "Contradiction majeure entre trois emplacements. Options : (a) afficher « composite » dans l'en-tête de la Proposition 4 et aligner exactement la répartition (définition pour la relativité à une classe d'erreurs ; résultat sous hypothèses ou définition pour la tension structurelle ; hypothèse de travail pour la tendance de coût direct) entre ch. 8 et Tableau 1 de la conclusion ; (b) scinder P4 en deux propositions distinctes."
+  },
+  {
+    "grappe": "V2-030",
+    "constats": [
+      "C-004",
+      "P2-027"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "ligne": 161,
+    "passage": "Si une erreur n’appartient pas à $B_1$, le producteur la voit et ne l’émet pas : elle n’apparaît pas du seul fait que le protocole de comparaison n’aurait pas su l’exprimer.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "Cette phrase contredit le modèle M1 (l. 123) et l'exemple quantitatif voisin (l. 144), où le producteur commet des erreurs ponctuelles hors de son angle mort structurel B_1 avec probabilité p = 6 %. Il faut préciser que l'équation (8.2) ne porte que sur les angles morts structurels (taux d'oubli 1), tandis que les erreurs ponctuelles relèvent de p et m.",
+    "correction": {
+      "avant": "Si une erreur n’appartient pas à $B_1$, le producteur la voit et ne l’émet pas : elle n’apparaît pas du seul fait que le protocole de comparaison n’aurait pas su l’exprimer.",
+      "apres": "Sur le plan des causes structurelles, si une cause n’appartient pas à $B_1$, elle ne relève pas de l’angle mort du producteur (les oublis ponctuels qui peuvent néanmoins survenir relèvent du taux d’erreur $p$ et du taux d’oubli $m$, non de l’@eq:ch08-croise-angle-mort)."
+    },
+    "justification": "Lève la contradiction interne entre la Nuance (l. 161) et l'exemple quantitatif (l. 144)."
+  },
+  {
+    "grappe": "V2-031",
+    "constats": [
+      "T1-015"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "ligne": 202,
+    "passage": "augmentée des écarts que la comparaison ne sait pas exprimer.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "clarte",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Le Point clé 3 (« l'intersection des angles morts du producteur et du contrôleur, augmentée des écarts que la comparaison ne sait pas exprimer ») suggère la formule (B_1 ∩ B_2) ∪ B_cmp, alors que la Nuance (l. 161) écarte explicitement cette forme au profit de B_1 ∩ (B_2 ∪ B_cmp).",
+    "correction": {
+      "avant": "augmentée des écarts que la comparaison ne sait pas exprimer.",
+      "apres": "augmentée, parmi les erreurs du producteur, de celles que la comparaison ne sait pas exprimer."
+    },
+    "justification": "Correction directe qui aligne le Point clé 3 sur l'équation (8.2) et la Nuance."
+  },
+  {
+    "grappe": "V2-032",
+    "constats": [
+      "C-055",
+      "P2-026"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "ligne": 100,
+    "passage": ", tandis que les résultats intermédiaires circulent toujours plus vite d’un maillon au suivant.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "clarte",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "Deux lecteurs relèvent que cette incise finale n'a aucun lien avec le morcellement d'un objectif en sous-problèmes et anticipe sans justification sur le thème de la vitesse au chapitre 14.",
+    "correction": {
+      "avant": ", tandis que les résultats intermédiaires circulent toujours plus vite d’un maillon au suivant.",
+      "apres": "."
+    },
+    "justification": "Suppression directe d'une incise hors sujet à cet endroit."
+  },
+  {
+    "grappe": "V2-033",
+    "constats": [
+      "C-036"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "ligne": 144,
+    "passage": "chaque étape fait l’objet d’un contrôle croisé en parallèle par un pair qui présente la même compétence que le producteur et laisse échapper chaque erreur indépendante avec la probabilité $m = p = 6\\,\\%$",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "Justifier m = p par « la même compétence » confond le taux d'erreur de production p avec le taux d'oubli de relecture m.",
+    "correction": {
+      "avant": "par un pair qui présente la même compétence que le producteur et laisse échapper chaque erreur indépendante avec la probabilité $m = p = 6\\,\\%$",
+      "apres": "par un pair qui, pour l’illustration, laisse échapper chaque erreur indépendante avec la même probabilité $m = p = 6\\,\\%$"
+    },
+    "justification": "Présenter m = p comme un choix illustratif évite de confondre taux d'erreur et taux d'oubli."
+  },
+  {
+    "grappe": "V2-034",
+    "constats": [
+      "P2-022"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "ligne": 13,
+    "passage": "Tout change dès qu’apparaît une défaillance de mode commun (@sec:ch07-mode-commun), comme deux pompes de secours alimentées par le même tableau électrique.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "repetition",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "La section 8.1 répète l'exemple des deux pompes sur la même alimentation et la borne q de la boîte à outils du chapitre 7 (§ 7.1), puis redit en boîte à outils ce qu'elle vient d'exposer en prose.",
+    "correction": null,
+    "justification": "Alléger la section 8.1 en renvoyant au § 7.1 pour les pompes de secours et en ne gardant que la fiabilité en série et en parallèle."
+  },
+  {
+    "grappe": "V2-035",
+    "constats": [
+      "P2-024"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "ligne": 66,
+    "passage": "Plus on descend dans le tableau, plus la classe d’erreurs atteignable s’élargit, et plus le coût tend à croître",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "clarte",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "Dans le Tableau 8.1, le coût n'est pas strictement croissant de haut en bas : « Expérience, retour d'exploitation » (« Très élevé et lent ») précède « Autre discipline » (« Élevé, plus un travail de traduction »).",
+    "correction": {
+      "avant": "Plus on descend dans le tableau, plus la classe d’erreurs atteignable s’élargit, et plus le coût tend à croître",
+      "apres": "Plus on descend dans le tableau, plus la classe d’erreurs atteignable s’élargit, et plus le coût tend globalement à croître"
+    },
+    "justification": "Ajout de « globalement » pour correspondre à la non-monotonie des deux dernières lignes."
+  },
+  {
+    "grappe": "V2-036",
+    "constats": [
+      "P2-025"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "ligne": 91,
+    "passage": "Parce que les vingt-sept développeurs partageaient l’énoncé du problème",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "fait",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "L'explication des échecs corrélés dans Knight & Leveson (1986) est présentée comme un fait établi plutôt que comme l'interprétation des auteurs, et la page de partie II parle d'« équipes indépendantes » alors que le chapitre parle de « programmeurs différents ».",
+    "correction": null,
+    "justification": "Nuancer avec « Les auteurs attribuent cette convergence au fait que… » et harmoniser « programmeurs » / « équipes »."
+  },
+  {
+    "grappe": "V2-037",
+    "constats": [
+      "P2-036"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "ligne": 201,
+    "passage": "L’indépendance tire structurellement contre la comparabilité",
+    "verdict": "DEJA_RELEVE",
+    "reference": "RAPPORT_AUDIT_CALQUES § 4 (08:201)",
+    "categorie": "francais",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "Calque de l'anglais (« pulls against ») dans le Point clé 2.",
+    "correction": null,
+    "justification": "Déjà listé dans RAPPORT_AUDIT_CALQUES § 4 (08-independance-chaines.md:201)."
+  },
+  {
+    "grappe": "V2-038",
+    "constats": [
+      "T5-012"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "ligne": 182,
+    "passage": "Le 23 septembre 1999, la sonde *Mars Climate Orbiter* disparut lors de sa manœuvre d’insertion en orbite autour de Mars",
+    "verdict": "PLAUSIBLE",
+    "reference": "ARBITRAGES P2.4",
+    "categorie": "repetition",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "L'encadré du chapitre 8 répète le récit de Mars Climate Orbiter déjà donné au chapitre 0 (date, SM_FORCES, 4,45) avant d'introduire l'élément nouveau (l'unité absente du fichier transmis).",
+    "correction": null,
+    "justification": "Raccourcir le rappel introductif pour centrer l'encadré sur le blanchiment à l'interface (cf. ARBITRAGES P2.4)."
+  },
+  {
+    "grappe": "V2-039",
+    "constats": [
+      "C-009",
+      "P2-029",
+      "T2-001"
+    ],
+    "lecteurs_distincts": 3,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 92,
+    "passage": "(pour *contrôle franchi*, qui correspond à l’événement noté $D$ au @sec:ch06)",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P1.10.4",
+    "categorie": "terminologie",
+    "gravite": "A",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Contresens introduit par ARBITRAGES P1.10.4 : l'événement C est défini comme l'arrêt de l'erreur par un contrôle (détection suivie d'effet), mais la glose « contrôle franchi » désigne l'inverse (l'échappement C̄), risquant de faire inverser C et C̄ au lecteur. Les lecteurs signalent aussi la réutilisation des lettres D, A et E d'un chapitre à l'autre.",
+    "correction": {
+      "avant": "(pour *contrôle franchi*, qui correspond à l’événement noté $D$ au @sec:ch06)",
+      "apres": "(pour *contrôle réussi*, qui correspond à l’événement noté $D$ au @sec:ch06)"
+    },
+    "justification": "La correction décidée (ARBITRAGES P1.10.4) a introduit le contresens « contrôle franchi ». Remplacer par « contrôle réussi » lève immédiatement l'inversion."
+  },
+  {
+    "grappe": "V2-040",
+    "constats": [
+      "C-008",
+      "P2-028"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 48,
+    "passage": "On la mesure par $\\Pr(\\bar{A} \\mid E)$, la probabilité que le contrôle donne l’alerte quand l’affirmation est fausse.",
+    "verdict": "CONFIRME",
+    "reference": "DECISIONS_SYNTHESE R4",
+    "categorie": "terminologie",
+    "gravite": "B",
+    "rang": 4,
+    "groupe": "G3",
+    "probleme": "La correction décidée (DECISIONS_SYNTHESE R4) ne suffit pas : mesurer la sévérité par Pr(Ā | E) la rend numériquement identique à la sensibilité s = Pr(Ā | E) définie à la section précédente et rappelée à la phrase suivante, créant deux termes du registre pour une même grandeur (et réduisant le critère de Mayo sans le signaler).",
+    "correction": null,
+    "justification": "Signal sur DECISIONS_SYNTHESE R4. Options : (a) préciser explicitement que, pour un contrôle binaire contre une classe d'erreurs E, la sévérité se mesure par sa sensibilité s = Pr(Ā | E) (ou par le rapport (1 − f)/(1 − s) pour un contrôle réussi) ; (b) retirer la phrase de R4."
+  },
+  {
+    "grappe": "V2-041",
+    "constats": [
+      "P2-030",
+      "T2-002"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 190,
+    "passage": "Le risque réel est le produit du taux d’erreur et de la probabilité d’échappement",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P1.9",
+    "categorie": "terminologie",
+    "gravite": "B",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "La correction décidée (ARBITRAGES P1.9) a remplacé « risque réel » par « risque résiduel » au § 9.5 (l. 112, 135, 153), mais a laissé « risque réel » en l. 90, au Point clé 4 (l. 190) et sur la page de la partie II (l. 13), alors que l'annexe C et le ch. 17 réservent « risque réel » à p_w = 1 − (1 − p)(1 − z).",
+    "correction": [
+      {
+        "avant": "exprimer le risque réel d’un système",
+        "apres": "exprimer le risque résiduel d’un système"
+      },
+      {
+        "avant": "Le risque réel est le produit du taux d’erreur et de la probabilité d’échappement",
+        "apres": "Le risque résiduel est le produit du taux d’erreur et de la probabilité d’échappement"
+      }
+    ],
+    "justification": "Harmonisation terminologique directe avec le § 9.5 et l'annexe C (et à reporter aussi sur partie-2.md:13 : « décompose surtout le risque réel » -> « risque résiduel »)."
+  },
+  {
+    "grappe": "V2-042",
+    "constats": [
+      "C-031"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 112,
+    "passage": " (où c’est cette probabilité d’erreur qui sera comparée au seuil de tolérance $p^\\ast$)",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P1.9",
+    "categorie": "dependance",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "L'incise ajoutée par ARBITRAGES P1.9 renvoie aux chapitres 4 et 17 en annonçant que R y est comparé à p*, alors que le ch. 4 précède et que le ch. 17 compare p + b à p*, sans jamais mentionner R.",
+    "correction": {
+      "avant": " (où c’est cette probabilité d’erreur qui sera comparée au seuil de tolérance $p^\\ast$)",
+      "apres": ""
+    },
+    "justification": "Supprimer la parenthèse évite de promettre un raccord qui n'est pas effectué au chapitre 17."
+  },
+  {
+    "grappe": "V2-043",
+    "constats": [
+      "C-024"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 151,
+    "passage": "Dans la seconde (*Indépendant et précis*), le producteur, plus exact, ne se trompe plus que dans 2 % des cas, et le contrôleur — qui garde la même part de causes partagées ($c = 0{,}10$) —",
+    "verdict": "PLAUSIBLE",
+    "reference": "ARBITRAGES P1.1",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G2",
+    "probleme": "Le nom du scénario « Indépendant et précis » garde le même c = 10 % que « Contrôle entre pairs » et ne prend tout son sens qu'au chapitre 16 face à c = 60 %.",
+    "correction": null,
+    "justification": "Le nom est figé dans parametres.py (ARBITRAGES P1.1) ; une brève incise (« nommé ainsi par contraste avec les scénarios corrélés du @sec:ch16 ») suffirait à lever la surprise."
+  },
+  {
+    "grappe": "V2-044",
+    "constats": [
+      "P2-031"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 82,
+    "passage": "que nous noterons $u \\in \\left[0, 1\\right]$ et qui désigne la proportion des alertes effectivement examinées et suivies d’effet",
+    "verdict": "PLAUSIBLE",
+    "reference": "monographie/commun/registre_termes.md",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G2",
+    "probleme": "Le même terme « prise en compte » désigne la condition qualitative (Def. 6) et le paramètre quantitatif u (proportion des alertes examinées).",
+    "correction": {
+      "avant": "que nous noterons $u \\in \\left[0, 1\\right]$ et qui désigne la proportion des alertes effectivement examinées et suivies d’effet",
+      "apres": "ou taux de prise en compte, que nous noterons $u \\in \\left[0, 1\\right]$ et qui désigne la proportion des alertes effectivement examinées et suivies d’effet"
+    },
+    "justification": "Conforme au registre (l. 101) tout en distinguant le taux u de la condition qualitative."
+  },
+  {
+    "grappe": "V2-045",
+    "constats": [
+      "P2-032"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/tableaux/ch09-depistage.md",
+    "ligne": 1,
+    "passage": "Prévalence / Taux de faux positifs",
+    "verdict": "REJETE",
+    "reference": "RAPPORT_AUDIT_CALQUES § 2",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Le lecteur reproche au tableau 9.1 d'utiliser « Prévalence » et « Taux de faux positifs » au lieu de « taux de base » et « taux de fausses alertes ».",
+    "correction": null,
+    "justification": "Le § 9.1 introduit explicitement les deux termes médicaux (« en médecine, on parle de prévalence », « en médecine on appelle ce chiffre taux de faux positifs ») avant de généraliser ; RAPPORT_AUDIT_CALQUES § 2 a déjà validé cette cohérence."
+  },
+  {
+    "grappe": "V2-046",
+    "constats": [
+      "P2-033"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 80,
+    "passage": "Les études expérimentales sur la réponse humaine aux systèmes d’alarme montrent ce qui se produit le plus souvent en pratique.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "fait",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Le pluriel « Les études expérimentales » ne s'appuie que sur une seule référence (@bliss1995).",
+    "correction": {
+      "avant": "Les études expérimentales sur la réponse humaine aux systèmes d’alarme montrent ce qui se produit le plus souvent en pratique.",
+      "apres": "Une étude expérimentale classique sur la réponse humaine aux systèmes d’alarme illustre ce qui se produit souvent en pratique."
+    },
+    "justification": "Aligne la formulation sur l'unique référence citée."
+  },
+  {
+    "grappe": "V2-047",
+    "constats": [
+      "P2-034"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 98,
+    "passage": "Toute l’ingénierie de la sûreté et toute l’analyse de la @sec:partie-2 portent au contraire sur le second facteur",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "Formulation excessive : le chapitre 5 porte sur la mesure de l'incertitude (donc sur P(E)) et le début du chapitre 9 calcule la VPP en fonction de P(E).",
+    "correction": {
+      "avant": "Toute l’ingénierie de la sûreté et toute l’analyse de la @sec:partie-2 portent au contraire sur le second facteur",
+      "apres": "L’ingénierie de la sûreté et une grande part de l’analyse de la @sec:partie-2 portent au contraire sur le second facteur"
+    },
+    "justification": "Nuance directe et exacte."
+  },
+  {
+    "grappe": "V2-048",
+    "constats": [
+      "P2-035"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 164,
+    "passage": "Le @tbl:ch09-echappement et la @fig:ch09-echappement font apparaître trois leviers distincts :",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "Dans le Tableau 9.4, le second scénario modifie simultanément P(faux) (10 % -> 2 %), m (20 % -> 10 %) et f (5 % -> 0,5 %), si bien que la lecture du tableau seul ne isole pas l'effet de f (même si la figure 9.1 montre bien le contrôleur fixe à P(faux) = 2 %).",
+    "correction": null,
+    "justification": "Renvoyer explicitement à la valeur lue sur la courbe orange de la figure 9.1 à P(faux) = 2 % (VPP ≈ 25 %) permettrait d'isoler rigoureusement le levier f."
+  },
+  {
+    "grappe": "V2-049",
+    "constats": [
+      "P2-037"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 191,
+    "passage": "Réduire durablement le risque exige d’agir sur les trois leviers du modèle :",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "statut",
+    "gravite": "C",
+    "rang": 3,
+    "groupe": "G1",
+    "probleme": "Le dernier point clé (« Réduire durablement le risque exige… ») durcit la portée du modèle illustratif M1 et omet que P(E) est aussi un levier.",
+    "correction": {
+      "avant": "Réduire durablement le risque exige d’agir sur les trois leviers du modèle :",
+      "apres": "Dans le modèle M1, réduire le risque résiduel (au-delà de la baisse de $P(E)$) passe par trois leviers :"
+    },
+    "justification": "Recadre exactement l'énoncé dans le périmètre et les hypothèses de M1."
+  },
+  {
+    "grappe": "V2-050",
+    "constats": [
+      "T1-009"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 98,
+    "passage": "Les batteries d’évaluations comparatives, les classements de performance et les courbes d’amélioration notent, par construction, le producteur seul sur un jeu d’épreuves.",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G2",
+    "probleme": "Généralisation empirique avancée sans relevé systématique ni référence, alors qu'elle sert de socle au contraste du chapitre 0 et de la partie II.",
+    "correction": null,
+    "justification": "Écrire « Les batteries d'évaluations comparatives usuelles notent… » ou citer quelques benchmarks courants."
+  },
+  {
+    "grappe": "V2-051",
+    "constats": [
+      "T1-020"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 191,
+    "passage": "la précision du contrôleur (faible $f$, pour garder des alertes lisibles)",
+    "verdict": "DEJA_TRANCHE",
+    "reference": "ARBITRAGES P2.1.2 (DEC-V1)",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Le lecteur signale que « précision » en statistique désigne la VPP et non un faible f.",
+    "correction": null,
+    "justification": "Déjà tranché par ARBITRAGES P2.1.2 (DEC-V1) : le livre réserve « exact » au producteur (faible P(E)) et « précis » au contrôleur (faible f)."
+  },
+  {
+    "grappe": "V2-052",
+    "constats": [
+      "T5-018"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "ligne": 3,
+    "passage": "Le @sec:ch06 a établi qu’une erreur n’est détectée que lorsqu’une affirmation rencontre un comparateur qui existe, se trompe autrement qu’elle, lui est comparable, arrive à temps et fait l’objet d’une prise en compte effective",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "repetition",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "Les cinq conditions de détection sont réénumérées in extenso dans les introductions des chapitres 8 (l. 3) et 9 (l. 3) avec des formulations quasi identiques, après avoir déjà été détaillées en 0.3.2, partie-2.md et ch. 6.",
+    "correction": null,
+    "justification": "Remplacer le rappel complet par un renvoi synthétique (« les cinq conditions de détection du @sec:ch06 ») dans les chapeaux des chapitres 8 et 9."
+  },
+  {
+    "grappe": "V2-053",
+    "constats": [
+      "PISTE-TERMES-V2"
+    ],
+    "lecteurs_distincts": 0,
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "ligne": 75,
+    "passage": "omission de saillance / validation / vérification / blanchiment de provenance / contrat",
+    "verdict": "REJETE",
+    "reference": "relecture/pistes/termes.md",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Cinq pistes mécaniques de termes.md touchent le lot V2 : « omission de saillance » (07:75), « validation » (07:81), « vérification » (08:53), « blanchiment de provenance » (08:190) et « contrat » (09:179).",
+    "correction": null,
+    "justification": "Toutes ces occurrences sont des faux positifs : 07:75 et 08:190 sont des annonces explicites en italique renvoyant aux ch. 12 et 16 ; 07:81 (« validation croisée ») et 08:53 (« toute vérification ») sont des emplois courants ; 09:179 (« programmation par contrat ») annonce la partie III."
+  }
+]
