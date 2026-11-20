@@ -1,0 +1,27 @@
+chapitre: 12-autre-regime
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: phrase-longue
+    avant: |
+      Ce qui sépare néanmoins ce cas du sommet de la pile tient au fait que la faute demeurait *définissable* : il existait un contrat d’interface écrit, et un comparateur mécanique vérifiant les unités aurait pu être écrit et appliqué une fois pour toutes au composant ou à l’interface.
+    apres: |
+      Ce qui sépare néanmoins ce cas du sommet de la pile tient au fait que la faute demeurait *définissable*. Il existait en effet un contrat d’interface écrit, et un comparateur mécanique vérifiant les unités aurait pu être écrit et appliqué une fois pour toutes au composant ou à l’interface.
+    note: "Coupe articulée au deux-points avec « en effet »."
+
+  - id: "002"
+    motif: phrase-longue
+    avant: |
+      Tant que ce déplacement n’est pas opéré — c’est-à-dire tant qu’un système en aval consomme la sortie d’un modèle comme une chaîne de caractères fiable, à la manière d’un résultat issu d’une couche spécifiée —, la chaîne entière (@sec:ch08) hérite d’un angle mort qui n’existait pas au même degré dans les couches inférieures : l’interface demeure aussi lisse qu’avant, mais la garantie qui la soutenait en dessous s’est retirée.
+    apres: |
+      Tant que ce déplacement n’est pas opéré — c’est-à-dire tant qu’un système en aval consomme la sortie d’un modèle comme une chaîne de caractères fiable, à la manière d’un résultat issu d’une couche spécifiée —, la chaîne entière (@sec:ch08) hérite d’un angle mort qui n’existait pas au même degré dans les couches inférieures. L’interface demeure en effet aussi lisse qu’avant, mais la garantie qui la soutenait en dessous s’est retirée.
+    note: "Scinde une phrase de 69 mots au deux-points avec « en effet »."
+
+  - id: "003"
+    motif: phrase-longue
+    avant: |
+      Alors que la calibration examinée au @sec:ch03 porte sur l’accord entre les probabilités annoncées et les fréquences observées, on appelle **calibration générative** l’accord entre la distribution des énoncés produits par un modèle et la distribution de ses données d’entraînement ; loin de prémunir contre l’invention, cette propriété entraîne mécaniquement l’invention de faits rares.
+    apres: |
+      Alors que la calibration examinée au @sec:ch03 porte sur l’accord entre les probabilités annoncées et les fréquences observées, on appelle **calibration générative** l’accord entre la distribution des énoncés produits par un modèle et la distribution de ses données d’entraînement. Loin de prémunir contre l’invention, cette propriété entraîne mécaniquement l’invention de faits rares.
+    note: "Scinde une phrase de 54 mots au point-virgule."
+
