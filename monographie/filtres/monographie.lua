@@ -493,7 +493,17 @@ local render = {
   end,
 
   Table = function(t)
-    if not LATEX and t.identifier ~= '' then
+    if LATEX then
+      if #t.colspecs >= 7 then
+        return {
+          pandoc.RawBlock('latex', '\\begingroup\\small\\setlength{\\tabcolsep}{3.5pt}'),
+          t,
+          pandoc.RawBlock('latex', '\\endgroup'),
+        }
+      end
+      return nil
+    end
+    if t.identifier ~= '' then
       local r = REFS[t.identifier]
       local cap = t.caption.long[1]
       if r and cap then cap.content:insert(1, pandoc.Strong({ pandoc.Str('Tableau ' .. r.num .. ' — ') })) end
