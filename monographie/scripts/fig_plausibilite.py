@@ -37,7 +37,7 @@ for mode in modes:
     dist = ', '.join(f'{a}{" ✓" if ok else ""} {v} %' for a, v, ok in items)
     rows.append([P.PLAUSIBILITE_NOMS[mode], dist, pct_in(st['p_faux']), pct(st['severite']), pct(st['fausse_alerte'])])
 tableau('ch12-plausibilite',
-        ['Question', 'Réponses (✓ = juste)', 'Réponse fausse', 'Sévérité', 'Alerte à tort'],
+        ['Question', 'Réponses (✓ = juste)', 'Réponse fausse', 'Sévérité', 'Fausse alerte'],
         rows, f'Reposer {k} fois la même question. Sévérité : probabilité que les {k} réponses divergent quand '
-              'la première est fausse ; alerte à tort : qu’elles divergent alors qu’elle est juste.',
+              'la première est fausse ; fausse alerte : qu’elles divergent alors qu’elle est juste.',
         ['l', 'l', 'r', 'r', 'r'])

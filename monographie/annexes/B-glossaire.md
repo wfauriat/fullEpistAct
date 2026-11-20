@@ -32,7 +32,7 @@ Termes définis dans l’ouvrage, avec leur équivalent anglais usuel et le chap
 :   Perte de l’origine d’une information, si bien que des copies d’une même source passent pour des témoignages indépendants. Voir le chapitre [-@sec:ch16].
 
 **cadre** (angl. *frame*)
-:   Spécification finie à l’intérieur de laquelle un raisonnement opère : variables, catégories, classe de modèles et objectif retenus. Il est choisi avant toute inférence. Voir le chapitre [-@sec:ch02].
+:   Spécification finie à l’intérieur de laquelle un raisonnement opère : variables, catégories, classe de modèles et objectif retenus. Il est choisi en amont de l’inférence qu’il encadre. Voir le chapitre [-@sec:ch02].
 
 **calibration** (angl. *calibration (confidence)*)
 :   Accord, sur un grand nombre de cas, entre les probabilités annoncées et les fréquences observées. Voir le chapitre [-@sec:ch03].
@@ -80,7 +80,7 @@ Termes définis dans l’ouvrage, avec leur équivalent anglais usuel et le chap
 :   Défaillance simultanée de protections redondantes, sous l’effet d’une cause qu’elles partagent. Voir le chapitre [-@sec:ch07].
 
 **dérive de distribution** (angl. *distribution shift*)
-:   Changement, en exploitation, d’un facteur resté constant pendant la collecte des données ; les contrôles fondés sur ces données ne pouvaient pas le voir. Voir le chapitre [-@sec:ch07].
+:   Au sens restreint retenu ici, changement, en exploitation, d’un facteur omis resté constant pendant la collecte des données ; les contrôles fondés sur ces données ne pouvaient pas le voir. Voir le chapitre [-@sec:ch07].
 
 **ensemble des alternatives admises** (angl. *admitted set*)
 :   Ensemble des hypothèses ou modèles sur lequel une incertitude est calculée ; ce qui n’y figure pas ne pèse pas. Voir le chapitre [-@sec:ch05].

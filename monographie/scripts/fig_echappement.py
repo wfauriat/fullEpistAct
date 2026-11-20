@@ -23,7 +23,7 @@ def tableau_transpose(nom, cles, legende):
         ['Taux de fausses alertes f'] + [pct_in(PRE[k][4]) for k in cles],
         ['Sensibilité (1 − c)(1 − m)'] + [pct_in(res[k][0]['sensibilite']) for k in cles],
         ['Alertes qui sont de vraies erreurs (VPP)'] + [pct(res[k][0]['vpp']) for k in cles],
-        ['Alertes par vraie erreur attrapée (1/VPP)'] + [fr(res[k][0]['cout'], 1) for k in cles],
+        ['Alertes par vraie erreur interceptée (1/VPP)'] + [fr(res[k][0]['cout'], 1) for k in cles],
         ['Échappement, alertes suivies à hauteur de la VPP'] + [pct(res[k][0]['echappement']) for k in cles],
         ['Échappement, chaque alerte examinée'] + [pct(res[k][1]['echappement']) for k in cles],
         ['Risque, alertes suivies à hauteur de la VPP'] + [pct(res[k][0]['risque']) for k in cles],

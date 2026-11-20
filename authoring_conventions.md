@@ -99,7 +99,7 @@ Six signaled block types (spec §13.5). Syntax: a fenced div with a class and an
 :::
 ```
 
-- `statut` is mandatory on every `.proposition`. Allowed values: `définition`, `résultat sous hypothèses`, `hypothèse de travail`, `constat empirique`.
+- `statut` is mandatory on every `.proposition`. Allowed values: `définition`, `résultat sous hypothèses`, `hypothèse de travail`, `constat empirique` (plus `composite` when a numbered proposition combines distinct parts whose statuses are stated in the body and Conclusion table).
 - The statement is followed in the main text by its justification. Where possible, it is also followed by a `.nuance` block on its robustness (spec §13.3).
 - Propositions are numbered automatically, in order of appearance. Never type a number.
 
