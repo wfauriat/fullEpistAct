@@ -1,0 +1,26 @@
+{
+  "lot": "style/lots/99-conclusion",
+  "chapitre": "99-conclusion",
+  "fichier": "monographie/chapitres/99-conclusion.md",
+  "tour": null,
+  "redacteur": "gemini",
+  "date": "2026-11-20T13:31:55",
+  "sha256_chapitre": "bf98df917273f3218c7b0c906435c5b1c56cf5c6ee12c0a867bce84bf522d447",
+  "sha256_propositions": "1ba017ac53f530c22e631f077a2e6a4e009827c50e1c4078da8ee7893540f166",
+  "modifications": [
+    {
+      "id": "001",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "or-initial",
+      "avant": "Or tous ces ponts ont le statut d’hypothèse de travail.",
+      "apres": "Mais tous ces ponts ont le statut d’hypothèse de travail.",
+      "debut": 10609,
+      "fin": 10664,
+      "ligne": 37,
+      "section": "sec:conclusion-statuts",
+      "titre_section": "L’échafaudage et ses statuts"
+    }
+  ]
+}
