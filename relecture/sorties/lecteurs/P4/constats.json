@@ -1,0 +1,222 @@
+[
+  {
+    "id": "P4-001",
+    "unite": "ch15",
+    "section": "15.4",
+    "passage": "ou, à défaut et au prix d'une neutralité moindre puisque le texte transmet déjà son découpage, lui demande de rechercher les failles",
+    "categorie": "argument",
+    "gravite": "B",
+    "constat": "La seconde condition est annoncée (page de partie, introduction du chapitre, points clés) comme « soumettre le problème sans transmettre son cadre ». Le texte admet ici une variante qui transmet le cadre, et qui ressemble à l'exemple « cherche s'il reste des coquilles dans cette démonstration » condamné au premier piège. Le lecteur ne sait plus si la condition est stricte ou graduée.",
+    "proposition": "Dire explicitement que la condition admet des degrés (problème nu = pleine indépendance ; relecture de failles = indépendance partielle) et nuancer l'introduction et les points clés en conséquence, ou supprimer la variante.",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-002",
+    "unite": "ch15",
+    "section": "15.4",
+    "passage": "Cette dynamique générale éclaire aussi pourquoi la posture devenue la plus courante devant un modèle de langage",
+    "categorie": "structure",
+    "gravite": "B",
+    "constat": "L'ironie de Bainbridge (atrophie des compétences, vigilance passive) n'explique pas l'échec du « premier jet machine, relecture humaine » comme contrôle croisé : cet échec tient au partage du cadre et à la consigne, mécanismes qui n'ont rien à voir avec l'atrophie. La section juxtapose deux sujets sous un connecteur qui suggère une dérivation que le texte n'établit pas. Par ailleurs l'introduction du chapitre ne mentionne pas Bainbridge, alors que la page de partie le fait.",
+    "proposition": "Remplacer le connecteur par une vraie transition (« Un autre mécanisme, indépendant du précédent, tient au dialogue lui-même ») et ajouter l'ironie de Bainbridge à l'annonce du chapitre.",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-003",
+    "unite": "ch15",
+    "section": "15.3",
+    "passage": "les mauvais véhicules finissent par chasser les bons du marché",
+    "categorie": "terminologie",
+    "gravite": "B",
+    "constat": "L'encadré rattache à Akerlof l'« équilibre mélangeant » (même prix pour toutes les qualités), mais décrit le mécanisme de sélection adverse où les bons véhicules quittent le marché, c'est-à-dire un déroulement vers les seuls mauvais, non un mélange stable. Le corps du texte définit pourtant l'équilibre mélangeant par l'indiscernabilité qui persiste et attribue cette notion à Akerlof 1970. Les deux phénomènes sont confondus, et l'attribution du terme est douteuse (notion de la théorie du signal).",
+    "proposition": "Distinguer dans l'encadré le mélange (prix unique à un instant) et son effet dynamique (éviction des bons produits), et vérifier l'attribution du terme « équilibre mélangeant » à Akerlof 1970.",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-004",
+    "unite": "ch15",
+    "section": "15.2",
+    "passage": "Il établit toutefois un fait décisif contre toute confiance spontanée dans l'impression de maîtrise",
+    "categorie": "statut",
+    "gravite": "B",
+    "constat": "Une seule étude (un protocole, une génération d'outils, un type de développeurs), que le texte précédent dit lui-même non généralisable et ne pas isoler la fluidité comme cause, est présentée comme établissant un « fait décisif ». La page de partie durcit encore (« cette fluidité trompe jusqu'aux experts sur leur propre productivité »), alors que le chapitre atteste l'écart entre mesure et impression, non son origine causale.",
+    "proposition": "« Il illustre toutefois, sur un cas documenté, que la perception subjective peut s'écarter de la mesure » ; écrire « peut tromper » dans la page de partie, comme dans les points clés.",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-005",
+    "unite": "ch14",
+    "section": "14.4",
+    "passage": "Parce que l'autorité et la garantie y marchaient du même pas, selon une pyramide stricte.",
+    "categorie": "argument",
+    "gravite": "B",
+    "constat": "L'affirmation que la pile classique était sûre parce que autorité et garantie y croissaient ensemble est présentée comme une régularité stricte, sans nuance. Le chapitre vient pourtant de montrer, avec Knight Capital, un système entièrement spécifié, à forte autorité, dont l'échec a causé des dégâts massifs, et il rappelle que les couches basses exécutent fidèlement des ordres invalides. « Rendait la pile sûre » est donc plus fort que ce qui est établi ; la sûreté tenait aussi à la lenteur humaine et aux contrôles de déploiement.",
+    "proposition": "Atténuer : « Tant que l'autorité et la garantie allaient, pour l'essentiel, du même pas... » et « l'architecture qui contenait les défaillances ».",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-006",
+    "unite": "ch14",
+    "section": "14.4",
+    "passage": "L'action automatisée devient alors une série de décisions uniques à fort coût (section 4.4)",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "constat": "Selon le glossaire, une décision unique est prise sans série d'essais comparables. Une suite d'actions d'agent est précisément une série de décisions répétées ; ce qui ressemble à la décision unique est l'irréversibilité de chacune. L'expression « série de décisions uniques » est contradictoire avec la définition.",
+    "proposition": "« une suite d'actions dont chacune, irréversible, a les traits d'une décision unique à fort coût (section 4.4) ».",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-007",
+    "unite": "ch14",
+    "section": "14.2.3",
+    "passage": "où chaque étape est contrôlée en parallèle par un pair de même compétence",
+    "categorie": "argument",
+    "gravite": "B",
+    "constat": "L'exemple suppose un contrôleur d'« étape » indépendant de l'agent sur les erreurs locales (m = p, indépendance), mais partageant q. Dans le contexte du chapitre, le contrôleur est le plus souvent un autre appel au même modèle, dont le chapitre 16 montre que c'est justement la part partagée c qui devient forte. La liste de limites de l'exemple ne mentionne pas cette tension, et la réduction de 52,4 % à 4,24 % paraît donc plus rassurante que ne l'autorisent les chapitres 15 et 16. L'identité du « pair » (humain à vitesse machine ? second modèle ?) n'est pas précisée.",
+    "proposition": "Préciser qui est le pair et ajouter aux hypothèses favorables que le contrôleur est supposé indépendant sur les erreurs locales (renvoi au chapitre 16).",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-008",
+    "unite": "ch14",
+    "section": "14.2.3",
+    "passage": "ne suffit jamais à sécuriser une trajectoire longue",
+    "categorie": "argument",
+    "gravite": "C",
+    "constat": "« Jamais » généralise à partir d'un exemple que le texte dit illustratif, et dont la conclusion dépend du choix q = 3 %. De même, « le facteur partagé pèse lourd » (42,2 %) et « large part des défaillances restantes » (points clés) reprennent un chiffre issu de ce seul paramètre comme une propriété générale.",
+    "proposition": "« ne suffit pas à lever le risque porté par un facteur partagé » ; dans les points clés : « peut intervenir dans une part importante ».",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-009",
+    "unite": "transversal",
+    "section": "14.2.3",
+    "passage": "Au chapitre 8, le modèle M1, celui des angles morts et de l'échappement, avait déjà chiffré l'effet d'une composition en série",
+    "categorie": "terminologie",
+    "gravite": "B",
+    "constat": "Le « modèle M1 » est situé au chapitre 8 (section 8.5) dans le chapitre 14, et au chapitre 9 (section 9.5, « reprend le modèle M1 du chapitre 9 ») dans le chapitre 16. Le lecteur ne sait pas s'il s'agit d'un seul modèle développé sur deux chapitres ou de deux objets. Les paramètres diffèrent aussi : q dans un cas, c, m, s, f, u dans l'autre.",
+    "proposition": "Désigner explicitement M1 comme un modèle introduit au chapitre 8 et complété au chapitre 9, ou harmoniser les renvois.",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-010",
+    "unite": "ch16",
+    "section": "16.1",
+    "passage": "Dans ce jeu de paramètres illustratif, le risque global sous appariement demeure plus bas avec le modèle partagé (1,93 %) qu'entre pairs (5,57 %)",
+    "categorie": "argument",
+    "gravite": "B",
+    "constat": "Le titre de section (« la probabilité d'échappement monte »), le premier point clé et la page de partie présentent la hausse de c comme acquise. Or c passe de 10 % à 60 % par simple stipulation, et l'exemple chiffré ne montre aucune hausse du risque total : il baisse de 5,57 % à 1,93 %. Ce que l'exemple établit, c'est que l'échappement monte si c monte, non que c monte, ni que le risque augmente. Le texte reconnaît lui-même que c'est une question empirique, ce qui affaiblit le ton des points clés.",
+    "proposition": "Présenter la hausse de c comme une hypothèse de travail et reformuler le point clé : « peut élever la probabilité d'échappement, sans que l'on puisse en déduire le sens de variation du risque total ».",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-011",
+    "unite": "ch16",
+    "section": "16.3",
+    "passage": "ils absorbent en proportion croissante les sorties blanchies des modèles qui les ont précédés",
+    "categorie": "statut",
+    "gravite": "B",
+    "constat": "Le résultat cité (effondrement sous entraînement récursif) porte sur des cadres expérimentaux de génération itérée ; l'application à l'ensemble du Web, avec des proportions croissantes de texte synthétique mêlé à des données humaines, est une extrapolation que le texte énonce comme un fait (« Ainsi se dégradent les biens communs épistémiques ») et que les points clés durcissent en « dégrade par récursion les générations suivantes ». Le statut (constat empirique, hypothèse de travail) n'est pas indiqué.",
+    "proposition": "Séparer le résultat expérimental de son extrapolation, conditionner celle-ci (« risque de dégrader ») et le signaler comme hypothèse de travail.",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-012",
+    "unite": "ch16",
+    "section": "16.4",
+    "passage": "les directions sont fortement incitées, dans leurs arbitrages budgétaires, à réallouer crédits, postes et attention vers les outils qui accélèrent la production",
+    "categorie": "argument",
+    "gravite": "B",
+    "constat": "Toute la section 16.4 énonce comme acquise une dynamique organisationnelle (récompense du débit, compression des fonctions d'évaluation, évaluateurs submergés qui retombent dans l'appariement des probabilités) sans exemple, source ni mention de statut, alors que le reste de la partie documente ses mécanismes. Il s'agit d'une hypothèse plausible, non d'un constat.",
+    "proposition": "Signaler la section comme hypothèse de travail, ou l'appuyer sur un exemple documenté ; adoucir « explique pourquoi nos institutions tendent à aggraver ».",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-013",
+    "unite": "ch16",
+    "section": "16.1",
+    "passage": "dont les 60 % de causes d'erreur partagées forment la part incompressible",
+    "categorie": "repetition",
+    "gravite": "B",
+    "constat": "Le plancher de 68,0 % (60 % + 8 %) et le message « la précision du contrôleur ne perce pas ce plancher » sont énoncés au moins cinq fois : légende de la figure, paragraphe de calcul, deuxième point de la lecture, encadré Nuance, points clés. L'encadré, en particulier, reprend presque mot pour mot la lecture, ce qui lasse le lecteur linéaire.",
+    "proposition": "Supprimer l'encadré Nuance ou le réduire à la distinction des deux mécanismes, sans refaire les chiffres ; alléger la lecture.",
+    "confiance": "haute"
+  },
+  {
+    "id": "P4-014",
+    "unite": "ch16",
+    "section": "16.4",
+    "passage": "Le diagnostic est désormais complet : agir d'après un cadre fini (partie I), ce qui peut nous détromper à temps (partie II)",
+    "categorie": "repetition",
+    "gravite": "C",
+    "constat": "La fin du chapitre recopie le dernier paragraphe de la page d'ouverture (« Le diagnostic est alors complet. Il reste à en tirer une pratique, ce que fait la partie V ») et résume de nouveau les trois chapitres. Ce texte de transition est en outre placé après l'encadré « Question à se poser », contrairement au chapitre 14, où la transition précède la question.",
+    "proposition": "Garder une seule version (de préférence ici, avant la question) et raccourcir l'autre.",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-015",
+    "unite": "partie-4",
+    "section": "",
+    "passage": "sont datés et présentés comme des études de cas",
+    "categorie": "structure",
+    "gravite": "C",
+    "constat": "La page de partie dit que les épisodes et mesures cités sont présentés comme des études de cas, mais seuls Knight Capital et METR le sont. Mars Climate Orbiter (14.3), Bainbridge (15.4) et Shumailov (16.3), qui portent aussi des mesures ou des épisodes datés, sont dans le texte courant. En outre, cette page résume chaque chapitre presque aussi en détail que son introduction (chiffres compris pour le chapitre 16), d'où une triple redite avec l'introduction et les points clés.",
+    "proposition": "Écrire « les deux études de cas de la partie » et resserrer les résumés de la page d'ouverture.",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-016",
+    "unite": "ch15",
+    "section": "15.2",
+    "passage": "c'est l'uniformité parfaite de sa voix",
+    "categorie": "argument",
+    "gravite": "C",
+    "constat": "« Uniformité parfaite », « entièrement disparu » et « Rien... ne vient plus prévenir le lecteur » sont absolus. Les modèles nuancent, refusent ou signalent parfois leur incertitude, et le texte admet que le signal interne subsiste dans la dispersion des tirages. L'argument tient avec « presque uniforme » et « en pratique ».",
+    "proposition": "« l'uniformité quasi complète de sa voix » ; « a pratiquement disparu ».",
+    "confiance": "basse"
+  },
+  {
+    "id": "P4-017",
+    "unite": "ch15",
+    "section": "15.2",
+    "passage": "La disparition du frottement et de l'hésitation produit un second effet, tout aussi déroutant",
+    "categorie": "clarte",
+    "gravite": "C",
+    "constat": "La section s'ouvre sur « un second mécanisme » (le signe révélateur) ; « un second effet » désigne ici autre chose (jugement erroné sur sa propre performance). La numérotation se brouille, d'autant que le chapitre compte ensuite un « quatrième mécanisme ».",
+    "proposition": "« La même fluidité a un effet voisin sur le jugement... »",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-018",
+    "unite": "ch15",
+    "section": "15.4",
+    "passage": "la probabilité que le modèle dise « votre raisonnement paraît solide » lorsque l'affirmation est fausse mais présentée avec assurance ($\\Pr(A \\mid E)$ dans l'équation (9.1))",
+    "categorie": "chiffres",
+    "gravite": "B",
+    "constat": "Dans cette partie, A désigne l'accord d'un contrôle (ici et en 16.3) mais, au chapitre 14, « les hypothèses explicites A » de la règle A ∩ (...) → B (table des notations). E désigne l'erreur. Ni A ni E ne sont redéfinis alors que l'équation (9.1) n'est pas rappelée, et la phrase décrit une probabilité conditionnée à « l'affirmation fausse » tout en citant un « rapport de vraisemblance de son accord » sans l'écrire.",
+    "proposition": "Redéfinir A (« accord du contrôleur ») et E (« affirmation fausse ») dans la phrase, et écrire le rapport Pr(A | Ē)/Pr(A | E) qui tend vers 1.",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "P4-019",
+    "unite": "ch14",
+    "section": "14.4",
+    "passage": "Le chapitre 17 formalisera ces deux dispositifs complémentaires",
+    "categorie": "clarte",
+    "gravite": "C",
+    "constat": "Les « deux dispositifs » (selon le glossaire, le bac à sable et le verrou) ne sont pas nommés dans la phrase précédente, qui décrit des « espaces » et des « frontières ». Le lecteur ne sait pas à quoi renvoie « ces deux dispositifs ».",
+    "proposition": "« ...ces deux dispositifs complémentaires, l'espace d'essai isolé et le verrou avant l'acte ».",
+    "confiance": "basse"
+  },
+  {
+    "id": "P4-020",
+    "unite": "ch14",
+    "section": "14.1",
+    "passage": "## 14.1 Des *pipelines* d'IA comme chaînes orchestrées",
+    "categorie": "typographie",
+    "gravite": "C",
+    "constat": "« IA » (14.1, 14.3 « chaînes d'IA ») n'est défini ni dans l'avant-propos ni dans le glossaire, alors que le texte écrit partout « intelligence artificielle ». Le titre « Des pipelines d'IA comme chaînes » est par ailleurs peu naturel.",
+    "proposition": "« Les pipelines d'intelligence artificielle, chaînes orchestrées », et même choix pour 14.3.",
+    "confiance": "basse"
+  }
+]

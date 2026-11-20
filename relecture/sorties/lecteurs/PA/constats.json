@@ -1,0 +1,222 @@
+[
+ {
+  "id": "PA-001",
+  "unite": "annexe-A",
+  "section": "A.4.2",
+  "passage": "*Prudence superflue* (ou renoncement justifié si $p \\geq p^{*}$)",
+  "categorie": "argument",
+  "gravite": "B",
+  "constat": "La liste des quatre régimes n'est pas cohérente avec sa parenthèse. Le régime 4 exige $p < p^{*}$, donc il ne peut pas être aussi le « renoncement justifié si $p \\geq p^{*}$ ». Le cas $p \\geq p^{*}$ (alors $p+b \\geq p^{*}$ et $p_w \\geq p$, donc $p_w \\geq p^{*}$) n'est couvert par aucun des quatre régimes alors que le tableau D.3 l'utilise (ligne M. X, « renoncement justifié »).",
+  "proposition": "Ajouter un régime 5 : « Renoncement justifié : $p \\geq p^{*}$ (donc $p+b \\geq p^{*}$ et $p_w \\geq p^{*}$) », et retirer la parenthèse du régime 4 ; ou annoncer « cinq régimes ».",
+  "confiance": "haute"
+ },
+ {
+  "id": "PA-002",
+  "unite": "annexe-A",
+  "section": "A.6",
+  "passage": "est conditionnellement indépendant de $z$ sachant $X = x$, donc indépendant de l'erreur $e(x,z) = g(x,z) - f_{1}(x)$",
+  "categorie": "argument",
+  "gravite": "B",
+  "constat": "L'hypothèse (1) admet des « tirages internes » pour $f_1$ et $f_2$. Si $f_1$ comporte un tirage, l'erreur $e = g(x,z) - f_1(x)$ en dépend aussi, et l'accord $A$ (qui dépend de ce tirage) n'est plus indépendant de $e$ du seul fait de l'indépendance vis-à-vis de $z$. L'implication « donc indépendant de l'erreur » n'est valable que si $f_1(x)$ est déterministe sachant $x$, ou si l'erreur est définie conditionnellement au tirage.",
+  "proposition": "Préciser « $f_1(x)$ déterministe sachant $x$ » ou « indépendant de $e$ sachant le tirage de $f_1$ ».",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-003",
+  "unite": "annexe-D",
+  "section": "",
+  "passage": "Conformément au principe de source unique posé dans l'avant-propos",
+  "categorie": "dependance",
+  "gravite": "B",
+  "constat": "L'avant-propos fourni ne pose aucun « principe de source unique » ni ne parle de génération mécanique des figures et tableaux ; il dit seulement que les paramètres des exemples sont récapitulés dans l'annexe D. Le renvoi attribue à l'avant-propos un contenu qu'il n'a pas.",
+  "proposition": "Soit ajouter le principe à l'avant-propos, soit reformuler : « Les figures et tableaux sont engendrés mécaniquement à partir des paramètres ci-dessous ».",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-004",
+  "unite": "annexe-D",
+  "section": "",
+  "passage": "l'ensemble des figures et des tableaux chiffrés des chapitres 1, 3, 4, 8, 9, 12, 14, 16 et 17 sont engendrés",
+  "categorie": "structure",
+  "gravite": "C",
+  "constat": "La liste omet le chapitre 0, alors que D.5.1 est intitulée « (chapitres 0 et 9) » et que le troisième exemple arithmétique est dit figurer à la section 0.5.4.",
+  "proposition": "Ajouter « 0 » à la liste (« chapitres 0, 1, 3, … »).",
+  "confiance": "haute"
+ },
+ {
+  "id": "PA-005",
+  "unite": "annexe-D",
+  "section": "D.3",
+  "passage": "utilise les trois situations sans facteur omis ni marge ($b = 0$, $z = 0$)",
+  "categorie": "chiffres",
+  "gravite": "B",
+  "constat": "Le tableau D.3 compte six situations ; seules deux (M. Y, M. X) ont $b = 0$ et $z = 0$. La fissure non repérée ($z = 8\\,\\%$) et la roulette russe ($z = 1/6$) ont un facteur omis non nul. Soit la phrase est fausse, soit le chapitre 4 utilise d'autres trois situations que celles qu'on identifie ici.",
+  "proposition": "Nommer explicitement les trois situations du chapitre 4 et corriger « sans facteur omis ni marge ».",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-006",
+  "unite": "annexe-D",
+  "section": "D.3",
+  "passage": "Roulette russe                      10 000",
+  "categorie": "clarte",
+  "gravite": "B",
+  "constat": "Les paramètres du tableau D.3 ne sont pas décrits : on ne dit pas ce que représentent $p$ (« 0,001 % » pour la roulette russe : probabilité de quoi ?), $L$ et $\\Delta U$, ni à quoi correspond la « fissure non repérée ». L'annexe D.2 décrit mieux la course à la voile que D.3, qui ne rappelle ni le scénario, ni l'unité de $b$ (points de probabilité ajoutés à $p$). Pour un aide-mémoire, le lecteur ne retrouve pas le contexte sans retourner aux chapitres.",
+  "proposition": "Ajouter une phrase par situation (que représente l'échec, le gain, la perte) et préciser que $b$ et $z$ sont des probabilités en %.",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-007",
+  "unite": "transversal",
+  "section": "A.2",
+  "passage": "Pr\\left( E \\mid \\bar{H} \\right) > 0$, le rapport de vraisemblance de $E$",
+  "categorie": "terminologie",
+  "gravite": "B",
+  "constat": "Plusieurs symboles ont des sens multiples dans les seules annexes A et D : $E$ (observation en A.2.1, événement d'erreur en A.2.2, ensemble des erreurs en A.7.1) ; $A$ (conditions de la règle en A.1, événement quelconque en A.2, accord en A.2.2 et A.6) ; $D$ (détection en A.7.1, défaut en D.1) ; $B$ (angle mort en A.7, type de production en A.9, événement en A.2) ; $H$ (hypothèse, type haute qualité en A.9) ; $c$ (part de causes partagées, fonction de conséquence en A.4, coût en A.9) ; $f$ (taux de fausses alertes, $f_1,f_2,f_\\theta$) ; $m$ (nombre d'hypothèses en (2.1), taux d'oubli) ; $k$ (taille de partition, nombre de composantes de $X$, nombre de tirages, indice de classe $E_k$). Cela fragilise un aide-mémoire censé être autosuffisant.",
+  "proposition": "Renommer au moins les collisions les plus gênantes (accord $A \\to$ $\\mathcal{A}$ ou $G$ ; type $B \\to$ $L$ ; coût $c \\to$ $\\kappa$) et signaler les autres en fin d'annexe.",
+  "confiance": "haute"
+ },
+ {
+  "id": "PA-008",
+  "unite": "annexe-A",
+  "section": "A.7.2",
+  "passage": "lorsque chaque étape est doublée d'un contrôleur indépendant de même taux d'oubli $p$",
+  "categorie": "terminologie",
+  "gravite": "B",
+  "constat": "Le taux d'oubli du contrôleur est noté $p$ ici (et dans D.4, où « $p = 6\\,\\%$ » désigne deux grandeurs différentes : l'erreur du producteur et l'oubli du pair), alors qu'il est noté $m$ en A.7.3, D.5 et dans la table des notations. Le terme « taux d'oubli » recouvre deux symboles et l'hypothèse « même taux » est masquée par la réutilisation de $p$.",
+  "proposition": "Noter $m$ l'oubli du contrôleur et écrire explicitement l'hypothèse $m = p$ ; en D.4, « oubli du pair : $m = 6\\,\\%$ ».",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-009",
+  "unite": "annexe-A",
+  "section": "A.7.3",
+  "passage": "La probabilité d'échappement et le risque résiduel (probabilité qu'une affirmation fausse atteigne l'action sans être arrêtée) s'écrivent",
+  "categorie": "clarte",
+  "gravite": "B",
+  "constat": "La parenthèse définit le risque résiduel comme « la probabilité qu'une affirmation fausse atteigne l'action », presque dans les mêmes mots que le glossaire pour la probabilité d'échappement. Or $1 - su$ est conditionnel à une affirmation fausse, tandis que $R = P(E)(1-su)$ porte sur l'ensemble des affirmations. La différence (conditionnel / joint) n'est jamais énoncée, alors que le tableau D.5 affiche les deux.",
+  "proposition": "Écrire : échappement = probabilité, parmi les affirmations fausses, ... ; risque résiduel = proportion de toutes les affirmations qui sont fausses et passent.",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-010",
+  "unite": "annexe-A",
+  "section": "A.1",
+  "passage": "Les termes techniques sont définis dans le glossaire (annexe B) et les symboles sont récapitulés dans la table des notations (annexe C).",
+  "categorie": "clarte",
+  "gravite": "C",
+  "constat": "Les annexes A et D emploient des symboles absents du tableau C.1 ($\\Lambda$, $S(p)$, $\\Omega$, $U$, UE, VPP-formule, $C_j$, $D$, $E_k$, $J$, $F$, $k$, $H_i$) et des termes absents du glossaire ('cote', 'risque réel', 'risque résiduel', 'précondition/postcondition' hors de 'contrat', 'équilibre séparateur'). L'affirmation de renvoi est donc trop forte.",
+  "proposition": "Compléter la table C et le glossaire, ou nuancer (« les principaux termes et symboles »).",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-011",
+  "unite": "annexe-A",
+  "section": "A.5",
+  "passage": "Soit $\\Theta$ l'ensemble des alternatives admises (paramètres ou modèles $\\theta$)",
+  "categorie": "terminologie",
+  "gravite": "C",
+  "constat": "Le glossaire parle d'« ensemble des alternatives admises » mais la table C définit $\\Theta$, $\\theta$ comme « ensemble des hypothèses admises ; une hypothèse », et A.2 emploie encore « hypothèses $H_i$ ». Trois formulations pour une même notion.",
+  "proposition": "Aligner la table C sur « alternatives admises ».",
+  "confiance": "haute"
+ },
+ {
+  "id": "PA-012",
+  "unite": "annexe-A",
+  "section": "A.4",
+  "passage": "l'utilité espérée ${UE}(a) = \\sum_{\\omega \\in \\Omega}",
+  "categorie": "terminologie",
+  "gravite": "C",
+  "constat": "Le glossaire introduit l'abréviation UES (utilité espérée subjective) ; l'annexe emploie ${UE}$ sans la définir ; de plus $c(a,\\omega)$ désigne la conséquence alors que $c$ désigne ailleurs la part de causes partagées.",
+  "proposition": "Écrire UES ou définir UE ; renommer la conséquence.",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-013",
+  "unite": "annexe-D",
+  "section": "D.6",
+  "passage": "Alerte à tort (5 tirages divergent $\\mid$ 1re juste)",
+  "categorie": "terminologie",
+  "gravite": "C",
+  "constat": "« Alerte à tort » (aussi en A.7.4) est un synonyme du terme glossaire « taux de fausses alertes » ; le glossaire impose un terme unique par concept.",
+  "proposition": "Écrire « Fausse alerte » ou « Taux de fausses alertes ».",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-014",
+  "unite": "annexe-A",
+  "section": "A.9",
+  "passage": "l'équilibre séparateur fait place à un équilibre mélangeant (au sens d'Akerlof)",
+  "categorie": "fait",
+  "gravite": "C",
+  "constat": "L'équilibre séparateur/mélangeant est le vocabulaire de la signalisation (Spence, puis Cho et Kreps) ; Akerlof (marché des « citrons ») décrit une sélection adverse, que le glossaire rapproche du mélange. L'attribution « au sens d'Akerlof » est approximative pour un terme d'équilibre. À vérifier.",
+  "proposition": "Écrire « (comme dans le marché des citrons d'Akerlof) » ou supprimer l'attribution.",
+  "confiance": "basse"
+ },
+ {
+  "id": "PA-015",
+  "unite": "annexe-D",
+  "section": "D.6",
+  "passage": "6e date",
+  "categorie": "clarte",
+  "gravite": "C",
+  "constat": "Les questions posées ne sont pas énoncées (de qui est la date de naissance ? quelle question pour le fait bien connu ?) et « 6e date » est un libellé vague. Le tableau est exact (somme 100 %, sévérité 99,9 %) mais ne se relit pas sans le chapitre 12.",
+  "proposition": "Indiquer la question en tête de ligne et nommer la 6e date (« autre date »).",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-016",
+  "unite": "annexe-A",
+  "section": "A.2",
+  "passage": "décomposer la prévision d'une grandeur $Y$ selon des hypothèses $H_{i}$ conditionnellement à $X = x$ s'écrit",
+  "categorie": "clarte",
+  "gravite": "C",
+  "constat": "L'équation (2.1) n'est valide que si les $H_i$ forment une partition (exclusives et exhaustives) ; ce n'est dit que pour (1.3), avec un autre indice ($k$ au lieu de $m$).",
+  "proposition": "Ajouter « partition $H_1,\\ldots,H_m$ ».",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-017",
+  "unite": "annexe-A",
+  "section": "A.2.2",
+  "passage": "portant sur un état ou une erreur d'occurrence *a priori* (taux de base) $P(E) = \\Pr(E)$",
+  "categorie": "francais",
+  "gravite": "C",
+  "constat": "Formulation lourde et peu claire (« une erreur d'occurrence a priori »). La même grandeur $P(E)$ est appelée taux de base, puis taux d'erreur dans la phrase suivante.",
+  "proposition": "« portant sur un état ou une erreur de taux de base $P(E)=\\Pr(E)$ ».",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-018",
+  "unite": "annexe-A",
+  "section": "A",
+  "passage": "mobilisés au fil de l'ouvrage. Elle reprend, sans élément nouveau,",
+  "categorie": "structure",
+  "gravite": "C",
+  "constat": "L'introduction annonce « les trois modèles (M1, M2, M3) » sans les nommer ni les ordonner ; ils apparaissent dans l'ordre M2 (A.4), M3 (A.6), M1 (A.7), et M1 n'est identifié qu'à A.7.",
+  "proposition": "Ajouter une ligne : M1 = détection, chaînes, contrôles ; M2 = seuil et risque omis ; M3 = cause commune.",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-019",
+  "unite": "annexe-D",
+  "section": "D.4",
+  "passage": "Part indépendante (sans $\\rightarrow$ avec contrôle)",
+  "categorie": "clarte",
+  "gravite": "C",
+  "constat": "L'en-tête « Part indépendante » n'est pas défini dans l'annexe : c'est la probabilité d'échec due aux seules erreurs indépendantes (hors $q$). Le lecteur doit le déduire (les valeurs 21,9 % et 1,43 % le confirment).",
+  "proposition": "Ajouter une phrase de définition sous le tableau.",
+  "confiance": "moyenne"
+ },
+ {
+  "id": "PA-020",
+  "unite": "annexe-D",
+  "section": "D.3",
+  "passage": "Prudence superflue                      25",
+  "categorie": "typographie",
+  "gravite": "C",
+  "constat": "Le nombre de décimales varie pour une même grandeur (« 0,1 % » en colonne $p$ et « 0,100 % » en colonne $p_w$ ; « 3,85 % » et « 0,0100 % » pour $p^*$). En outre, dans les formules en mode mathématique, la virgule décimale (« $0,75/0,15$ », « $\\approx 0,0417$ ») produira une espace parasite en TeX si elle n'est pas écrite {,}.",
+  "proposition": "Uniformiser les décimales par colonne ; vérifier le rendu de la virgule en mode mathématique.",
+  "confiance": "basse"
+ }
+]
