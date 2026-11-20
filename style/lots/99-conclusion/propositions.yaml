@@ -1,0 +1,10 @@
+chapitre: 99-conclusion
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: or-initial
+    avant: |
+      Or tous ces ponts ont le statut d’hypothèse de travail.
+    apres: |
+      Mais tous ces ponts ont le statut d’hypothèse de travail.
+    note: "Remplace « Or » en tête de phrase par « Mais »."
