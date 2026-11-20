@@ -1,0 +1,994 @@
+[
+  {
+    "grappe": "V3-001",
+    "constats": [
+      "P3-001",
+      "T1-001"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/parties/partie-3.md",
+    "ligne": 11,
+    "passage": "Les composants appris produisent des erreurs d’un type nouveau : leur cause est interne au cadre, et rien ne les signale.",
+    "verdict": "CONFIRME",
+    "reference": "content_spec/00_global.md § 9.3 ; monographie/chapitres/99-conclusion.md l. 29",
+    "categorie": "argument",
+    "gravite": "A",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "La page d’ouverture de la partie III qualifie les erreurs internes au cadre et silencieuses de « type nouveau » propre aux composants appris, ce qui contredit le chapitre 10 et le chapitre 13 (Mars Climate Orbiter montre que le logiciel classique en produit aussi). Par ailleurs, le peuplement massif de cette case par les composants appris est une hypothèse de travail (Conclusion, tableau des statuts), non un fait établi sans réserve.",
+    "correction": [
+      {
+        "avant": "Les composants appris produisent des erreurs d’un type nouveau : leur cause est interne au cadre, et rien ne les signale.",
+        "apres": "Les composants appris tendent à produire en abondance des erreurs dont la cause est interne au cadre et que rien ne signale."
+      },
+      {
+        "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+        "avant": "- Les composants appris peuplent la case « dans le cadre et silencieuse », tandis que les composants spécifiés permettent — non par nature, mais par contrat écrit — de vider cette case à l’avance ;",
+        "apres": "- Les composants appris tendent à peupler la case « dans le cadre et silencieuse », tandis que les composants spécifiés permettent — non par nature, mais par contrat écrit — de vider cette case à l’avance ;"
+      }
+    ],
+    "justification": "Contradiction directe avec le ch. 10, le ch. 13 (encadré « Vider la case par avance, non par nature ») et la règle 9.3 de content_spec/00_global.md ; alignement du point clé 3 du ch. 13 sur le statut d’hypothèse de travail retenu en conclusion."
+  },
+  {
+    "grappe": "V3-002",
+    "constats": [
+      "P3-002"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/parties/partie-3.md",
+    "ligne": 11,
+    "passage": "Les composants spécifiés permettent d’exclure ces erreurs d’avance, non par nature, mais grâce au contrat écrit.",
+    "verdict": "CONFIRME",
+    "reference": "content_spec/00_global.md § 9.3",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G1",
+    "probleme": "« Exclure ces erreurs d’avance […] grâce au contrat écrit » durcit la thèse des chapitres 10 et 13 : un contrat seulement écrit en prose n’arrête rien avant l’usage s’il n’est pas appliqué mécaniquement.",
+    "correction": {
+      "avant": "Les composants spécifiés permettent d’exclure ces erreurs d’avance, non par nature, mais grâce au contrat écrit.",
+      "apres": "Les composants spécifiés permettent de vider cette case à l’avance, non par nature, mais grâce au contrat écrit lorsqu’il est effectivement appliqué."
+    },
+    "justification": "La formulation retenue reprend exactement l’expression « vider cette case à l’avance » du ch. 13 et rappelle la condition d’application effective établie au ch. 10."
+  },
+  {
+    "grappe": "V3-003",
+    "constats": [
+      "T1-014"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/parties/partie-3.md",
+    "ligne": 9,
+    "passage": "Ce basculement ne tient ni à la fréquence des erreurs ni au fait qu’elles passent inaperçues, mais à l’absence d’une spécification écrite que l’on pourrait vérifier d’avance.",
+    "verdict": "PLAUSIBLE",
+    "reference": "monographie/chapitres/99-conclusion.md l. 28",
+    "categorie": "statut",
+    "gravite": "C",
+    "rang": 3,
+    "groupe": "G3",
+    "probleme": "Le tableau des statuts de la conclusion classe le « changement de régime » comme une définition, alors que l’affirmation selon laquelle les trois propriétés basculent ensemble et tiennent à l’absence de spécification écrite comporte une part de thèse empirique ou structurelle.",
+    "correction": null,
+    "justification": "Affaire d’arbitrage éditorial sur le statut : (a) garder le statut de définition dans le tableau de la conclusion pour la conjonction des trois bascules au ch. 12, et préciser qu’il s’agit d’une hypothèse de travail pour le lien causal avec l’absence de spécification ; (b) laisser en l’état, le terme étant défini dans le registre."
+  },
+  {
+    "grappe": "V3-004",
+    "constats": [
+      "P3-009"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "ligne": 5,
+    "passage": "## Boîte à outils : les contrats logiciels {#sec:ch10-boite-outils}",
+    "verdict": "PLAUSIBLE",
+    "reference": "monographie/notes/RAPPORT_AUDIT_CALQUES.md l. 290",
+    "categorie": "repetition",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "Le titre de la section 10.1 (« Boîte à outils : les contrats logiciels ») reprend le titre d’un encadré alors que le texte principal porte la définition du contrat ; par ailleurs, le triplet de Hoare est présenté dans le texte puis repris au début de l’encadré .outils.",
+    "correction": {
+      "avant": "## Boîte à outils : les contrats logiciels {#sec:ch10-boite-outils}",
+      "apres": "## Les contrats logiciels {#sec:ch10-boite-outils}"
+    },
+    "justification": "La règle du texte principal (BUILDER_START_HERE § 2.9) impose que la définition du contrat et du triplet de Hoare figure dans le corps, ce qui rend le doublon partiel avec l’encadré compréhensible ; en revanche, le titre de section sans « Boîte à outils : » est plus clair et évite le calque à deux-points déjà noté dans RAPPORT_AUDIT_CALQUES."
+  },
+  {
+    "grappe": "V3-005",
+    "constats": [
+      "P3-008"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "ligne": 42,
+    "passage": "Ensuite, hors panne matérielle ou perturbation physique accidentelle, elles sont *déterministes* : placée devant les mêmes entrées et le même état initial, la même suite d’instructions produit exactement les mêmes sorties, sur une autre machine, dix ans plus tard.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "fait",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "L’affirmation sur le déterminisme de « la même suite d’instructions […] sur une autre machine » est trop générale telle quelle : les calculs en virgule flottante peuvent différer d’une architecture à l’autre et l’ordonnancement de tâches concurrentes (cité à la section 10.5) n’est pas déterministe.",
+    "correction": {
+      "avant": "Ensuite, hors panne matérielle ou perturbation physique accidentelle, elles sont *déterministes* : placée devant les mêmes entrées et le même état initial, la même suite d’instructions produit exactement les mêmes sorties, sur une autre machine, dix ans plus tard.",
+      "apres": "Ensuite, hors panne matérielle ou perturbation physique accidentelle, ces opérations séquentielles sont *déterministes* : à architecture et ordonnancement donnés, placée devant les mêmes entrées et le même état initial, la même suite d’instructions produit exactement les mêmes sorties, sur une autre machine, dix ans plus tard."
+    },
+    "justification": "Une incise minimale lève l’objection sur la concurrence et les variantes matérielles de virgule flottante sans alourdir la phrase."
+  },
+  {
+    "grappe": "V3-006",
+    "constats": [
+      "P3-003"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "ligne": 74,
+    "passage": "Dans un composant spécifié, la règle existe *avant* l’exécution sous forme de texte",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 4,
+    "groupe": "G2",
+    "probleme": "Flottement entre les lignes 72, 74 et le point clé 2 (l. 144) : la ligne 72 explique que le contrat peut être écrit avant l’exécution ou seulement formulé après coup (3e degré), mais la ligne 74 écrit que « la règle existe *avant* l’exécution sous forme de texte » et le point clé 2 affirme qu’un composant spécifié « repose sur un énoncé écrit à l’avance ».",
+    "correction": [
+      {
+        "avant": "Dans un composant spécifié, la règle existe *avant* l’exécution sous forme de texte : quelqu’un l’a formulée, quelqu’un peut la lire, quelqu’un peut la confronter au programme.",
+        "apres": "Dans un composant spécifié, les règles d’exécution existent sous forme de code écrit avant l’usage, et leur contrat est soit rédigé à l’avance, soit formulable après coup : quelqu’un peut les lire et les confronter au programme."
+      },
+      {
+        "avant": "- Un composant spécifié repose sur un énoncé écrit à l’avance, lisible par autrui, discutable, versionnable et violable, donc opposable à son exécution, qui joue le rôle d’un comparateur permanent.",
+        "apres": "- Un composant spécifié repose sur des règles écrites par un auteur et admet un contrat (écrit à l’avance dans le cas nominal, ou formulable après coup), lisible par autrui, discutable, versionnable et violable, qui joue le rôle d’un comparateur."
+      }
+    ],
+    "justification": "Distingue nettement le code (toujours écrit avant l’exécution) du contrat (écrit d’avance dans le cas central, ou formulable après coup dans le cas limite du 3e degré)."
+  },
+  {
+    "grappe": "V3-007",
+    "constats": [
+      "P3-005"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "ligne": 109,
+    "passage": "Durant des mois, le logiciel de navigation a poursuivi ses calculs sans qu’aucune alarme ne vienne interrompre les opérations. L’erreur était tout sauf bruyante.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "fait",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "L’étude de cas qui suit (l. 118) signale que des doutes et anomalies de trajectoire ont été observés pendant le transit mais non instruits ; dire « sans qu’aucune alarme ne vienne interrompre les opérations » est donc plus exact si l’on précise « alarme automatique ».",
+    "correction": {
+      "avant": "Durant des mois, le logiciel de navigation a poursuivi ses calculs sans qu’aucune alarme ne vienne interrompre les opérations. L’erreur était tout sauf bruyante.",
+      "apres": "Durant des mois, le logiciel de navigation a poursuivi ses calculs sans qu’aucune alarme automatique ne vienne interrompre les opérations, les anomalies observées en vol n’étant pas instruites à temps. L’erreur était tout sauf manifeste."
+    },
+    "justification": "Harmonise le récit principal avec le bloc .cas de la ligne 118 et remplace au passage « bruyante » (calque relevé dans RAPPORT_AUDIT_CALQUES l. 19) par « manifeste »."
+  },
+  {
+    "grappe": "V3-008",
+    "constats": [
+      "C-019",
+      "T5-011"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "ligne": 107,
+    "passage": "Le 23 septembre 1999, la sonde *Mars Climate Orbiter* devait s’insérer en orbite autour de Mars ; elle pénétra bien trop bas dans l’atmosphère martienne et fut perdue [@mco1999].",
+    "verdict": "CONFIRME",
+    "reference": "monographie/notes/TODO_ETAT_ACTUEL.md P2.4 [REV-3.1]",
+    "categorie": "repetition",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "L’accident de Mars Climate Orbiter (23 septembre 1999, SM_FORCES, lbf·s vs N·s, facteur 4,45) est raconté in extenso au ch. 0, au ch. 8, puis deux fois de suite au ch. 10.5 (dans le texte principal l. 107-109, puis aussitôt dans l’encadré .cas l. 113-119).",
+    "correction": {
+      "avant": "Le 23 septembre 1999, la sonde *Mars Climate Orbiter* devait s’insérer en orbite autour de Mars ; elle pénétra bien trop bas dans l’atmosphère martienne et fut perdue [@mco1999]. Tout au long du transit vers la planète, un programme au sol baptisé `SM_FORCES` calculait l’effet des petites poussées de correction des propulseurs et inscrivait ces impulsions dans un fichier de données transmis à l’équipe de navigation [@mco1999]. Or la spécification d’interface écrite exigeait que ces grandeurs soient exprimées en unités du Système international, les newton-secondes ($\\text{N}\\cdot\\text{s}$), alors que le programme `SM_FORCES` les écrivait en unités anglo-saxonnes, les livres-force-secondes ($\\text{lbf}\\cdot\\text{s}$). Parce que l’équipe et les logiciels de navigation lisaient ces valeurs comme des newton-secondes, l’effet de chaque petite poussée était sous-estimé d’un facteur proche de 4,45 [@mco1999].",
+      "apres": "Comme on l’a vu au @sec:ch08, la sonde *Mars Climate Orbiter* a été perdue le 23 septembre 1999 parce que le programme au sol `SM_FORCES` écrivait ses impulsions en livres-force-secondes ($\\text{lbf}\\cdot\\text{s}$) au lieu des newton-secondes ($\\text{N}\\cdot\\text{s}$) exigées par la spécification d’interface, introduisant un écart d’un facteur proche de 4,45 [@mco1999]."
+    },
+    "justification": "Ce point rejoint l’arbitrage ouvert TODO P2.4 ([REV-3.1]). Même en conservant l’encadré .cas pour son volet organisationnel, condenser le rappel technique du texte principal en une phrase avec renvoi au ch. 8 supprime la double narration consécutive."
+  },
+  {
+    "grappe": "V3-009",
+    "constats": [
+      "P3-004"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "ligne": 121,
+    "passage": "on peut la formuler *après coup* en regard d’une instruction précise et localiser exactement l’endroit de la divergence. Les analyses après incident convergent vers une adresse",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "Affirmer sans nuance que « les analyses après incident convergent vers une adresse » peut sembler trop fort pour les défaillances de concurrence, d’interaction entre modules ou d’erreur dans la spécification elle-même, et donne au troisième degré (« formulable mais non écrit ») un statut quasi irréfutable.",
+    "correction": {
+      "avant": "Les analyses après incident convergent vers une adresse, où un correctif local peut être écrit, relu et transformé en test de non-régression pour les exécutions futures.",
+      "apres": "Les analyses après incident convergent le plus souvent vers une adresse — une ligne, une interface ou une interaction précise entre tâches —, où un correctif peut être écrit, relu et transformé en test de non-régression pour les exécutions futures."
+    },
+    "justification": "La nuance (« le plus souvent », mention des interactions entre tâches) préserve la thèse tout en répondant aux cas de concurrence cités plus haut dans la section."
+  },
+  {
+    "grappe": "V3-010",
+    "constats": [
+      "P3-006"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "ligne": 123,
+    "passage": "Entre un type statique qui interdit dès la compilation de confondre des newtons et des livres-force, un document d’interface rédigé en prose dans un classeur séparé, et une attente implicite que personne n’a pris la peine de noter avant la panne, la protection en cours de route change du tout au tout.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "repetition",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "Les trois degrés du contrat (appliqué mécaniquement, écrit, seulement formulable) sont exposés au paragraphe principal (l. 123), puis repris presque à l’identique dans l’encadré .nuance qui suit immédiatement (l. 125-133) avec le même exemple SM_FORCES.",
+    "correction": null,
+    "justification": "Par la règle du texte principal (BUILDER_START_HERE § 2.9), le paragraphe principal (l. 123) doit rester autonome. L’option préférable est d’alléger l’encadré .nuance pour n’y garder que ce qui n’est pas dans l. 123 (le rattachement explicite de SM_FORCES au 2e degré et la transition vers le ch. 11)."
+  },
+  {
+    "grappe": "V3-011",
+    "constats": [
+      "PISTE-T-01"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "ligne": 132,
+    "passage": "ni cahier écrit qui fixe la sortie exacte de chaque consigne",
+    "verdict": "CONFIRME",
+    "reference": "relecture/pistes/termes.md l. 15 ; monographie/commun/registre_termes.md l. 62",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Le terme « consigne » (prompt) est employé au sens technique dès le chapitre 10 (l. 132), alors qu’il n’est introduit qu’au chapitre 11 selon le registre des termes.",
+    "correction": {
+      "avant": "ni cahier écrit qui fixe la sortie exacte de chaque consigne,",
+      "apres": "ni cahier écrit qui fixe la sortie exacte de chaque demande,"
+    },
+    "justification": "Piste mécanique confirmée : remplacer « consigne » par « demande » évite d’employer le terme technique avant son introduction au ch. 11."
+  },
+  {
+    "grappe": "V3-012",
+    "constats": [
+      "P3-010",
+      "C-030"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/11-regle-tiree-des-donnees.md",
+    "ligne": 7,
+    "passage": "l’arrière-plan ouvert d’exceptions étudié dès le @sec:ch02",
+    "verdict": "CONFIRME",
+    "reference": "monographie/commun/registre_termes.md l. 21-22",
+    "categorie": "dependance",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Deux renvois inexacts au ch. 11.1 : « l’arrière-plan ouvert d’exceptions » (l. 7) renvoie au ch. 2 et emploie un synonyme de « arrière-plan tacite » (introduit au ch. 1) ; « Comme toute inférence inductive (@sec:ch02) » (l. 19) omet le ch. 1 où l’induction est définie.",
+    "correction": [
+      {
+        "avant": "l’arrière-plan ouvert d’exceptions étudié dès le @sec:ch02 envahissait l’écriture même du programme.",
+        "apres": "l’arrière-plan tacite (@sec:ch01, @sec:ch02) envahissait l’écriture même du programme."
+      },
+      {
+        "avant": "Comme toute inférence inductive (@sec:ch02), la régularité",
+        "apres": "Comme toute inférence inductive (@sec:ch01, @sec:ch02), la régularité"
+      }
+    ],
+    "justification": "Harmonise les renvois avec registre_termes.md (arrière-plan tacite et induction introduits au ch. 1, développés au ch. 2) et supprime le synonyme non répertorié."
+  },
+  {
+    "grappe": "V3-013",
+    "constats": [
+      "T5-030"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/11-regle-tiree-des-donnees.md",
+    "ligne": 3,
+    "passage": "*personne ne savait écrire la règle*",
+    "verdict": "CONFIRME",
+    "reference": "relecture/pistes/repetitions.md l. 255",
+    "categorie": "repetition",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "Le motif « personne ne savait écrire la règle / l’apprentissage inverse la démarche » est répété à la fin du ch. 10 (l. 135), dans le chapeau du ch. 11 (l. 3) et en 11.1 (l. 7-9), en plus du ch. 0 (recouvrement de 12 % relevé par repetitions.md) et de la page de partie III.",
+    "correction": null,
+    "justification": "Alléger la fin du ch. 10 (en une phrase d’annonce sans liste d’exemples) et le chapeau du ch. 11 tout en conservant le développement en 11.1 réduit la redite en lecture linéaire."
+  },
+  {
+    "grappe": "V3-014",
+    "constats": [
+      "C-042",
+      "P3-011"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/11-regle-tiree-des-donnees.md",
+    "ligne": 31,
+    "passage": "Lorsqu’on lui soumet une phrase inachevée dont la suite attendue est la ville où se dresse la tour Eiffel, les premières couches n’avancent encore que des mots grammaticaux passe-partout ; les couches médianes resserrent la prévision sur le pays correspondant ; la ville précise ne remonte en tête qu’à l’approche des dernières couches [@nostalgebraist2020].",
+    "verdict": "PLAUSIBLE",
+    "reference": "monographie/notes/RAPPORT_VERIFICATION_BIBLIO.md l. 313",
+    "categorie": "fait",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "L’exemple précis de la tour Eiffel (pays aux couches médianes, ville aux dernières couches) est présenté comme tiré du billet de blog de 2020 sur le logit lens, alors qu’il peut être schématique sans être ainsi signalé.",
+    "correction": {
+      "avant": "Lorsqu’on lui soumet une phrase inachevée dont la suite attendue est la ville où se dresse la tour Eiffel,",
+      "apres": "Schématiquement, lorsqu’on soumet à un tel modèle une phrase inachevée dont la suite attendue est la ville où se dresse la tour Eiffel,"
+    },
+    "justification": "RAPPORT_VERIFICATION_BIBLIO (l. 313) confirme l’attribution du logit lens à nostalgebraist2020, sans attester cet exemple précis ; ajouter « Schématiquement » évite d’attribuer littéralement l’illustration à la source."
+  },
+  {
+    "grappe": "V3-015",
+    "constats": [
+      "C-044"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/11-regle-tiree-des-donnees.md",
+    "ligne": 47,
+    "passage": "Dans un modèle de langage, en revanche, la *plausibilité* constitue l’objectif même d’optimisation ; la vérité n’en est qu’un corrélat fréquent.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "La section 11.4 range tout le post-entraînement sous l’ajustement sur préférences humaines et omet l’entraînement par renforcement sur des récompenses vérifiables (tests de code, résultats mathématiques), qui introduit pourtant un comparateur mécanique dans l’objectif et prépare directement le ch. 12.",
+    "correction": null,
+    "justification": "Ajouter une phrase en 11.4 précisant que l’optimisation par renforcement contre un comparateur mécanique (tests de code, preuves ou réponses mathématiques vérifiables) améliore la tâche contrôlée sans pour autant doter le modèle d’un contrat général sur les autres tâches."
+  },
+  {
+    "grappe": "V3-016",
+    "constats": [
+      "T5-013"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/11-regle-tiree-des-donnees.md",
+    "ligne": 54,
+    "passage": "Au début de 2023, dans l’affaire *Mata v. Avianca* instruite devant le tribunal fédéral du district sud de New York, les avocats du demandeur déposèrent un mémoire en opposition à la demande de rejet présentée par la compagnie aérienne [@mata2023].",
+    "verdict": "CONFIRME",
+    "reference": "monographie/notes/TODO_ETAT_ACTUEL.md P2.4 [REV-3.1]",
+    "categorie": "repetition",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "L’affaire Mata v. Avianca est racontée in extenso au ch. 0 (0.1) puis à nouveau dans l’encadré .cas du ch. 11.3 avec les mêmes éléments factuels.",
+    "correction": null,
+    "justification": "Relève de l’arbitrage ouvert TODO P2.4 ([REV-3.1]) : soit renvoyer au ch. 0 en 11.3 pour ne garder que les détails nouveaux et la leçon sur l’absence de contrat, soit alléger le récit en 0.1."
+  },
+  {
+    "grappe": "V3-017",
+    "constats": [
+      "P3-012"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/11-regle-tiree-des-donnees.md",
+    "ligne": 59,
+    "passage": "Dans les commentaires qui entourent ces affaires, un autre litige survenu peu après est souvent invoqué d’un même souffle comme preuve d’une « hallucination » de modèle de langage.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "clarte",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "La transition dit « ces affaires » au pluriel alors qu’une seule affaire (Mata v. Avianca) vient d’être exposée, et « peu après » est vague (2023 vs 2024).",
+    "correction": {
+      "avant": "Dans les commentaires qui entourent ces affaires, un autre litige survenu peu après est souvent invoqué d’un même souffle comme preuve d’une « hallucination » de modèle de langage.",
+      "apres": "Dans les commentaires qui entourent cette affaire, un autre litige jugé l’année suivante est souvent invoqué d’un même souffle comme preuve d’une « hallucination » de modèle de langage."
+    },
+    "justification": "Correction syntaxique et factuelle directe."
+  },
+  {
+    "grappe": "V3-018",
+    "constats": [
+      "T1-022"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/11-regle-tiree-des-donnees.md",
+    "ligne": 102,
+    "passage": "- La compétence accumulée pour prédire des textes n’obéit à aucune frontière nette, ce qui empêche d’en borner d’avance le domaine de fiabilité.",
+    "verdict": "REJETE",
+    "reference": "",
+    "categorie": "structure",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "Le lecteur T1 (qui ne disposait que d’extraits) pensait que ce point clé anticipait à tort la « frontière en dents de scie » du ch. 12 sans figurer dans le ch. 11.",
+    "correction": null,
+    "justification": "Erreur d’extrait incomplet : le dernier paragraphe de la section 11.2 (l. 39) expose explicitement cette absence de contour régulier et de frontière nette, sans employer le terme « frontière en dents de scie » réservé au ch. 12."
+  },
+  {
+    "grappe": "V3-019",
+    "constats": [
+      "C-034"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "ligne": 15,
+    "passage": "Comme l’a établi le @sec:ch09, un producteur dont le taux d’erreur diminue mais dont les erreurs échappent aux contrôles peut encore former un système plus risqué qu’un producteur moins exact mais mieux contenu.",
+    "verdict": "CONFIRME",
+    "reference": "content_spec/00_global.md § 9.5",
+    "categorie": "statut",
+    "gravite": "C",
+    "rang": 3,
+    "groupe": "G1",
+    "probleme": "Le verbe « établi » durcit ce que le chapitre 9 a seulement illustré en comparant deux configurations (la baisse du taux d’erreur ne suffit pas à elle seule à faire monter le risque).",
+    "correction": {
+      "avant": "Comme l’a établi le @sec:ch09, un producteur dont le taux d’erreur diminue",
+      "apres": "Comme l’a illustré le @sec:ch09, un producteur dont le taux d’erreur diminue"
+    },
+    "justification": "Alignement exact sur le statut retenu au ch. 9 et dans la conclusion (l. 73 : « il établit une possibilité, non une fréquence »)."
+  },
+  {
+    "grappe": "V3-020",
+    "constats": [
+      "P3-013"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "ligne": 15,
+    "passage": "L’axe décisif est de savoir si une erreur est définissable par rapport à un énoncé préalable, et si un contrôle peut être exercé une fois pour toutes avant l’usage.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "La section 12.2 montre que les anciens composants statistiques (antipourriels, recommandations) étaient eux aussi sans contrat complet mais restaient cantonnés à une tâche unique d’impact borné : c’est donc la combinaison de l’absence de spécification et de la composabilité généraliste qui fait basculer le sommet de la pile. Or 12.1, le point clé 2 et partie-3.md ne mentionnent que le premier critère.",
+    "correction": null,
+    "justification": "À compléter brièvement en 12.1 (ou dans le point clé 2) en précisant que l’absence de spécification écrite bascule en changement de régime à l’échelle de la pile dès qu’elle s’unit à un emploi généraliste et composable (développé en 12.2)."
+  },
+  {
+    "grappe": "V3-021",
+    "constats": [
+      "P3-014"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "ligne": 35,
+    "passage": "l’incertitude de la génération reste enfermée dans l’étape où le modèle propose un candidat : seule survit une sortie qui a franchi un comparateur mécanique.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Une suite de tests ou un schéma ne contrôle que la conformité à lui-même ; l’incertitude n’est donc pas « enfermée », elle est déplacée vers l’adéquation du comparateur mécanique (qui sera traitée au ch. 13).",
+    "correction": {
+      "avant": "seule survit une sortie qui a franchi un comparateur mécanique.",
+      "apres": "seule survit une sortie qui a franchi un comparateur mécanique, dont l’adéquation au besoin réel reste à établir (@sec:ch13)."
+    },
+    "justification": "Ajoute la réserve attendue dès le ch. 12 sans anticiper le vocabulaire de la validation du ch. 13."
+  },
+  {
+    "grappe": "V3-022",
+    "constats": [
+      "P3-015",
+      "T5-014"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "ligne": 47,
+    "passage": "En 2023, Fabrizio Dell’Acqua et ses coauteurs ont mené une expérience contrôlée auprès de 758 consultants du Boston Consulting Group afin de mesurer l’effet de l’assistance par un grand modèle de langage (GPT-4) sur des tâches réalistes de conseil [@dellacqua2023].",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "repetition",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "Le protocole de l’expérience BCG (2023, 758 consultants, GPT-4, tâches de conseil) est présenté au ch. 11.2 puis redécrit à l’identique au début de l’encadré .cas du ch. 12.3.",
+    "correction": {
+      "avant": "En 2023, Fabrizio Dell’Acqua et ses coauteurs ont mené une expérience contrôlée auprès de 758 consultants du Boston Consulting Group afin de mesurer l’effet de l’assistance par un grand modèle de langage (GPT-4) sur des tâches réalistes de conseil [@dellacqua2023]. Comme l’a montré le @sec:ch11, sur les tâches situées à l’intérieur de la zone de compétence du modèle, les gains de productivité et de qualité étaient nets.",
+      "apres": "Dans la même expérience contrôlée du Boston Consulting Group présentée au @sec:ch11 [@dellacqua2023], où GPT-4 apportait des gains nets sur les tâches situées dans sa zone de compétence, les chercheurs avaient aussi mesuré l’effet de la frontière."
+    },
+    "justification": "Supprime la redite de protocole tout en gardant la référence et la transition vers le résultat hors frontière (−19 points)."
+  },
+  {
+    "grappe": "V3-023",
+    "constats": [
+      "P3-016"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "ligne": 51,
+    "passage": "L’analyse met en évidence le mécanisme de cette dégradation : l’outil produisait des réponses tout aussi fluides, structurées et convaincantes de part et d’autre de la limite. Faute de marque visible signalant le franchissement de la frontière, une partie des utilisateurs a relâché ses propres contrôles et repris à son compte un raisonnement erroné [@dellacqua2023].",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 3,
+    "groupe": "G1",
+    "probleme": "Le texte présente comme un mécanisme établi ce qui relève de l’interprétation par les auteurs de l’écart de 19 points.",
+    "correction": {
+      "avant": "L’analyse met en évidence le mécanisme de cette dégradation : l’outil produisait des réponses tout aussi fluides, structurées et convaincantes de part et d’autre de la limite. Faute de marque visible signalant le franchissement de la frontière, une partie des utilisateurs a relâché ses propres contrôles et repris à son compte un raisonnement erroné [@dellacqua2023].",
+      "apres": "Les auteurs interprètent cette dégradation par le fait que l’outil produisait des réponses tout aussi fluides, structurées et convaincantes de part et d’autre de la limite : faute de marque visible signalant le franchissement de la frontière, une partie des utilisateurs a relâché ses propres contrôles et repris à son compte un raisonnement erroné [@dellacqua2023]."
+    },
+    "justification": "Retouche minimale qui distingue le constat mesuré (−19 points) de l’interprétation mécaniste."
+  },
+  {
+    "grappe": "V3-024",
+    "constats": [
+      "P3-017"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "ligne": 65,
+    "passage": "On parle d’**omission de saillance** lorsqu’un facteur pertinent est bien représenté",
+    "verdict": "PLAUSIBLE",
+    "reference": "monographie/chapitres/99-conclusion.md l. 59-63",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G2",
+    "probleme": "Le terme « omission de saillance » emploie « omission » pour un facteur qui est pourtant présent dans la représentation (et classé en « Cause dans le cadre » au ch. 13), ce qui contraste avec le sens de $z$ (hors du cadre) ; de plus, le texte dit que la distinction « affine » la proposition 3 alors qu’elle en restreint le volet (a) aux facteurs absents ou aux contrôles réutilisant les mêmes poids et consigne.",
+    "correction": null,
+    "justification": "La tension est déjà reconnue dans la conclusion (l. 59-63). Préciser brièvement en 12.3 qu’« omission » désigne ici une omission d’usage (de mobilisation) et non une absence du cadre suffit à lever l’ambiguïté."
+  },
+  {
+    "grappe": "V3-025",
+    "constats": [
+      "P3-018"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "ligne": 72,
+    "passage": "John McCarthy et Patrick Hayes [@mccarthy1969] puis Daniel Dennett [@dennett1984] montraient que la difficulté ne porte pas uniquement sur ce qui manque dans la liste des faits, mais sur la *pertinence* de faits déjà représentés.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "fait",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "McCarthy et Hayes (1969) ont formulé le problème du cadre en termes d’axiomes de persistance (ce qui ne change pas après une action), tandis que la formulation en termes de *pertinence* de faits déjà représentés revient à Dennett (1984).",
+    "correction": {
+      "avant": "John McCarthy et Patrick Hayes [@mccarthy1969] puis Daniel Dennett [@dennett1984] montraient que la difficulté ne porte pas uniquement sur ce qui manque dans la liste des faits, mais sur la *pertinence* de faits déjà représentés.",
+      "apres": "À la suite de John McCarthy et Patrick Hayes [@mccarthy1969], Daniel Dennett [@dennett1984] a montré que la difficulté ne porte pas uniquement sur ce qui manque dans la liste des faits, mais sur la *pertinence* de faits déjà représentés."
+    },
+    "justification": "Attribue exactement la question de la pertinence à Dennett tout en conservant la filiation historique de McCarthy et Hayes."
+  },
+  {
+    "grappe": "V3-026",
+    "constats": [
+      "P3-019",
+      "T1-008"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "ligne": 168,
+    "passage": "Soumis à la calibration générative, un modèle doit inventer des faits rares et arbitraires à une fréquence au moins de l’ordre du taux de singletons de ses données d’entraînement",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G1",
+    "probleme": "La borne de Kalai et Vempala est un résultat sous hypothèses (faits arbitraires, calibration générative, diminué du défaut de calibration et de termes mineurs), mais le texte principal (l. 84 : « entraîne mécaniquement l’invention ») et le point clé 4 (l. 168 : « doit inventer ») l’énoncent sans rappeler ces hypothèses ni le statut conditionnel de l’inégalité.",
+    "correction": [
+      {
+        "avant": "Loin de prémunir contre l’invention, cette propriété entraîne mécaniquement l’invention de faits rares.",
+        "apres": "Sous les hypothèses de l’analyse statistique présentée ci-dessous, cette propriété contraint le modèle à inventer des faits rares et arbitraires."
+      },
+      {
+        "avant": "- Soumis à la calibration générative, un modèle doit inventer des faits rares et arbitraires à une fréquence au moins de l’ordre du taux de singletons de ses données d’entraînement,",
+        "apres": "- Sous les hypothèses de l’analyse de Kalai et Vempala, un modèle proche de la calibration générative invente des faits rares et arbitraires à une fréquence bornée inférieurement par le taux de singletons de ses données d’entraînement (diminué du défaut de calibration),"
+      }
+    ],
+    "justification": "Aligne le texte principal et le point clé 4 sur l’encadré .formel (l. 89-102) et sur le tableau des statuts de la conclusion (l. 28)."
+  },
+  {
+    "grappe": "V3-027",
+    "constats": [
+      "C-032",
+      "T2-016"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "ligne": 119,
+    "passage": "seulement 9 % à Mercure (qui, restant plus près du Soleil, est en moyenne dans le temps la planète la plus proche de la Terre [@stockman2019], contrairement à l’idée reçue qui confond distance minimale au rapprochement et distance moyenne)",
+    "verdict": "CONFIRME",
+    "reference": "monographie/notes/TODO_ETAT_ACTUEL.md P2.2 [SYN-S8]",
+    "categorie": "clarte",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "Une longue incise explicative à trois niveaux de parenthèses coupe la liste des pourcentages de l’exemple quantitatif.",
+    "correction": {
+      "avant": "seulement 9 % à Mercure (qui, restant plus près du Soleil, est en moyenne dans le temps la planète la plus proche de la Terre [@stockman2019], contrairement à l’idée reçue qui confond distance minimale au rapprochement et distance moyenne) et 3 % à Mars.",
+      "apres": "seulement 9 % à Mercure et 3 % à Mars. En effet, restant plus près du Soleil, Mercure est en moyenne dans le temps la planète la plus proche de la Terre [@stockman2019], contrairement à l’idée reçue qui confond distance minimale au rapprochement et distance moyenne."
+    },
+    "justification": "Sort l’explication astronomique et sa référence dans une phrase distincte immédiatement après l’item, ce qui règle également TODO P2.2 [SYN-S8]."
+  },
+  {
+    "grappe": "V3-028",
+    "constats": [
+      "C-033"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/tableaux/ch12-plausibilite.md",
+    "ligne": 4,
+    "passage": "| Fait rare et arbitraire | 14 mai 22 %, 3 août 20 %, 22 nov. ✓ 18 %, 9 janv. 16 %, 17 oct. 14 %, une autre date 10 % |",
+    "verdict": "CONFIRME",
+    "reference": "monographie/notes/ARBITRAGES_RESTANTS.md P1.10.2 [REV-4B.2]",
+    "categorie": "chiffres",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Le texte du ch. 12 (l. 118) nomme la sixième date « le 5 mars » (10 %) pour rendre exact le calcul $0{,}10^5$, mais le tableau généré ch12-plausibilite.md (et commun/parametres.py l. 128) affiche encore « une autre date 10 % ».",
+    "correction": null,
+    "justification": "Le fichier tableaux/ch12-plausibilite.md étant généré, il ne doit pas être modifié à la main : il faut remplacer 'une autre date' par '5 mars' dans monographie/commun/parametres.py (l. 128) puis relancer le script monographie/scripts/fig_plausibilite.py (make figures)."
+  },
+  {
+    "grappe": "V3-029",
+    "constats": [
+      "P3-021"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "ligne": 121,
+    "passage": "le taux d’*alerte à tort* est la probabilité qu’ils divergent sachant que la première réponse est juste.",
+    "verdict": "CONFIRME",
+    "reference": "monographie/commun/registre_termes.md l. 54",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G2",
+    "probleme": "Le registre des termes fixe « taux de fausses alertes » (introduit au ch. 9) ; la section 12.4 et le tableau ch12-plausibilite.md emploient « alerte à tort », synonyme non répertorié (et trompeur sur le fait rare où la divergence signale à bon droit l’ignorance du modèle).",
+    "correction": null,
+    "justification": "Remplacer « alerte à tort » par « fausse alerte » (ou « taux de fausses alertes ») dans 12-autre-regime.md (l. 121, 123, 130, 132, 134, 140) ainsi que dans fig_plausibilite.py / tableaux/ch12-plausibilite.md."
+  },
+  {
+    "grappe": "V3-030",
+    "constats": [
+      "C-005",
+      "P3-020"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "ligne": 138,
+    "passage": "- *La répétition attrape efficacement les erreurs hasardées.* Sur le fait rare et arbitraire, où une réponse unique a 82 % de chances d’être fausse, tirer 5 réponses offre une sévérité de 99,9 % : la dispersion trahit l’ignorance du modèle.",
+    "verdict": "CONFIRME",
+    "reference": "monographie/notes/RAPPORT_AUDIT_CALQUES.md l. 323",
+    "categorie": "argument",
+    "gravite": "A",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Présenter une sévérité de 99,9 % comme un succès (« attrape efficacement ») sans rappeler dans la même puce que le taux de fausses alertes vaut lui aussi 99,9 % (s/f ≈ 1) contredit la leçon du chapitre 9 : le contrôle sonne presque toujours et décèle l’ignorance sur la question, sans pouvoir distinguer si la première réponse était juste ou fausse.",
+    "correction": {
+      "avant": "- *La répétition attrape efficacement les erreurs hasardées.* Sur le fait rare et arbitraire, où une réponse unique a 82 % de chances d’être fausse, tirer 5 réponses offre une sévérité de 99,9 % : la dispersion trahit l’ignorance du modèle.",
+      "apres": "- *La répétition révèle l’ignorance sur les faits hasardés, au prix d’alertes quasi systématiques.* Sur le fait rare et arbitraire (82 % d’erreurs), tirer 5 réponses offre une sévérité de 99,9 %, mais avec un taux de fausses alertes également égal à 99,9 % : la dispersion signale que la question dépasse le modèle et invite à l’écarter, sans dire si la première réponse était juste ou fausse."
+    },
+    "justification": "Corrige l’erreur d’interprétation au regard du ch. 9 et supprime au passage le calque « attrape » (RAPPORT_AUDIT_CALQUES l. 323)."
+  },
+  {
+    "grappe": "V3-031",
+    "constats": [
+      "T5-019"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 3,
+    "passage": "(@sec:ch08, @prop:independance, @prop:chaines, @def:blanchiment), puis la sévérité et la décomposition du risque (@sec:ch09, @def:severite)",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "clarte",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "La phrase d’ouverture du ch. 13 (environ 220 mots) égrène douze renvois numérotés sans rappel lisible, ce qui nuit à la lecture linéaire.",
+    "correction": null,
+    "justification": "Scinder la phrase d’ouverture en deux ou trois phrases courtes et alléger la liste de numéros de définitions et propositions déjà nommées en prose."
+  },
+  {
+    "grappe": "V3-032",
+    "constats": [
+      "P3-026"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 13,
+    "passage": "toute erreur silencieuse atteint l’action avec une probabilité d’échappement égale à $1$ (@def:echappement).",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Deux imprécisions d’argument : (1) l. 13, une erreur silencieuse étant définie comme non contredite avant l’action, dire qu’elle atteint l’action avec une probabilité d’échappement égale à 1 confond une erreur réalisée avec la probabilité d’échappement d’un dispositif ; (2) l. 29, « devient signalée dès qu’on lui oppose au moins un comparateur capable de se tromper autrement » confond condition nécessaire et condition suffisante (le comparateur doit aussi réagir).",
+    "correction": [
+      {
+        "avant": "toute erreur silencieuse atteint l’action avec une probabilité d’échappement égale à $1$ (@def:echappement).",
+        "apres": "un dispositif dépourvu de comparateur adapté laisse ces erreurs atteindre l’action avec une probabilité d’échappement égale à $1$ (@def:echappement)."
+      },
+      {
+        "avant": "Une erreur devient signalée dès qu’on lui oppose au moins un comparateur capable de se tromper autrement (@prop:independance, @sec:ch08)",
+        "apres": "Une erreur peut devenir signalée lorsqu’on lui oppose un comparateur capable de se tromper autrement (@prop:independance, @sec:ch08) et doté d’une sensibilité suffisante,"
+      }
+    ],
+    "justification": "Rétablit la rigueur entre propriété d’un dispositif de contrôle et erreur réalisée, ainsi qu’entre condition nécessaire et condition suffisante."
+  },
+  {
+    "grappe": "V3-033",
+    "constats": [
+      "C-015",
+      "P3-023"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 15,
+    "passage": "la ligne supérieure (*Cause dans le cadre*) s’entend par rapport au cadre du problème posé par l’utilisateur — les faits, règles ou données qui figurent déjà dans le domaine courant ou dans la consigne fournie, sans intervention d’un facteur physique extérieur omis $z$ —, même lorsqu’un composant appris substitue son objectif statistique de plausibilité à une liste explicite de variables $X$ et à un objectif métier formel (@def:cadre).",
+    "verdict": "CONFIRME",
+    "reference": "monographie/notes/ARBITRAGES_RESTANTS.md P1.3 [REV-4A.3]",
+    "categorie": "terminologie",
+    "gravite": "B",
+    "rang": 4,
+    "groupe": "G2",
+    "probleme": "Malgré l’ajout de la phrase de la ligne 15, les deux lecteurs butent sur le glissement de référent du mot « cadre » : la Définition 2 (ch. 2) définit le cadre du composant/raisonnement, alors que la matrice 13.1 l’entend par rapport au « cadre du problème posé par l’utilisateur » (« domaine courant » ou « consigne fournie »), puis l’encadré formel (l. 51) traite composants spécifiés et appris comme égaux devant l’adéquation de leur cadre ; de plus, l’ambiguïté de cet axe (reconnue en conclusion l. 63 comme « affaire de degré ») n’est pas annoncée en 13.1.",
+    "correction": null,
+    "justification": "La correction décidée (ARBITRAGES P1.3) ne suffit pas : il faut assumer explicitement en 13.1 l’extension de la notion de cadre à celle du cadre de la tâche pour les composants appris, et signaler dès 13.1 que la frontière entre les deux lignes devient pour eux une affaire de degré (annonçant la conclusion l. 63)."
+  },
+  {
+    "grappe": "V3-034",
+    "constats": [
+      "P3-033"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 20,
+    "passage": "Le dernier matin de la dinde inductiviste (@sec:ch03, @sec:ch05) [@russell1912]",
+    "verdict": "CONFIRME",
+    "reference": "monographie/notes/RAPPORT_VERIFICATION_BIBLIO.md l. 292",
+    "categorie": "fait",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "L’apologue original de Bertrand Russell (1912, ch. VI) met en scène un poulet (chicken), et non une dinde (variante ultérieure popularisée notamment par Taleb).",
+    "correction": [
+      {
+        "avant": "Le dernier matin de la dinde inductiviste (@sec:ch03, @sec:ch05) [@russell1912]",
+        "apres": "Le dernier matin du poulet inductiviste (souvent raconté avec une dinde, @sec:ch03, @sec:ch05) [@russell1912]"
+      },
+      {
+        "avant": "ou le basculement du calendrier pour la dinde inductiviste (@sec:ch05) [@russell1912].",
+        "apres": "ou le basculement du calendrier pour le poulet inductiviste de Russell (@sec:ch05) [@russell1912]."
+      }
+    ],
+    "justification": "Confirmé par RAPPORT_VERIFICATION_BIBLIO (l. 292). À rapprocher des autres lots (ch. 3 et ch. 5 emploient aussi « dinde »)."
+  },
+  {
+    "grappe": "V3-035",
+    "constats": [
+      "P3-024"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 35,
+    "passage": "Ce qu’offre un composant spécifié est d’un autre ordre : il permet de *vider cette case à l’avance*, à la différence d’un composant appris qui oblige à contrôler chaque sortie au cas par cas.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "repetition",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "Le paragraphe principal (l. 35) et l’encadré .nuance qui suit (l. 37-41) exposent la même idée avec le même exemple (Mars Climate Orbiter) et presque les mêmes mots (« vider cette case à l’avance »).",
+    "correction": null,
+    "justification": "Conserver le paragraphe l. 35 (règle du texte principal) et resserrer l’encadré .nuance sur ce qui n’y figure pas (préconditions tacites, cas limites non couverts, contrats en prose non exécutés)."
+  },
+  {
+    "grappe": "V3-036",
+    "constats": [
+      "P3-025"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 163,
+    "passage": "de manière générale, le formalisme, là où il existe, déplace la colonne, jamais la ligne.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G1",
+    "probleme": "Le point clé 3 (l. 163) généralise sans condition « le formalisme, là où il existe, déplace la colonne, jamais la ligne », alors que l’encadré .formel (l. 49-51) subordonne ce déplacement à l’application effective du contrôle et note un effet indirect sur la ligne du bas (exposition des hypothèses aux objections externes, résumé l. 54).",
+    "correction": {
+      "avant": "de manière générale, le formalisme, là où il existe, déplace la colonne, jamais la ligne.",
+      "apres": "sous réserve d’application effective, le formalisme déplace la colonne sur la ligne du haut et expose les hypothèses à la critique, mais ne certifie jamais par lui-même la ligne."
+    },
+    "justification": "Aligne exactement le point clé 3 sur la phrase prudente du texte principal (l. 54) et sur l’encadré .formel (l. 49-51)."
+  },
+  {
+    "grappe": "V3-037",
+    "constats": [
+      "P3-027"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 71,
+    "passage": "| *Un énoncé fixé à l’avance* | Systématique : vérifié une fois, en amont (contrats, types, tests, preuves). |",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Le tableau 13.2 idéalise la colonne des composants spécifiés par rapport au chapitre 10 : un contrat seulement écrit en prose n’est pas vérifié « systématiquement » en amont s’il n’est pas appliqué mécaniquement, et « vos propres contrôles » sont préservés pour le concepteur qui écrit les règles, non nécessairement pour l’utilisateur.",
+    "correction": [
+      {
+        "avant": "| *Un énoncé fixé à l’avance* | Systématique : vérifié une fois, en amont (contrats, types, tests, preuves). |",
+        "apres": "| *Un énoncé fixé à l’avance* | Possible en amont lorsque le contrat est appliqué mécaniquement (types, tests, preuves). |"
+      },
+      {
+        "avant": "| *Vos propres contrôles* | Préservés : quelqu’un a dû écrire les règles et formuler les cas limites. |",
+        "apres": "| *Vos propres contrôles* | Préservés chez le concepteur : quelqu’un a dû écrire les règles et formuler les cas limites. |"
+      }
+    ],
+    "justification": "Supprime la contradiction entre le tableau 13.2 et les nuances du chapitre 10."
+  },
+  {
+    "grappe": "V3-038",
+    "constats": [
+      "P3-028"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 98,
+    "passage": "::: {.cas titre=\"Autoformalisation et noyau de confiance en Lean\"}",
+    "verdict": "CONFIRME",
+    "reference": "authoring_conventions.md § 4",
+    "categorie": "structure",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G2",
+    "probleme": "Le bloc est typé .cas (« Étude de cas »), que l’avant-propos réserve à des épisodes documentés et datés, alors que le texte ouvre sur un scénario hypothétique (« Considérons un problème mathématique… ») appuyé sur des références d’outils.",
+    "correction": {
+      "avant": "::: {.cas titre=\"Autoformalisation et noyau de confiance en Lean\"}",
+      "apres": "::: {.outils titre=\"Autoformalisation et noyau de confiance en Lean\"}"
+    },
+    "justification": "La classe .outils correspond à la présentation d’un dispositif technique (Lean 4 et autoformalisation) sans devoir inventer un épisode daté."
+  },
+  {
+    "grappe": "V3-039",
+    "constats": [
+      "P3-029"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 120,
+    "passage": "C’est le seul comparateur qui ne soit pas lui-même une représentation, et donc le seul qui n’ait pas de cadre propre.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "terminologie",
+    "gravite": "B",
+    "rang": 4,
+    "groupe": "G2",
+    "probleme": "La section 13.2.4 présente d’abord le monde comme « le seul comparateur qui ne soit pas lui-même une représentation, et donc le seul qui n’ait pas de cadre propre » (l. 120), puis range sous « le monde » (l. 122) des environnements informatiques déterministes (compilateur, tests, noyau logique) qui « rejoignent la première source » et reposent donc sur des cadres formels.",
+    "correction": null,
+    "justification": "Distinguer explicitement dès le début de 13.2.4 le monde physique, clinique ou institutionnel (seul sans cadre propre) de l’environnement d’exécution informatique (où la confrontation est réelle mais rejoint les énoncés formels de la première source)."
+  },
+  {
+    "grappe": "V3-040",
+    "constats": [
+      "P3-030"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 122,
+    "passage": "la confrontation est rapide, réversible et peu coûteuse.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "fait",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Exécuter du code généré ou interroger une base de données réelle n’est pas toujours réversible (écritures, suppressions, effets de bord) : cela suppose un environnement isolé.",
+    "correction": {
+      "avant": "la confrontation est rapide, réversible et peu coûteuse.",
+      "apres": "la confrontation, lorsqu’elle s’exécute dans un environnement isolé, est rapide, réversible et peu coûteuse."
+    },
+    "justification": "Ajoute la condition d’isolement sans anticiper le terme « bac à sable » (introduit au ch. 17)."
+  },
+  {
+    "grappe": "V3-041",
+    "constats": [
+      "C-039",
+      "P3-031"
+    ],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 128,
+    "passage": "conduit directement à une distinction classique des sciences de l’ingénieur et de la simulation numérique [@fauriat2026frame], qui met de l’ordre dans tout ce qui précède.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "fait",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "Une distinction présentée comme « classique des sciences de l’ingénieur et de la simulation numérique » (vérification et validation) est uniquement référencée à l’article de l’auteur [@fauriat2026frame], sans référence du domaine de l’ingénierie ou de la simulation.",
+    "correction": null,
+    "justification": "Requiert l’ajout d’une référence de référence du domaine (ex. guide ASME V&V, Oberkampf & Roy ou IEEE) dans biblio.bib, en réservant [@fauriat2026frame] au rapprochement avec la matrice à deux axes."
+  },
+  {
+    "grappe": "V3-042",
+    "constats": [
+      "P3-032"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 134,
+    "passage": "Cette paire conceptuelle recouvre exactement l’architecture de la matrice à deux axes du @tbl:ch13-deux-axes",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "« Recouvre exactement » est excessif : la matrice croise lieu de la cause et présence d’un comparateur, tandis que la vérification agit sur la colonne de la ligne supérieure et la validation sur la frontière entre les deux lignes. Le lien avec « vérification en amont » (ch. 10) mérite aussi un mot.",
+    "correction": {
+      "avant": "Cette paire conceptuelle recouvre exactement l’architecture de la matrice à deux axes du @tbl:ch13-deux-axes",
+      "apres": "Cette paire conceptuelle s’articule directement avec la matrice à deux axes du @tbl:ch13-deux-axes"
+    },
+    "justification": "Remplace « recouvre exactement » par « s’articule directement avec », plus juste vis-à-vis des deux puces qui suivent."
+  },
+  {
+    "grappe": "V3-043",
+    "constats": [
+      "PISTE-T-02"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "ligne": 3,
+    "passage": "vérification en amont",
+    "verdict": "REJETE",
+    "reference": "relecture/pistes/termes.md l. 18-20 ; monographie/commun/registre_termes.md l. 59",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Piste mécanique signalant « vérification » (introduit au ch. 13) aux ch. 10 (l. 3, 82, 101, 129, 135, 145), 11 (l. 3, 71) et 12 (l. 3, 31).",
+    "correction": null,
+    "justification": "Faux positif mécanique : toutes les occurrences relevées appartiennent à l’expression « vérification en amont », terme distinct du registre introduit dès le chapitre 10."
+  },
+  {
+    "grappe": "V3-044",
+    "constats": [
+      "PISTE-R-01"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 120,
+    "passage": "C’est le seul comparateur qui ne soit pas lui-même une représentation, et donc le seul qui n’ait pas de cadre propre. Directement, par l’épreuve, ou indirectement, par l’intermédiaire de celui qui nous avertit après l’avoir éprouvé (@sec:ch07-deux-voies), il demeure, sous les conditions de la @prop:cause-commune (@sec:ch07), la source ultime de toute pertinence nouvelle.",
+    "verdict": "REJETE",
+    "reference": "relecture/pistes/repetitions.md l. 44 ; monographie/notes/ARBITRAGES_RESTANTS.md P1.11.1 [SYN-E1]",
+    "categorie": "repetition",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "Piste mécanique signalant un recouvrement de 30 % entre ch. 13 (§ 13.2.4, l. 120) et la conclusion (l. 123).",
+    "correction": null,
+    "justification": "Reprise volontaire en conclusion, alignée explicitement par l’arbitrage P1.11.1 ([SYN-E1]) lors du rappel des comparateurs du livre lui-même."
+  },
+  {
+    "grappe": "V3-045",
+    "constats": [
+      "P3-022"
+    ],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "ligne": 116,
+    "passage": "D’abord, comme l’a établi l’étude de la plausibilité au @sec:ch12, réinterroger un même modèle ou des modèles très voisins attrape les erreurs hasardées où le modèle hésite, mais échoue devant les erreurs constantes où il reproduit fidèlement un biais fréquent de ses données d’entraînement. La sévérité (@def:severite) du second avis tombe alors au plus bas.",
+    "verdict": "CONFIRME",
+    "reference": "monographie/notes/RAPPORT_AUDIT_CALQUES.md l. 334",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G1",
+    "probleme": "L’exemple quantitatif du ch. 12 est « purement illustratif » et ne porte que sur des tirages répétés d’un même modèle : écrire au ch. 13 qu’il a « établi » le résultat, l’étendre à « des modèles très voisins » et dire que la sévérité « tombe au plus bas » (42,0 % dans l’exemple) durcit son statut.",
+    "correction": {
+      "avant": "D’abord, comme l’a établi l’étude de la plausibilité au @sec:ch12, réinterroger un même modèle ou des modèles très voisins attrape les erreurs hasardées où le modèle hésite, mais échoue devant les erreurs constantes où il reproduit fidèlement un biais fréquent de ses données d’entraînement. La sévérité (@def:severite) du second avis tombe alors au plus bas.",
+      "apres": "D’abord, comme l’illustre l’étude de la plausibilité au @sec:ch12 [@farquhar2024], réinterroger un même modèle ne décèle par sa dispersion que les erreurs hasardées où il hésite, et échoue devant les erreurs constantes où il reproduit fidèlement un biais fréquent de ses données d’entraînement : la sévérité (@def:severite) du second avis devient alors faible."
+    },
+    "justification": "Remplace « établi » par « illustre », cite [@farquhar2024], supprime l’extrapolation non appuyée aux « modèles très voisins », adoucit « tombe au plus bas » et retire au passage le calque « attrape »."
+  }
+]

@@ -1,0 +1,562 @@
+[
+  {
+    "grappe": "V4-001",
+    "constats": ["C-010"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "ligne": 15,
+    "passage": "À la @sec:ch10-composition, l’enchaînement $\\{P\\}\\, C_1 \\,\\{R\\}$ puis $\\{R\\}\\, C_2 \\,\\{Q\\}$",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "dependance",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Le renvoi pointe vers @sec:ch10-composition (10.2), alors que la règle de composition séquentielle des triplets de Hoare figure dans l’encadré Boîte à outils de @sec:ch10-boite-outils (10.1).",
+    "correction": {
+      "avant": "À la @sec:ch10-composition, l’enchaînement $\\{P\\}\\, C_1 \\,\\{R\\}$ puis $\\{R\\}\\, C_2 \\,\\{Q\\}$",
+      "apres": "À la @sec:ch10-boite-outils, l’enchaînement $\\{P\\}\\, C_1 \\,\\{R\\}$ puis $\\{R\\}\\, C_2 \\,\\{Q\\}$"
+    },
+    "justification": "Vérifié dans 10-couches-basses.md (l. 23-31) : les triplets de Hoare et la règle de composition séquentielle sont en 10.1 (#sec:ch10-boite-outils), non en 10.2 (#sec:ch10-composition)."
+  },
+  {
+    "grappe": "V4-002",
+    "constats": ["C-022", "T5-022"],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "ligne": 11,
+    "passage": "On morcelle donc cette finalité floue en sous-problèmes locaux plus nets, tandis que les résultats intermédiaires circulent toujours plus vite d’un module au suivant.",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P2.4 (REV-3.1)",
+    "categorie": "repetition",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "La section 14.1 (l. 11-13) reprend presque mot pour mot 8.4 (hiérarchie des finalités, résultats qui « circulent toujours plus vite », chaîne de montage automobile). En outre, les exemples quantitatifs de 14.2.3 (l. 54-80) et 16.1 (l. 26-54) répètent longuement la mise en place de ceux des ch. 8 et 9.",
+    "correction": null,
+    "justification": "Confirmé par comparaison directe avec 08-independance-chaines.md (l. 100-102 et 143-159) et 09-severite-echappement.md (l. 150-172). Groupe G2 : l’auteur doit arbitrer le degré d’allègement entre autonomie de chaque chapitre et renvoi aux chapitres 8 et 9 (dans le prolongement de P2.4)."
+  },
+  {
+    "grappe": "V4-003",
+    "constats": ["C-035"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "ligne": 130,
+    "passage": "ce facteur finit alors par intervenir dans une large part des défaillances restantes.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "La locution « finit alors par » suggère à tort que la part relative du facteur partagé croît avec la longueur N de la trajectoire, alors que les tableaux montrent l’inverse (68,3 % à N = 4 contre 42,2 % à N = 12).",
+    "correction": {
+      "avant": "ce facteur finit alors par intervenir dans une large part des défaillances restantes.",
+      "apres": "ce facteur intervient dans une part importante des défaillances restantes, sur laquelle aucun contrôle de même nature n’a prise."
+    },
+    "justification": "Exact : quand N croît, le risque dû aux erreurs locales croît et la part relative q / P(échec) diminue. La reformulation supprime l’ambiguïté temporelle/asymptotique tout en restant fidèle à la leçon du modèle."
+  },
+  {
+    "grappe": "V4-004",
+    "constats": ["P4-008"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "ligne": 79,
+    "passage": "Cet exemple montre pourquoi multiplier les contrôles internes ou demander au même type de modèle de relire chaque étape ne suffit jamais à sécuriser une trajectoire longue.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "L’adverbe « jamais » généralise indûment à partir d’un exemple illustratif où q = 3 % : si q = 0 %, le contrôle croisé abaisse bien l’échec à 4,24 %. Ce qui ne suffit pas, c’est de lever le risque porté par un facteur partagé.",
+    "correction": {
+      "avant": "ne suffit jamais à sécuriser une trajectoire longue.",
+      "apres": "ne suffit pas à lever le risque porté par un facteur partagé le long d’une trajectoire."
+    },
+    "justification": "La conclusion générale doit porter sur l’impuissance face à un facteur partagé q, non sur l’impossibilité absolue de sécuriser une trajectoire."
+  },
+  {
+    "grappe": "V4-005",
+    "constats": ["C-038"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "ligne": 112,
+    "passage": "La vérification réussit à chaque couche basse, tandis que la question de validation — cet acte était-il le bon ? — n’est posée par personne (@sec:ch13-verification-validation).",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Au sens du ch. 13 (registre_termes.md), la validation demande si le problème posé représente fidèlement la réalité. Or un acte erroné d’un agent peut venir d’une faute interne du modèle (fait inventé, montant faux), qui relève de la vérification de l’agent et non de la seule validation.",
+    "correction": {
+      "avant": "La vérification réussit à chaque couche basse, tandis que la question de validation — cet acte était-il le bon ? — n’est posée par personne (@sec:ch13-verification-validation).",
+      "apres": "La vérification réussit à chaque couche basse, tandis que personne ne demande si cet acte était le bon — ni s’il repose sur une faute interne de l’agent, ni si la tâche posée correspondait à la réalité (@sec:ch13-verification-validation)."
+    },
+    "justification": "Évite d’élargir le terme technique « validation » au-delà de sa définition du ch. 13 tout en conservant le contraste avec la vérification des couches basses."
+  },
+  {
+    "grappe": "V4-006",
+    "constats": ["P4-005"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "ligne": 108,
+    "passage": "Parce que l’autorité et la garantie y marchaient du même pas, selon une pyramide stricte.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Présenter l’alignement autorité/garantie dans la pile classique comme « une pyramide stricte » qui « rendait la pile sûre » (l. 112) contredit l’épisode de Knight Capital (l. 42-46) et la remarque précédente sur les couches basses exécutant fidèlement des ordres invalides.",
+    "correction": [
+      {
+        "avant": "Parce que l’autorité et la garantie y marchaient du même pas, selon une pyramide stricte.",
+        "apres": "Parce que l’autorité et la garantie y allaient, pour l’essentiel, du même pas."
+      },
+      {
+        "avant": "*inverse l’architecture qui rendait la pile sûre*",
+        "apres": "*inverse l’architecture qui contenait les défaillances*"
+      }
+    ],
+    "justification": "Conforme aux pièges globaux 3 et 4 de 00_global.md § 9 : le logiciel classique ne rend pas la pile absolument sûre, il en contient et localise les défaillances."
+  },
+  {
+    "grappe": "V4-007",
+    "constats": ["P4-006"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "ligne": 117,
+    "passage": "L’action automatisée devient alors une série de décisions uniques à fort coût (@sec:ch04-decision-unique)",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "terminologie",
+    "gravite": "C",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Dans le registre des termes (introduit au ch. 4), une « décision unique » est prise sans série d’essais comparables. L’expression « série de décisions uniques » est donc contradictoire avec la définition.",
+    "correction": {
+      "avant": "L’action automatisée devient alors une série de décisions uniques à fort coût (@sec:ch04-decision-unique)",
+      "apres": "L’action automatisée devient alors une suite d’actions dont chacune, irréversible, a les traits d’une décision unique à fort coût (@sec:ch04-decision-unique)"
+    },
+    "justification": "Supprime l’oxymore terminologique tout en gardant le renvoi exact à @sec:ch04-decision-unique."
+  },
+  {
+    "grappe": "V4-008",
+    "constats": ["P4-007"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "ligne": 58,
+    "passage": "où chaque étape est contrôlée en parallèle par un pair de même compétence",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "L’identité du « pair de même compétence » (second modèle indépendant ou programme dédié) n’est pas précisée, et la liste des hypothèses favorables (l. 79) omet l’indépendance du contrôleur sur les erreurs locales — hypothèse pourtant centrale que le ch. 16 remettra en cause.",
+    "correction": [
+      {
+        "avant": "un pair de même compétence qui manque chaque erreur locale avec la probabilité $m = p = 6\\,\\%$, indépendamment de l’agent",
+        "apres": "un contrôleur distinct de même compétence qui manque chaque erreur locale avec la probabilité $m = p = 6\\,\\%$, indépendamment de l’agent"
+      },
+      {
+        "avant": "erreurs indépendantes d’une étape à l’autre, taux d’erreur constant $p = 6\\,\\%$, comparabilité intacte aux interfaces ($B_{\\text{cmp}} = \\emptyset$) et prise en compte immédiate de chaque alerte.",
+        "apres": "erreurs indépendantes d’une étape à l’autre, contrôleur indépendant de l’agent sur les erreurs locales (hypothèse que lèvera le @sec:ch16), taux d’erreur constant $p = 6\\,\\%$, comparabilité intacte aux interfaces ($B_{\\text{cmp}} = \\emptyset$) et prise en compte immédiate de chaque alerte."
+      }
+    ],
+    "justification": "Évite de laisser croire que le pair pourrait être un humain à vitesse machine ou un simple second appel au même modèle partageant déjà les erreurs locales."
+  },
+  {
+    "grappe": "V4-009",
+    "constats": ["P4-019"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "ligne": 119,
+    "passage": "Le @sec:ch17 formalisera ces deux dispositifs complémentaires",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "clarte",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "La phrase précédente parle « des espaces » et « des frontières », sans employer le mot « dispositifs ». L’anaphore « ces deux dispositifs complémentaires » reste floue pour qui n’a pas encore lu le ch. 17.",
+    "correction": {
+      "avant": "Le @sec:ch17 formalisera ces deux dispositifs complémentaires",
+      "apres": "Le @sec:ch17 formalisera ces deux dispositifs complémentaires — l’espace d’essai isolé et le verrou avant l’acte —"
+    },
+    "justification": "Précise l’antécédent sans introduire en gras les termes du registre (bac à sable, verrou) qui relèvent du ch. 17."
+  },
+  {
+    "grappe": "V4-010",
+    "constats": ["P4-020"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "ligne": 5,
+    "passage": "## Des *pipelines* d’IA comme chaînes orchestrées {#sec:ch14-pipelines}",
+    "verdict": "PLAUSIBLE",
+    "reference": "",
+    "categorie": "typographie",
+    "gravite": "C",
+    "rang": 6,
+    "groupe": "G1",
+    "probleme": "Le sigle « IA » figure uniquement dans les deux titres de section 14.1 et 14.3, alors que le corps du chapitre écrit « intelligence artificielle » (le sigle apparaît toutefois dans le titre de la partie 3 et au ch. 0). De plus, le titre 14.1 est formulé comme un empilement nominal.",
+    "correction": [
+      {
+        "avant": "## Des *pipelines* d’IA comme chaînes orchestrées {#sec:ch14-pipelines}",
+        "apres": "## Les *pipelines* d’intelligence artificielle comme chaînes orchestrées {#sec:ch14-pipelines}"
+      },
+      {
+        "avant": "## Le blanchiment dans les chaînes d’IA {#sec:ch14-blanchiment}",
+        "apres": "## Le blanchiment dans les chaînes d’intelligence artificielle {#sec:ch14-blanchiment}"
+      }
+    ],
+    "justification": "Affaire de jugement stylistique (le sigle IA est déjà présent dans partie-3.md et ch00), mais l’harmonisation des titres avec le corps du chapitre et le retrait de l’article indéfini « Des » sont simples et améliorent la tenue."
+  },
+  {
+    "grappe": "V4-011",
+    "constats": ["P4-001"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "ligne": 92,
+    "passage": "ou, à défaut et au prix d’une neutralité moindre puisque le texte transmet déjà son découpage, lui demande de rechercher les failles, les hypothèses cachées et les contre-exemples possibles d’un texte déjà rédigé",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P1.11.3 (SYN-E3)",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G2",
+    "probleme": "La seconde condition est annoncée (partie-4, chapeau du ch. 15, points clés) comme « soumettre le problème nu sans transmettre son cadre ». Or le corps (l. 92) admet une variante sur texte déjà rédigé qui transmet le découpage et ressemble à l’exemple condamné au premier piège (l. 83).",
+    "correction": null,
+    "justification": "La correction décidée (ARBITRAGES P1.11.3 / SYN-E3) ne suffit pas : l’ajout de « à défaut et au prix d’une neutralité moindre » laisse subsister une contradiction entre la règle stricte des résumés et la tolérance du corps. Groupe G2 : soit supprimer cette variante, soit graduer explicitement la seconde condition dans l’introduction, le corps et les points clés."
+  },
+  {
+    "grappe": "V4-012",
+    "constats": ["P4-002"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "ligne": 77,
+    "passage": "Cette dynamique générale éclaire aussi pourquoi la posture devenue la plus courante devant un modèle de langage — « le modèle rédige un premier jet, et l’humain relit et corrige » — échoue si souvent",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "structure",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "L’ironie de Bainbridge (atrophie des compétences, l. 73-75) n’explique pas le piège du « premier jet machine, relecture humaine » (l. 79), qui tient au partage du cadre. Le connecteur « Cette dynamique générale éclaire aussi » crée une fausse dérivation. De plus, le chapeau du chapitre (l. 3) omet l’ironie de Bainbridge.",
+    "correction": [
+      {
+        "avant": "Cette dynamique générale éclaire aussi pourquoi la posture devenue la plus courante devant un modèle de langage",
+        "apres": "À cette atrophie des compétences s’ajoute un autre mécanisme, qui explique pourquoi la posture devenue la plus courante devant un modèle de langage"
+      },
+      {
+        "avant": "que la belle forme a cessé d’attester le travail de fond, et qu’une personne et un modèle",
+        "apres": "que la belle forme a cessé d’attester le travail de fond, que l’automatisation émousse les compétences requises en cas d’incident (ironie de Bainbridge), et qu’une personne et un modèle"
+      }
+    ],
+    "justification": "Rétablit une transition exacte entre Bainbridge et les pièges de la consigne, et aligne l’introduction du chapitre sur sa section 15.4 et sur partie-4.md."
+  },
+  {
+    "grappe": "V4-013",
+    "constats": ["P4-003"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "ligne": 60,
+    "passage": "Ne pouvant les distinguer, les acheteurs n’offrent qu’un prix moyen ; ce prix dissuade alors les propriétaires de véhicules sains de vendre, la qualité moyenne offerte baisse, le prix recule encore et les mauvais véhicules finissent par chasser les bons du marché [@akerlof1970].",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "terminologie",
+    "gravite": "B",
+    "rang": 4,
+    "groupe": "G2",
+    "probleme": "Le corps (l. 52) attribue le terme « équilibre mélangeant » à Akerlof 1970, et l’encadré (l. 60) confond l’équilibre mélangeant (même prix à un instant donné pour des qualités indiscernables) avec la dynamique de sélection adverse où les bons véhicules quittent le marché (qui mène au contraire à la disparition du mélange).",
+    "correction": null,
+    "justification": "P4 a raison sur l’histoire économique : la notion d’équilibre mélangeant (pooling equilibrium) vient de la théorie des jeux / du signal (Spence 1973), tandis qu’Akerlof 1970 décrit le mécanisme dynamique de sélection adverse (éviction des bons produits). Groupe G2 : conserver le terme du registre « équilibre mélangeant » en l. 52 sans l’attribuer à Akerlof, et distinguer dans l’encadré le mélange initial (prix unique) de son issue dynamique (sélection adverse)."
+  },
+  {
+    "grappe": "V4-014",
+    "constats": ["P4-004"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "ligne": 38,
+    "passage": "Il établit toutefois un fait décisif contre toute confiance spontanée dans l’impression de maîtrise : *la perception subjective n’est pas un instrument de mesure*.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G1",
+    "probleme": "Une seule étude datée (METR 2025), dont la phrase précédente dit qu’elle n’isole pas la fluidité comme cause unique, est présentée en l. 38 comme établissant « un fait décisif ». La page de partie (partie-4.md l. 7) durcit encore en affirmant que « cette fluidité trompe jusqu’aux experts », contrairement aux points clés (« peut tromper »).",
+    "correction": [
+      {
+        "fichier": "monographie/chapitres/15-erosion-verifications.md",
+        "avant": "Il établit toutefois un fait décisif contre toute confiance spontanée dans l’impression de maîtrise",
+        "apres": "Il illustre toutefois, sur un cas documenté, que la perception subjective peut s’écarter fortement de la mesure"
+      },
+      {
+        "fichier": "monographie/parties/partie-4.md",
+        "avant": "et cette fluidité trompe jusqu’aux experts sur leur propre productivité.",
+        "apres": "et cette fluidité peut tromper jusqu’aux experts sur leur propre productivité."
+      }
+    ],
+    "justification": "Aligne le statut épistémique d’un constat empirique daté (un seul essai randomisé) dans le corps, la page de partie et les points clés."
+  },
+  {
+    "grappe": "V4-015",
+    "constats": ["P4-016"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "ligne": 28,
+    "passage": "c’est l’uniformité parfaite de sa voix.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "argument",
+    "gravite": "C",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Les tournures « uniformité parfaite », « entièrement disparu » et « Rien... ne vient plus prévenir » (l. 28) sont trop absolues : certains modèles nuancent ou refusent, même si le ton reste lisse.",
+    "correction": [
+      {
+        "avant": "c’est l’uniformité parfaite de sa voix.",
+        "apres": "c’est l’uniformité quasi complète de sa voix."
+      },
+      {
+        "avant": "le signe révélateur a toutefois entièrement disparu.",
+        "apres": "le signe révélateur a toutefois pratiquement disparu."
+      }
+    ],
+    "justification": "Nuance minimale qui rend l’énoncé exact sans affaiblir l’argument."
+  },
+  {
+    "grappe": "V4-016",
+    "constats": ["P4-017"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "ligne": 30,
+    "passage": "La disparition du frottement et de l’hésitation produit un second effet, tout aussi déroutant, sur le jugement que celui qui travaille porte sur sa propre performance.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "clarte",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "La section s’ouvre sur « un second mécanisme » (l. 22) et le chapitre compte un « quatrième mécanisme » (l. 73). Parler d’« un second effet » en l. 30 pour l’illusion de productivité brouille la numérotation.",
+    "correction": {
+      "avant": "produit un second effet, tout aussi déroutant, sur le jugement",
+      "apres": "produit un autre effet, tout aussi déroutant, sur le jugement"
+    },
+    "justification": "Lève la collision de numérotation entre mécanismes et effets."
+  },
+  {
+    "grappe": "V4-017",
+    "constats": ["P4-018"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "ligne": 86,
+    "passage": "($\\Pr(A \\mid E)$ dans l’@eq:ch09-accord-cotes) se rapproche de $\\Pr(A \\mid \\bar{E})$, le rapport de vraisemblance de son accord s’effondre vers $1$.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "chiffres",
+    "gravite": "B",
+    "rang": 4,
+    "groupe": "G1",
+    "probleme": "Dans l’@eq:ch09-accord-cotes rappelée en l. 86, ni A (accord du contrôleur) ni E (affirmation fausse) ne sont redéfinis — alors qu’au ch. 14 l. 86 la lettre A désignait les hypothèses explicites — et le rapport de vraisemblance cité n’est pas écrit explicitement.",
+    "correction": {
+      "avant": "($\\Pr(A \\mid E)$ dans l’@eq:ch09-accord-cotes) se rapproche de $\\Pr(A \\mid \\bar{E})$, le rapport de vraisemblance de son accord s’effondre vers $1$.",
+      "apres": "($\\Pr(A \\mid E)$ dans l’@eq:ch09-accord-cotes, où $A$ note l’accord du contrôleur et $E$ l’erreur) se rapproche de $\\Pr(A \\mid \\bar{E})$, le rapport de vraisemblance $\\Pr(A \\mid \\bar{E}) / \\Pr(A \\mid E)$ s’effondre vers $1$."
+    },
+    "justification": "Rend la phrase autonome et lève la collision de notation avec le ch. 14."
+  },
+  {
+    "grappe": "V4-018",
+    "constats": ["C-045"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "ligne": 53,
+    "passage": "En outre, comme $c$ mesure une part conditionnelle aux erreurs restantes, cette baisse globale recouvre deux mouvements opposés : les étourderies individuelles ont reculé, mais sur le sous-ensemble des erreurs propres au modèle partagé — dont la fréquence absolue $P(\\text{faux}) \\times c$ passe ici de $10\\,\\% \\times 10\\,\\% = 1{,}0\\,\\%$ à $2\\,\\% \\times 60\\,\\% = 1{,}2\\,\\%$ et qui frappent de manière systémique tous les dossiers —, le filet de sécurité a entièrement disparu.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "clarte",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "Le seul passage qui montre la hausse absolue des erreurs partagées (1,0 % → 1,2 %) est enfoui dans une phrase de plus de cinq lignes à incise cadratinée, difficile à lire d’une traite.",
+    "correction": {
+      "avant": "En outre, comme $c$ mesure une part conditionnelle aux erreurs restantes, cette baisse globale recouvre deux mouvements opposés : les étourderies individuelles ont reculé, mais sur le sous-ensemble des erreurs propres au modèle partagé — dont la fréquence absolue $P(\\text{faux}) \\times c$ passe ici de $10\\,\\% \\times 10\\,\\% = 1{,}0\\,\\%$ à $2\\,\\% \\times 60\\,\\% = 1{,}2\\,\\%$ et qui frappent de manière systémique tous les dossiers —, le filet de sécurité a entièrement disparu.",
+      "apres": "En outre, comme $c$ mesure une part conditionnelle aux erreurs restantes, cette baisse globale recouvre deux mouvements opposés. Les étourderies individuelles ont reculé, mais les erreurs propres au modèle partagé passent en fréquence absolue $P(\\text{faux}) \\times c$ de $10\\,\\% \\times 10\\,\\% = 1{,}0\\,\\%$ à $2\\,\\% \\times 60\\,\\% = 1{,}2\\,\\%$ : elles frappent de manière systémique tous les dossiers, et le filet de sécurité a entièrement disparu pour elles."
+    },
+    "justification": "Scinde la phrase en deux tout en conservant l’intégralité des valeurs et de l’argument ajouté par P1.1."
+  },
+  {
+    "grappe": "V4-019",
+    "constats": ["P4-010", "T1-006"],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "ligne": 5,
+    "passage": "## Le taux d’erreur baisse, la probabilité d’échappement monte {#sec:ch16-taux-echappement}",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P1.1",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G2",
+    "probleme": "Le titre de 16.1, le premier point clé (l. 116) et la page de partie (partie-4.md l. 9) affirment sans condition que l’usage d’un modèle partagé fait monter l’échappement, alors que la hausse de c est une hypothèse de travail (stipulée à 60 % dans l’exemple) et que le risque total baisse dans le tableau 16.1 (5,57 % → 1,93 %).",
+    "correction": null,
+    "justification": "La correction décidée (ARBITRAGES P1.1) ne suffit pas : l’explication ajoutée en 16.1 l. 53 n’a pas été répercutée sur le titre de 16.1, le point clé l. 116 et partie-4.md l. 9. Groupe G2 : reformuler ces trois énoncés au conditionnel ou en précisant « lorsque la part c des causes partagées augmente » (sans changer le slug #sec:ch16-taux-echappement)."
+  },
+  {
+    "grappe": "V4-020",
+    "constats": ["T2-008"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "ligne": 51,
+    "passage": "*Seul un comparateur qui se trompe autrement abaisse le plancher.*",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P1.1",
+    "categorie": "argument",
+    "gravite": "B",
+    "rang": 1,
+    "groupe": "G1",
+    "probleme": "Le plancher sous examen complet vaut 1 − s = c + (1 − c)m : il baisse aussi lorsque l’oubli indépendant m diminue (de 28,0 % à 19,0 % entre « Contrôle entre pairs » et « Indépendant et précis »). Seule la part incompressible c exige un comparateur qui se trompe autrement.",
+    "correction": {
+      "avant": "*Seul un comparateur qui se trompe autrement abaisse le plancher.*",
+      "apres": "*Seul un comparateur qui se trompe autrement abaisse la part incompressible $c$ du plancher.*"
+    },
+    "justification": "La correction décidée (ARBITRAGES P1.1) ne suffit pas : le point clé l. 118 a bien été corrigé en « abaisse cette part », mais l’intertitre de la puce l. 51 dit encore « abaisse le plancher »."
+  },
+  {
+    "grappe": "V4-021",
+    "constats": ["P4-013"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "ligne": 61,
+    "passage": "il met ainsi à nu un plancher d’échappement sous examen complet de 68,0 % ($1 - s = c + (1 - c)m = 60\\,\\% + 8\\,\\%$), dont les 60 % de causes d’erreur partagées forment la part incompressible.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "repetition",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "La formule et les valeurs du plancher de 68,0 % (60 % + 8 %) sont répétées cinq fois dans la même section (légende l. 34, calcul l. 43, lecture l. 50, encadré Nuance l. 61, points clés l. 118).",
+    "correction": {
+      "avant": "il met ainsi à nu un plancher d’échappement sous examen complet de 68,0 % ($1 - s = c + (1 - c)m = 60\\,\\% + 8\\,\\%$), dont les 60 % de causes d’erreur partagées forment la part incompressible.",
+      "apres": "il met ainsi à nu le plancher dû à la corrélation des causes d’erreur, contre lequel la seule baisse des fausses alertes reste sans effet."
+    },
+    "justification": "Confirmé par lecture linéaire. Retouche proposée en G2 : alléger l’encadré Nuance (l. 61) qui vient juste après l’exemple chiffré, et décider s’il faut aussi alléger l. 34 ou l. 50."
+  },
+  {
+    "grappe": "V4-022",
+    "constats": ["P4-011", "T1-033"],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "ligne": 92,
+    "passage": "Ainsi se dégradent les biens communs épistémiques",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G1",
+    "probleme": "Le résultat de Shumailov et al. (2024) porte sur des expériences d’entraînement récursif sur données synthétiques. Son extrapolation à l’ensemble du Web et des générations futures est présentée comme un fait acquis (« Ainsi se dégradent les biens communs épistémiques » l. 92, « dégrade par récursion » l. 119) sans marquer qu’il s’agit d’un risque ou d’une hypothèse de travail.",
+    "correction": [
+      {
+        "avant": "Ainsi se dégradent les biens communs épistémiques",
+        "apres": "Ainsi risquent de se dégrader les biens communs épistémiques"
+      },
+      {
+        "avant": "prive leur accord de toute sévérité et dégrade par récursion les générations suivantes de modèles.",
+        "apres": "prive leur accord de toute sévérité et expose par récursion les générations suivantes de modèles à une dégradation."
+      }
+    ],
+    "justification": "Distingue le constat expérimental documenté (Shumailov 2024) de son extrapolation à l’échelle du Web."
+  },
+  {
+    "grappe": "V4-023",
+    "constats": ["P4-012", "T1-011"],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "ligne": 96,
+    "passage": "une dynamique proprement organisationnelle qui explique pourquoi nos institutions tendent à aggraver le déséquilibre au lieu de le corriger.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "statut",
+    "gravite": "B",
+    "rang": 3,
+    "groupe": "G2",
+    "probleme": "La section 16.4 (l. 96-104) et son résumé dans partie-4.md (l. 9 : « les organisations n’en continuent pas moins de récompenser le volume produit... ») énoncent comme un fait général une dynamique organisationnelle sans source empirique ni mention de statut, alors que la Conclusion indique que l’érosion des contrôles repose sur peu de mesures.",
+    "correction": null,
+    "justification": "Confirmé : aucune citation empirique n’appuie 16.4, contrairement au reste de la partie. Groupe G2 : l’auteur doit choisir entre marquer explicitement 16.4 comme hypothèse de travail (en adoucissant partie-4.md l. 9 en « risquent de continuer ») ou appuyer la section sur une source documentée."
+  },
+  {
+    "grappe": "V4-024",
+    "constats": ["T5-021"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "ligne": 80,
+    "passage": "À la @sec:ch08-blanchiment (@def:blanchiment), le blanchiment a été défini comme la perte des conditions d’un résultat — hypothèses, unités et définitions comprises — lorsqu’il change de mains, et un proche cousin lui a été associé : l’effacement de la provenance, déjà retrouvé à la @sec:ch14-blanchiment entre les étapes d’un *pipeline*.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "repetition",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G1",
+    "probleme": "La définition mot pour mot du blanchiment (@def:blanchiment) est répétée en 14.3 (l. 86) puis à nouveau en 16.3 (l. 80), après avoir été résumée dans l’introduction du ch. 14.",
+    "correction": {
+      "avant": "À la @sec:ch08-blanchiment (@def:blanchiment), le blanchiment a été défini comme la perte des conditions d’un résultat — hypothèses, unités et définitions comprises — lorsqu’il change de mains, et un proche cousin lui a été associé : l’effacement de la provenance, déjà retrouvé à la @sec:ch14-blanchiment entre les étapes d’un *pipeline*.",
+      "apres": "Le blanchiment (@def:blanchiment, @sec:ch08-blanchiment) et son proche cousin, l’effacement de la provenance déjà rencontré à la @sec:ch14-blanchiment entre les étapes d’un *pipeline*, prennent ici une ampleur collective."
+    },
+    "justification": "Supprime la redite textuelle de la définition tout en conservant les deux renvois utiles."
+  },
+  {
+    "grappe": "V4-025",
+    "constats": ["P4-014"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "ligne": 112,
+    "passage": "Le diagnostic est désormais complet : agir d’après un cadre fini (@sec:partie-1), ce qui peut nous détromper à temps (@sec:partie-2), la spécification passée dans les données (@sec:partie-3), puis ce que l’automatisation fait de nos contrôles.",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "repetition",
+    "gravite": "C",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "La fin du ch. 16 (l. 110-112) récapitule les trois chapitres de la partie IV et reprend presque mot pour mot le dernier paragraphe de partie-4.md (l. 11). Ce texte de transition est en outre placé après l’encadré Question (l. 106-108), à l’inverse des ch. 14 et 15.",
+    "correction": null,
+    "justification": "Confirmé : redite avec partie-4.md l. 11 et asymétrie de placement avec les ch. 14 et 15. Groupe G2 : replacer la transition avant l’encadré Question et alléger l’une des deux occurrences."
+  },
+  {
+    "grappe": "V4-026",
+    "constats": ["P4-015", "T5-003"],
+    "lecteurs_distincts": 2,
+    "fichier": "monographie/parties/partie-4.md",
+    "ligne": 3,
+    "passage": "Les épisodes et les mesures cités, de la panne de Knight Capital en 2012 à l’essai de METR en 2025, sont datés et présentés comme des études de cas",
+    "verdict": "CONFIRME",
+    "reference": "",
+    "categorie": "structure",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "D’une part, la page d’ouverture affirme que les épisodes et mesures cités sont présentés comme des études de cas, alors que seuls Knight Capital et METR sont en encadré .cas (Mars Climate Orbiter, Bainbridge et Shumailov sont dans le texte courant). D’autre part, les § 2 à 4 (l. 5-9) résument en détail chaque chapitre, créant une triple redite avec les introductions et les points clés.",
+    "correction": null,
+    "justification": "Confirmé sur partie-4.md (l. 3-9). Groupe G2 : corriger l’annonce des « deux études de cas » en l. 3 et arbitrer le resserrement des l. 5-9 en une présentation brève de l’ordre des chapitres."
+  },
+  {
+    "grappe": "V4-027",
+    "constats": ["piste-rep-01"],
+    "lecteurs_distincts": 1,
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "ligne": 32,
+    "passage": "::: {.cas titre=\"Mesure contre impression : l’essai randomisé de METR\" date=\"2025\"}",
+    "verdict": "CONFIRME",
+    "reference": "ARBITRAGES P2.4 (REV-3.1)",
+    "categorie": "repetition",
+    "gravite": "B",
+    "rang": 5,
+    "groupe": "G2",
+    "probleme": "Piste mécanique (repetitions.md, ch00 ↔ ch15, recouvrement 28 %, 38 séquences) : l’encadré .cas sur l’essai randomisé de METR (2025) au ch. 15 (l. 32-36) duplique presque mot pour mot l’encadré déjà donné au ch. 0 (00-cartographier.md, l. 13-15).",
+    "correction": null,
+    "justification": "Confirmé par comparaison directe entre 00-cartographier.md (l. 13-15) et 15-erosion-verifications.md (l. 32-36). Groupe G2 : déjà identifié en P2.4 (REV-3.1) ; l’auteur doit trancher quel chapitre porte l’encadré complet et lequel renvoie à l’autre."
+  }
+]

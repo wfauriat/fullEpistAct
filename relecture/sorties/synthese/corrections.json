@@ -1,0 +1,1122 @@
+[
+  {
+    "grappe": "V0-019",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-avant-propos.md",
+    "avant": "Pour leur épargner tout prérequis implicite, le @sec:ch01 et des encadrés dédiés rappellent chaque outil mobilisé",
+    "apres": "Pour limiter les prérequis implicites, le @sec:ch01 et des encadrés dédiés rappellent les outils mobilisés"
+  },
+  {
+    "grappe": "V0-015",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-avant-propos.md",
+    "avant": "propose huit parcours de lecture adaptés à ces profils.",
+    "apres": "propose huit parcours de lecture, dont cinq correspondent directement à ces profils."
+  },
+  {
+    "grappe": "V0-016",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "Dans la première, une erreur de calcul traverse des mois d’opérations",
+    "apres": "Dans la première, une erreur d’unités traverse des mois d’opérations"
+  },
+  {
+    "grappe": "V0-021",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "vis-à-vis de la cause d’erreur considérée",
+    "apres": "à l’égard de la cause d’erreur considérée"
+  },
+  {
+    "grappe": "V0-021",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "Mais vis-à-vis de tout facteur omis par le cadre",
+    "apres": "Mais face à tout facteur omis par le cadre"
+  },
+  {
+    "grappe": "V0-005",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "tandis que le contrôle croisé ne laisse passer que les causes d’erreur communes aux deux voies.",
+    "apres": "tandis que le contrôle croisé ne laisse passer, sous réserve d’une comparaison fidèle, que les causes d’erreur communes aux deux voies."
+  },
+  {
+    "grappe": "V0-021",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "vis-à-vis de son propre angle mort",
+    "apres": "à l’égard de son propre angle mort"
+  },
+  {
+    "grappe": "V0-017",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "et ce contrôle, fait une fois, vaut pour toutes ses exécutions futures.",
+    "apres": "et ce qu’il établit vaut pour toutes ses exécutions futures conformes à la spécification."
+  },
+  {
+    "grappe": "V0-021",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "Vis-à-vis des étourderies propres à chaque individu",
+    "apres": "Face aux étourderies propres à chaque individu"
+  },
+  {
+    "grappe": "VX-001",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "Bien que son producteur soit dix fois plus exact, la seconde organisation laisse passer neuf fois plus d’erreurs jusqu’à l’action que la première.",
+    "apres": "Bien que ce producteur commette dix fois moins d’erreurs, la seconde organisation en laisse ici passer neuf fois plus jusqu’à l’action que la première : ce calcul montre une possibilité, dont le @sec:ch16 précisera à quelles conditions elle se réalise."
+  },
+  {
+    "grappe": "V0-018",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "Pourtant, les tests de référence et les courbes de performance notent le producteur seul",
+    "apres": "Les tests de référence et les courbes de performance notent pourtant le producteur seul"
+  },
+  {
+    "grappe": "V0-007",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "notre expérience du monde déborde souvent le cadre du modèle que nous consultons, même si elle ne déborde jamais le nôtre.",
+    "apres": "notre expérience du monde déborde souvent le cadre du modèle que nous consultons, même si elle reste toujours enfermée dans notre propre cadre."
+  },
+  {
+    "grappe": "V0-002",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "(conditionnement, règle de Bayes sous forme de cotes, rapport de vraisemblance, score logarithmique de surprise). Le @sec:ch02 introduit la distinction entre le monde et la représentation, explicite le schéma des règles à conditions cachées et définit le cadre ainsi que le problème du cadre",
+    "apres": "(règles à arrière-plan tacite, conditionnement, règle de Bayes sous forme de cotes, rapport de vraisemblance, score logarithmique de surprise). Le @sec:ch02 introduit la distinction entre le monde et la représentation et définit le cadre ainsi que le problème du cadre"
+  },
+  {
+    "grappe": "V0-013",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "établit le seuil de décision, noté $p^\\ast$ (@eq:ch00-seuil), face à une décision unique.",
+    "apres": "établit le seuil de décision (@eq:ch00-seuil) face à une décision unique."
+  },
+  {
+    "grappe": "V0-020",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "Comme annoncé dans l’avant-propos, chacune des cinq propositions structurantes de la @sec:partie-2 portera",
+    "apres": "Comme l’avant-propos l’indique, chacune des cinq propositions principales — toutes réunies dans la @sec:partie-2 — portera"
+  },
+  {
+    "grappe": "V0-004",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "Les contrôles placés en chaîne additionnent leurs angles morts",
+    "apres": "Les composants placés en chaîne additionnent leurs angles morts"
+  },
+  {
+    "grappe": "V0-005",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/00-cartographier.md",
+    "avant": "alors que les contrôles croisés en parallèle ne laissent subsister que les causes d’erreur communes aux deux voies.",
+    "apres": "alors que les contrôles croisés en parallèle ne laissent subsister, sous réserve d’une comparaison fidèle, que les causes d’erreur communes aux deux voies."
+  },
+  {
+    "grappe": "V1-021",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/01-outils-logique-probabilite.md",
+    "avant": "# Boîte à outils : logique, conditionnement, probabilité {#sec:ch01}",
+    "apres": "# Outils de logique et de probabilité {#sec:ch01}"
+  },
+  {
+    "grappe": "V1-008",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/01-outils-logique-probabilite.md",
+    "avant": "lorsqu’elles s’en écartent, elle transporte l’erreur avec la même rigueur.",
+    "apres": "lorsqu’elles s’en écartent, rien ne garantit plus la conclusion, et l’erreur peut se propager avec la même rigueur."
+  },
+  {
+    "grappe": "V1-005",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/01-outils-logique-probabilite.md",
+    "avant": "Il suffit pourtant que l’eau soit fortement salée, ou que le récipient soit clos et que la pression y monte, pour qu’elle reste calme à 100 °C ; en altitude, c’est la valeur même de 100 °C qui cesse de convenir, car l’eau y bout bien avant. On peut allonger la règle en précisant que l’eau est pure et la pression normale. Même ainsi complétée, elle tait encore d’autres conditions. Dans un récipient très lisse, l’eau peut dépasser 100 °C sans bouillir, faute d’aspérités où les bulles se forment : c’est le retard à l’ébullition. Le relevé suppose en outre un thermomètre juste, plongé dans un liquide de température homogène.",
+    "apres": "Il suffit pourtant que l’eau soit fortement salée, ou qu’on la chauffe en altitude, pour que cette règle courte soit prise en défaut. Même si l’on précise « eau pure sous pression normale », la règle tait encore bien d’autres conditions, comme le montrera en détail le @sec:ch02."
+  },
+  {
+    "grappe": "V1-014",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/01-outils-logique-probabilite.md",
+    "avant": "Il adopte la lecture comme jugement à titre de position de travail,",
+    "apres": "Il adopte la lecture comme jugement à titre de convention de travail,"
+  },
+  {
+    "grappe": "V1-015",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/01-outils-logique-probabilite.md",
+    "avant": "D’après l’historique de fabrication et l’inspection du chantier,",
+    "apres": "D’après les relevés de fabrication et l’inspection du chantier,"
+  },
+  {
+    "grappe": "V1-017",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/01-outils-logique-probabilite.md",
+    "avant": "un signal normal la multiplie par 0,294, ce qui revient à la diviser par moins de 5.",
+    "apres": "un signal normal la multiplie par 0,294, ce qui revient à la diviser par 3,4 seulement."
+  },
+  {
+    "grappe": "V1-015",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/01-outils-logique-probabilite.md",
+    "avant": "les probabilités *a priori*, tirées de l’historique de fabrication,",
+    "apres": "les probabilités *a priori*, tirées des relevés de fabrication,"
+  },
+  {
+    "grappe": "V1-013",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/02-cadre.md",
+    "avant": "::: {.definition #def:representation titre=\"Représentation\"}\nUne **représentation** est la construction (mesures, catégories, équations, probabilités) d’après laquelle on décide et l’on agit. Le monde, lui, répond à l’action, non à la représentation.\n:::\n\nC’est la seconde phrase de cette définition qui compte en pratique :",
+    "apres": "::: {.definition #def:representation titre=\"Représentation\"}\nUne **représentation** est la construction (mesures, catégories, équations, probabilités) d’après laquelle on décide et l’on agit.\n:::\n\nLe monde, lui, répond à l’action, non à la représentation ; et c’est cette dissymétrie qui compte en pratique :"
+  },
+  {
+    "grappe": "V1-018",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/02-cadre.md",
+    "avant": "| 4 | Récipient ouvert au sommet du mont Blanc : ébullition vers 85 °C | Eau pure sous la pression atmosphérique normale (1013,25 hPa) $\\rightarrow$ ébullition à 100 °C |",
+    "apres": "| 4 | Récipient ouvert au sommet du mont Blanc : ébullition vers 85 °C | Eau pure à l’air libre, sous la pression atmosphérique normale (1013,25 hPa), portée à 100 °C $\\rightarrow$ ébullition |"
+  },
+  {
+    "grappe": "V1-009",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/02-cadre.md",
+    "avant": "Aucune mesure de performance calculée sur les cohortes initiales ne pouvait annoncer cette rupture,",
+    "apres": "Aucune des mesures de performance effectuées sur les cohortes initiales ne pouvait annoncer cette rupture,"
+  },
+  {
+    "grappe": "V1-022",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/03-mondes-possibles.md",
+    "avant": "Le @sec:ch02 a déjà écarté cette image : le 5 % du navigateur n’est ni une propriété de l’océan ni une caractéristique du mât, et il ne fera pas « une course à 5 % ». Le mât tiendra jusqu’à l’arrivée, ou il cassera.",
+    "apres": "Comme l’a montré le @sec:ch02, le mât tiendra jusqu’à l’arrivée ou il cassera : ce 5 % n’appartient ni à l’océan ni au mât."
+  },
+  {
+    "grappe": "V1-023",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/03-mondes-possibles.md",
+    "avant": "Stuart Russell et Peter Norvig proposent une manière simple de dire ce que désigne alors le nombre [@russell2021].",
+    "apres": "Stuart Russell et Peter Norvig proposent une manière simple de dire ce que désigne alors le nombre [-@russell2021]."
+  },
+  {
+    "grappe": "V1-011",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/03-mondes-possibles.md",
+    "avant": "Chacun estime la probabilité que le bateau casse avant l’arrivée, c’est-à-dire qu’il démâte ou subisse une avarie qui l’oblige à abandonner.",
+    "apres": "Chacun estime la probabilité que le bateau casse (démâte) avant l’arrivée."
+  },
+  {
+    "grappe": "V1-019",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/03-mondes-possibles.md",
+    "avant": "Appliquée à toute une série, une telle règle avantage en outre, en moyenne et parmi des prévisionnistes également calibrés, celui qui annonce des probabilités élevées les jours où il pleuvra et faibles les autres.",
+    "apres": "Appliquée à toute une série, une telle règle avantage aussi, en moyenne et parmi des prévisionnistes également calibrés, celui qui annonce des probabilités élevées les jours où il pleuvra et faibles les autres [@gneiting2007]."
+  },
+  {
+    "grappe": "V1-004",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/03-mondes-possibles.md",
+    "avant": "Seule la répétition permet de juger un prévisionniste, à condition que ses prévisions soient consignées dans un historique, notées par une règle de score strictement propre et examinées pour leur calibration",
+    "apres": "Une issue isolée ne suffit pas à juger solidement un prévisionniste ; seule la répétition le permet de façon fiable, à condition que ses prévisions soient consignées dans un historique, notées par une règle de score strictement propre et examinées pour leur calibration"
+  },
+  {
+    "grappe": "V1-010",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/04-decider.md",
+    "avant": "S’il tient jusqu’à l’arrivée, c’est le *succès*, d’utilité $U_{\\text{succès}}$ supérieure à $U_{\\text{sûr}}$",
+    "apres": "S’il tient jusqu’à l’arrivée (on suppose pour simplifier qu’il remporte alors la course), c’est le *succès*, d’utilité $U_{\\text{succès}}$ supérieure à $U_{\\text{sûr}}$"
+  },
+  {
+    "grappe": "V1-006",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/04-decider.md",
+    "avant": "Pour un rapport des enjeux de 25, l’@eq:ch04-seuil donne $p^\\ast = 1/(1 + 25) = 1/26$, soit 3,85 % : M. Y, à 0,1 %, se trouve au-dessous du seuil et part ; M. X, à 5 %, se trouve au-dessus et renonce. Pour un rapport de 10 000, $p^\\ast = 1/(1 + 10\\,000)$, soit 0,0100 % : le joueur, qui estime le risque à 0,001 %, reste au-dessous et presse la détente.",
+    "apres": "Le @tbl:ch04-seuil et la @fig:ch04-seuil rassemblent les trois seuils calculés ci-dessus : 3,85 % pour la course à la voile (où M. Y part et M. X renonce) et 0,0100 % pour la roulette russe (où le joueur presse la détente)."
+  },
+  {
+    "grappe": "V1-020",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/04-decider.md",
+    "avant": "Un lecteur familier des usages statistiques de la théorie de la décision pourrait trouver ici une consolation. Si M. Y choisit le voilier léger chaque fois que $p < p^\\ast$, et si ses estimations sont bien calibrées, ses gains l’emporteront à la longue sur ceux de l’option sûre. Cette consolation suppose pourtant que la décision se répète.",
+    "apres": "Un lecteur habitué à raisonner en moyenne pourrait se croire protégé ici. Si M. Y choisit le voilier léger chaque fois que $p < p^\\ast$, et si ses estimations sont bien calibrées, son utilité espérée se retrouvera à la longue dans la moyenne des résultats. Cette protection suppose pourtant que la décision se répète."
+  },
+  {
+    "grappe": "V1-004",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/04-decider.md",
+    "avant": "et la calibration n’aide que lorsque les décisions se répètent.",
+    "apres": "et la calibration aide là où les décisions se répètent."
+  },
+  {
+    "grappe": "V2-001",
+    "groupe": "G2",
+    "fichier": "monographie/parties/partie-2.md",
+    "avant": "C’est pourquoi ses exemples sont délibérément choisis hors de l’intelligence artificielle",
+    "apres": "C’est pourquoi ses principaux exemples sont délibérément choisis hors de l’intelligence artificielle"
+  },
+  {
+    "grappe": "V2-002",
+    "groupe": "G2",
+    "fichier": "monographie/parties/partie-2.md",
+    "avant": "mais jamais de découvrir un facteur que le cadre a omis.",
+    "apres": "mais non, tant qu’ils restent dans le même cadre, de découvrir un facteur que celui-ci a omis."
+  },
+  {
+    "grappe": "V2-041",
+    "groupe": "G1",
+    "fichier": "monographie/parties/partie-2.md",
+    "avant": "Le chapitre décompose surtout le risque réel en un produit de deux facteurs",
+    "apres": "Le chapitre décompose surtout le risque résiduel en un produit de deux facteurs"
+  },
+  {
+    "grappe": "V2-007",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/05-trois-incertitudes.md",
+    "avant": "Deux propriétés découlent immédiatement de cette expression.",
+    "apres": "Trois conséquences découlent immédiatement de cette expression."
+  },
+  {
+    "grappe": "V2-006",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/05-trois-incertitudes.md",
+    "avant": "intervalle inter-quantiles, entropie prédictive, région de prédiction conforme ou borne au pire cas sur $\\Theta$ — reste par construction une fonctionnelle définie sur le seul ensemble $\\Theta$ des alternatives admises, et partage donc la même cécité envers ce qui n’appartient pas à $\\Theta$.",
+    "apres": "intervalle inter-quantiles, entropie prédictive ou borne au pire cas sur $\\Theta$ — reste par construction une fonctionnelle définie sur le seul ensemble $\\Theta$ des alternatives admises (de même qu’une région de prédiction conforme reste relative à l’hypothèse d’échangeabilité retenue dans le cadre, @sec:ch02-garanties-conditionnelles), et partage donc la même cécité envers ce qui est laissé hors du cadre."
+  },
+  {
+    "grappe": "V2-013",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/06-detecter-une-erreur.md",
+    "avant": "Ce que le cadre omet, et sur quoi toutes les alternatives admises gardent donc le silence, ne laisse aucune trace chiffrée.",
+    "apres": "Ce que le cadre omet, et sur quoi toutes les alternatives admises gardent donc le silence, ne laisse aucune trace attribuable (et, s’il est resté constant, aucune trace du tout)."
+  },
+  {
+    "grappe": "V2-015",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/06-detecter-une-erreur.md",
+    "avant": "quelqu’un prend acte d’un éventuel désaccord et ait l’autorité nécessaire pour suspendre ou corriger l’action.",
+    "apres": "quelqu’un prend acte d’un éventuel désaccord et a l’autorité nécessaire pour suspendre ou corriger l’action."
+  },
+  {
+    "grappe": "V2-017",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/06-detecter-une-erreur.md",
+    "avant": "La cinquième condition a subi une double rupture disjointe dans la salle de décision :",
+    "apres": "La cinquième condition a subi une double rupture dans la salle de décision :"
+  },
+  {
+    "grappe": "V2-025",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "avant": "Les deux calculs s’accordent jusqu’à la troisième décimale.",
+    "apres": "Les deux calculs s’accordent à quelques pour cent près."
+  },
+  {
+    "grappe": "V2-021",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "avant": "1. *Dépendance aux seules variables du cadre* : $f_1$ et $f_2$ sont des fonctions de $x$ seul, éventuellement perturbées par des tirages aléatoires internes (graines, rééchantillonnage dans le modèle) conditionnellement indépendants de $z$ sachant $X = x$.",
+    "apres": "1. *Dépendance aux seules variables du cadre* : $f_1$ est une fonction déterministe de $x$ seul, et $f_2$ est une fonction de $x$ seul éventuellement perturbée par des tirages aléatoires internes (graines, rééchantillonnage dans le modèle) conditionnellement indépendants de $z$ sachant $X = x$."
+  },
+  {
+    "grappe": "V2-026",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "avant": "Le raisonnement suppose que ni $f_1$ ni $f_2$ ne dépendent d’observations réelles où $Z$ aurait varié. Dès qu’un modèle est ajusté ou confronté à des mesures issues de $g(X, Z)$ pendant que $Z$ variait, l’effet de $Z$ se glisse dans la dispersion des observations conditionnellement à $X = x$",
+    "apres": "Le raisonnement suppose que ni $f_1$ ni $f_2$ ne dépendent d’observations réelles où $z$ aurait varié. Dès qu’un modèle est ajusté ou confronté à des mesures issues de $g(X, z)$ pendant que $z$ variait, l’effet de $z$ se glisse dans la dispersion des observations conditionnellement à $X = x$"
+  },
+  {
+    "grappe": "V2-024",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/07-cadre-cause-commune.md",
+    "avant": "tandis que le dispositif continuait d’appliquer la même méthode et de passer ses propres contrôles internes.",
+    "apres": "tandis que l’analyse interne des seules séries de requêtes — déjà exposées au surajustement lors de la conception [@lazer2014] — ne suffisait pas à déceler la dérive."
+  },
+  {
+    "grappe": "V2-035",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "avant": "Plus on descend dans le tableau, plus la classe d’erreurs atteignable s’élargit, et plus le coût tend à croître",
+    "apres": "Plus on descend dans le tableau, plus la classe d’erreurs atteignable s’élargit, et plus le coût tend globalement à croître"
+  },
+  {
+    "grappe": "V2-032",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "avant": ", tandis que les résultats intermédiaires circulent toujours plus vite d’un maillon au suivant.",
+    "apres": "."
+  },
+  {
+    "grappe": "V2-030",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "avant": "Si une erreur n’appartient pas à $B_1$, le producteur la voit et ne l’émet pas : elle n’apparaît pas du seul fait que le protocole de comparaison n’aurait pas su l’exprimer.",
+    "apres": "Sur le plan des causes structurelles, si une cause n’appartient pas à $B_1$, elle ne relève pas de l’angle mort du producteur (les oublis ponctuels qui peuvent néanmoins survenir relèvent du taux d’erreur $p$ et du taux d’oubli $m$, non de l’@eq:ch08-croise-angle-mort)."
+  },
+  {
+    "grappe": "V2-031",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/08-independance-chaines.md",
+    "avant": "augmentée des écarts que la comparaison ne sait pas exprimer.",
+    "apres": "augmentée, parmi les erreurs du producteur, de celles que la comparaison ne sait pas exprimer."
+  },
+  {
+    "grappe": "V2-046",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "avant": "Les études expérimentales sur la réponse humaine aux systèmes d’alarme montrent ce qui se produit le plus souvent en pratique.",
+    "apres": "Une étude expérimentale classique sur la réponse humaine aux systèmes d’alarme illustre ce qui se produit souvent en pratique."
+  },
+  {
+    "grappe": "V2-041",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "avant": "exprimer le risque réel d’un système",
+    "apres": "exprimer le risque résiduel d’un système"
+  },
+  {
+    "grappe": "V2-039",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "avant": "(pour *contrôle franchi*, qui correspond à l’événement noté $D$ au @sec:ch06)",
+    "apres": "(pour *contrôle réussi*, qui correspond à l’événement noté $D$ au @sec:ch06)"
+  },
+  {
+    "grappe": "V2-047",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "avant": "Toute l’ingénierie de la sûreté et toute l’analyse de la @sec:partie-2 portent au contraire sur le second facteur",
+    "apres": "L’ingénierie de la sûreté et une grande part de l’analyse de la @sec:partie-2 portent au contraire sur le second facteur"
+  },
+  {
+    "grappe": "VX-006",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "avant": "le producteur est dix fois plus exact (taux d’erreur de 1 %)",
+    "apres": "le producteur commet dix fois moins d’erreurs (taux d’erreur de 1 %)"
+  },
+  {
+    "grappe": "VX-006",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "avant": "Le producteur dix fois plus exact forme ici un système neuf fois plus risqué.",
+    "apres": "Le producteur qui commet dix fois moins d’erreurs forme ici un système neuf fois plus risqué."
+  },
+  {
+    "grappe": "V2-042",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "avant": " (où c’est cette probabilité d’erreur qui sera comparée au seuil de tolérance $p^\\ast$)",
+    "apres": ""
+  },
+  {
+    "grappe": "VX-006",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "avant": "Bien que le producteur soit cinq fois plus exact (taux d’erreur de 2 %)",
+    "apres": "Bien que le producteur commette cinq fois moins d’erreurs (taux d’erreur de 2 %)"
+  },
+  {
+    "grappe": "V2-041",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "avant": "Le risque réel est le produit du taux d’erreur et de la probabilité d’échappement",
+    "apres": "Le risque résiduel est le produit du taux d’erreur et de la probabilité d’échappement"
+  },
+  {
+    "grappe": "V2-049",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/09-severite-echappement.md",
+    "avant": "Réduire durablement le risque exige d’agir sur les trois leviers du modèle :",
+    "apres": "Dans le modèle M1, réduire le risque résiduel (au-delà de la baisse de $P(E)$) passe par trois leviers :"
+  },
+  {
+    "grappe": "V3-001",
+    "groupe": "G1",
+    "fichier": "monographie/parties/partie-3.md",
+    "avant": "Les composants appris produisent des erreurs d’un type nouveau : leur cause est interne au cadre, et rien ne les signale.",
+    "apres": "Les composants appris tendent à produire en abondance des erreurs dont la cause est interne au cadre et que rien ne signale."
+  },
+  {
+    "grappe": "V3-002",
+    "groupe": "G1",
+    "fichier": "monographie/parties/partie-3.md",
+    "avant": "Les composants spécifiés permettent d’exclure ces erreurs d’avance, non par nature, mais grâce au contrat écrit.",
+    "apres": "Les composants spécifiés permettent de vider cette case à l’avance, non par nature, mais grâce au contrat écrit lorsqu’il est effectivement appliqué."
+  },
+  {
+    "grappe": "V3-005",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "avant": "Ensuite, hors panne matérielle ou perturbation physique accidentelle, elles sont *déterministes* : placée devant les mêmes entrées et le même état initial, la même suite d’instructions produit exactement les mêmes sorties, sur une autre machine, dix ans plus tard.",
+    "apres": "Ensuite, hors panne matérielle ou perturbation physique accidentelle, ces opérations séquentielles sont *déterministes* : à architecture et ordonnancement donnés, placée devant les mêmes entrées et le même état initial, la même suite d’instructions produit exactement les mêmes sorties, sur une autre machine, dix ans plus tard."
+  },
+  {
+    "grappe": "V3-006",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "avant": "Dans un composant spécifié, la règle existe *avant* l’exécution sous forme de texte : quelqu’un l’a formulée, quelqu’un peut la lire, quelqu’un peut la confronter au programme.",
+    "apres": "Dans un composant spécifié, les règles d’exécution existent sous forme de code écrit avant l’usage, et leur contrat est soit rédigé à l’avance, soit formulable après coup : quelqu’un peut les lire et les confronter au programme."
+  },
+  {
+    "grappe": "V3-008",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "avant": "Le 23 septembre 1999, la sonde *Mars Climate Orbiter* devait s’insérer en orbite autour de Mars ; elle pénétra bien trop bas dans l’atmosphère martienne et fut perdue [@mco1999]. Tout au long du transit vers la planète, un programme au sol baptisé `SM_FORCES` calculait l’effet des petites poussées de correction des propulseurs et inscrivait ces impulsions dans un fichier de données transmis à l’équipe de navigation [@mco1999]. Or la spécification d’interface écrite exigeait que ces grandeurs soient exprimées en unités du Système international, les newton-secondes ($\\text{N}\\cdot\\text{s}$), alors que le programme `SM_FORCES` les écrivait en unités anglo-saxonnes, les livres-force-secondes ($\\text{lbf}\\cdot\\text{s}$). Parce que l’équipe et les logiciels de navigation lisaient ces valeurs comme des newton-secondes, l’effet de chaque petite poussée était sous-estimé d’un facteur proche de 4,45 [@mco1999].",
+    "apres": "Comme on l’a vu au @sec:ch08, la sonde *Mars Climate Orbiter* a été perdue le 23 septembre 1999 parce que le programme au sol `SM_FORCES` écrivait ses impulsions en livres-force-secondes ($\\text{lbf}\\cdot\\text{s}$) au lieu des newton-secondes ($\\text{N}\\cdot\\text{s}$) exigées par la spécification d’interface, introduisant un écart d’un facteur proche de 4,45 [@mco1999]."
+  },
+  {
+    "grappe": "V3-007",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "avant": "Durant des mois, le logiciel de navigation a poursuivi ses calculs sans qu’aucune alarme ne vienne interrompre les opérations. L’erreur était tout sauf bruyante.",
+    "apres": "Durant des mois, le logiciel de navigation a poursuivi ses calculs sans qu’aucune alarme automatique ne vienne interrompre les opérations, les anomalies observées en vol n’étant pas instruites à temps. L’erreur était tout sauf manifeste."
+  },
+  {
+    "grappe": "V3-011",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "avant": "ni cahier écrit qui fixe la sortie exacte de chaque consigne,",
+    "apres": "ni cahier écrit qui fixe la sortie exacte de chaque demande,"
+  },
+  {
+    "grappe": "V3-006",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/10-couches-basses.md",
+    "avant": "- Un composant spécifié repose sur un énoncé écrit à l’avance, lisible par autrui, discutable, versionnable et violable, donc opposable à son exécution, qui joue le rôle d’un comparateur permanent.",
+    "apres": "- Un composant spécifié repose sur des règles écrites par un auteur et admet un contrat (écrit à l’avance dans le cas nominal, ou formulable après coup), lisible par autrui, discutable, versionnable et violable, qui joue le rôle d’un comparateur."
+  },
+  {
+    "grappe": "V3-012",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/11-regle-tiree-des-donnees.md",
+    "avant": "l’arrière-plan ouvert d’exceptions étudié dès le @sec:ch02 envahissait l’écriture même du programme.",
+    "apres": "l’arrière-plan tacite (@sec:ch01, @sec:ch02) envahissait l’écriture même du programme."
+  },
+  {
+    "grappe": "V3-012",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/11-regle-tiree-des-donnees.md",
+    "avant": "Comme toute inférence inductive (@sec:ch02), la régularité",
+    "apres": "Comme toute inférence inductive (@sec:ch01, @sec:ch02), la régularité"
+  },
+  {
+    "grappe": "V3-017",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/11-regle-tiree-des-donnees.md",
+    "avant": "Dans les commentaires qui entourent ces affaires, un autre litige survenu peu après est souvent invoqué d’un même souffle comme preuve d’une « hallucination » de modèle de langage.",
+    "apres": "Dans les commentaires qui entourent cette affaire, un autre litige jugé l’année suivante est souvent invoqué d’un même souffle comme preuve d’une « hallucination » de modèle de langage."
+  },
+  {
+    "grappe": "V3-019",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "avant": "Comme l’a établi le @sec:ch09, un producteur dont le taux d’erreur diminue",
+    "apres": "Comme l’a illustré le @sec:ch09, un producteur dont le taux d’erreur diminue"
+  },
+  {
+    "grappe": "V3-021",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "avant": "seule survit une sortie qui a franchi un comparateur mécanique.",
+    "apres": "seule survit une sortie qui a franchi un comparateur mécanique, dont l’adéquation au besoin réel reste à établir (@sec:ch13)."
+  },
+  {
+    "grappe": "V3-022",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "avant": "En 2023, Fabrizio Dell’Acqua et ses coauteurs ont mené une expérience contrôlée auprès de 758 consultants du Boston Consulting Group afin de mesurer l’effet de l’assistance par un grand modèle de langage (GPT-4) sur des tâches réalistes de conseil [@dellacqua2023]. Comme l’a montré le @sec:ch11, sur les tâches situées à l’intérieur de la zone de compétence du modèle, les gains de productivité et de qualité étaient nets.",
+    "apres": "Dans la même expérience contrôlée du Boston Consulting Group présentée au @sec:ch11 [@dellacqua2023], où GPT-4 apportait des gains nets sur les tâches situées dans sa zone de compétence, les chercheurs avaient aussi mesuré l’effet de la frontière."
+  },
+  {
+    "grappe": "V3-025",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "avant": "John McCarthy et Patrick Hayes [@mccarthy1969] puis Daniel Dennett [@dennett1984] montraient que la difficulté ne porte pas uniquement sur ce qui manque dans la liste des faits, mais sur la *pertinence* de faits déjà représentés.",
+    "apres": "À la suite de John McCarthy et Patrick Hayes [@mccarthy1969], Daniel Dennett [@dennett1984] a montré que la difficulté ne porte pas uniquement sur ce qui manque dans la liste des faits, mais sur la *pertinence* de faits déjà représentés."
+  },
+  {
+    "grappe": "V3-026",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "avant": "Loin de prémunir contre l’invention, cette propriété entraîne mécaniquement l’invention de faits rares.",
+    "apres": "Sous les hypothèses de l’analyse statistique présentée ci-dessous, cette propriété contraint le modèle à inventer des faits rares et arbitraires."
+  },
+  {
+    "grappe": "V3-027",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "avant": "seulement 9 % à Mercure (qui, restant plus près du Soleil, est en moyenne dans le temps la planète la plus proche de la Terre [@stockman2019], contrairement à l’idée reçue qui confond distance minimale au rapprochement et distance moyenne) et 3 % à Mars.",
+    "apres": "seulement 9 % à Mercure et 3 % à Mars. En effet, restant plus près du Soleil, Mercure est en moyenne dans le temps la planète la plus proche de la Terre [@stockman2019], contrairement à l’idée reçue qui confond distance minimale au rapprochement et distance moyenne."
+  },
+  {
+    "grappe": "V3-030",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "avant": "- *La répétition attrape efficacement les erreurs hasardées.* Sur le fait rare et arbitraire, où une réponse unique a 82 % de chances d’être fausse, tirer 5 réponses offre une sévérité de 99,9 % : la dispersion trahit l’ignorance du modèle.",
+    "apres": "- *La répétition révèle l’ignorance sur les faits hasardés, au prix d’alertes quasi systématiques.* Sur le fait rare et arbitraire (82 % d’erreurs), tirer 5 réponses offre une sévérité de 99,9 %, mais avec un taux de fausses alertes également égal à 99,9 % : la dispersion signale que la question dépasse le modèle et invite à l’écarter, sans dire si la première réponse était juste ou fausse."
+  },
+  {
+    "grappe": "V3-026",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/12-autre-regime.md",
+    "avant": "- Soumis à la calibration générative, un modèle doit inventer des faits rares et arbitraires à une fréquence au moins de l’ordre du taux de singletons de ses données d’entraînement,",
+    "apres": "- Sous les hypothèses de l’analyse de Kalai et Vempala, un modèle proche de la calibration générative invente des faits rares et arbitraires à une fréquence bornée inférieurement par le taux de singletons de ses données d’entraînement (diminué du défaut de calibration),"
+  },
+  {
+    "grappe": "V3-032",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "toute erreur silencieuse atteint l’action avec une probabilité d’échappement égale à $1$ (@def:echappement).",
+    "apres": "un dispositif dépourvu de comparateur adapté laisse ces erreurs atteindre l’action avec une probabilité d’échappement égale à $1$ (@def:echappement)."
+  },
+  {
+    "grappe": "V3-034",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "Le dernier matin de la dinde inductiviste (@sec:ch03, @sec:ch05) [@russell1912]",
+    "apres": "Le dernier matin du poulet inductiviste (souvent raconté avec une dinde, @sec:ch03, @sec:ch05) [@russell1912]"
+  },
+  {
+    "grappe": "V3-032",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "Une erreur devient signalée dès qu’on lui oppose au moins un comparateur capable de se tromper autrement (@prop:independance, @sec:ch08)",
+    "apres": "Une erreur peut devenir signalée lorsqu’on lui oppose un comparateur capable de se tromper autrement (@prop:independance, @sec:ch08) et doté d’une sensibilité suffisante,"
+  },
+  {
+    "grappe": "V3-037",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "| *Un énoncé fixé à l’avance* | Systématique : vérifié une fois, en amont (contrats, types, tests, preuves). |",
+    "apres": "| *Un énoncé fixé à l’avance* | Possible en amont lorsque le contrat est appliqué mécaniquement (types, tests, preuves). |"
+  },
+  {
+    "grappe": "V3-037",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "| *Vos propres contrôles* | Préservés : quelqu’un a dû écrire les règles et formuler les cas limites. |",
+    "apres": "| *Vos propres contrôles* | Préservés chez le concepteur : quelqu’un a dû écrire les règles et formuler les cas limites. |"
+  },
+  {
+    "grappe": "V3-038",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "::: {.cas titre=\"Autoformalisation et noyau de confiance en Lean\"}",
+    "apres": "::: {.outils titre=\"Autoformalisation et noyau de confiance en Lean\"}"
+  },
+  {
+    "grappe": "V3-045",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "D’abord, comme l’a établi l’étude de la plausibilité au @sec:ch12, réinterroger un même modèle ou des modèles très voisins attrape les erreurs hasardées où le modèle hésite, mais échoue devant les erreurs constantes où il reproduit fidèlement un biais fréquent de ses données d’entraînement. La sévérité (@def:severite) du second avis tombe alors au plus bas.",
+    "apres": "D’abord, comme l’illustre l’étude de la plausibilité au @sec:ch12 [@farquhar2024], réinterroger un même modèle ne décèle par sa dispersion que les erreurs hasardées où il hésite, et échoue devant les erreurs constantes où il reproduit fidèlement un biais fréquent de ses données d’entraînement : la sévérité (@def:severite) du second avis devient alors faible."
+  },
+  {
+    "grappe": "V3-040",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "la confrontation est rapide, réversible et peu coûteuse.",
+    "apres": "la confrontation, lorsqu’elle s’exécute dans un environnement isolé, est rapide, réversible et peu coûteuse."
+  },
+  {
+    "grappe": "V3-042",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "Cette paire conceptuelle recouvre exactement l’architecture de la matrice à deux axes du @tbl:ch13-deux-axes",
+    "apres": "Cette paire conceptuelle s’articule directement avec la matrice à deux axes du @tbl:ch13-deux-axes"
+  },
+  {
+    "grappe": "V3-034",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "ou le basculement du calendrier pour la dinde inductiviste (@sec:ch05) [@russell1912].",
+    "apres": "ou le basculement du calendrier pour le poulet inductiviste de Russell (@sec:ch05) [@russell1912]."
+  },
+  {
+    "grappe": "V3-001",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "- Les composants appris peuplent la case « dans le cadre et silencieuse », tandis que les composants spécifiés permettent — non par nature, mais par contrat écrit — de vider cette case à l’avance ;",
+    "apres": "- Les composants appris tendent à peupler la case « dans le cadre et silencieuse », tandis que les composants spécifiés permettent — non par nature, mais par contrat écrit — de vider cette case à l’avance ;"
+  },
+  {
+    "grappe": "V3-036",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/13-synthese-deux-axes.md",
+    "avant": "de manière générale, le formalisme, là où il existe, déplace la colonne, jamais la ligne.",
+    "apres": "sous réserve d’application effective, le formalisme déplace la colonne sur la ligne du haut et expose les hypothèses à la critique, mais ne certifie jamais par lui-même la ligne."
+  },
+  {
+    "grappe": "V4-014",
+    "groupe": "G1",
+    "fichier": "monographie/parties/partie-4.md",
+    "avant": "et cette fluidité trompe jusqu’aux experts sur leur propre productivité.",
+    "apres": "et cette fluidité peut tromper jusqu’aux experts sur leur propre productivité."
+  },
+  {
+    "grappe": "V4-001",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "avant": "À la @sec:ch10-composition, l’enchaînement $\\{P\\}\\, C_1 \\,\\{R\\}$ puis $\\{R\\}\\, C_2 \\,\\{Q\\}$",
+    "apres": "À la @sec:ch10-boite-outils, l’enchaînement $\\{P\\}\\, C_1 \\,\\{R\\}$ puis $\\{R\\}\\, C_2 \\,\\{Q\\}$"
+  },
+  {
+    "grappe": "V4-008",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "avant": "un pair de même compétence qui manque chaque erreur locale avec la probabilité $m = p = 6\\,\\%$, indépendamment de l’agent",
+    "apres": "un contrôleur distinct de même compétence qui manque chaque erreur locale avec la probabilité $m = p = 6\\,\\%$, indépendamment de l’agent"
+  },
+  {
+    "grappe": "V4-004",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "avant": "ne suffit jamais à sécuriser une trajectoire longue.",
+    "apres": "ne suffit pas à lever le risque porté par un facteur partagé le long d’une trajectoire."
+  },
+  {
+    "grappe": "V4-008",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "avant": "erreurs indépendantes d’une étape à l’autre, taux d’erreur constant $p = 6\\,\\%$, comparabilité intacte aux interfaces ($B_{\\text{cmp}} = \\emptyset$) et prise en compte immédiate de chaque alerte.",
+    "apres": "erreurs indépendantes d’une étape à l’autre, contrôleur indépendant de l’agent sur les erreurs locales (hypothèse que lèvera le @sec:ch16), taux d’erreur constant $p = 6\\,\\%$, comparabilité intacte aux interfaces ($B_{\\text{cmp}} = \\emptyset$) et prise en compte immédiate de chaque alerte."
+  },
+  {
+    "grappe": "V4-006",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "avant": "Parce que l’autorité et la garantie y marchaient du même pas, selon une pyramide stricte.",
+    "apres": "Parce que l’autorité et la garantie y allaient, pour l’essentiel, du même pas."
+  },
+  {
+    "grappe": "V4-006",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "avant": "*inverse l’architecture qui rendait la pile sûre*",
+    "apres": "*inverse l’architecture qui contenait les défaillances*"
+  },
+  {
+    "grappe": "V4-005",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "avant": "La vérification réussit à chaque couche basse, tandis que la question de validation — cet acte était-il le bon ? — n’est posée par personne (@sec:ch13-verification-validation).",
+    "apres": "La vérification réussit à chaque couche basse, tandis que personne ne demande si cet acte était le bon — ni s’il repose sur une faute interne de l’agent, ni si la tâche posée correspondait à la réalité (@sec:ch13-verification-validation)."
+  },
+  {
+    "grappe": "V4-007",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "avant": "L’action automatisée devient alors une série de décisions uniques à fort coût (@sec:ch04-decision-unique)",
+    "apres": "L’action automatisée devient alors une suite d’actions dont chacune, irréversible, a les traits d’une décision unique à fort coût (@sec:ch04-decision-unique)"
+  },
+  {
+    "grappe": "V4-009",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "avant": "Le @sec:ch17 formalisera ces deux dispositifs complémentaires",
+    "apres": "Le @sec:ch17 formalisera ces deux dispositifs complémentaires — l’espace d’essai isolé et le verrou avant l’acte —"
+  },
+  {
+    "grappe": "V4-003",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/14-chaines-qui-agissent.md",
+    "avant": "ce facteur finit alors par intervenir dans une large part des défaillances restantes.",
+    "apres": "ce facteur intervient dans une part importante des défaillances restantes, sur laquelle aucun contrôle de même nature n’a prise."
+  },
+  {
+    "grappe": "V4-012",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "avant": "que la belle forme a cessé d’attester le travail de fond, et qu’une personne et un modèle",
+    "apres": "que la belle forme a cessé d’attester le travail de fond, que l’automatisation émousse les compétences requises en cas d’incident (ironie de Bainbridge), et qu’une personne et un modèle"
+  },
+  {
+    "grappe": "V4-015",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "avant": "c’est l’uniformité parfaite de sa voix.",
+    "apres": "c’est l’uniformité quasi complète de sa voix."
+  },
+  {
+    "grappe": "V4-015",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "avant": "le signe révélateur a toutefois entièrement disparu.",
+    "apres": "le signe révélateur a toutefois pratiquement disparu."
+  },
+  {
+    "grappe": "V4-016",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "avant": "produit un second effet, tout aussi déroutant, sur le jugement",
+    "apres": "produit un autre effet, tout aussi déroutant, sur le jugement"
+  },
+  {
+    "grappe": "V4-014",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "avant": "Il établit toutefois un fait décisif contre toute confiance spontanée dans l’impression de maîtrise",
+    "apres": "Il illustre toutefois, sur un cas documenté, que la perception subjective peut s’écarter fortement de la mesure"
+  },
+  {
+    "grappe": "V4-012",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "avant": "Cette dynamique générale éclaire aussi pourquoi la posture devenue la plus courante devant un modèle de langage",
+    "apres": "À cette atrophie des compétences s’ajoute un autre mécanisme, qui explique pourquoi la posture devenue la plus courante devant un modèle de langage"
+  },
+  {
+    "grappe": "V4-017",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/15-erosion-verifications.md",
+    "avant": "($\\Pr(A \\mid E)$ dans l’@eq:ch09-accord-cotes) se rapproche de $\\Pr(A \\mid \\bar{E})$, le rapport de vraisemblance de son accord s’effondre vers $1$.",
+    "apres": "($\\Pr(A \\mid E)$ dans l’@eq:ch09-accord-cotes, où $A$ note l’accord du contrôleur et $E$ l’erreur) se rapproche de $\\Pr(A \\mid \\bar{E})$, le rapport de vraisemblance $\\Pr(A \\mid \\bar{E}) / \\Pr(A \\mid E)$ s’effondre vers $1$."
+  },
+  {
+    "grappe": "VX-006",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "avant": "Un producteur cinq fois plus exact peut s’accompagner d’un contrôleur presque décoratif.",
+    "apres": "Un producteur qui commet cinq fois moins d’erreurs peut s’accompagner d’un contrôleur presque décoratif."
+  },
+  {
+    "grappe": "V4-020",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "avant": "*Seul un comparateur qui se trompe autrement abaisse le plancher.*",
+    "apres": "*Seul un comparateur qui se trompe autrement abaisse la part incompressible $c$ du plancher.*"
+  },
+  {
+    "grappe": "V4-018",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "avant": "En outre, comme $c$ mesure une part conditionnelle aux erreurs restantes, cette baisse globale recouvre deux mouvements opposés : les étourderies individuelles ont reculé, mais sur le sous-ensemble des erreurs propres au modèle partagé — dont la fréquence absolue $P(\\text{faux}) \\times c$ passe ici de $10\\,\\% \\times 10\\,\\% = 1{,}0\\,\\%$ à $2\\,\\% \\times 60\\,\\% = 1{,}2\\,\\%$ et qui frappent de manière systémique tous les dossiers —, le filet de sécurité a entièrement disparu.",
+    "apres": "En outre, comme $c$ mesure une part conditionnelle aux erreurs restantes, cette baisse globale recouvre deux mouvements opposés. Les étourderies individuelles ont reculé, mais les erreurs propres au modèle partagé passent en fréquence absolue $P(\\text{faux}) \\times c$ de $10\\,\\% \\times 10\\,\\% = 1{,}0\\,\\%$ à $2\\,\\% \\times 60\\,\\% = 1{,}2\\,\\%$ : elles frappent de manière systémique tous les dossiers, et le filet de sécurité a entièrement disparu pour elles."
+  },
+  {
+    "grappe": "V4-021",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "avant": "il met ainsi à nu un plancher d’échappement sous examen complet de 68,0 % ($1 - s = c + (1 - c)m = 60\\,\\% + 8\\,\\%$), dont les 60 % de causes d’erreur partagées forment la part incompressible.",
+    "apres": "il met ainsi à nu le plancher dû à la corrélation des causes d’erreur, contre lequel la seule baisse des fausses alertes reste sans effet."
+  },
+  {
+    "grappe": "V4-024",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "avant": "À la @sec:ch08-blanchiment (@def:blanchiment), le blanchiment a été défini comme la perte des conditions d’un résultat — hypothèses, unités et définitions comprises — lorsqu’il change de mains, et un proche cousin lui a été associé : l’effacement de la provenance, déjà retrouvé à la @sec:ch14-blanchiment entre les étapes d’un *pipeline*.",
+    "apres": "Le blanchiment (@def:blanchiment, @sec:ch08-blanchiment) et son proche cousin, l’effacement de la provenance déjà rencontré à la @sec:ch14-blanchiment entre les étapes d’un *pipeline*, prennent ici une ampleur collective."
+  },
+  {
+    "grappe": "V4-022",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "avant": "Ainsi se dégradent les biens communs épistémiques",
+    "apres": "Ainsi risquent de se dégrader les biens communs épistémiques"
+  },
+  {
+    "grappe": "V4-022",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/16-angles-morts-collectifs.md",
+    "avant": "prive leur accord de toute sévérité et dégrade par récursion les générations suivantes de modèles.",
+    "apres": "prive leur accord de toute sévérité et expose par récursion les générations suivantes de modèles à une dégradation."
+  },
+  {
+    "grappe": "V5-017",
+    "groupe": "G2",
+    "fichier": "monographie/parties/partie-5.md",
+    "avant": "Le chapitre [-@sec:ch17] revient à la course de voiliers de la @sec:partie-1. Une fissure repérée dans le mât avant le départ corrige la représentation ; une fissure cachée ajoute au risque réel une part que rien, dans le calcul, ne signale. Le décideur ne peut ni lire ni estimer ce facteur omis ; son seul levier est d’ajouter délibérément à son estimation une marge d’humilité avant de la comparer au seuil fixé par les enjeux. Cette marge relève du jugement, non de la mesure, et elle a un prix : renoncer parfois sans nécessité. Le chapitre sépare ensuite ce qui se répète dans un environnement stable et que l’on peut calibrer en confrontant les probabilités annoncées aux fréquences observées, de ce qui ne se joue qu’une fois : aucune moyenne ne protège alors, et il faut un verrou, point où l’action attend l’autorisation d’un contrôle indépendant. Toute action étant aussi une question posée au monde, mieux vaut la poser là où la réponse est rapide, peu coûteuse et réversible : on peut explorer librement dans un bac à sable, et réserver les verrous aux frontières où cette réponse coûterait trop cher ou serait irréversible. Le chapitre propose enfin quatre questions qui permettent à quiconque reçoit un chiffre assuré d’en retrouver les conditions ; quand ce chiffre sort d’un système automatisé, c’est à l’institution qui le déploie qu’il faut les poser.",
+    "apres": "Le chapitre [-@sec:ch17] traite de la décision unique : comment ménager une marge d’humilité du côté de l’estimation, séparer bacs à sable d’exploration et verrous avant l’acte irréversible, et poser quatre questions devant tout chiffre assuré."
+  },
+  {
+    "grappe": "V5-017",
+    "groupe": "G2",
+    "fichier": "monographie/parties/partie-5.md",
+    "avant": "Le chapitre [-@sec:ch18] organise les contrôles sur trois niveaux, dont aucun ne suffit seul. Le premier est l’attitude : l’humilité épistémique y devient la première source de comparateurs, avec une attente écrite avant de lire un résultat, un pré-mortem qui suppose l’échec pour en chercher les causes, et des mondes possibles élargis à dessein. Ces comparateurs débordent le cadre de l’outil, jamais celui de la personne qui les forme. Le deuxième niveau est le placement. Il donne un contenu au mot d’ordre « un humain dans la boucle » en disant où placer le contrôle (là où une sortie commence à être tenue pour acquise), qui doit le tenir (quelqu’un qui partage l’interface et comprend le niveau situé sous ce qu’il approuve), ce qu’il faut contrôler (la sortie, mais aussi la représentation) et combien y consacrer. Le troisième niveau est l’organisation : nommer les contrôleurs et plafonner la production à leur capacité, exiger que chaque résultat déclare son état de vérification (exploratoire ou établi, ce qui a été contrôlé et par qui, sous quelles hypothèses), tenir un historique, et mesurer la probabilité d’échappement avec des erreurs injectées, comme le font déjà la sûreté aérienne et le test des logiciels. Le chapitre se clôt sur cinq questions à poser avant d’agir sur une affirmation, qui reprennent les cinq conditions de détection.",
+    "apres": "Le chapitre [-@sec:ch18] organise ensuite les contrôles sur trois niveaux complémentaires — attitude individuelle, placement dans le flux et règles collectives d’organisation — avant de les résumer en cinq questions."
+  },
+  {
+    "grappe": "V5-002",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/17-decisions-sans-appel.md",
+    "avant": "Il ne lui reste qu’un levier : s’imposer une retenue avant de comparer son estimation au seuil.",
+    "apres": "Du côté de l’estimation, il ne lui reste qu’un levier : s’imposer une retenue avant de comparer son estimation au seuil."
+  },
+  {
+    "grappe": "V5-014",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/17-decisions-sans-appel.md",
+    "avant": "avec la position du risque réel par rapport au même seuil, on obtient quatre issues :",
+    "apres": "avec la position du risque réel par rapport au même seuil, on obtient quatre quadrants, dont le troisième porte deux étiquettes :"
+  },
+  {
+    "grappe": "V5-003",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/17-decisions-sans-appel.md",
+    "avant": "un facteur omis ne produit aucun désaccord dans l’ensemble des alternatives admises (@prop:desaccord)",
+    "apres": "un facteur omis resté constant dans les données ne produit aucun désaccord dans l’ensemble des alternatives admises (@prop:desaccord)"
+  },
+  {
+    "grappe": "V5-002",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/17-decisions-sans-appel.md",
+    "avant": "Dans ce modèle, la marge d’humilité est le seul levier du décideur contre ce que le cadre omet.",
+    "apres": "Dans ce modèle d’estimation, la marge d’humilité est le seul levier du décideur contre ce que le cadre omet."
+  },
+  {
+    "grappe": "V5-005",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/17-decisions-sans-appel.md",
+    "avant": "Le joueur ne tombe dans le piège silencieux que parce qu’il n’en prend aucune ; aucune marge, en revanche, ne lui aurait appris que le barillet était chargé.",
+    "apres": "Le joueur ne tombe dans le piège silencieux que parce qu’il n’en prend aucune ; aucune marge, en revanche, ne lui aurait appris que le barillet était chargé, et lorsque $p^\\ast$ devient inférieur à toute marge plausible, la règle revient simplement à s’abstenir."
+  },
+  {
+    "grappe": "V5-015",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/17-decisions-sans-appel.md",
+    "avant": "L’encadré suivant explique pourquoi cette règle, d’apparence rigoureuse, est contradictoire.",
+    "apres": "Or une règle de décision ne peut porter que sur les grandeurs disponibles dans le cadre, jamais sur un facteur omis $z$ que le décideur ne sait ni lire ni estimer ; l’encadré suivant précise cette distinction et situe la marge $b$ face aux axiomes de Savage."
+  },
+  {
+    "grappe": "V5-003",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/17-decisions-sans-appel.md",
+    "avant": "aucune décomposition de la variance sur l’ensemble des alternatives admises ne le fait apparaître (@prop:desaccord, @sec:ch05)",
+    "apres": "aucune décomposition de la variance sur l’ensemble des alternatives admises ne l’identifie (@prop:desaccord, @sec:ch05)"
+  },
+  {
+    "grappe": "V5-007",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/17-decisions-sans-appel.md",
+    "avant": "La calibration est le seul moyen de juger un prévisionniste, et elle n’existe que là où les cas se répètent.",
+    "apres": "La calibration est le seul moyen statistique de juger un prévisionniste sur ses résultats, et elle n’existe que là où les cas se répètent."
+  },
+  {
+    "grappe": "V5-008",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/17-decisions-sans-appel.md",
+    "avant": "le @sec:ch14 (@sec:ch14-autorite-garanties) a montré ce qu’il en coûte de confier l’autorité d’agir à la couche de la pile qui offre le moins de garanties, le modèle de langage, quand des agents exécutent des opérations réelles plus vite que quiconque ne peut réagir, comme lors de l’incident de Knight Capital [@sec2013knight].",
+    "apres": "le @sec:ch14 (@sec:ch14-autorite-garanties) a montré ce qu’il en coûte lorsqu’un système automatisé exécute des opérations réelles plus vite que quiconque ne peut réagir — comme déjà, hors de tout modèle de langage, lors de l’incident de Knight Capital [@sec2013knight], et plus encore lorsqu’on confie l’autorité d’agir à la couche de la pile qui offre le moins de garanties, le modèle de langage."
+  },
+  {
+    "grappe": "V5-012",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/17-decisions-sans-appel.md",
+    "avant": "le risque réel $p_w = 1 - (1 - p)(1 - z)$ combine le risque estimé dans le cadre et un facteur omis $z$ qu’aucun contrôle interne ne sait lire.",
+    "apres": "sous l’hypothèse d’indépendance du modèle M2, le risque réel $p_w = 1 - (1 - p)(1 - z)$ combine le risque estimé dans le cadre et un facteur omis $z$ qu’aucun contrôle interne ne sait lire."
+  },
+  {
+    "grappe": "V5-020",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/18-remede-trois-niveaux.md",
+    "avant": "On appelle **pré-mortem** l’exercice qui consiste à supposer que le projet a échoué et à écrire pourquoi, avant de l’engager.",
+    "apres": "On appelle **pré-mortem** l’exercice qui consiste à supposer que le projet a échoué et à écrire pourquoi, avant de l’engager [@A-VERIFIER: Klein 2007, Performing a Project Premortem, Harvard Business Review]."
+  },
+  {
+    "grappe": "V5-019",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/18-remede-trois-niveaux.md",
+    "avant": "(@sec:ch03, @prop:cause-commune)",
+    "apres": "(@sec:ch03 ; @prop:cause-commune au @sec:ch07)"
+  },
+  {
+    "grappe": "V5-028",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/18-remede-trois-niveaux.md",
+    "avant": "c’est-à-dire la probabilité d’échappement $\\Pr(\\bar{C} \\mid E)$ (@def:echappement, @eq:ch09-risque, @sec:ch16-taux-echappement).",
+    "apres": "c’est-à-dire la probabilité d’échappement $\\Pr(\\bar{C} \\mid E)$, où $\\bar{C}$ désigne l’absence de contrôle suivi d’effet (@def:echappement, @eq:ch09-risque, @sec:ch16-taux-echappement)."
+  },
+  {
+    "grappe": "V5-025",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/18-remede-trois-niveaux.md",
+    "avant": "donne une estimation directe de l’échappement, dans les conditions réelles de charge, de fatigue et de délais.",
+    "apres": "donne une estimation directe de l’échappement pour cette classe de fautes, dans les conditions réelles de charge, de fatigue et de délais."
+  },
+  {
+    "grappe": "V5-032",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/18-remede-trois-niveaux.md",
+    "avant": "Le @sec:ch17 (@sec:ch17-quatre-questions) a proposé quatre questions à poser à quiconque remet un chiffre assuré : sous quelles conditions tient-il, qu’est-ce qui le ferait changer, quelle est la manière la plus vraisemblable dont il pourrait être faux, et qu’a-t-on choisi de ne pas modéliser ? Elles portent sur *l’affirmation elle-même*.",
+    "apres": "Les quatre questions du @sec:ch17 (@sec:ch17-quatre-questions) devant un chiffre assuré portent sur *l’affirmation elle-même*."
+  },
+  {
+    "grappe": "V5-027",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/18-remede-trois-niveaux.md",
+    "avant": "::: {.question titre=\"Cinq questions avant d’engager l’action\"}\nAvant de vous fier, pour agir, à une affirmation décisive :\n\n1. Quel est le comparateur ?\n2. Comment peut-il se tromper autrement que l’affirmation ?\n3. L’affirmation et le comparateur peuvent-ils être comparés : les conditions de l’affirmation sont-elles énoncées ?\n4. La confrontation a-t-elle lieu avant l’action ?\n5. Qui doit écouter le désaccord, et le fera-t-il ?\n:::\n\nAucune de ces questions n’exige de théorème ni d’outil particulier, et aucune ne garantit rien.",
+    "apres": "Aucune de ces cinq questions n’exige de théorème ni d’outil particulier, et aucune ne garantit rien."
+  },
+  {
+    "grappe": "V5-035",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/99-conclusion.md",
+    "avant": "| Marge d’humilité, verrou, bac à sable, quatre questions et remède à trois niveaux aident à arrêter les erreurs à temps (@sec:partie-5). | *résultat sous hypothèses* pour la marge d’humilité (modèle M2) ; *constat empirique* pour les dispositifs documentés ; *hypothèse de travail* pour les pratiques proposées |",
+    "apres": "| Marge d’humilité, verrou, bac à sable, quatre questions et remède à trois niveaux aident à arrêter les erreurs à temps (@sec:partie-5). | *résultat sous hypothèses* pour le comportement de la marge (modèle M2) ; *constat empirique* pour l’existence des dispositifs documentés dans leurs domaines d’origine ; *hypothèse de travail* pour l’efficacité pratique des remèdes et de la marge |"
+  },
+  {
+    "grappe": "V5-042",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/99-conclusion.md",
+    "avant": "Le noyau formel de l’argument — les cinq propositions — a été construit pour ne dépendre d’aucun d’eux ;",
+    "apres": "Le noyau formel de l’argument — les résultats sous hypothèses et les définitions des cinq propositions — a été construit pour ne dépendre d’aucun d’eux ;"
+  },
+  {
+    "grappe": "VX-006",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/99-conclusion.md",
+    "avant": "un producteur dix fois plus exact peut former un système neuf fois plus risqué",
+    "apres": "un producteur qui commet dix fois moins d’erreurs peut former un système neuf fois plus risqué"
+  },
+  {
+    "grappe": "V5-037",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/99-conclusion.md",
+    "avant": "enfin, des pratiques comme l’attente écrite, le pré-mortem ou l’affichage de l’état de vérification qui ne modifieraient pas l’échappement mesuré là où elles sont appliquées (@sec:ch18).",
+    "apres": "enfin, des décisions uniques où la marge d’humilité et les verrous dégénéreraient en formalité sans réduire les pièges silencieux (@sec:ch17), ou des pratiques comme l’attente écrite, le pré-mortem ou l’affichage de l’état de vérification qui ne modifieraient pas l’échappement mesuré là où elles sont appliquées (@sec:ch18)."
+  },
+  {
+    "grappe": "V5-034",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/99-conclusion.md",
+    "avant": "L’avant-propos a dit comment ce livre a été élaboré (@sec:avant-propos-genese), et on la rappelle ici sans rien y ajouter. L’architecture argumentative et la rédaction ont été développées dans un dialogue itératif avec de grands modèles de langage, mobilisés pour explorer des littératures habituellement séparées, structurer les raisonnements, mettre les formulations à l’épreuve d’objections croisées et rédiger une large part du texte. L’auteur a fixé les orientations théoriques, sélectionné les exemples, écarté les rapprochements fragiles, révisé les arguments et vérifié leur articulation logique ; il assume la responsabilité de chaque énoncé. La thèse centrale prolonge une réflexion engagée avant le recours à ces outils, et elle a d’abord été exposée dans un article [@fauriat2026frame], seule référence de l’auteur à ses propres travaux. Lue avec les outils de l’ouvrage, cette provenance appelle trois remarques.",
+    "apres": "L’avant-propos a exposé comment cet ouvrage a été élaboré en dialogue itératif avec de grands modèles de langage, sous la direction et la responsabilité de l’auteur, dans le prolongement d’un article préalable [@fauriat2026frame] (@sec:avant-propos-genese). Lue avec les outils du livre, cette provenance appelle trois remarques."
+  },
+  {
+    "grappe": "V5-036",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/99-conclusion.md",
+    "avant": "Ce qu’ils laissent dans l’ombre, ou répètent avec constance, a pu passer dans le texte sans rencontrer d’objection de leur part.",
+    "apres": "Ce qu’ils laissent dans l’ombre, répètent avec constance ou valident par complaisance (@sec:ch15-bainbridge-consigne) a pu passer dans le texte sans rencontrer d’objection de leur part."
+  },
+  {
+    "grappe": "V5-040",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/99-conclusion.md",
+    "avant": "Sous les hypothèses que nomme le tableau de la première section.",
+    "apres": "Sous les hypothèses et limites recensées dans la troisième colonne du @tbl:conclusion-statuts (cadre fini, indépendance des oublis non partagés ou de $z$, absence de biais systématique de la prise en compte)."
+  },
+  {
+    "grappe": "V5-033",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/99-conclusion.md",
+    "avant": "Tout ce que le livre a pu faire pour sa cohérence (statuts explicites, termes fixés, hypothèses énoncées, renvois tenus)",
+    "apres": "Tout ce que le livre a cherché à faire pour sa cohérence (statuts explicites, termes fixés, hypothèses énoncées, renvois vérifiés)"
+  },
+  {
+    "grappe": "V5-039",
+    "groupe": "G2",
+    "fichier": "monographie/chapitres/99-conclusion.md",
+    "avant": "La réponse du livre vaut pour lui-même : rien qui soit calculé à l’intérieur de cette seule représentation, mais un comparateur qui existe, se trompe autrement, reste comparable, arrive à temps et trouve quelqu’un pour l’entendre.",
+    "apres": "La réponse du livre vaut pour lui-même : rien, en principe, qui soit calculé à l’intérieur de cette seule représentation, mais un comparateur qui, au minimum, existe, se trompe autrement, reste comparable, arrive à temps et trouve quelqu’un pour l’entendre."
+  },
+  {
+    "grappe": "V5-042",
+    "groupe": "G1",
+    "fichier": "monographie/chapitres/99-conclusion.md",
+    "avant": "le noyau formel de l’argument ne dépend d’aucun constat empirique — ses résultats sous hypothèses valent ce que valent leurs hypothèses dans la situation considérée et sa proposition définitionnelle",
+    "apres": "le noyau formel de l’argument (ses résultats sous hypothèses et sa proposition définitionnelle) ne dépend d’aucun constat empirique — ses résultats sous hypothèses valent ce que valent leurs hypothèses dans la situation considérée et la @prop:comparateur"
+  },
+  {
+    "grappe": "VX-029",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/A-outils.md",
+    "avant": "les trois modèles (M1, M2, M3) mobilisés au fil de l’ouvrage.",
+    "apres": "les trois modèles mobilisés au fil de l’ouvrage (M2 sur la décision et la marge d’humilité, M3 sur le cadre comme cause commune, M1 sur les chaînes et l’échappement)."
+  },
+  {
+    "grappe": "VX-027",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/A-outils.md",
+    "avant": "décomposer la prévision d’une grandeur $Y$ selon des hypothèses $H_i$ conditionnellement à $X = x$",
+    "apres": "décomposer la prévision d’une grandeur $Y$ sur une partition d’hypothèses $H_1, \\dots, H_m$ conditionnellement à $X = x$"
+  },
+  {
+    "grappe": "VX-028",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/A-outils.md",
+    "avant": "portant sur un état ou une erreur d’occurrence *a priori* (taux de base) $P(E) = \\Pr(E)$",
+    "apres": "portant sur un état ou une erreur de taux de base $P(E) = \\Pr(E)$"
+  },
+  {
+    "grappe": "VX-023",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/A-outils.md",
+    "avant": "l’utilité espérée $\\mathrm{UE}(a) = \\sum_{\\omega \\in \\Omega}",
+    "apres": "l’utilité espérée subjective $\\mathrm{UES}(a) = \\sum_{\\omega \\in \\Omega}"
+  },
+  {
+    "grappe": "VX-012",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/A-outils.md",
+    "avant": "4. *Prudence superflue* (ou renoncement justifié si $p \\ge p^\\ast$) : $p < p^\\ast \\le p + b$ et $p_w < p^\\ast$ (prix de la marge lorsque $z$ est nul ou bénin : le gain $\\Delta U$ est délaissé au profit de l’option sûre).",
+    "apres": "4. *Prudence superflue* : $p < p^\\ast \\le p + b$ et $p_w < p^\\ast$ (prix de la marge lorsque $z$ est nul ou bénin : le gain $\\Delta U$ est délaissé au profit de l’option sûre).\n\nLe cas où $p \\ge p^\\ast$ dès l’origine (comme M. X) relève du *renoncement justifié* sans recours à la marge."
+  },
+  {
+    "grappe": "VX-013",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/A-outils.md",
+    "avant": "donc indépendant de l’erreur $e(x, z) = g(x, z) - f_1(x)$.",
+    "apres": "donc indépendant de l’erreur $e(x, z) = g(x, z) - f_1(x)$ dès que $f_1(x)$ est déterministe sachant $x$ (ou conditionnellement au tirage interne de $f_1$)."
+  },
+  {
+    "grappe": "VX-019",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/A-outils.md",
+    "avant": "lorsque chaque étape est doublée d’un contrôleur indépendant de même taux d’oubli $p$",
+    "apres": "lorsque chaque étape est doublée d’un contrôleur indépendant de taux d’oubli $m = p$"
+  },
+  {
+    "grappe": "VX-020",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/A-outils.md",
+    "avant": "La probabilité d’échappement et le risque résiduel (probabilité qu’une affirmation fausse atteigne l’action sans être arrêtée) s’écrivent",
+    "apres": "La probabilité d’échappement (conditionnelle à une affirmation fausse) et le risque résiduel (proportion de toutes les affirmations qui sont fausses et atteignent l’action sans être arrêtées) s’écrivent"
+  },
+  {
+    "grappe": "VX-025",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/A-outils.md",
+    "avant": "équilibre mélangeant (au sens d’Akerlof)",
+    "apres": "équilibre mélangeant (comme dans le marché des « citrons » d’Akerlof)"
+  },
+  {
+    "grappe": "VX-014",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/D-parametres.md",
+    "avant": "Conformément au principe de source unique posé dans l’avant-propos, l’ensemble",
+    "apres": "L’ensemble"
+  },
+  {
+    "grappe": "VX-016",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/D-parametres.md",
+    "avant": "utilise les trois situations sans facteur omis ni marge ($b = 0$, $z = 0$)",
+    "apres": "utilise les trois situations de base (M. Y, M. X et la roulette russe, sans marge $b = 0$ et avec $z = 0$ dans le cadre du décideur)"
+  },
+  {
+    "grappe": "VX-019",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/D-parametres.md",
+    "avant": "probabilité d’oubli du contrôleur pair lors d’un contrôle croisé à chaque étape : $p = 6\\,\\%$",
+    "apres": "probabilité d’oubli du contrôleur pair lors d’un contrôle croisé à chaque étape : $m = p = 6\\,\\%$"
+  },
+  {
+    "grappe": "VX-026",
+    "groupe": "G1",
+    "fichier": "monographie/annexes/D-parametres.md",
+    "avant": "17 oct. 14 %, 6e date 10 %",
+    "apres": "17 oct. 14 %, 5 mars 10 %"
+  },
+  {
+    "grappe": "VX-022",
+    "groupe": "G1",
+    "fichier": "monographie/commun/registre_termes.md",
+    "avant": "| Θ, θ | ensemble des hypothèses admises ; une hypothèse | sec:ch05 |",
+    "apres": "| Θ, θ | ensemble des alternatives admises ; une alternative | sec:ch05 |"
+  }
+]
