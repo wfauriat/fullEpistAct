@@ -1,0 +1,18 @@
+chapitre: 04-decider
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: phrase-longue
+    avant: |
+      Et si les probabilités annoncées sont trop optimistes, ou si le seuil est mal réglé, l’écart entre les prévisions consignées et les fréquences observées finit par apparaître dans l’historique : on peut alors recalibrer la règle pour les cas suivants.
+    apres: |
+      Et si les probabilités annoncées sont trop optimistes, ou si le seuil est mal réglé, l’écart entre les prévisions consignées et les fréquences observées finit par apparaître dans l’historique. On peut alors recalibrer la règle pour les cas suivants.
+    note: "Coupe articulée au deux-points avant « alors »."
+
+  - id: "002"
+    motif: or-initial
+    avant: |
+      Or le monde, une fois l’acte engagé, ne consulte pas nos probabilités (@sec:ch02-monde-action).
+    apres: |
+      Mais le monde, une fois l’acte engagé, ne consulte pas nos probabilités (@sec:ch02-monde-action).
+    note: "Remplace « Or » en tête de phrase par « Mais »."
