@@ -1,0 +1,10 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/11-regle-tiree-des-donnees/",
+  "verdicts": [
+    {"id": "001", "verdict": "rejete", "dimensions": ["gain", "argument"], "raison": "Remplacer le deux-points par « car » n'apporte qu'un gain marginal sur une phrase qui fonctionnait déjà. La retouche rompt en outre le parallèle voulu entre « En premier lieu disparaît… : » et « En second lieu disparaît la lisibilité : », qui structure les deux volets du prix payé."},
+    {"id": "002", "verdict": "accepte", "dimensions": [], "raison": "La formule impersonnelle « Il serait erroné de voir » est retirée. La négation porte sur les deux mêmes termes, le sens est conservé et l'enchaînement avec la phrase suivante reste intact."},
+    {"id": "003", "verdict": "accepte", "dimensions": [], "raison": "La longue phrase est coupée au deux-points. « Uniquement » et le lien de contraste restent lisibles grâce à la reprise « Cette organisation » ; sens et portée inchangés."},
+    {"id": "004", "verdict": "accepte", "dimensions": [], "raison": "La phrase est coupée au tiret. La première proposition était déjà absolue, et la seconde garde toutes ses restrictions (« dans quelles limites », « pour certaines erreurs mais non pour toutes ») ainsi que la glose entre parenthèses."}
+  ]
+}
