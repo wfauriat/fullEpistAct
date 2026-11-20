@@ -1,0 +1,8 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/04-decider/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points d'une longue phrase, dans un paragraphe qui s'ouvre déjà sur un deux-points. « alors » garde la condition (« si les probabilités annoncées sont trop optimistes… ») et le modal « peut » est conservé. Sens, portée et termes inchangés."},
+    {"id": "002", "verdict": "rejete", "dimensions": ["gain"], "raison": "Simple échange de connecteur. C'est le seul « Or » initial du chapitre, il n'y a donc pas de série à corriger, et il introduit à juste titre la prémisse décisive après la conclusion de la règle. « Mais » ferait aussi doublon avec le « Mais d'où vient $p$ ? » qui ouvre la même section deux paragraphes plus haut."}
+  ]
+}
