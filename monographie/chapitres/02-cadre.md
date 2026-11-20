@@ -6,7 +6,7 @@ Le @sec:ch01 a rappelé que la déduction comme l’induction ne garantissent le
 
 Toute action menée avec méthode part d’une cible, d’un état du monde et de l’écart entre les deux [@fauriat2026frame]. Guider un navire, soigner un patient, dimensionner un ouvrage ou mettre en service un logiciel, c’est chercher à amener une partie du monde vers un état jugé préférable. Encore faut-il savoir comment cette partie du monde réagira à ce que l’on fait.
 
-Or ce savoir n’est jamais direct. Il passe par nos sens et nos instruments de mesure, par les catégories dans lesquelles nous rangeons les choses, par nos équations et nos estimations chiffrées. Au moment de choisir, on ne manipule pas le monde lui-même. Que l’on soit une personne seule, une équipe d’ingénieurs ou une institution, on assemble ce que l’on a mesuré, retenu et supposé pour se faire une idée maniable de la situation, et c’est d’après cette construction que l’on agit. Il en va de même lorsque la décision revient à un programme.
+Ce savoir n’est pourtant jamais direct. Il passe par nos sens et nos instruments de mesure, par les catégories dans lesquelles nous rangeons les choses, par nos équations et nos estimations chiffrées. Au moment de choisir, on ne manipule pas le monde lui-même. Que l’on soit une personne seule, une équipe d’ingénieurs ou une institution, on assemble ce que l’on a mesuré, retenu et supposé pour se faire une idée maniable de la situation, et c’est d’après cette construction que l’on agit. Il en va de même lorsque la décision revient à un programme.
 
 ::: {.definition #def:representation titre="Représentation"}
 Une **représentation** est la construction (mesures, catégories, équations, probabilités) d’après laquelle on décide et l’on agit. Le monde, lui, répond à l’action, non à la représentation.
@@ -141,7 +141,7 @@ Déployé dans une autre région, ou quelques années plus tard, il voit ses pr�
 
 Le cas montre qu’un modèle peut passer avec succès toutes les épreuves conçues à l’intérieur de son cadre et échouer au contact du terrain : la faille n’est pas dans le calcul, mais dans l’inadéquation du cadre à la situation nouvelle. Le @sec:ch07 examinera à quelles conditions des observations du monde permettent de déceler un tel décalage.
 
-Devant ce genre d’échec, le réflexe d’une discipline formelle est presque toujours de *formaliser un cran plus haut*. Puisque l’on s’est trompé de modèle ou de domaine d’application, pourquoi ne pas ajouter un étage : des méta-règles, ou une batterie d’indicateurs automatiques chargés d’examiner si le cadre convient encore et de signaler qu’il ne convient plus ?
+Devant ce genre d’échec, le réflexe d’une discipline formelle est presque toujours de formaliser un cran plus haut. Puisque l’on s’est trompé de modèle ou de domaine d’application, pourquoi ne pas ajouter un étage : des méta-règles, ou une batterie d’indicateurs automatiques chargés d’examiner si le cadre convient encore et de signaler qu’il ne convient plus ?
 
 Ce recours ne supprime pas le choix du cadre ; il le reporte d’un étage [@fauriat2026frame]. Toute méta-procédure chargée d’examiner un cadre doit arrêter à l’avance la liste finie des indices qu’elle surveille, des écarts qu’elle juge suspects et des hypothèses sous lesquelles ses propres tests fonctionnent. Elle adopte donc à son tour un cadre, exposé aux mêmes omissions un étage plus haut. Le @sec:ch07 reviendra sur cette régression à l’infini : aucune procédure formelle ne peut certifier son propre cadre de l’intérieur.
 

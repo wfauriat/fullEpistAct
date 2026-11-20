@@ -1,0 +1,68 @@
+{
+  "lot": "style/lots/02-cadre",
+  "chapitre": "02-cadre",
+  "fichier": "monographie/chapitres/02-cadre.md",
+  "tour": null,
+  "redacteur": "gemini",
+  "date": "2026-11-20T13:23:15",
+  "sha256_chapitre": "76db0b329ace530025d900bb8a5eb9c2c1847e5a10f6a2368f2cab4402fe61ee",
+  "sha256_propositions": "2efcd1a2e4bde78084438931c8acc4f553afd5b2bda14412dff51c2f286e310a",
+  "modifications": [
+    {
+      "id": "001",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "or-initial",
+      "avant": "Or ce savoir n’est jamais direct.",
+      "apres": "Ce savoir n’est pourtant jamais direct.",
+      "debut": 1226,
+      "fin": 1259,
+      "ligne": 9,
+      "section": "sec:ch02-monde-action",
+      "titre_section": "Le monde répond à l’action, non à la représentation"
+    },
+    {
+      "id": "002",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "or-initial",
+      "avant": "Or choisir ces axiomes, ces conditions aux limites et ces idéalisations, c’est précisément poser un cadre.",
+      "apres": "Mais choisir ces axiomes, ces conditions aux limites et ces idéalisations, c’est précisément poser un cadre.",
+      "debut": 22903,
+      "fin": 23009,
+      "ligne": 117,
+      "section": "sec:ch02-rigueur-formelle",
+      "titre_section": "La rigueur formelle ne lève pas cette limite"
+    },
+    {
+      "id": "003",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "or-initial",
+      "avant": "Or choisir les grandeurs mesurées, les variables sur lesquelles on conditionne et la série de référence (les cas que l’on tient pour semblables) qui définissent cette ressemblance, c’est encore choisir un cadre.",
+      "apres": "Mais choisir les grandeurs mesurées, les variables sur lesquelles on conditionne et la série de référence (les cas que l’on tient pour semblables) qui définissent cette ressemblance, c’est encore choisir un cadre.",
+      "debut": 24122,
+      "fin": 24333,
+      "ligne": 121,
+      "section": "sec:ch02-rigueur-formelle",
+      "titre_section": "La rigueur formelle ne lève pas cette limite"
+    },
+    {
+      "id": "004",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "italique",
+      "avant": "Devant ce genre d’échec, le réflexe d’une discipline formelle est presque toujours de *formaliser un cran plus haut*.",
+      "apres": "Devant ce genre d’échec, le réflexe d’une discipline formelle est presque toujours de formaliser un cran plus haut.",
+      "debut": 30254,
+      "fin": 30371,
+      "ligne": 144,
+      "section": "sec:ch02-rigueur-formelle",
+      "titre_section": "La rigueur formelle ne lève pas cette limite"
+    }
+  ]
+}
