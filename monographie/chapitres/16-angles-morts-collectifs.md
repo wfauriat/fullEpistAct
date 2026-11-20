@@ -77,7 +77,7 @@ Une scène familière du journalisme résume ce trompe-l’œil collectif. Imagi
 
 ## Blanchiment de provenance et biens communs épistémiques {#sec:ch16-blanchiment-provenance}
 
-Projeter ce mécanisme d’un seul prêteur dans le temps révèle un second effet, qui dépasse l’organisation isolée pour atteindre le patrimoine documentaire partagé par toute une société. Le blanchiment (@def:blanchiment, @sec:ch08-blanchiment) et son proche cousin, l’effacement de la provenance déjà rencontré à la @sec:ch14-blanchiment entre les étapes d’un *pipeline*, prennent ici une ampleur collective. À l’échelle collective, ce cousin prend une ampleur nouvelle.
+Projeter ce mécanisme d’un seul prêteur dans le temps révèle un second effet, qui dépasse l’organisation isolée pour atteindre le patrimoine documentaire partagé par toute une société. Le blanchiment (@def:blanchiment, @sec:ch08-blanchiment) et son proche cousin, l’effacement de la provenance déjà rencontré à la @sec:ch14-blanchiment entre les étapes d’un *pipeline*, prennent ici une ampleur collective.
 
 Chaque jour, des quantités massives de synthèses, d’articles explicatifs, de bouts de code, de fiches techniques et de notices produits avec l’aide de modèles de langage sont publiées sur le Web, déposées dans des bibliothèques logicielles ou intégrées à la littérature spécialisée sans aucune mention de la façon dont elles ont été obtenues. On appelle **blanchiment de provenance** la perte de l’origine d’une information, si bien que des copies d’une même source passent pour des témoignages indépendants.
 

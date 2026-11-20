@@ -41,14 +41,14 @@ Les exemples de décision de la course à la voile et des situations à enjeu ex
 
 Le @sec:ch04 (@fig:ch04-seuil, @tbl:ch04-seuil) utilise les trois situations de base sans marge ni facteur omis dans le cadre ($b = 0$, $z = 0$ : *M. Y*, *M. X* et *Roulette russe*) ; le @sec:ch17 (@fig:ch17-decisions, @tbl:ch17-scenarios, @tbl:ch17-decisions) déploie les six situations du tableau ci-dessous en remplaçant à $L/\Delta U = 10\,000$ la roulette russe par le *Vol de nuit en montagne*, afin de garder $p$ et $z$ rigoureusement disjoints.
 
-| Situation | $L/\Delta U$ | $p$ estimé | Marge $b$ | Facteur omis $z$ | $p + b$ | Seuil $p^\ast$ | Décision | Risque réel $p_w$ | Issue |
-| :-- | --: | --: | --: | --: | --: | --: | :-- | --: | :-- |
-| M. Y | 25 | 0,1 % | 0 % | 0 % | 0,1 % | 3,85 % | on part | 0,100 % | départ justifié |
-| M. X | 25 | 5 % | 0 % | 0 % | 5 % | 3,85 % | on renonce | 5,00 % | renoncement justifié |
-| M. Y, fissure non repérée | 25 | 0,1 % | 0 % | 8 % | 0,1 % | 3,85 % | on part | 8,09 % | piège silencieux |
-| … avec une marge | 25 | 0,1 % | 4 % | 8 % | 4,1 % | 3,85 % | on renonce | 8,09 % | sauvé par la marge |
-| Prudence superflue | 25 | 0,1 % | 4 % | 0 % | 4,1 % | 3,85 % | on renonce | 0,100 % | prudence superflue |
-| Vol de nuit en montagne | 10 000 | 0,001 % | 0 % | $1/6 \approx 16{,}7\,\%$ | 0,001 % | 0,0100 % | on part | 16,7 % | piège silencieux |
+| Situation | $L/\Delta U$ | $p$ | $b$ | $z$ | $p + b$ | $p^\ast$ | Décision | $p_w$ | Issue |
+| :------------------ | --------: | -----------: | ----: | --------: | -----------: | ------------: | :------------ | -----------: | :-------------- |
+| M. Y | 25 | 0,1 % | 0 % | 0 % | 0,1 % | 3,85 % | on part | 0,100 % | départ justifié |
+| M. X | 25 | 5 % | 0 % | 0 % | 5 % | 3,85 % | on renonce | 5,00 % | renoncement justifié |
+| M. Y, fissure non repérée | 25 | 0,1 % | 0 % | 8 % | 0,1 % | 3,85 % | on part | 8,09 % | piège silencieux |
+| … avec une marge | 25 | 0,1 % | 4 % | 8 % | 4,1 % | 3,85 % | on renonce | 8,09 % | sauvé par la marge |
+| Prudence superflue | 25 | 0,1 % | 4 % | 0 % | 4,1 % | 3,85 % | on renonce | 0,100 % | prudence superflue |
+| Vol de nuit en montagne | 10 000 | 0,001 % | 0 % | $1/6 \approx 16{,}7\,\%$ | 0,001 % | 0,0100 % | on part | 16,7 % | piège silencieux |
 
 Table: Paramètres et résultats des scénarios de décision des chapitres [-@sec:ch04] (@tbl:ch04-seuil) et [-@sec:ch17] (@tbl:ch17-scenarios et @tbl:ch17-decisions). {#tbl:annexe-d-seu}
 

@@ -108,20 +108,26 @@ def sauver(fig, nom):
     print(f'  figure  figures/{nom}.pdf (+ .svg)')
 
 
+def _cell_md(s):
+    """Prevent ugly line breaks before '%' or after '>' inside narrow table cells."""
+    return str(s).replace(' %', '\u00a0%').replace('> ', '>\u00a0')
+
+
 def tableau(nom, entetes, lignes, legende, alignements=None):
     """Write tableaux/<nom>.md: a pipe table with caption and label {#tbl:<nom>}."""
     alignements = alignements or ['l'] + ['r'] * (len(entetes) - 1)
-    sep = {'l': ':--', 'r': '--:', 'c': ':-:'}
     md = '| ' + ' | '.join(entetes) + ' |\n'
-    # dash counts set pandoc's relative column widths (content length; headers count half: they wrap)
+    # dash counts set pandoc's relative column widths (content length; headers count half: they wrap;
+    # cap long wrapping prose cells so narrow percentage columns do not get squeezed below 1 line)
     largeurs = [max([len(str(h)) // 2, max(len(w) for w in str(h).split()) + 1]
-                    + [len(str(r[i])) for r in lignes] + [3]) for i, h in enumerate(entetes)]
+                    + [min(len(str(r[i])), 45) + (3 if '%' in str(r[i]) else 0) for r in lignes] + [4])
+                for i, h in enumerate(entetes)]
     if sum(largeurs) < 90:  # pandoc wraps cells (relative widths) only when the source line exceeds 72 columns
-        largeurs = [max(3, round(w * 90 / sum(largeurs))) for w in largeurs]
+        largeurs = [max(4, round(w * 90 / sum(largeurs))) for w in largeurs]
     md += '|' + '|'.join({'l': ':', 'r': '', 'c': ':'}[a] + '-' * w + {'l': '', 'r': ':', 'c': ':'}[a]
                          for a, w in zip(alignements, largeurs)) + '|\n'
     for row in lignes:
-        md += '| ' + ' | '.join(str(c) for c in row) + ' |\n'
+        md += '| ' + ' | '.join(_cell_md(c) for c in row) + ' |\n'
     md += f'\nTable: {legende} {{#tbl:{nom}}}\n'
     out = ROOT / 'tableaux'
     out.mkdir(exist_ok=True)
