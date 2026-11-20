@@ -1,0 +1,8 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/18-remede-trois-niveaux/",
+  "verdicts": [
+    {"id": "001", "verdict": "accepte", "dimensions": [], "raison": "Coupe au deux-points qui suit la définition : la définition du pré-mortem devient une phrase autonome. « ainsi » marque la mise en œuvre concrète et non une conséquence. Terme en gras, sens et portée inchangés."},
+    {"id": "002", "verdict": "accepte", "dimensions": [], "raison": "Coupe au point-virgule d'une longue phrase qui enchaînait deux-points et point-virgule. « Cette marge » renvoie toujours à la marge $b$ introduite sous la condition « quand la décision est unique », et la réserve « relève du jugement et non d'une mesure » est conservée intacte."}
+  ]
+}
