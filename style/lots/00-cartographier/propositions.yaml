@@ -1,0 +1,122 @@
+chapitre: 00-cartographier
+redacteur: gemini
+modifications:
+  - id: "001"
+    motif: or-initial
+    avant: |
+      Or la spécification d’interface exigeait que ces impulsions soient exprimées dans l’unité du Système international, le newton-seconde, tandis que le programme les écrivait en livres-force-secondes, une unité anglo-saxonne.
+    apres: |
+      La spécification d’interface exigeait pourtant que ces impulsions soient exprimées dans l’unité du Système international, le newton-seconde, tandis que le programme les écrivait en livres-force-secondes, une unité anglo-saxonne.
+    note: "Remplace « Or » en tête de phrase par « pourtant »."
+
+  - id: "002"
+    motif: phrase-longue
+    avant: |
+      Qu’un raisonnement procède par déduction mathématique à partir d’axiomes ou par induction statistique à partir de données observées, sa garantie demeure strictement conditionnelle : la déduction certifie la conclusion *pourvu que* la description initiale soit fidèle ; l’induction la certifie *pourvu que* le contexte futur ressemble au contexte passé sur les points retenus.
+    apres: |
+      Qu’un raisonnement procède par déduction mathématique à partir d’axiomes ou par induction statistique à partir de données observées, sa garantie demeure strictement conditionnelle. La déduction certifie en effet la conclusion *pourvu que* la description initiale soit fidèle ; l’induction la certifie *pourvu que* le contexte futur ressemble au contexte passé sur les points retenus.
+    note: "Scinde une phrase de 55 mots au deux-points avec « en effet »."
+
+  - id: "003"
+    motif: phrase-longue
+    avant: |
+      La dinde inductiviste qui note chaque matin l’heure à laquelle le fermier lui apporte son grain dispose, à la veille de Noël, d’une série statistique irréprochable ; la catastrophe qui l’attend ne vient pas d’une faute de calcul, mais d’une variable qui n’a jamais figuré dans son cadre.
+    apres: |
+      La dinde inductiviste qui note chaque matin l’heure à laquelle le fermier lui apporte son grain dispose, à la veille de Noël, d’une série statistique irréprochable. Pourtant, la catastrophe qui l’attend ne vient pas d’une faute de calcul, mais d’une variable qui n’a jamais figuré dans son cadre.
+    note: "Coupe articulée au point-virgule."
+
+  - id: "004"
+    motif: phrase-longue
+    avant: |
+      Si la perte en cas de casse vaut vingt-cinq fois le gain d’une victoire, le seuil vaut 1/26, un peu moins de 4 % : M. X, qui évalue le risque à 5 %, choisit rationnellement le voilier renforcé, tandis que M. Y, qui l’évalue à 0,1 %, s’élance non moins rationnellement sur le voilier léger.
+    apres: |
+      Si la perte en cas de casse vaut vingt-cinq fois le gain d’une victoire, le seuil vaut 1/26, un peu moins de 4 %. Dès lors, M. X, qui évalue le risque à 5 %, choisit rationnellement le voilier renforcé, tandis que M. Y, qui l’évalue à 0,1 %, s’élance non moins rationnellement sur le voilier léger.
+    note: "Coupe articulée au deux-points avec « Dès lors »."
+
+  - id: "005"
+    motif: or-initial
+    avant: |
+      Or c’est là tout le nœud d’une décision unique, prise une seule fois et dont la réponse ne vient qu’après l’acte : le décideur compare au seuil la probabilité issue de sa propre représentation, tandis que le monde ne consulte pas ce chiffre.
+    apres: |
+      C’est là tout le nœud d’une décision unique, prise une seule fois et dont la réponse ne vient qu’après l’acte. Le décideur compare en effet au seuil la probabilité issue de sa propre représentation, tandis que le monde ne consulte pas ce chiffre.
+    note: "Retire « Or » en tête et scinde au deux-points avec « en effet »."
+
+  - id: "006"
+    motif: phrase-longue
+    avant: |
+      Qu’une seule de ces cinq conditions vienne à manquer pour une famille d’erreurs, et ce contrôle les laisse toutes passer : pour lui, leur probabilité d’échappement, c’est-à-dire la probabilité qu’elles atteignent l’action sans avoir été contredites à temps, est de 100 %.
+    apres: |
+      Qu’une seule de ces cinq conditions vienne à manquer pour une famille d’erreurs, et ce contrôle les laisse toutes passer. Pour lui, leur probabilité d’échappement — c’est-à-dire la probabilité qu’elles atteignent l’action sans avoir été contredites à temps — est alors de 100 %.
+    note: "Coupe articulée au deux-points."
+
+  - id: "007"
+    motif: phrase-longue
+    avant: |
+      Encore faut-il que le facteur omis ait effectivement varié pendant la collecte des données, et que ses effets se lisent dans ce que l’on a pris soin d’enregistrer : un essai de charge sur une ferrure neuve dans l’air sec d’un laboratoire ne révélera jamais l’effet de cinq ans de brouillard salin, et un modèle statistique validé tant qu’un facteur caché restait constant peut être pris en défaut dès que ce facteur change en exploitation.
+    apres: |
+      Encore faut-il que le facteur omis ait effectivement varié pendant la collecte des données, et que ses effets se lisent dans ce que l’on a pris soin d’enregistrer. Ainsi, un essai de charge sur une ferrure neuve dans l’air sec d’un laboratoire ne révélera jamais l’effet de cinq ans de brouillard salin, et un modèle statistique validé tant qu’un facteur caché restait constant peut être pris en défaut dès que ce facteur change en exploitation.
+    note: "Scinde une phrase de 69 mots au deux-points avec « Ainsi »."
+
+  - id: "008"
+    motif: phrase-longue
+    avant: |
+      Ce passage en série est d’autant plus redoutable qu’il s’accompagne souvent d’un blanchiment des conditions : un champ de températures calculé sous dix hypothèses prudentes traverse une interface sous la forme d’un simple tableau de nombres nus, dépouillé de ses réserves, de ses barres d’erreur et parfois de ses unités, comme l’étaient les impulsions transmises à l’équipe de navigation de *Mars Climate Orbiter* [@mco1999].
+    apres: |
+      Ce passage en série est d’autant plus redoutable qu’il s’accompagne souvent d’un blanchiment des conditions. Un champ de températures calculé sous dix hypothèses prudentes traverse ainsi une interface sous la forme d’un simple tableau de nombres nus, dépouillé de ses réserves, de ses barres d’erreur et parfois de ses unités, comme l’étaient les impulsions transmises à l’équipe de navigation de *Mars Climate Orbiter* [@mco1999].
+    note: "Coupe articulée au deux-points avec « ainsi »."
+
+  - id: "009"
+    motif: phrase-longue
+    avant: |
+      Mais ce gain a, le plus souvent, un prix : plus le contrôleur est indépendant du producteur (par ses méthodes, sa discipline ou ses données), moins il partage spontanément le même langage et les mêmes définitions, et plus il faut travailler pour rendre leurs conclusions comparables.
+    apres: |
+      Mais ce gain a, le plus souvent, un prix. En effet, plus le contrôleur est indépendant du producteur (par ses méthodes, sa discipline ou ses données), moins il partage spontanément le même langage et les mêmes définitions, et plus il faut travailler pour rendre leurs conclusions comparables.
+    note: "Coupe articulée au deux-points avec « En effet »."
+
+  - id: "010"
+    motif: phrase-longue
+    avant: |
+      2. *La façon dont l’échec se présente* : dans les couches basses, une erreur est un écart définissable par rapport à une règle écrite, même lorsqu’elle passe longtemps inaperçue, comme celle des unités de la sonde martienne ; au sommet, elle prend la forme d’un texte fluide, poli et assuré, identique en surface à une réponse juste, comme l’ont appris à leurs dépens les avocats de l’affaire *Mata v. Avianca* [@mata2023].
+    apres: |
+      2. *La façon dont l’échec se présente* : dans les couches basses, une erreur est un écart définissable par rapport à une règle écrite, même lorsqu’elle passe longtemps inaperçue, comme celle des unités de la sonde martienne. Au sommet, en revanche, elle prend la forme d’un texte fluide, poli et assuré, identique en surface à une réponse juste, comme l’ont appris à leurs dépens les avocats de l’affaire *Mata v. Avianca* [@mata2023].
+    note: "Coupe au point-virgule avec « en revanche »."
+
+  - id: "011"
+    motif: phrase-longue
+    avant: |
+      - dans la seconde, le producteur, désormais assisté d’un modèle, ne se trompe plus que dans 1 % des cas, mais ses erreurs se présentent avec la même aisance que ses réussites et n’ont pas d’adresse, et ceux qui le relisent consultent le même modèle ; 90 % d’entre elles passent, et la part des affirmations fausses suivies d’effet atteint $1\,\% \times 90\,\% = 0{,}9\,\%$.
+    apres: |
+      - dans la seconde, le producteur, désormais assisté d’un modèle, ne se trompe plus que dans 1 % des cas, mais ses erreurs se présentent avec la même aisance que ses réussites et n’ont pas d’adresse, et ceux qui le relisent consultent le même modèle. Dès lors, 90 % d’entre elles passent, et la part des affirmations fausses suivies d’effet atteint $1\,\% \times 90\,\% = 0{,}9\,\%$.
+    note: "Coupe articulée au point-virgule."
+
+  - id: "012"
+    motif: or-initial
+    avant: |
+      Or les tests de référence et les courbes de performance notent le producteur seul : ils ne mesurent que le premier facteur ; toute la question du cadre et de l’architecture des contrôles porte sur le second.
+    apres: |
+      Pourtant, les tests de référence et les courbes de performance notent le producteur seul et ne mesurent ainsi que le premier facteur. Toute la question du cadre et de l’architecture des contrôles porte, quant à elle, sur le second.
+    note: "Remplace « Or » en tête et scinde au point-virgule."
+
+  - id: "013"
+    motif: phrase-longue
+    avant: |
+      Puisque toute action sur le monde est en même temps une question posée au monde, mieux vaut la poser là où la réponse coûte peu et peut être défaite : il est fécond de laisser les modèles et les agents explorer librement à l’intérieur d’un bac à sable — un environnement isolé où le compilateur, le simulateur ou la suite de tests répondent instantanément, presque gratuitement et sans effet extérieur irréversible —, tout en maintenant des verrous stricts à chaque frontière où l’action toucherait le monde réel à fort coût.
+    apres: |
+      Puisque toute action sur le monde est en même temps une question posée au monde, mieux vaut la poser là où la réponse coûte peu et peut être défaite. Il est ainsi fécond de laisser les modèles et les agents explorer librement à l’intérieur d’un bac à sable — un environnement isolé où le compilateur, le simulateur ou la suite de tests répondent instantanément, presque gratuitement et sans effet extérieur irréversible —, tout en maintenant des verrous stricts à chaque frontière où l’action toucherait le monde réel à fort coût.
+    note: "Scinde une phrase de 85 mots au deux-points avec « ainsi »."
+
+  - id: "014"
+    motif: phrase-longue
+    avant: |
+      - *L’attitude individuelle* : notre expérience du monde déborde souvent le cadre du modèle que nous consultons, même si elle ne déborde jamais le nôtre ; l’humilité épistémique consiste alors à produire ses propres comparateurs *avant* de consulter l’outil — fixer par écrit un ordre de grandeur attendu avant de lire la sortie, pratiquer l’exercice du pré-mortem en supposant que le projet a échoué six mois plus tard pour en imaginer les causes, et élargir à dessein l’éventail des mondes possibles envisagés.
+    apres: |
+      - *L’attitude individuelle* : notre expérience du monde déborde souvent le cadre du modèle que nous consultons, même si elle ne déborde jamais le nôtre. L’humilité épistémique consiste alors à produire ses propres comparateurs *avant* de consulter l’outil : fixer par écrit un ordre de grandeur attendu avant de lire la sortie, pratiquer l’exercice du pré-mortem en supposant que le projet a échoué six mois plus tard pour en imaginer les causes, et élargir à dessein l’éventail des mondes possibles envisagés.
+    note: "Coupe au point-virgule."
+
+  - id: "015"
+    motif: phrase-longue
+    avant: |
+      - L’informatique classique a fondé sa fiabilité sur des contrats écrits vérifiables en amont et dotés d’une adresse en cas de défaillance ; l’apprentissage automatique achète sa portée sur des tâches rebelles à toute règle écrite en dépensant cette garantie préalable ; ses erreurs n’ont plus d’adresse et se présentent avec la même aisance que ses réussites.
+    apres: |
+      - L’informatique classique a fondé sa fiabilité sur des contrats écrits vérifiables en amont et dotés d’une adresse en cas de défaillance. À l’inverse, l’apprentissage automatique achète sa portée sur des tâches rebelles à toute règle écrite en dépensant cette garantie préalable ; ses erreurs n’ont plus d’adresse et se présentent avec la même aisance que ses réussites.
+    note: "Coupe articulée dans les points clés."

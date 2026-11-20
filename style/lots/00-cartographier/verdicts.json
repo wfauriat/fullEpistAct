@@ -1,0 +1,21 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/00-cartographier/",
+  "verdicts": [
+    {"id": "001", "verdict": "rejete", "dimensions": ["argument"], "raison": "« Or » introduit ici l’élément décisif du récit ; « pourtant » pose une concession sans antécédent : rien dans la phrase précédente (le fichier transmis à l’équipe de navigation) ne s’oppose à l’exigence de la spécification. Avec « tandis que » dans la même phrase, l’enchaînement devient confus."},
+    {"id": "002", "verdict": "accepte", "dimensions": [], "raison": "La phrase est coupée au deux-points, et « en effet » garde le lien explicatif ; les deux « pourvu que » et « strictement conditionnelle » sont conservés."},
+    {"id": "003", "verdict": "rejete", "dimensions": ["argument"], "raison": "« Pourtant » porte sur une phrase qui nie une faute de calcul, ce qui s’accorde avec la « série statistique irréprochable » au lieu de s’y opposer. Le lien logique devient incohérent, alors que la juxtaposition d’origine laissait bien sentir le contraste entre la série irréprochable et la catastrophe."},
+    {"id": "004", "verdict": "accepte", "dimensions": [], "raison": "La phrase longue est coupée au deux-points, et « Dès lors » garde le lien de conséquence ; chiffres, seuil et « non moins rationnellement » sont inchangés."},
+    {"id": "005", "verdict": "accepte", "dimensions": [], "raison": "Retire le « Or » initial et coupe la phrase ; « en effet » garde l’explication du nœud. Sens et portée sont inchangés."},
+    {"id": "006", "verdict": "accepte", "dimensions": [], "raison": "Après la coupure, « alors » maintient le caractère conditionnel du 100 % ; la glose de la probabilité d’échappement est conservée."},
+    {"id": "007", "verdict": "accepte", "dimensions": [], "raison": "La phrase longue est coupée et « Ainsi » introduit l’illustration ; « jamais », « peut être pris en défaut » et « tant que » sont conservés."},
+    {"id": "008", "verdict": "accepte", "dimensions": [], "raison": "La phrase est coupée au deux-points et « ainsi » garde le rôle d’exemple du blanchiment des conditions ; « souvent » et « parfois » sont conservés."},
+    {"id": "009", "verdict": "accepte", "dimensions": [], "raison": "La coupure allège un paragraphe chargé de deux-points ; « le plus souvent » est conservé et « En effet » garde le lien explicatif."},
+    {"id": "010", "verdict": "accepte", "dimensions": [], "raison": "La coupure d’un item long rend explicite, par « en revanche », un contraste déjà présent ; les deux renvois aux exemples courants sont conservés."},
+    {"id": "011", "verdict": "rejete", "dimensions": ["statut", "argument"], "raison": "« Dès lors, 90 % d’entre elles passent » présente comme une conséquence déduite un chiffre que le texte annonce comme « choisi pour l’illustration ». Le point coupe aussi un item de liste dont la structure repose sur des points-virgules."},
+    {"id": "012", "verdict": "accepte", "dimensions": [], "raison": "Retire le « Or » initial et la série deux-points/point-virgule. « Pourtant » s’appuie ici sur le résultat qui précède (producteur plus exact, système plus risqué) ; « seul » et « ne… que » sont conservés."},
+    {"id": "013", "verdict": "accepte", "dimensions": [], "raison": "Une phrase très longue est coupée au deux-points ; « ainsi » garde le lien, et « presque gratuitement » ainsi que l’incise définissant le bac à sable sont conservés."},
+    {"id": "014", "verdict": "accepte", "dimensions": [], "raison": "L’item long est coupé au point-virgule et le tiret non refermé est remplacé par un deux-points ; « souvent », « jamais » et les trois pratiques énumérées sont conservés."},
+    {"id": "015", "verdict": "accepte", "dimensions": [], "raison": "La coupure allège une suite de trois propositions ; « À l’inverse » rend explicite le contraste déjà présent entre garantie fondée et garantie dépensée. Termes et portée sont inchangés."}
+  ]
+}
