@@ -141,18 +141,10 @@ Les identifiants entre crochets indiquent la lignée de chaque point :
   - **2** balises `[@A-VERIFIER: ...]` résolues dans le texte et ajoutées à `commun/biblio.bib` :
     - `chapitres/02-cadre.md:150` $\to$ `[@shanahan2016frame]` ;
     - `chapitres/05-trois-incertitudes.md:52` $\to$ `[@fcic2011; @coval2009]`.
-- [ ] **P5.1b — Entrées et points factuels restants signalés avec écart ou imprécision (NON modifiés — à arbitrer / éditer)**
-  - **7 entrées conservées dans `commun/biblio_a_verifier.bib`** (et à corriger dans les chapitres avant bascule vers `biblio.bib`, cf. `RAPPORT_VERIFICATION_BIBLIO.md` Parties B & C) :
-    1. `pearl1988` (`chapitres/02-cadre.md:56`) — l’attribution littérale de l’image du « champ de mines » à Pearl (1988) n’a pas pu être attestée mot pour mot dans la source primaire ; à vérifier en page exacte ou reformuler sans attribution littérale (+ compléter le sous-titre dans BibTeX).
-    2. `rogers1986` (`chapitres/05-trois-incertitudes.md`, `chapitres/06-detecter-une-erreur.md:112`) — distinguer direction de la NASA (inversion de la charge de la preuve) et direction de Morton Thiokol (+ compléter titre/éditeur dans BibTeX).
-    3. `tufte1997` (`chapitres/05-trois-incertitudes.md:119`, `chapitres/06-detecter-une-erreur.md:112, 117`) — *Challenger* : 24 vols antérieurs = **23 documentés** (7 avec dommages + **16** documentés sans dommage, et non 17 ; le vol STS-4 a perdu ses propulseurs en mer) (+ compléter sous-titre dans BibTeX).
-    4. `mco1999` (`chapitres/08-independance-chaines.md:185`) — expliciter la chaîne causale entre sous-estimation d’un facteur 4,45 des impulsions et trajectoire trop basse (~57 km) (+ ajouter `month = nov` dans BibTeX).
-    5. `mata2023` (`chapitres/00-cartographier.md:9`, `chapitres/11-regle-tiree-des-donnees.md:54`) — préciser que les sanctions ont visé les deux avocats **et leur cabinet** (*Levidow, Levidow & Oberman P.C.*) (+ compléter référence recueil/date dans BibTeX).
-    6. `demoura2021` (`chapitres/13-synthese-deux-axes.md:89, 101`) — cité à tort seul pour l’*autoformalisation* alors qu’il porte sur Lean 4 et son noyau de confiance ; distinguer traduction et recherche de preuves et adjoindre `wu2022` (NeurIPS 2022).
-    7. `sec2013knight` (`chapitres/14-chaines-qui-agissent.md:43`) — harmoniser les l. 43 et 45 (oubli sur 1 des 8 serveurs + indicateur réutilisé réactivant le code dormant *Power Peg*) (+ préciser `Exchange Act Release No. 34-70694, Oct. 16, 2013` dans BibTeX).
-  - **1 balise `[@A-VERIFIER: ...]` restante non modifiée :**
-    - `chapitres/11-regle-tiree-des-donnees.md:64` (`[@A-VERIFIER: déclaration d’Air Canada (technologie antérieure)]`) — `[@moffatt2024]` (`2024 BCCRT 149`) constate seulement l’absence de preuve technique au dossier et ne couvre pas les commentaires de presse ultérieurs ; décider de supprimer la clause sur la déclaration ultérieure ou de la sourcer.
-  - **1 retouche factuelle hors clé `biblio_a_verifier.bib` :**
-    - `chapitres/12-autre-regime.md:119` (Vénus vs. Mercure) — remplacer « en moyenne *géométrique* » par « en moyenne *temporelle* » et ajouter `stockman2019` (*Physics Today*, 2019).
+- [x] **P5.1b — Entrées et points factuels restants (corrigés le 2026-11-20, branche `relecture-livre`)**
+  - Chapitres corrigés : `pearl1988` (ch. 2 : l’image du champ de mines n’est plus attribuée littéralement à Pearl, cité pour la difficulté des exceptions) ; `rogers1986` (ch. 6 : responsables de la NASA puis direction de Morton Thiokol) ; `tufte1997` (ch. 5–6 : 7 vols endommagés + 16 sans dommage = 23 vols documentés sur 24) ; `mco1999` (ch. 8 : chaînon causal facteur 4,45 → trajectoire trop basse) ; `mata2023` (ch. 0, 11 : avocats **et leur cabinet**) ; `demoura2021` + `wu2022` (ch. 13 : autoformalisation distinguée de la recherche de preuves) ; `sec2013knight` (ch. 14 : 1 serveur sur 8, indicateur réutilisé, code dormant réactivé).
+  - Air Canada (ch. 11) : clause sur les déclarations ultérieures supprimée (seule l’absence de preuve technique au dossier est retenue, `[@moffatt2024]`).
+  - Vénus/Mercure (ch. 12) : « en moyenne dans le temps » + `[@stockman2019]` ; BCG (ch. 11) : « supérieure de plus de 40 % ».
+  - Les 7 entrées, `wu2022` et `stockman2019` sont dans `commun/biblio.bib` ; `commun/biblio_a_verifier.bib` est vide. `make verifier` : 0 erreur, 0 `A-VERIFIER`, 0 citation candidate.
 - [ ] **P5.2 — `[STY-P2]` : Seconde passe de style ciblée (optionnelle, après stabilisation du fond)**
   - Cible : chapitres encore denses (ch. 0, 13, 14, 15 et 16 ; moyenne actuelle 29–31 mots/phrase), avec les trois consignes issues de `style/BILAN_PASSE.md`.
