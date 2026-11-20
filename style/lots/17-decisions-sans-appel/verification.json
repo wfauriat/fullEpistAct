@@ -1,0 +1,68 @@
+{
+  "lot": "style/lots/17-decisions-sans-appel",
+  "chapitre": "17-decisions-sans-appel",
+  "fichier": "monographie/chapitres/17-decisions-sans-appel.md",
+  "tour": null,
+  "redacteur": "gemini",
+  "date": "2026-11-20T13:31:21",
+  "sha256_chapitre": "ccb0b3e18452d0a9c2b179fbc4921f62b12a67d1e183608781d5c1537e93c7fc",
+  "sha256_propositions": "c470e7ab7090eb4675cd7f8d49a8907a587ebedd69d06f9b53286603b241fba7",
+  "modifications": [
+    {
+      "id": "001",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "or-initial",
+      "avant": "Or c’est le mât réel que la mer éprouve, non la fiche technique (@sec:ch02-monde-action).",
+      "apres": "Mais c’est le mât réel que la mer éprouve, non la fiche technique (@sec:ch02-monde-action).",
+      "debut": 2552,
+      "fin": 2641,
+      "ligne": 11,
+      "section": "sec:ch17-course-revisitee",
+      "titre_section": "La course à la voile revisitée"
+    },
+    {
+      "id": "002",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "or-initial",
+      "avant": "Or $z$ désigne, par définition, ce que le cadre n’a pas retenu : aucune décomposition de la variance sur l’ensemble des alternatives admises ne le fait apparaître (@prop:desaccord, @sec:ch05), et aucun contrôle interne ne peut le lire (@prop:cause-commune, @sec:ch07).",
+      "apres": "Mais $z$ désigne, par définition, ce que le cadre n’a pas retenu : aucune décomposition de la variance sur l’ensemble des alternatives admises ne le fait apparaître (@prop:desaccord, @sec:ch05), et aucun contrôle interne ne peut le lire (@prop:cause-commune, @sec:ch07).",
+      "debut": 15381,
+      "fin": 15649,
+      "ligne": 95,
+      "section": "sec:ch17-course-revisitee",
+      "titre_section": "La course à la voile revisitée"
+    },
+    {
+      "id": "003",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "Un taux de réussite élevé, mesuré sur des cas antérieurs ou sur des tests de référence, ne promet rien pour *cette* instance : elle peut tomber parmi les rares échecs, se situer au-delà de la frontière en dents de scie de l’outil (@sec:ch12-frontiere-dents-scie) ou dépendre d’un facteur $z$ absent des séries passées.",
+      "apres": "Un taux de réussite élevé, mesuré sur des cas antérieurs ou sur des tests de référence, ne promet rien pour *cette* instance. Elle peut en effet tomber parmi les rares échecs, se situer au-delà de la frontière en dents de scie de l’outil (@sec:ch12-frontiere-dents-scie) ou dépendre d’un facteur $z$ absent des séries passées.",
+      "debut": 19327,
+      "fin": 19645,
+      "ligne": 113,
+      "section": "sec:ch17-calibrer-verrouiller",
+      "titre_section": "Calibrer ce qui se répète, verrouiller ce qui ne se joue qu’une fois"
+    },
+    {
+      "id": "004",
+      "statut": "ok",
+      "raisons": [],
+      "alertes": [],
+      "motif": "phrase-longue",
+      "avant": "Le @sec:ch16 (@sec:ch16-etranglement-evaluation) a montré la fragilité de cette exigence : la capacité d’une institution à répondre honnêtement (conserver la provenance, entretenir des équipes capables de regarder sous l’interface, ne pas sacrifier la relecture au débit) est justement ce que la course au volume tend à vider.",
+      "apres": "Le @sec:ch16 (@sec:ch16-etranglement-evaluation) a montré la fragilité de cette exigence. La capacité d’une institution à répondre honnêtement (conserver la provenance, entretenir des équipes capables de regarder sous l’interface, ne pas sacrifier la relecture au débit) est justement ce que la course au volume tend à vider.",
+      "debut": 31919,
+      "fin": 32245,
+      "ligne": 166,
+      "section": "sec:ch17-quatre-questions",
+      "titre_section": "Recevoir un chiffre assuré : quatre questions"
+    }
+  ]
+}
