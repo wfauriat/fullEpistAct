@@ -1,0 +1,12 @@
+{
+  "juge": "claude-opus (juge-style)",
+  "lot": "style/lots/07-cadre-cause-commune/",
+  "verdicts": [
+    {"id": "001", "verdict": "rejete", "dimensions": ["portee", "gain"], "raison": "L’ajout de « ainsi » rattache au seul cas de la fiche de chantier une règle que l’original énonce en général (« dès qu’il s’appuie sur un élément absent de $x$ »). La phrase, de longueur modérée, se lisait déjà bien : le gain est faible."},
+    {"id": "002", "verdict": "accepte", "dimensions": [], "raison": "La phrase longue est coupée au deux-points. « en effet » garde le lien explicatif de l’original. Le sens, la portée (« ne… qu’ », « sans aucun concept ») et l’exemple de l’automate sont inchangés."},
+    {"id": "003", "verdict": "rejete", "dimensions": ["registre", "francais"], "raison": "Une phrase ouverte par « Car » est une construction déconseillée dans la prose académique : la retouche remplace un deux-points par un autre tic, sans gain net."},
+    {"id": "004", "verdict": "rejete", "dimensions": ["argument"], "raison": "Dans l’original, « retenir les catégories pertinentes… précède l’inférence » est la leçon tirée de l’exemple « vleu ». Avec « en effet », cette conclusion devient la justification de la phrase qui précède, ce qui inverse le sens de l’argument."},
+    {"id": "005", "verdict": "accepte", "dimensions": [], "raison": "La longue phrase est coupée au deux-points. Juxtaposées, les deux phrases gardent le lien de justification. La double négation, « manifestement » et l’énumération sont intacts."},
+    {"id": "006", "verdict": "rejete", "dimensions": ["argument", "francais"], "raison": "Après la coupe, « Il ne découvre en effet » renvoie au « système qui se contenterait d’exploiter », alors que ce système n’essaie justement rien de nouveau. On passe en outre du conditionnel à l’indicatif, et la seconde proposition, parallèle dans l’original, devient une justification qui se détache de ce que la phrase attribue à Sutton et Barto."}
+  ]
+}
