@@ -17,6 +17,7 @@ Standalone copies of the published pages; they open in any browser.
 | :-- | :-- |
 | `monograph-build-lookback.html` | https://claude.ai/artifact/PN8wpd27aXmMGQurS7ZnJX |
 | `monograph-idea-lineage.html` | https://claude.ai/artifact/PqndnS1EbH9u8tr6RyWAYL |
+| `monograph-research-positioning.html` | https://claude.ai/artifact/6nW9rdarKFkVYtnCovaibr |
 
 ## Scripts and data
 

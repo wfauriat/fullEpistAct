@@ -1,0 +1,276 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Research Positioning Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a referee's sheet. A 4×4 placement grid (position in the field × apparent level), then one row per domain with evidence and gaps, then the positioning to add. */
+:root {
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --fg: #1b2330;
+  --muted: #5a6577;
+  --rule: #d5dbe3;
+  --lag: #b4532a;
+  --main: #6b7890;
+  --sota: #1f7a72;
+  --front: #4b4fb0;
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11151b; --surface: #181e27; --fg: #e3e8ef; --muted: #9ba6b7; --rule: #2b3340;
+    --lag: #ec8a5f; --main: #a3aec2; --sota: #5cc2b8; --front: #9da1f2; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11151b; --surface: #181e27; --fg: #e3e8ef; --muted: #9ba6b7; --rule: #2b3340;
+  --lag: #ec8a5f; --main: #a3aec2; --sota: #5cc2b8; --front: #9da1f2; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 15.5px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 4rem;
+}
+main { max-width: 940px; margin: 0 auto; }
+header { padding-block: 2.75rem 1.4rem; border-bottom: 1px solid var(--rule); }
+.eyebrow { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.7rem; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; text-wrap: balance; }
+h1 { font-size: clamp(1.8rem, 4.2vw, 2.4rem); margin: 0 0 0.9rem; }
+h2 { font-size: 1.45rem; margin: 2.8rem 0 0.9rem; }
+h3 { font-size: 1.08rem; margin: 0 0 0.3rem; }
+p, li { max-width: 70ch; }
+p { margin: 0 0 1rem; }
+.lede { font-size: 1.05rem; }
+.caveat { font-size: 0.88rem; color: var(--muted); border-left: 3px solid var(--rule); padding: 0.3rem 0 0.3rem 0.9rem; margin: 1.2rem 0 0; }
+.caveat p { margin: 0 0 0.4rem; }
+.caveat p:last-child { margin: 0; }
+
+/* Position chips */
+.pos { display: inline-flex; align-items: center; gap: 0.35rem; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.1rem 0.45rem; border-radius: 3px; border: 1px solid currentColor; white-space: nowrap; }
+.pos::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.pos.lag { color: var(--lag); } .pos.main { color: var(--main); } .pos.sota { color: var(--sota); } .pos.front { color: var(--front); }
+.lvl { font-family: var(--font-mono); font-size: 0.72rem; color: var(--fg); background: color-mix(in srgb, var(--rule) 55%, transparent); padding: 0.1rem 0.45rem; border-radius: 3px; white-space: nowrap; }
+
+/* Placement grid */
+.gridwrap { overflow-x: auto; margin: 1.2rem 0 0.4rem; }
+.grid { min-width: 640px; display: grid; grid-template-columns: 118px repeat(4, minmax(0, 1fr)); border: 1px solid var(--rule); background: var(--rule); gap: 1px; }
+.grid > div { background: var(--surface); padding: 0.55rem 0.6rem; min-height: 64px; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 0.35rem; }
+.grid .colh, .grid .rowh, .grid .corner { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); min-height: 0; align-items: center; }
+.grid .colh { justify-content: center; text-align: center; }
+.grid .colh.lag { color: var(--lag); } .grid .colh.main { color: var(--main); } .grid .colh.sota { color: var(--sota); } .grid .colh.front { color: var(--front); }
+.dom { font-size: 0.8rem; line-height: 1.25; padding: 0.25rem 0.5rem; border-radius: 3px; border: 1px solid currentColor; background: color-mix(in srgb, currentColor 9%, var(--surface)); }
+.dom span { color: var(--fg); }
+.dom.lag { color: var(--lag); } .dom.main { color: var(--main); } .dom.sota { color: var(--sota); } .dom.front { color: var(--front); }
+.dom.home { font-weight: 600; outline: 2px solid currentColor; outline-offset: 1px; }
+.caption { font-size: 0.83rem; color: var(--muted); margin-top: 0.5rem; }
+
+/* Domain rows */
+.domains { display: grid; gap: 0; border-top: 1px solid var(--rule); margin-top: 0.8rem; }
+.drow { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 0.4rem 1.4rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+.drow .meta { display: flex; flex-direction: column; gap: 0.4rem; align-items: flex-start; min-width: 0; }
+.drow .body { min-width: 0; }
+.drow .body p { margin: 0 0 0.45rem; font-size: 0.93rem; }
+.drow .body p:last-child { margin-bottom: 0; }
+.tag { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-right: 0.35rem; }
+.gap { color: var(--lag); }
+
+.callout { background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--front); padding: 1rem 1.2rem; margin: 1.6rem 0; }
+.callout p:last-child { margin-bottom: 0; }
+
+/* Reading list */
+.reads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 0.8rem; }
+.reads > div { background: var(--surface); border: 1px solid var(--rule); padding: 0.9rem 1rem; min-width: 0; }
+.reads ul { margin: 0.4rem 0 0; padding-left: 1.1rem; font-size: 0.9rem; }
+.reads li { margin-bottom: 0.3rem; }
+.verify { font-family: var(--font-mono); font-size: 0.68rem; color: var(--lag); border: 1px dashed currentColor; padding: 0 0.3rem; border-radius: 3px; margin-left: 0.25rem; white-space: nowrap; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.82rem; color: var(--muted); }
+
+@media (max-width: 680px) {
+  .drow { grid-template-columns: minmax(0, 1fr); }
+  .drow .meta { flex-direction: row; flex-wrap: wrap; align-items: center; }
+  .reads { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+
+<main>
+<header>
+  <p class="eyebrow">Referee's sheet · Agir d'après une représentation du monde · Nov 2026</p>
+  <h1>Where the work sits, domain by domain</h1>
+  <p class="lede">A rough placement of the 2026 monograph against nine neighbouring fields: how close it comes to each field's current state, and the level of expertise the writing and the citations suggest. The profile is T-shaped: expert in uncertainty, reliability and decision, broadly read across philosophy, computing and ML, and least well positioned in the two fields nearest the 2026 thesis.</p>
+  <div class="caveat">
+    <p><strong>How this was judged.</strong> From the writing, the 69 verified bibliography entries and the build record. Your 2020–21 time log also shows ESREL and PHM talks, and review and editorial work for a risk-and-reliability journal. A work missing from the bibliography may still be one you know.</p>
+    <p><strong>Who is judging.</strong> A model from the family that wrote much of the 2026 prose, with knowledge that stops around mid-2026. Treat this as one reviewer's sketch, to be checked against domain experts.</p>
+  </div>
+</header>
+
+<section>
+  <h2>Placement</h2>
+  <div class="gridwrap">
+    <div class="grid" role="img" aria-label="Grid placing nine domains by position in the field and by apparent level of expertise">
+      <div class="corner">Level ↓ · Position →</div>
+      <div class="colh lag">Lagging</div>
+      <div class="colh main">Mainstream</div>
+      <div class="colh sota">State of the art</div>
+      <div class="colh front">Forefront</div>
+
+      <div class="rowh">Expert</div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div><span class="dom front home"><span>Uncertainty quantification &amp; reliability</span></span></div>
+
+      <div class="rowh">Advanced</div>
+      <div></div>
+      <div><span class="dom main"><span>Bayesian decision theory</span></span></div>
+      <div></div>
+      <div><span class="dom front"><span>AI-assisted research method</span></span></div>
+
+      <div class="rowh">Well-informed</div>
+      <div></div>
+      <div></div>
+      <div><span class="dom sota"><span>Philosophy of science</span></span><span class="dom sota"><span>ML &amp; LLM behaviour</span></span></div>
+      <div></div>
+
+      <div class="rowh">Informed</div>
+      <div><span class="dom lag"><span>Safety science &amp; human factors</span></span><span class="dom lag"><span>AI safety &amp; oversight</span></span></div>
+      <div><span class="dom main"><span>Software engineering</span></span><span class="dom main"><span>Information economics</span></span></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <p class="caption">"Forefront" for uncertainty quantification applies to one point: ontological uncertainty and the frame as a common cause in quantitative practice. "Forefront" for the research method refers to practice, since the build is not yet written up. The outlined cell is your home field.</p>
+
+  <div class="callout">
+    <p><strong>Your strongest card, and the risk around it.</strong> Expertise in uncertainty and reliability is what lets the book carry reliability logic over to checks on reasoning. Two neighbouring fields have studied "independent checks that can fail differently" for years under other names: safety science (defences in depth, control structures) and AI oversight (scalable oversight, AI control, monoculture). A reviewer from either will ask first how the book differs from them.</p>
+    <p>The answer exists and is yours: the frame acts as a common cause of every internal check, and ontological uncertainty stays out of sight by construction. Neither field states this as sharply. The book does not yet make the comparison.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Domain by domain</h2>
+  <div class="domains">
+
+    <div class="drow">
+      <div class="meta"><h3>Uncertainty quantification &amp; reliability</h3><span class="pos front">Forefront, one point</span><span class="lvl">Expert · home field</span></div>
+      <div class="body">
+        <p><span class="tag">Covers</span>Der Kiureghian &amp; Ditlevsen and Oberkampf &amp; Roy on kinds of uncertainty, Knight 1921, Walker 2003, Lempert 2003, value of information. The ontological-uncertainty argument goes further than most UQ papers.</p>
+        <p class="gap"><span class="tag">Gap</span>The design-diversity models of software reliability (Eckhardt–Lee 1985, Littlewood–Miller 1989), which are the formal theory of "failing differently". Common-cause failure models from probabilistic safety assessment, such as the beta factor; M1's shared-cause parameter is close to them.</p>
+      </div>
+    </div>
+
+    <div class="drow">
+      <div class="meta"><h3>AI-assisted research method</h3><span class="pos front">Forefront, as practice</span><span class="lvl">Advanced practitioner</span></div>
+      <div class="body">
+        <p><span class="tag">Covers</span>An audited multi-model build: isolated readers, a judge calibrated before it was trusted, edits applied by script, file-based handoffs between vendors, provenance tracked end to end.</p>
+        <p class="gap"><span class="tag">Gap</span>Not written up or published, so the field cannot see it yet.</p>
+      </div>
+    </div>
+
+    <div class="drow">
+      <div class="meta"><h3>Bayesian decision theory</h3><span class="pos main">Mainstream, solid</span><span class="lvl">Advanced to expert</span></div>
+      <div class="body">
+        <p><span class="tag">Covers</span>Savage, de Finetti, Jaynes, Lindley, Gneiting &amp; Raftery on proper scoring rules.</p>
+        <p class="gap"><span class="tag">Gap</span>Imprecise probability (Walley), robust Bayes and ambiguity aversion, the natural formal language for the humility margin <i>b</i>.</p>
+      </div>
+    </div>
+
+    <div class="drow">
+      <div class="meta"><h3>Philosophy of science</h3><span class="pos sota">State of the art, in pockets</span><span class="lvl">Well-read practitioner</span></div>
+      <div class="body">
+        <p><span class="tag">Covers</span>McCarthy &amp; Hayes, Dennett and Shanahan on the frame problem; Hume, Goodman; Mayo 1996 and 2018 on severity; robustness analysis (Levins, Wimsatt, Orzack); Wynne 1992 on ignorance. Carrying the frame problem into quantitative practice is a relatively original niche.</p>
+        <p class="gap"><span class="tag">Gap</span>Social epistemology (testimony, epistemic dependence), which the chapter on collective blind spots touches.</p>
+      </div>
+    </div>
+
+    <div class="drow">
+      <div class="meta"><h3>ML &amp; LLM behaviour</h3><span class="pos sota">State of the art, as a user</span><span class="lvl">Well-informed generalist</span></div>
+      <div class="body">
+        <p><span class="tag">Covers</span>Recent and well chosen: Kalai &amp; Vempala 2024 and Kalai et al. 2025 on hallucination, Farquhar 2024 on semantic entropy, Sharma on sycophancy, Shumailov 2024 on model collapse, conformal prediction, RLHF.</p>
+        <p class="gap"><span class="tag">Gap</span>Correlated errors across models and algorithmic monoculture, the empirical twin of the "prêteur unique" chapter.</p>
+      </div>
+    </div>
+
+    <div class="drow">
+      <div class="meta"><h3>Software engineering &amp; formal methods</h3><span class="pos main">Mainstream classics</span><span class="lvl">Informed practitioner</span></div>
+      <div class="body">
+        <p><span class="tag">Covers</span>Hoare, Meyer, Dijkstra, DeMillo on mutation testing, Lean, Sculley on technical debt, all used accurately.</p>
+        <p class="gap"><span class="tag">Gap</span>Verification of LLM-generated code (2024–26), which bears directly on chapter 13.</p>
+      </div>
+    </div>
+
+    <div class="drow">
+      <div class="meta"><h3>Information economics</h3><span class="pos main">Mainstream classics</span><span class="lvl">Competent</span></div>
+      <div class="body">
+        <p><span class="tag">Covers</span>Spence on costly signals, Akerlof on pooling, Goodhart and Strathern, correctly used.</p>
+      </div>
+    </div>
+
+    <div class="drow">
+      <div class="meta"><h3>Safety science &amp; human factors</h3><span class="pos lag">Lagging in positioning</span><span class="lvl">Informed practitioner</span></div>
+      <div class="body">
+        <p><span class="tag">Covers</span>Bainbridge 1983, Tufte and the Rogers commission on Challenger, Knight Capital.</p>
+        <p class="gap"><span class="tag">Gap</span>Reason's defences in depth, Perrow's normal accidents, Leveson's control-structure view, Parasuraman on complacency, Mosier on automation bias, Lee &amp; See on trust in automation. The five conditions and the placement of checks overlap strongly with this literature.</p>
+      </div>
+    </div>
+
+    <div class="drow">
+      <div class="meta"><h3>AI safety &amp; oversight</h3><span class="pos lag">Lagging, where the thesis lands hardest</span><span class="lvl">Informed generalist</span></div>
+      <div class="body">
+        <p><span class="tag">Covers</span>Christiano 2017 and Ouyang 2022 only.</p>
+        <p class="gap"><span class="tag">Gap</span>Scalable oversight, debate, AI control, weak-to-strong supervision, and the self-preference of models judging their own output. "A checker that fails differently from the producer" is this field's central question, so without explicit positioning the book risks being read as rediscovering it.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>The positioning to add</h2>
+  <p>One section that maps the five conditions onto these four bodies of work would move Parts II and IV from lagging to positioned at the state of the art.</p>
+  <div class="reads">
+    <div>
+      <h3>Safety science</h3>
+      <ul>
+        <li>Reason, <em>Human Error</em> (1990) and the defences-in-depth model</li>
+        <li>Perrow, <em>Normal Accidents</em> (1984)</li>
+        <li>Leveson, <em>Engineering a Safer World</em> (2011)</li>
+        <li>Parasuraman &amp; Riley (1997); Mosier &amp; Skitka on automation bias; Lee &amp; See (2004)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Design diversity and common cause</h3>
+      <ul>
+        <li>Eckhardt &amp; Lee (1985); Littlewood &amp; Miller (1989)</li>
+        <li>Common-cause failure models in probabilistic safety assessment (beta factor)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>AI oversight</h3>
+      <ul>
+        <li>Irving, Christiano &amp; Amodei on debate (2018); Bowman et al. on scalable oversight (2022)</li>
+        <li>Burns et al. on weak-to-strong supervision (2023); Greenblatt et al. on AI control (2024)</li>
+        <li>Work on self-preference in LLM judges (2024) <span class="verify">verify</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Monoculture and correlated errors</h3>
+      <ul>
+        <li>Kleinberg &amp; Raghavan, algorithmic monoculture (2021)</li>
+        <li>Bommasani et al., outcome homogenisation (2022)</li>
+        <li>2025 studies of correlated errors between LLMs and their effect on oversight <span class="verify">verify</span></li>
+      </ul>
+    </div>
+  </div>
+  <p class="caption">References are given from memory, to orient a search. Items marked "verify" especially should be checked before they are cited.</p>
+</section>
+
+<footer>Compiled 21 Nov 2026. Companion pages: the build lookback and the lineage of ideas, in <code>lookback-22-26/</code> of the repository.</footer>
+</main>
+
+</body></html>
