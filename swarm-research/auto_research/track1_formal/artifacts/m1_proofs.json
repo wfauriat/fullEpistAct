@@ -1,0 +1,27 @@
+{
+  "M1_NonMonotonic": {
+    "R_rational": "p*(f*(1 - p) - p*s**2 + p*s)/(f*(1 - p) + p*s)",
+    "dR_dp_factored": "-(-f**2*p**2 + 2*f**2*p - f**2 - f*p**2*s**2 + 2*f*p**2*s + 2*f*p*s**2 - 2*f*p*s + p**2*s**3 - p**2*s**2)/(-f*p + f + p*s)**2",
+    "dR_at_1_factored": "-f - s + 1",
+    "z3_monotone_iff_s_plus_f_le_1_unsat": true,
+    "z3_dR1_neg_iff_s_plus_f_gt_1_unsat": true,
+    "witness_s096_f005": {
+      "p_peak": 0.4348008918955214,
+      "R_at_p_peak": 0.04386002121760868,
+      "R_at_p1": 0.04,
+      "z3_decreasing_on_peak_to_1_unsat": true
+    }
+  },
+  "M1_Monoculture": {
+    "dR_dc_factored": "-p**2*(c - 1)*(m - 1)**2*(c*m*p - c*p - 2*f*p + 2*f - m*p + p)/(c*m*p - c*p - f*p + f - m*p + p)**2",
+    "z3_strictly_increasing_in_c_unsat": true,
+    "peer_baseline_R": 0.055692307692307694,
+    "p_crit_at_c060": 0.06150865526567876,
+    "R_at_p002_c060": 0.019260649819494585,
+    "R_at_p007_c060": 0.06271756168359942,
+    "tipping_verified": true
+  },
+  "M1_Track2_Bypass": {
+    "z3_bypass_strictly_raises_R_unsat": true
+  }
+}

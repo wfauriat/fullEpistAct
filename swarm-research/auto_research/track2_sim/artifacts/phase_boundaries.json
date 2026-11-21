@@ -1,0 +1,63 @@
+{
+  "n_sobol_points": 4096,
+  "episodes_per_point_per_policy": 1000,
+  "runtime_seconds": 28.12,
+  "validation": {
+    "m1_abs_err": 5.564102564102613e-05,
+    "annex_d_passed": true
+  },
+  "policy_means": {
+    "none": {
+      "mean_step_risk": 0.04388022867838542,
+      "mean_ep_fail": 0.23254150390625,
+      "mean_escape_rate": 0.5724374078442983,
+      "mean_total_cost": 252.6317369556441,
+      "mean_cvar99_cost": 1085.079107442756,
+      "mean_bypass_rate": 0.0,
+      "mean_cff_rate": 0.0
+    },
+    "static_always": {
+      "mean_step_risk": 0.05603831990559896,
+      "mean_ep_fail": 0.279261962890625,
+      "mean_escape_rate": 0.7330452757428388,
+      "mean_total_cost": 303.42193507115576,
+      "mean_cvar99_cost": 1085.9227967354368,
+      "mean_bypass_rate": 0.31057348632812504,
+      "mean_cff_rate": 0.689426513671875
+    },
+    "adaptive_uq": {
+      "mean_step_risk": 0.04668009440104167,
+      "mean_ep_fail": 0.2465556640625,
+      "mean_escape_rate": 0.6080279137684073,
+      "mean_total_cost": 300.74666825021234,
+      "mean_cvar99_cost": 1085.8464230592213,
+      "mean_bypass_rate": 0.10992114257812499,
+      "mean_cff_rate": 0.385457763671875
+    },
+    "adaptive_uq_only": {
+      "mean_step_risk": 0.04220304361979167,
+      "mean_ep_fail": 0.230865478515625,
+      "mean_escape_rate": 0.5478937390316814,
+      "mean_total_cost": 250.79188472331978,
+      "mean_cvar99_cost": 1084.8951559376992,
+      "mean_bypass_rate": 0.012979248046875003,
+      "mean_cff_rate": 0.23941552734375
+    }
+  },
+  "phase_fractions": {
+    "adaptive_uq_beats_none_on_cost": 0.401123046875,
+    "adaptive_uq_beats_static_on_cost": 0.66796875,
+    "adaptive_uq_dominates_cost_and_trap_low_bypass": 0.025634765625,
+    "uq_only_beats_none_on_cost": 0.61083984375,
+    "uq_only_beats_static_on_cost": 0.984130859375,
+    "uq_only_dominates_cost_and_trap_low_bypass": 0.0283203125,
+    "static_bypass_gt_25pct": 0.55517578125,
+    "adaptive_uq_bypass_gt_25pct": 0.180908203125,
+    "uq_only_bypass_gt_25pct": 0.00048828125
+  },
+  "trigger_F2_check": {
+    "adaptive_uq_stakes_dominance_share": 0.025634765625,
+    "uq_only_dominance_share": 0.0283203125,
+    "adaptive_pareto_basin_exists": false
+  }
+}

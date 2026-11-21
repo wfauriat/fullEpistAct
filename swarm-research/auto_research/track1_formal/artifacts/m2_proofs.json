@@ -1,0 +1,197 @@
+{
+  "M2_Frechet_Hoeffding": {
+    "z3_fh_union_bounds_unsat": true,
+    "z3_independence_strictly_interior_unsat": true,
+    "z3_nonvacuity_sat": true
+  },
+  "M2_Copula_Stress": {
+    "delta": 0.05,
+    "monotonic_trap_in_lambda_U": false,
+    "grid_results": [
+      {
+        "K": 10,
+        "p_star": 0.09090909090909091,
+        "lambda_U": 0.0,
+        "theta": 0.0,
+        "psi_at_b0": 0.030415890751086277,
+        "b_min_for_delta_005": 0.0,
+        "infeasible_departure": false
+      },
+      {
+        "K": 10,
+        "p_star": 0.09090909090909091,
+        "lambda_U": 0.2,
+        "theta": 0.43067655807339306,
+        "psi_at_b0": 0.04789497650872898,
+        "b_min_for_delta_005": 0.0,
+        "infeasible_departure": false
+      },
+      {
+        "K": 10,
+        "p_star": 0.09090909090909091,
+        "lambda_U": 0.4,
+        "theta": 0.7564707973660302,
+        "psi_at_b0": 0.05562660417764289,
+        "b_min_for_delta_005": 0.02147099132023755,
+        "infeasible_departure": false
+      },
+      {
+        "K": 10,
+        "p_star": 0.09090909090909091,
+        "lambda_U": 0.6,
+        "theta": 1.3569154488567239,
+        "psi_at_b0": 0.06370172031938626,
+        "b_min_for_delta_005": 0.02603928734582001,
+        "infeasible_departure": false
+      },
+      {
+        "K": 10,
+        "p_star": 0.09090909090909091,
+        "lambda_U": 0.8,
+        "theta": 3.1062837195053903,
+        "psi_at_b0": 0.07068780644670576,
+        "b_min_for_delta_005": 0.029693924166285975,
+        "infeasible_departure": false
+      },
+      {
+        "K": 25,
+        "p_star": 0.038461538461538464,
+        "lambda_U": 0.0,
+        "theta": 0.0,
+        "psi_at_b0": 0.3638185654008438,
+        "b_min_for_delta_005": 0.038268264398917666,
+        "infeasible_departure": true
+      },
+      {
+        "K": 25,
+        "p_star": 0.038461538461538464,
+        "lambda_U": 0.2,
+        "theta": 0.43067655807339306,
+        "psi_at_b0": 0.33005949229574205,
+        "b_min_for_delta_005": 0.038268264398917666,
+        "infeasible_departure": true
+      },
+      {
+        "K": 25,
+        "p_star": 0.038461538461538464,
+        "lambda_U": 0.4,
+        "theta": 0.7564707973660302,
+        "psi_at_b0": 0.31678879905960045,
+        "b_min_for_delta_005": 0.03208349439505219,
+        "infeasible_departure": false
+      },
+      {
+        "K": 25,
+        "p_star": 0.038461538461538464,
+        "lambda_U": 0.6,
+        "theta": 1.3569154488567239,
+        "psi_at_b0": 0.30624550042275683,
+        "b_min_for_delta_005": 0.024932354078082725,
+        "infeasible_departure": false
+      },
+      {
+        "K": 25,
+        "p_star": 0.038461538461538464,
+        "lambda_U": 0.8,
+        "theta": 3.1062837195053903,
+        "psi_at_b0": 0.30632792349151433,
+        "b_min_for_delta_005": 0.01952068032470043,
+        "infeasible_departure": false
+      },
+      {
+        "K": 100,
+        "p_star": 0.009900990099009901,
+        "lambda_U": 0.0,
+        "theta": 0.0,
+        "psi_at_b0": 0.8418650793650794,
+        "b_min_for_delta_005": 0.009602467784466889,
+        "infeasible_departure": false
+      },
+      {
+        "K": 100,
+        "p_star": 0.009900990099009901,
+        "lambda_U": 0.2,
+        "theta": 0.43067655807339306,
+        "psi_at_b0": 0.7934272678768465,
+        "b_min_for_delta_005": 0.009602467784466889,
+        "infeasible_departure": false
+      },
+      {
+        "K": 100,
+        "p_star": 0.009900990099009901,
+        "lambda_U": 0.4,
+        "theta": 0.7564707973660302,
+        "psi_at_b0": 0.7622039729891876,
+        "b_min_for_delta_005": 0.009602467784466889,
+        "infeasible_departure": false
+      },
+      {
+        "K": 100,
+        "p_star": 0.009900990099009901,
+        "lambda_U": 0.6,
+        "theta": 1.3569154488567239,
+        "psi_at_b0": 0.7143162878708086,
+        "b_min_for_delta_005": 0.009602467784466889,
+        "infeasible_departure": false
+      },
+      {
+        "K": 100,
+        "p_star": 0.009900990099009901,
+        "lambda_U": 0.8,
+        "theta": 3.1062837195053903,
+        "psi_at_b0": 0.6223995465815646,
+        "b_min_for_delta_005": 0.009602467784466889,
+        "infeasible_departure": false
+      },
+      {
+        "K": 1000,
+        "p_star": 0.000999000999000999,
+        "lambda_U": 0.0,
+        "theta": 0.0,
+        "psi_at_b0": 0.9925925925925926,
+        "b_min_for_delta_005": 0.0006726941400308235,
+        "infeasible_departure": false
+      },
+      {
+        "K": 1000,
+        "p_star": 0.000999000999000999,
+        "lambda_U": 0.2,
+        "theta": 0.43067655807339306,
+        "psi_at_b0": 0.9894535269230345,
+        "b_min_for_delta_005": 0.0006726941400308235,
+        "infeasible_departure": false
+      },
+      {
+        "K": 1000,
+        "p_star": 0.000999000999000999,
+        "lambda_U": 0.4,
+        "theta": 0.7564707973660302,
+        "psi_at_b0": 0.9870979498241781,
+        "b_min_for_delta_005": 0.0006726941400308235,
+        "infeasible_departure": false
+      },
+      {
+        "K": 1000,
+        "p_star": 0.000999000999000999,
+        "lambda_U": 0.6,
+        "theta": 1.3569154488567239,
+        "psi_at_b0": 0.9828013936406593,
+        "b_min_for_delta_005": 0.0006726941400308235,
+        "infeasible_departure": false
+      },
+      {
+        "K": 1000,
+        "p_star": 0.000999000999000999,
+        "lambda_U": 0.8,
+        "theta": 3.1062837195053903,
+        "psi_at_b0": 0.970601628265641,
+        "b_min_for_delta_005": 0.0006726941400308235,
+        "infeasible_departure": false
+      }
+    ]
+  },
+  "M2_Decision_Identities": {
+    "sympy_manski_mmr_exact": true,
+    "z3_hansen_sargent_q_gt_p_unsat": true
+  }
+}

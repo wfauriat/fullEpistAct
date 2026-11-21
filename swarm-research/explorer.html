@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Interactive Explorer — M1, Chains & M2 (Representations, Controls & Risk)</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --panel-alt: #162032;
+    --border: #334155;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --orange: #f97316;
+    --green: #22c55e;
+    --red: #ef4444;
+    --amber: #f59e0b;
+    --purple: #a855f7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.45;
+  }
+  header {
+    padding: 18px 24px 12px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #131d33 0%, #0f172a 100%);
+  }
+  header h1 {
+    margin: 0 0 4px;
+    font-size: 1.25rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    padding: 12px 24px 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel-alt);
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid transparent;
+    border-bottom: none;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.15s ease;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active {
+    background: var(--bg);
+    color: var(--accent);
+    border-color: var(--border);
+  }
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 20px 24px 40px;
+  }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+  .grid {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .card h2 {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    font-weight: 650;
+    color: var(--text);
+  }
+  .presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  .preset-btn {
+    background: var(--panel-alt);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 9px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .preset-btn:hover {
+    border-color: var(--accent);
+    background: #1d2d44;
+  }
+  .control {
+    margin-bottom: 13px;
+  }
+  .control-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.84rem;
+    margin-bottom: 4px;
+  }
+  .control-head span.val {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+  .hint {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .toggle-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .toggle-btn {
+    flex: 1;
+    padding: 6px 8px;
+    font-size: 0.78rem;
+    background: var(--panel-alt);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .toggle-btn.active {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent);
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .kpi {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .kpi .label {
+    font-size: 0.76rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .kpi .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 4px 0 2px;
+  }
+  .kpi .sub {
+    font-size: 0.76rem;
+    color: var(--muted);
+  }
+  .callout {
+    border-left: 4px solid var(--accent);
+    background: var(--panel-alt);
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+  }
+  .callout.warn { border-left-color: var(--orange); }
+  .callout.danger { border-left-color: var(--red); }
+  .callout.ok { border-left-color: var(--green); }
+  .charts-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  @media (max-width: 720px) {
+    .charts-row { grid-template-columns: 1fr; }
+  }
+  svg.plot {
+    width: 100%;
+    height: auto;
+    background: var(--panel-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: block;
+  }
+  .legend {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 0.76rem;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 650;
+  }
+  .badge.ok { background: rgba(34,197,94,0.16); color: #4ade80; }
+  .badge.danger { background: rgba(239,68,68,0.18); color: #f87171; }
+  .badge.warn { background: rgba(245,158,11,0.18); color: #fbbf24; }
+  .badge.muted { background: rgba(148,163,184,0.18); color: #cbd5e1; }
+  .guide-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  .guide-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .guide-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+    color: var(--accent);
+  }
+  .guide-card h3 {
+    margin: 14px 0 6px;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .guide-card p, .guide-card li {
+    font-size: 0.88rem;
+    color: #cbd5e1;
+  }
+  .guide-card ul {
+    margin: 6px 0 10px;
+    padding-left: 18px;
+  }
+  .guide-card li { margin-bottom: 5px; }
+  .formula {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--panel-alt);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.83rem;
+    color: #f8fafc;
+    margin: 8px 0 10px;
+    overflow-x: auto;
+  }
+  .jump-btn {
+    margin-top: 8px;
+    background: rgba(56, 189, 248, 0.14);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .jump-btn:hover { background: rgba(56, 189, 248, 0.25); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Interactive Explorer: Representations, Controls &amp; Residual Risk</h1>
+  <p>Standalone sandbox implementing Models <strong>M1</strong>, <strong>Serial vs. Cross-Check Chains</strong>, and <strong>M2</strong> (with coupled stress) from <em>Agir d’après une représentation du monde</em> &amp; the cross-domain synthesis.</p>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="m1">1. Model M1: VPP Collapse &amp; Shared Models</button>
+  <button class="tab-btn" data-tab="chains">2. Chains vs. Cross-Checks (N Steps)</button>
+  <button class="tab-btn" data-tab="m2">3. Model M2: One-Shot Stakes &amp; Silent Traps</button>
+  <button class="tab-btn" data-tab="guide">4. Guide: Explaining the 3 Labs</button>
+</nav>
+
+<main>
+  <!-- ==================== TAB 1: M1 ==================== -->
+  <section id="tab-m1" class="tab-panel active">
+    <div class="grid">
+      <div class="card">
+        <h2>Parameters (Model M1 — Ch. 9 &amp; 16)</h2>
+        <div class="presets">
+          <button class="preset-btn" onclick="applyM1Preset(0.10, 0.10, 0.20, 0.05, 'pm')">Peer Review (10%, c=10%)</button>
+          <button class="preset-btn" onclick="applyM1Preset(0.02, 0.60, 0.20, 0.05, 'pm')">One Model for All (2%, c=60%)</button>
+          <button class="preset-btn" onclick="applyM1Preset(0.07, 0.60, 0.20, 0.05, 'pm')">Shallow AI Gain (7%, c=60%)</button>
+          <button class="preset-btn" onclick="applyM1Preset(0.02, 0.10, 0.10, 0.005, 'pm')">Independent &amp; Sharp (2%, c=10%)</button>
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Producer error rate <em>P(E)</em></span><span class="val" id="m1_p_val">10.0%</span></div>
+          <input type="range" id="m1_p" min="0.005" max="0.30" step="0.005" value="0.10" />
+          <div class="hint">How often the producer outputs a false claim.</div>
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Shared causes <em>c</em> (correlation)</span><span class="val" id="m1_c_val">10%</span></div>
+          <input type="range" id="m1_c" min="0" max="0.95" step="0.01" value="0.10" />
+          <div class="hint">Fraction of producer errors inherently invisible to checker.</div>
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Independent miss rate <em>m</em></span><span class="val" id="m1_m_val">20%</span></div>
+          <input type="range" id="m1_m" min="0" max="0.60" step="0.01" value="0.20" />
+          <div class="hint">Checker oversight rate on non-shared errors.</div>
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>False-alarm rate <em>f</em></span><span class="val" id="m1_f_val">5.0%</span></div>
+          <input type="range" id="m1_f" min="0.002" max="0.25" step="0.002" value="0.05" />
+          <div class="hint">Alerts fired on actually valid outputs.</div>
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Human / system uptake policy <em>u</em></span><span class="val" id="m1_u_mode_lbl">u = VPP</span></div>
+          <div class="toggle-row">
+            <button class="toggle-btn active" id="u_pm_btn" onclick="setUMode('pm')">Prob. Matching (u = VPP)</button>
+            <button class="toggle-btn" id="u_one_btn" onclick="setUMode('one')">Audit Every Alert (u = 1)</button>
+          </div>
+          <div class="hint">Bliss et al. (1995): ~90% of operators match historical VPP.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="kpis">
+          <div class="kpi">
+            <div class="label">Sensitivity <em>s</em></div>
+            <div class="num" id="m1_s_out">—</div>
+            <div class="sub">s = (1 − c)(1 − m)</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Positive Pred. Value (VPP)</div>
+            <div class="num" id="m1_vpp_out">—</div>
+            <div class="sub" id="m1_alerts_per">— alerts / true error</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Escape Prob (1 − s·u)</div>
+            <div class="num" id="m1_esc_out">—</div>
+            <div class="sub">Share of errors reaching action</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Residual Risk <em>R</em></div>
+            <div class="num" id="m1_r_out">—</div>
+            <div class="sub" id="m1_r_sub">Unchecked baseline: —</div>
+          </div>
+        </div>
+
+        <div class="callout" id="m1_insight">Loading...</div>
+
+        <div class="charts-row">
+          <div class="card">
+            <h2>Non-Monotonic Residual Risk vs. Producer Error <em>P(E)</em></h2>
+            <svg id="m1_chart_p" class="plot" viewBox="0 0 420 250"></svg>
+            <div class="legend">
+              <span><span class="dot" style="background:var(--orange)"></span>R with Prob. Matching (u = VPP)</span>
+              <span><span class="dot" style="background:var(--accent)"></span>R with Full Audit (u = 1)</span>
+              <span><span class="dot" style="background:#64748b"></span>No Checker (R = P(E))</span>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Monoculture Tipping Curve: <em>R</em> vs. Shared Causes <em>c</em></h2>
+            <svg id="m1_chart_c" class="plot" viewBox="0 0 420 250"></svg>
+            <div class="legend">
+              <span><span class="dot" style="background:var(--orange)"></span>R(c) at current P(E), m, f</span>
+              <span><span class="dot" style="background:var(--green)"></span>Peer Baseline (5.57%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TAB 2: CHAINS ==================== -->
+  <section id="tab-chains" class="tab-panel">
+    <div class="grid">
+      <div class="card">
+        <h2>Parameters (Chains vs. Cross-Checks — Ch. 8 &amp; 14)</h2>
+        <div class="presets">
+          <button class="preset-btn" onclick="applyChainPreset(12, 0.06, 0.03)">Ch. 14 Agent Chain (N=12, p=6%, q=3%)</button>
+          <button class="preset-btn" onclick="applyChainPreset(4, 0.06, 0.03)">Ch. 8 Short Chain (N=4, p=6%, q=3%)</button>
+          <button class="preset-btn" onclick="applyChainPreset(12, 0.02, 0.06)">Shared-Frame Heavy (N=12, p=2%, q=6%)</button>
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Pipeline length <em>N</em> steps</span><span class="val" id="ch_n_val">12</span></div>
+          <input type="range" id="ch_n" min="1" max="24" step="1" value="12" />
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Local step error <em>p</em> (checker miss <em>m = p</em>)</span><span class="val" id="ch_p_val">6.0%</span></div>
+          <input type="range" id="ch_p" min="0.005" max="0.20" step="0.005" value="0.06" />
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Shared omitted factor <em>q</em></span><span class="val" id="ch_q_val">3.0%</span></div>
+          <input type="range" id="ch_q" min="0" max="0.15" step="0.005" value="0.03" />
+          <div class="hint">Frame/environment blind spot shared across all steps.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="kpis">
+          <div class="kpi">
+            <div class="label">Uncontrolled Chain Fail</div>
+            <div class="num" id="ch_unc_out" style="color:var(--orange)">—</div>
+            <div class="sub">1 − (1 − p)ᴺ(1 − q)</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Cross-Checked Every Step</div>
+            <div class="num" id="ch_chk_out" style="color:var(--accent)">—</div>
+            <div class="sub">1 − (1 − p²)ᴺ(1 − q)</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Shared-Cause Share</div>
+            <div class="num" id="ch_share_out" style="color:var(--purple)">—</div>
+            <div class="sub">q / P(fail, cross-checked)</div>
+          </div>
+        </div>
+
+        <div class="callout" id="ch_insight">Loading...</div>
+
+        <div class="card">
+          <h2>Cumulative Failure Probability Across Chain Depth <em>N</em></h2>
+          <svg id="ch_chart" class="plot" viewBox="0 0 820 280"></svg>
+          <div class="legend">
+            <span><span class="dot" style="background:var(--orange)"></span>Uncontrolled Serial Chain</span>
+            <span><span class="dot" style="background:var(--accent)"></span>Stepwise Independent Cross-Checks (m = p)</span>
+            <span><span class="dot" style="background:var(--purple)"></span>Shared Omitted-Factor Floor (q)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TAB 3: M2 ==================== -->
+  <section id="tab-m2" class="tab-panel">
+    <div class="grid">
+      <div class="card">
+        <h2>Parameters (Model M2 — Ch. 4 &amp; 17 + Stress Coupling)</h2>
+        <div class="presets">
+          <button class="preset-btn" onclick="applyM2Preset(0.02, 25, 0.03, 0.02, 0)">Sailing Race (L/ΔU=25)</button>
+          <button class="preset-btn" onclick="applyM2Preset(0.0005, 10000, 0.002, 0.0002, 0.5)">Night Mountain Flight (L/ΔU=10,000)</button>
+          <button class="preset-btn" onclick="applyM2Preset(0.015, 25, 0.03, 0.025, 0)">Saved by Margin</button>
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Modeled failure prob <em>p</em></span><span class="val" id="m2_p_val">2.00%</span></div>
+          <input type="range" id="m2_p" min="0.0001" max="0.12" step="0.0005" value="0.02" />
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Loss asymmetry <em>L / ΔU</em> (log scale)</span><span class="val" id="m2_k_val">25×</span></div>
+          <input type="range" id="m2_k_log" min="0" max="4" step="0.05" value="1.3979" />
+          <div class="hint">Threshold p* = 1 / (1 + L/ΔU).</div>
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Omitted risk <em>z</em> (invisible to model)</span><span class="val" id="m2_z_val">3.00%</span></div>
+          <input type="range" id="m2_z" min="0" max="0.15" step="0.001" value="0.03" />
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Humility margin <em>b</em></span><span class="val" id="m2_b_val">2.00%</span></div>
+          <input type="range" id="m2_b" min="0" max="0.15" step="0.0005" value="0.02" />
+          <div class="hint">Decision rule: act iff p + b &lt; p*.</div>
+        </div>
+
+        <div class="control">
+          <div class="control-head"><span>Stress coupling (independent → worst-case union)</span><span class="val" id="m2_cpl_val">0%</span></div>
+          <input type="range" id="m2_cpl" min="0" max="1" step="0.05" value="0" />
+          <div class="hint">0% = independent p+z−pz; 100% = Fréchet–Hoeffding upper union min(1, p+z).</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="kpis">
+          <div class="kpi">
+            <div class="label">Decision Cutoff <em>p*</em></div>
+            <div class="num" id="m2_pstar_out">—</div>
+            <div class="sub">ΔU / (ΔU + L)</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Perceived Risk <em>p + b</em></div>
+            <div class="num" id="m2_pb_out">—</div>
+            <div class="sub" id="m2_act_out">Decision: —</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Real-World Risk <em>p<sub>w</sub></em></div>
+            <div class="num" id="m2_pw_out">—</div>
+            <div class="sub" id="m2_pw_sub">Indep vs. Upper Union</div>
+          </div>
+          <div class="kpi">
+            <div class="label">M2 Regime</div>
+            <div style="margin-top:6px" id="m2_regime_badge">—</div>
+            <div class="sub" style="margin-top:6px" id="m2_regime_sub">—</div>
+          </div>
+        </div>
+
+        <div class="callout" id="m2_insight">Loading...</div>
+
+        <div class="card">
+          <h2>Threshold Comparison: <em>p</em>, <em>p + b</em>, Real Risk <em>p<sub>w</sub></em> vs. Cutoff <em>p*</em></h2>
+          <svg id="m2_chart" class="plot" viewBox="0 0 820 260"></svg>
+          <div class="legend">
+            <span><span class="dot" style="background:var(--accent)"></span>Modeled p</span>
+            <span><span class="dot" style="background:var(--amber)"></span>Decision Rule p + b</span>
+            <span><span class="dot" style="background:var(--red)"></span>Real-World p<sub>w</sub></span>
+            <span><span class="dot" style="background:var(--green)"></span>Threshold p*</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TAB 4: GUIDE ==================== -->
+  <section id="tab-guide" class="tab-panel">
+    <div class="guide-stack">
+      <div class="guide-card">
+        <h2>Why These Three Labs Exist</h2>
+        <p>Every automated pipeline, statistical model, or human-AI workflow acts through a <strong>finite representation</strong> of the world. Standard evaluations focus on the producer's average error rate—how often the model or team gets routine cases right. Yet in real-world deployments, safety and decision quality depend on <strong>what escapes the frame and the checks before an irreversible action occurs</strong>.</p>
+        <p>Each of the three interactive tabs isolates one structural mechanism from <em>Agir d’après une représentation du monde</em> (Models <strong>M1</strong>, <strong>M2</strong>, and chain composition) and the cross-disciplinary synthesis. Rather than reading equations passively, you can perturb one assumption at a time and watch where intuition breaks.</p>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-card">
+          <h2>Lab 1 — Model M1: VPP Collapse &amp; Shared Models</h2>
+          <p><strong>Core question:</strong> <em>If an AI tool cuts individual mistakes by 5×, why can total escaped risk still jump—or why do reviewers stop catching the mistakes that remain?</em></p>
+          <div class="formula">s = (1 − c)(1 − m) &nbsp;|&nbsp; VPP = P(E)s / [P(E)s + (1−P(E))f] &nbsp;|&nbsp; R = P(E)(1 − s·u)</div>
+          <h3>What the sliders represent</h3>
+          <ul>
+            <li><strong>Producer error rate <em>P(E)</em>:</strong> How often the generator (human or LLM) produces a flawed claim.</li>
+            <li><strong>Shared causes <em>c</em>:</strong> Fraction of errors driven by blind spots shared between producer and checker (same model family, overlapping training data, or shared framing). Even if the checker audits 100% of alerts (<em>u = 1</em>), at least <em>c</em> of errors pass invisibly.</li>
+            <li><strong>Independent miss rate <em>m</em> &amp; false-alarm rate <em>f</em>:</strong> How often the checker misses non-shared errors, versus crying wolf on valid outputs.</li>
+            <li><strong>Uptake <em>u</em>:</strong> Behavioral probability matching (<em>u = VPP</em>, Bliss et al. 1995) vs. auditing every alert (<em>u = 1</em>).</li>
+          </ul>
+          <h3>Two "Aha!" experiments to try</h3>
+          <ul>
+            <li>Click <strong>Peer Review (10%, c=10%)</strong> then <strong>One Model for All (2%, c=60%)</strong>: VPP plunges from <code>61.5%</code> to <code>11.6%</code> (8.7 alerts per true catch), and escape shoots to <code>96.3%</code>—yet mean risk <em>R</em> still drops (<code>5.57% → 1.93%</code>) because <em>P(E)</em> fell fivefold.</li>
+            <li>Now click <strong>Shallow AI Gain (7%, c=60%)</strong>: when shared-model monoculture raises <em>c</em> without a massive drop in <em>P(E)</em>, residual risk <em>R = 6.27%</em> actually becomes <strong>worse</strong> than the unchecked 10% peer-review baseline! Also inspect the orange curve in the left plot to see the non-monotonic bump where lowering <em>P(E)</em> triggers VPP collapse.</li>
+          </ul>
+          <button class="jump-btn" onclick="jumpTo('m1', () => applyM1Preset(0.07, 0.60, 0.20, 0.05, 'pm'))">Open Lab 1 (Shallow AI Tipping) →</button>
+        </div>
+
+        <div class="guide-card">
+          <h2>Lab 2 — Serial Chains vs. Cross-Checks (N Steps)</h2>
+          <p><strong>Core question:</strong> <em>What happens when we chain LLMs into N-step agentic pipelines (extract → summarize → plan → execute) instead of isolated single-turn answers?</em></p>
+          <div class="formula">Uncontrolled: 1 − (1 − p)ᴺ(1 − q) &nbsp;|&nbsp; Cross-checked (m = p): 1 − (1 − p²)ᴺ(1 − q)</div>
+          <h3>What the sliders represent</h3>
+          <ul>
+            <li><strong>Pipeline length <em>N</em>:</strong> Number of sequential handoffs or tool calls where any unrecovered error derails the run.</li>
+            <li><strong>Local step error <em>p</em>:</strong> Per-step mistake probability (and miss rate <em>m = p</em> for an independent stepwise verifier).</li>
+            <li><strong>Shared omitted factor <em>q</em>:</strong> Frame-level blind spot, environment shift, or interface laundering affecting the whole pipeline together.</li>
+          </ul>
+          <h3>What to watch in the chart</h3>
+          <ul>
+            <li>At <em>N = 12, p = 6%, q = 3%</em> (Ch. 14 preset), an unmonitored chain fails <strong>53.8%</strong> of runs—even though each step is 94% reliable!</li>
+            <li>Adding independent stepwise cross-checks (blue curve) collapses local error propagation (<code>p² = 0.36%</code> per step), dropping total failures to <strong>7.11%</strong>.</li>
+            <li>Notice the <strong>purple dashed floor <em>q</em></strong>: once local steps are cross-checked, <strong>42.2%</strong> of all remaining failures come from the shared factor <em>q</em>. Further local polishing cannot cross that floor—only changing the frame or breaking shared assumptions can.</li>
+          </ul>
+          <button class="jump-btn" onclick="jumpTo('chains', () => applyChainPreset(12, 0.06, 0.03))">Open Lab 2 (12-Step Agent Chain) →</button>
+        </div>
+
+        <div class="guide-card">
+          <h2>Lab 3 — Model M2: One-Shot Stakes &amp; Silent Traps</h2>
+          <p><strong>Core question:</strong> <em>How should you decide on a high-stakes, one-shot action when an omitted factor z may exist outside your model—and what happens when stress couples p and z together?</em></p>
+          <div class="formula">p* = 1 / (1 + L/ΔU) &nbsp;|&nbsp; Act iff p + b &lt; p* &nbsp;|&nbsp; p_w ∈ [p+z−pz, min(1, p+z)]</div>
+          <h3>What the sliders represent</h3>
+          <ul>
+            <li><strong>Loss asymmetry <em>L / ΔU</em>:</strong> Ratio of catastrophic loss to safe upside. Under Savage's expected utility, you should act only if real failure risk is below <em>p*</em>. At <code>10,000×</code>, <em>p* ≈ 0.01%</em>—far smaller than finite data can reliably estimate.</li>
+            <li><strong>Modeled risk <em>p</em> vs. omitted risk <em>z</em>:</strong> Your model estimates <em>p</em>, while reality also carries unmodeled risk <em>z</em>.</li>
+            <li><strong>Humility margin <em>b</em>:</strong> An explicit prudence buffer added outside the model (<code>p + b &lt; p*</code>).</li>
+            <li><strong>Stress coupling (0% → 100%):</strong> At 0%, <em>p</em> and <em>z</em> fail independently; toward 100%, common stress pushes real-world risk <em>p<sub>w</sub></em> up to the Fréchet–Hoeffding union bound <code>min(1, p + z)</code>.</li>
+          </ul>
+          <h3>The four M2 regimes</h3>
+          <ul>
+            <li><strong>Justified Departure:</strong> Both rule and reality stay safely below <em>p*</em>.</li>
+            <li><strong>Silent Trap (red):</strong> Your model + margin says "go" (<code>p + b &lt; p*</code>), yet omitted <em>z</em> pushes real risk above <em>p*</em>.</li>
+            <li><strong>Saved by Margin (green):</strong> Naive model <em>p</em> wanted to go, but margin <em>b</em> caught the trap in time.</li>
+            <li><strong>Superfluous Caution (amber):</strong> Margin <em>b</em> blocked a bet that would have been worth taking—the visible cost of prudence.</li>
+          </ul>
+          <button class="jump-btn" onclick="jumpTo('m2', () => applyM2Preset(0.0005, 10000, 0.002, 0.0002, 0.5))">Open Lab 3 (Night Mountain Flight) →</button>
+        </div>
+      </div>
+
+      <div class="guide-card">
+        <h2>What These Three Interactive Labs Deliberately Leave Out</h2>
+        <p>Consistent with the monograph's <em>Conclusion</em> and our cross-domain synthesis, toy sliders make mechanisms visible without claiming to capture full operational reality:</p>
+        <ul>
+          <li><strong>No formula sets the humility margin <em>b</em> or discovers <em>z</em>:</strong> An omitted variable <em>z</em> that stayed constant during data collection leaves zero trace in historical variance. Discovering it requires external contact (testing in a reversible sandbox or an independent observer), not adjusting sliders inside the model.</li>
+          <li><strong>Uptake <em>u</em> and bypass are behavioral, not fixed constants:</strong> In Lab 1, raising friction to force <em>u = 1</em> works in equations, yet in live organizations uniform Cognitive Forcing Functions lower user satisfaction (Buçinca et al. 2021) and can push staff toward unmonitored <em>Shadow AI</em>—motivating risk-tiered checks and deterministic capability locks (CaMeL / VeriGuard) rather than blanket manual checklists.</li>
+          <li><strong>Illustrative numbers ≠ field calibration:</strong> Presets reproduce Annex D of <em>Agir d’après une représentation du monde</em> to expose sign flips and phase boundaries; measuring true <em>c</em>, <em>m</em>, <em>f</em>, and <em>u</em> in a real team requires blinded fault-injection benchmarks (<em>erreurs injectées</em>).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Tab switching
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tabId));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + tabId));
+  }
+  function jumpTo(tabId, fn) {
+    if (fn) fn();
+    switchTab(tabId);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+  });
+
+  const fmtPct = (v, d = 2) => (v * 100).toFixed(d) + '%';
+
+  // ==================== MODEL M1 ====================
+  let uMode = 'pm';
+  function setUMode(m) {
+    uMode = m;
+    document.getElementById('u_pm_btn').classList.toggle('active', m === 'pm');
+    document.getElementById('u_one_btn').classList.toggle('active', m === 'one');
+    document.getElementById('m1_u_mode_lbl').textContent = m === 'pm' ? 'u = VPP' : 'u = 1.00';
+    updateM1();
+  }
+  function applyM1Preset(p, c, m, f, mode) {
+    document.getElementById('m1_p').value = p;
+    document.getElementById('m1_c').value = c;
+    document.getElementById('m1_m').value = m;
+    document.getElementById('m1_f').value = f;
+    setUMode(mode);
+  }
+  function calcM1(p, c, m, f, mode) {
+    const s = (1 - c) * (1 - m);
+    const num = p * s;
+    const vpp = num / (num + (1 - p) * f);
+    const u = mode === 'pm' ? vpp : 1.0;
+    const esc = 1 - s * u;
+    const r = p * esc;
+    return { s, vpp, u, esc, r };
+  }
+  function updateM1() {
+    const p = parseFloat(document.getElementById('m1_p').value);
+    const c = parseFloat(document.getElementById('m1_c').value);
+    const m = parseFloat(document.getElementById('m1_m').value);
+    const f = parseFloat(document.getElementById('m1_f').value);
+
+    document.getElementById('m1_p_val').textContent = fmtPct(p, 1);
+    document.getElementById('m1_c_val').textContent = fmtPct(c, 0);
+    document.getElementById('m1_m_val').textContent = fmtPct(m, 0);
+    document.getElementById('m1_f_val').textContent = fmtPct(f, 1);
+
+    const res = calcM1(p, c, m, f, uMode);
+    document.getElementById('m1_s_out').textContent = fmtPct(res.s, 1);
+    document.getElementById('m1_vpp_out').textContent = fmtPct(res.vpp, 1);
+    document.getElementById('m1_alerts_per').textContent = (1 / Math.max(res.vpp, 1e-6)).toFixed(1) + ' alerts / true error';
+    document.getElementById('m1_esc_out').textContent = fmtPct(res.esc, 1);
+    document.getElementById('m1_r_out').textContent = fmtPct(res.r, 2);
+    document.getElementById('m1_r_sub').textContent = `Unchecked: ${fmtPct(p, 2)} (delta ${res.r < p ? '−' : '+'}${fmtPct(Math.abs(p - res.r), 2)})`;
+
+    const ins = document.getElementById('m1_insight');
+    const peerBase = 0.0557;
+    if (res.vpp < 0.25 && uMode === 'pm') {
+      ins.className = 'callout warn';
+      ins.innerHTML = `<strong>VPP Collapse:</strong> Only <strong>${fmtPct(res.vpp,1)}</strong> of alerts are real errors (${(1/res.vpp).toFixed(1)} alerts per catch). Under probability matching, <strong>${fmtPct(res.esc,1)}</strong> of errors escape. ${res.r > peerBase ? '<strong>Monoculture Tipping Exceeded:</strong> Residual risk (' + fmtPct(res.r,2) + ') is <em>worse</em> than the 10% peer-review baseline (5.57%)!' : 'Mean risk (' + fmtPct(res.r,2) + ') falls because P(E) dropped—even as escape jumped to ' + fmtPct(res.esc,1) + '.'}`;
+    } else if (c >= 0.5) {
+      ins.className = 'callout warn';
+      ins.innerHTML = `<strong>Shared-Cause Floor Active:</strong> Even auditing 100% of alerts (u=1), sensitivity is capped at <strong>${fmtPct(res.s,1)}</strong>, so at least <strong>${fmtPct(1 - res.s,1)}</strong> of producer errors pass silently.`;
+    } else {
+      ins.className = 'callout ok';
+      ins.innerHTML = `<strong>Healthy Filtering Regime:</strong> Checker catches <strong>${fmtPct(1 - res.esc,1)}</strong> of errors, cutting risk from ${fmtPct(p,2)} to <strong>${fmtPct(res.r,2)}</strong>.`;
+    }
+
+    drawM1Charts(p, c, m, f);
+  }
+
+  function drawM1Charts(pCur, cCur, m, f) {
+    // Chart 1: R vs P(E)
+    const svg1 = document.getElementById('m1_chart_p');
+    const W = 420, H = 250, pad = { l: 44, r: 16, t: 18, b: 32 };
+    const iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
+    const pMax = 0.30;
+    const xOf = x => pad.l + (x / pMax) * iw;
+    const yMax = 0.16;
+    const yOf = y => pad.t + ih - Math.min(y / yMax, 1) * ih;
+
+    let pathPM = '', path1 = '', pathNo = '';
+    for (let i = 0; i <= 100; i++) {
+      const p = 0.001 + (pMax - 0.001) * (i / 100);
+      const rPM = calcM1(p, cCur, m, f, 'pm').r;
+      const r1 = calcM1(p, cCur, m, f, 'one').r;
+      pathPM += (i === 0 ? 'M' : 'L') + `${xOf(p).toFixed(1)},${yOf(rPM).toFixed(1)} `;
+      path1 += (i === 0 ? 'M' : 'L') + `${xOf(p).toFixed(1)},${yOf(r1).toFixed(1)} `;
+      pathNo += (i === 0 ? 'M' : 'L') + `${xOf(p).toFixed(1)},${yOf(p).toFixed(1)} `;
+    }
+    const curVal = calcM1(pCur, cCur, m, f, uMode).r;
+    svg1.innerHTML = `
+      ${gridLines(pad, iw, ih, [0, 0.1, 0.2, 0.3], [0, 0.04, 0.08, 0.12, 0.16], xOf, yOf, v => (v*100).toFixed(0)+'%')}
+      <path d="${pathNo}" fill="none" stroke="#64748b" stroke-dasharray="4 4" stroke-width="1.5"/>
+      <path d="${path1}" fill="none" stroke="#38bdf8" stroke-width="2"/>
+      <path d="${pathPM}" fill="none" stroke="#f97316" stroke-width="2.5"/>
+      <circle cx="${xOf(pCur)}" cy="${yOf(curVal)}" r="5.5" fill="#fff" stroke="#f97316" stroke-width="2.5"/>
+      <text x="${W/2}" y="${H-6}" fill="#94a3b8" font-size="11" text-anchor="middle">Producer Error Rate P(E)</text>
+    `;
+
+    // Chart 2: R vs c
+    const svg2 = document.getElementById('m1_chart_c');
+    let pathC_pm = '', pathC_1 = '';
+    const rMaxC = Math.max(0.10, pCur * 1.15);
+    const xC = c => pad.l + c * iw;
+    const yC = r => pad.t + ih - Math.min(r / rMaxC, 1) * ih;
+    for (let i = 0; i <= 100; i++) {
+      const c = 0.95 * (i / 100);
+      const rPM = calcM1(pCur, c, m, f, 'pm').r;
+      const r1 = calcM1(pCur, c, m, f, 'one').r;
+      pathC_pm += (i === 0 ? 'M' : 'L') + `${xC(c).toFixed(1)},${yC(rPM).toFixed(1)} `;
+      pathC_1 += (i === 0 ? 'M' : 'L') + `${xC(c).toFixed(1)},${yC(r1).toFixed(1)} `;
+    }
+    const yPeer = yC(0.0557);
+    svg2.innerHTML = `
+      ${gridLines(pad, iw, ih, [0, 0.25, 0.5, 0.75, 1.0], [0, rMaxC*0.25, rMaxC*0.5, rMaxC*0.75, rMaxC], xC, yC, v => (v*100).toFixed(1)+'%')}
+      <line x1="${pad.l}" y1="${yPeer}" x2="${pad.l+iw}" y2="${yPeer}" stroke="#22c55e" stroke-dasharray="5 4" stroke-width="1.5"/>
+      <path d="${pathC_1}" fill="none" stroke="#38bdf8" stroke-width="1.8" opacity="0.75"/>
+      <path d="${pathC_pm}" fill="none" stroke="#f97316" stroke-width="2.5"/>
+      <circle cx="${xC(cCur)}" cy="${yC(curVal)}" r="5.5" fill="#fff" stroke="#f97316" stroke-width="2.5"/>
+      <text x="${W/2}" y="${H-6}" fill="#94a3b8" font-size="11" text-anchor="middle">Shared Causes Fraction c</text>
+    `;
+  }
+
+  function gridLines(pad, iw, ih, xs, ys, xOf, yOf, fmt) {
+    let s = '';
+    xs.forEach(x => {
+      const px = xOf(x);
+      s += `<line x1="${px}" y1="${pad.t}" x2="${px}" y2="${pad.t+ih}" stroke="#253248" stroke-width="1"/>`;
+      s += `<text x="${px}" y="${pad.t+ih+13}" fill="#64748b" font-size="10" text-anchor="middle">${(x*100).toFixed(0)}%</text>`;
+    });
+    ys.forEach(y => {
+      const py = yOf(y);
+      s += `<line x1="${pad.l}" y1="${py}" x2="${pad.l+iw}" y2="${py}" stroke="#253248" stroke-width="1"/>`;
+      s += `<text x="${pad.l-5}" y="${py+3}" fill="#64748b" font-size="10" text-anchor="end">${fmt(y)}</text>`;
+    });
+    return s;
+  }
+
+  ['m1_p','m1_c','m1_m','m1_f'].forEach(id => document.getElementById(id).addEventListener('input', updateM1));
+
+  // ==================== MODEL CHAINS ====================
+  function applyChainPreset(n, p, q) {
+    document.getElementById('ch_n').value = n;
+    document.getElementById('ch_p').value = p;
+    document.getElementById('ch_q').value = q;
+    updateChains();
+  }
+  function updateChains() {
+    const N = parseInt(document.getElementById('ch_n').value, 10);
+    const p = parseFloat(document.getElementById('ch_p').value);
+    const q = parseFloat(document.getElementById('ch_q').value);
+    document.getElementById('ch_n_val').textContent = N;
+    document.getElementById('ch_p_val').textContent = fmtPct(p, 1);
+    document.getElementById('ch_q_val').textContent = fmtPct(q, 1);
+
+    const failUnc = 1 - Math.pow(1 - p, N) * (1 - q);
+    const failChk = 1 - Math.pow(1 - p * p, N) * (1 - q);
+    const shareQ = failChk > 0 ? q / failChk : 0;
+
+    document.getElementById('ch_unc_out').textContent = fmtPct(failUnc, 1);
+    document.getElementById('ch_chk_out').textContent = fmtPct(failChk, 2);
+    document.getElementById('ch_share_out').textContent = fmtPct(shareQ, 1);
+
+    document.getElementById('ch_insight').innerHTML =
+      `Over <strong>${N}</strong> serial steps, an unmonitored pipeline fails <strong>${fmtPct(failUnc,1)}</strong> of runs. Adding independent cross-checks at every step cuts failures to <strong>${fmtPct(failChk,2)}</strong>—and <strong>${fmtPct(shareQ,1)}</strong> of the remaining failures come from the shared omitted factor <em>q</em>.`;
+
+    const svg = document.getElementById('ch_chart');
+    const W = 820, H = 280, pad = { l: 48, r: 20, t: 18, b: 34 };
+    const iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
+    const xOf = n => pad.l + ((n - 1) / 23) * iw;
+    const yOf = y => pad.t + ih - y * ih;
+
+    let dUnc = '', dChk = '';
+    for (let n = 1; n <= 24; n++) {
+      const u = 1 - Math.pow(1 - p, n) * (1 - q);
+      const c = 1 - Math.pow(1 - p * p, n) * (1 - q);
+      dUnc += (n === 1 ? 'M' : 'L') + `${xOf(n).toFixed(1)},${yOf(u).toFixed(1)} `;
+      dChk += (n === 1 ? 'M' : 'L') + `${xOf(n).toFixed(1)},${yOf(c).toFixed(1)} `;
+    }
+    let grid = '';
+    [1, 4, 8, 12, 16, 20, 24].forEach(n => {
+      grid += `<line x1="${xOf(n)}" y1="${pad.t}" x2="${xOf(n)}" y2="${pad.t+ih}" stroke="#253248"/>`;
+      grid += `<text x="${xOf(n)}" y="${pad.t+ih+14}" fill="#64748b" font-size="11" text-anchor="middle">${n}</text>`;
+    });
+    [0, 0.25, 0.5, 0.75, 1.0].forEach(y => {
+      grid += `<line x1="${pad.l}" y1="${yOf(y)}" x2="${pad.l+iw}" y2="${yOf(y)}" stroke="#253248"/>`;
+      grid += `<text x="${pad.l-6}" y="${yOf(y)+4}" fill="#64748b" font-size="11" text-anchor="end">${(y*100).toFixed(0)}%</text>`;
+    });
+    svg.innerHTML = `
+      ${grid}
+      <line x1="${pad.l}" y1="${yOf(q)}" x2="${pad.l+iw}" y2="${yOf(q)}" stroke="#a855f7" stroke-dasharray="5 4" stroke-width="1.8"/>
+      <path d="${dUnc}" fill="none" stroke="#f97316" stroke-width="2.5"/>
+      <path d="${dChk}" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+      <circle cx="${xOf(N)}" cy="${yOf(failUnc)}" r="5" fill="#fff" stroke="#f97316" stroke-width="2.5"/>
+      <circle cx="${xOf(N)}" cy="${yOf(failChk)}" r="5" fill="#fff" stroke="#38bdf8" stroke-width="2.5"/>
+      <text x="${W/2}" y="${H-6}" fill="#94a3b8" font-size="11" text-anchor="middle">Number of Serial Steps N</text>
+    `;
+  }
+  ['ch_n','ch_p','ch_q'].forEach(id => document.getElementById(id).addEventListener('input', updateChains));
+
+  // ==================== MODEL M2 ====================
+  function applyM2Preset(p, k, z, b, cpl) {
+    document.getElementById('m2_p').value = p;
+    document.getElementById('m2_k_log').value = Math.log10(k);
+    document.getElementById('m2_z').value = z;
+    document.getElementById('m2_b').value = b;
+    document.getElementById('m2_cpl').value = cpl;
+    updateM2();
+  }
+  function updateM2() {
+    const p = parseFloat(document.getElementById('m2_p').value);
+    const K = Math.pow(10, parseFloat(document.getElementById('m2_k_log').value));
+    const z = parseFloat(document.getElementById('m2_z').value);
+    const b = parseFloat(document.getElementById('m2_b').value);
+    const cpl = parseFloat(document.getElementById('m2_cpl').value);
+
+    const pStar = 1 / (1 + K);
+    const pb = p + b;
+    const pwIndep = p + z - p * z;
+    const pwUpper = Math.min(1, p + z);
+    const pw = pwIndep + cpl * (pwUpper - pwIndep);
+
+    document.getElementById('m2_p_val').textContent = fmtPct(p, 2);
+    document.getElementById('m2_k_val').textContent = Math.round(K).toLocaleString() + '×';
+    document.getElementById('m2_z_val').textContent = fmtPct(z, 2);
+    document.getElementById('m2_b_val').textContent = fmtPct(b, 2);
+    document.getElementById('m2_cpl_val').textContent = (cpl * 100).toFixed(0) + '%';
+
+    document.getElementById('m2_pstar_out').textContent = fmtPct(pStar, 3);
+    document.getElementById('m2_pb_out').textContent = fmtPct(pb, 2);
+    const act = pb < pStar;
+    document.getElementById('m2_act_out').textContent = act ? 'Decision: ACT (p + b < p*)' : 'Decision: HOLD / LOCK (p + b ≥ p*)';
+    document.getElementById('m2_pw_out').textContent = fmtPct(pw, 2);
+    document.getElementById('m2_pw_sub').textContent = `Indep: ${fmtPct(pwIndep,2)} | Union: ${fmtPct(pwUpper,2)}`;
+
+    const badge = document.getElementById('m2_regime_badge');
+    const rsub = document.getElementById('m2_regime_sub');
+    const ins = document.getElementById('m2_insight');
+
+    if (p >= pStar) {
+      badge.innerHTML = '<span class="badge muted">Justified Abstention</span>';
+      rsub.textContent = 'p ≥ p* even before margin b.';
+      ins.className = 'callout';
+      ins.innerHTML = `Modeled risk (${fmtPct(p,2)}) already exceeds threshold p* (${fmtPct(pStar,3)}). No humility margin needed to stop.`;
+    } else if (act && pw < pStar) {
+      badge.innerHTML = '<span class="badge ok">Justified Departure</span>';
+      rsub.textContent = 'p + b < p* and real risk p_w < p*.';
+      ins.className = 'callout ok';
+      ins.innerHTML = `Safe regime: even including omitted risk z, true risk (${fmtPct(pw,2)}) remains below threshold p* (${fmtPct(pStar,3)}).`;
+    } else if (act && pw >= pStar) {
+      badge.innerHTML = '<span class="badge danger">SILENT TRAP (Piège silencieux)</span>';
+      rsub.textContent = 'p + b < p* but real risk p_w ≥ p*!';
+      ins.className = 'callout danger';
+      ins.innerHTML = `<strong>Silent Trap:</strong> The model clears departure (p+b = ${fmtPct(pb,2)} &lt; p* = ${fmtPct(pStar,3)}), yet omitted risk z drives true failure rate to <strong>${fmtPct(pw,2)}</strong>—losing expected utility on a one-shot gamble.`;
+    } else if (!act && pw >= pStar) {
+      badge.innerHTML = '<span class="badge ok">Saved by Margin (Sauvé par la marge)</span>';
+      rsub.textContent = 'p < p* ≤ p + b and p_w ≥ p*.';
+      ins.className = 'callout ok';
+      ins.innerHTML = `<strong>Saved by Humility Margin:</strong> Naive model (p = ${fmtPct(p,2)}) wanted to proceed, but buffer b = ${fmtPct(b,2)} blocked an action whose true risk (${fmtPct(pw,2)}) exceeds p* (${fmtPct(pStar,3)}).`;
+    } else {
+      badge.innerHTML = '<span class="badge warn">Superfluous Caution (Prudence superflue)</span>';
+      rsub.textContent = 'p < p* ≤ p + b yet p_w < p*.';
+      ins.className = 'callout warn';
+      ins.innerHTML = `<strong>Price of Caution:</strong> Margin b blocked a gamble whose real risk (${fmtPct(pw,2)}) was still below p* (${fmtPct(pStar,3)}), forfeiting ΔU.`;
+    }
+
+    // Horizontal gauge SVG
+    const svg = document.getElementById('m2_chart');
+    const W = 820, H = 260, pad = { l: 150, r: 40, t: 24, b: 36 };
+    const iw = W - pad.l - pad.r;
+    const scaleMax = Math.max(0.06, pb * 1.25, pw * 1.25, pStar * 1.25);
+    const xOf = v => pad.l + Math.min(v / scaleMax, 1) * iw;
+    const rows = [
+      { label: 'Modeled p', val: p, color: '#38bdf8', y: 42 },
+      { label: 'Rule (p + b)', val: pb, color: '#f59e0b', y: 92 },
+      { label: 'Real World p_w', val: pw, color: '#ef4444', y: 142 }
+    ];
+    let bars = '';
+    rows.forEach(r => {
+      bars += `<text x="${pad.l - 12}" y="${r.y + 18}" fill="#cbd5e1" font-size="12" text-anchor="end">${r.label}</text>`;
+      bars += `<rect x="${pad.l}" y="${r.y}" width="${Math.max(2, xOf(r.val) - pad.l)}" height="26" rx="4" fill="${r.color}" opacity="0.88"/>`;
+      bars += `<text x="${xOf(r.val) + 8}" y="${r.y + 17}" fill="#f8fafc" font-size="12" font-family="monospace">${fmtPct(r.val, 2)}</text>`;
+    });
+    const pxStar = xOf(pStar);
+    svg.innerHTML = `
+      <rect x="${pad.l}" y="26" width="${iw}" height="156" fill="#111a2b" rx="6"/>
+      ${bars}
+      <line x1="${pxStar}" y1="20" x2="${pxStar}" y2="195" stroke="#22c55e" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <text x="${pxStar}" y="15" fill="#4ade80" font-size="12" font-weight="700" text-anchor="middle">p* = ${fmtPct(pStar, 2)}</text>
+      <text x="${W/2}" y="${H-10}" fill="#94a3b8" font-size="11" text-anchor="middle">Probability Scale (0% to ${fmtPct(scaleMax, 1)})</text>
+    `;
+  }
+  ['m2_p','m2_k_log','m2_z','m2_b','m2_cpl'].forEach(id => document.getElementById(id).addEventListener('input', updateM2));
+
+  updateM1();
+  updateChains();
+  updateM2();
+</script>
+</body>
+</html>
