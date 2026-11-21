@@ -1,0 +1,8 @@
+chaine|chaîne|enchaîn|enchain
+autonomie
+délégu
+pas de garantie|garantie
+complexité croissante|de plus en plus complexe
+exploration[^.]{0,80}(risque|coût|dommage|danger)
+limites? économique
+données[^.]{0,60}(passé|similaire)

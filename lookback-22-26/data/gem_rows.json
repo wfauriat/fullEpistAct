@@ -1,0 +1,1111 @@
+[
+{
+"cid": "bb94fdf6",
+"agent": "",
+"parent": "",
+"title": "Critique of AI Research Triology",
+"lm": "2026-11-18 08:54:32.887152121+00:00",
+"steps": 43,
+"calls": 20,
+"maxctx": 226487,
+"models": {
+"Gemini 4 Argon (High)": 20
+},
+"new_in": 496928,
+"cached_in": 2238316,
+"out": 102185,
+"f9": 13650,
+"f10": 88535
+},
+{
+"cid": "706678bb",
+"agent": "",
+"parent": "",
+"title": "Extract HTML Decision Map Structure",
+"lm": "2026-11-18 14:16:18.799413201+00:00",
+"steps": 40,
+"calls": 19,
+"maxctx": 82172,
+"models": {
+"Gemini 4 Hydrogen (High)": 19
+},
+"new_in": 179757,
+"cached_in": 817859,
+"out": 29941,
+"f9": 12060,
+"f10": 17881
+},
+{
+"cid": "f25721c2",
+"agent": "",
+"parent": "",
+"title": "Build Part 0 From Instructions",
+"lm": "2026-11-18 15:58:52.752666552+00:00",
+"steps": 70,
+"calls": 25,
+"maxctx": 189702,
+"models": {
+"Gemini 4 Argon (High)": 25
+},
+"new_in": 375195,
+"cached_in": 2783899,
+"out": 42036,
+"f9": 18870,
+"f10": 23166
+},
+{
+"cid": "fa237edf",
+"agent": "",
+"parent": "",
+"title": "Build Chapter 01 From Instructions",
+"lm": "2026-11-18 16:25:00.916840527+00:00",
+"steps": 99,
+"calls": 30,
+"maxctx": 226591,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 30
+},
+"new_in": 440103,
+"cached_in": 3667083,
+"out": 76398,
+"f9": 55913,
+"f10": 20485
+},
+{
+"cid": "80a934d3",
+"agent": "",
+"parent": "",
+"title": "Build Chapter 02 From Instructions",
+"lm": "2026-11-18 16:41:06.408822887+00:00",
+"steps": 92,
+"calls": 33,
+"maxctx": 231772,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 33
+},
+"new_in": 245512,
+"cached_in": 4247980,
+"out": 64912,
+"f9": 44281,
+"f10": 20631
+},
+{
+"cid": "c7591e1c",
+"agent": "",
+"parent": "",
+"title": "Build Chapter 03 From Guide",
+"lm": "2026-11-18 17:20:03.525208804+00:00",
+"steps": 111,
+"calls": 37,
+"maxctx": 274137,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 37
+},
+"new_in": 476349,
+"cached_in": 5369993,
+"out": 66901,
+"f9": 42421,
+"f10": 24480
+},
+{
+"cid": "9b6faafb",
+"agent": "",
+"parent": "",
+"title": "Build Chapter 04 From File",
+"lm": "2026-11-18 17:45:25.739601087+00:00",
+"steps": 97,
+"calls": 30,
+"maxctx": 250137,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 30
+},
+"new_in": 256515,
+"cached_in": 3833426,
+"out": 68488,
+"f9": 44193,
+"f10": 24295
+},
+{
+"cid": "eabeb2c4",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 19:30:07.301360413+00:00",
+"steps": 111,
+"calls": 30,
+"maxctx": 256617,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 30
+},
+"new_in": 264371,
+"cached_in": 4345368,
+"out": 61770,
+"f9": 39152,
+"f10": 22618
+},
+{
+"cid": "6920e919",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 19:30:24.43826118+00:00",
+"steps": 100,
+"calls": 33,
+"maxctx": 230701,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 33
+},
+"new_in": 444017,
+"cached_in": 4557402,
+"out": 57815,
+"f9": 35868,
+"f10": 21947
+},
+{
+"cid": "7628a0cc",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 19:30:27.025973664+00:00",
+"steps": 112,
+"calls": 38,
+"maxctx": 255802,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 38
+},
+"new_in": 279452,
+"cached_in": 6049860,
+"out": 71480,
+"f9": 44820,
+"f10": 26660
+},
+{
+"cid": "a264b6ba",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 19:30:39.768579489+00:00",
+"steps": 104,
+"calls": 34,
+"maxctx": 293136,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 34
+},
+"new_in": 299253,
+"cached_in": 4760966,
+"out": 68274,
+"f9": 40542,
+"f10": 27732
+},
+{
+"cid": "dce4f56a",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 19:31:58.03251932+00:00",
+"steps": 113,
+"calls": 47,
+"maxctx": 248492,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 47
+},
+"new_in": 271996,
+"cached_in": 6941516,
+"out": 59493,
+"f9": 40884,
+"f10": 18609
+},
+{
+"cid": "a00b2734",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 19:47:14.42483177+00:00",
+"steps": 150,
+"calls": 58,
+"maxctx": 270877,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 58
+},
+"new_in": 390239,
+"cached_in": 10700816,
+"out": 89865,
+"f9": 71154,
+"f10": 18711
+},
+{
+"cid": "08cbe147",
+"agent": "relecteur",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 20:13:42.394918681+00:00",
+"steps": 207,
+"calls": 71,
+"maxctx": 229248,
+"models": {
+"Claude Opus 5.5 (High)": 30,
+"Gemini 4 Hydrogen (XHigh)": 41
+},
+"new_in": 728427,
+"cached_in": 10306011,
+"out": 75944,
+"f9": 0,
+"f10": 75944
+},
+{
+"cid": "76ab8676",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 20:26:52.467772149+00:00",
+"steps": 91,
+"calls": 32,
+"maxctx": 230342,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 32
+},
+"new_in": 252085,
+"cached_in": 4842639,
+"out": 55371,
+"f9": 37308,
+"f10": 18063
+},
+{
+"cid": "4823ec54",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 20:27:48.60207301+00:00",
+"steps": 102,
+"calls": 34,
+"maxctx": 228840,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 34
+},
+"new_in": 251970,
+"cached_in": 5136894,
+"out": 57144,
+"f9": 35715,
+"f10": 21429
+},
+{
+"cid": "9029e865",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 20:28:18.120222105+00:00",
+"steps": 119,
+"calls": 59,
+"maxctx": 206449,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 59
+},
+"new_in": 244891,
+"cached_in": 6591162,
+"out": 59023,
+"f9": 36523,
+"f10": 22500
+},
+{
+"cid": "857ca5a4",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 20:28:50.813766193+00:00",
+"steps": 152,
+"calls": 47,
+"maxctx": 302483,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 47
+},
+"new_in": 321889,
+"cached_in": 8603071,
+"out": 70961,
+"f9": 36273,
+"f10": 34688
+},
+{
+"cid": "e2b01526",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 20:49:21.897837218+00:00",
+"steps": 139,
+"calls": 56,
+"maxctx": 259553,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 56
+},
+"new_in": 664022,
+"cached_in": 9677044,
+"out": 78154,
+"f9": 59408,
+"f10": 18746
+},
+{
+"cid": "5ae4c5b9",
+"agent": "relecteur-p3",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 21:24:37.060800241+00:00",
+"steps": 93,
+"calls": 27,
+"maxctx": 215513,
+"models": {
+"Gemini 4 Argon (High)": 27
+},
+"new_in": 433968,
+"cached_in": 3800083,
+"out": 39821,
+"f9": 17173,
+"f10": 22648
+},
+{
+"cid": "33332e54",
+"agent": "monitor",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 21:28:00.542321244+00:00",
+"steps": 101,
+"calls": 29,
+"maxctx": 37672,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 25,
+"Gemini 4 Argon (High)": 4
+},
+"new_in": 142978,
+"cached_in": 546291,
+"out": 6326,
+"f9": 5079,
+"f10": 1247
+},
+{
+"cid": "3abb8db6",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 21:59:48.838814462+00:00",
+"steps": 111,
+"calls": 38,
+"maxctx": 267166,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 38
+},
+"new_in": 288174,
+"cached_in": 6991317,
+"out": 58182,
+"f9": 35769,
+"f10": 22413
+},
+{
+"cid": "b4efbb73",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 22:14:28.063976329+00:00",
+"steps": 98,
+"calls": 37,
+"maxctx": 243367,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 37
+},
+"new_in": 263971,
+"cached_in": 5846403,
+"out": 57921,
+"f9": 34263,
+"f10": 23658
+},
+{
+"cid": "d14a2b9a",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 22:26:18.280240537+00:00",
+"steps": 89,
+"calls": 25,
+"maxctx": 300476,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 25
+},
+"new_in": 494212,
+"cached_in": 4091383,
+"out": 48102,
+"f9": 30833,
+"f10": 17269
+},
+{
+"cid": "62a1f71a",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 22:34:41.241169754+00:00",
+"steps": 99,
+"calls": 35,
+"maxctx": 256569,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 35
+},
+"new_in": 464894,
+"cached_in": 5506547,
+"out": 43282,
+"f9": 30899,
+"f10": 12383
+},
+{
+"cid": "315df0bd",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 22:42:05.024125283+00:00",
+"steps": 115,
+"calls": 36,
+"maxctx": 346250,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 36
+},
+"new_in": 358515,
+"cached_in": 7813276,
+"out": 58081,
+"f9": 32576,
+"f10": 25505
+},
+{
+"cid": "f862839c",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 22:42:09.149565741+00:00",
+"steps": 104,
+"calls": 38,
+"maxctx": 306401,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 38
+},
+"new_in": 314564,
+"cached_in": 7045809,
+"out": 68512,
+"f9": 35306,
+"f10": 33206
+},
+{
+"cid": "abbe39bb",
+"agent": "self",
+"parent": "b465800e",
+"title": "",
+"lm": "2026-11-18 22:52:12.270368816+00:00",
+"steps": 107,
+"calls": 34,
+"maxctx": 210748,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 34
+},
+"new_in": 228153,
+"cached_in": 4801705,
+"out": 36841,
+"f9": 26922,
+"f10": 9919
+},
+{
+"cid": "b465800e",
+"agent": "",
+"parent": "",
+"title": "Orchestrating Sub-Agents For Chapters",
+"lm": "2026-11-18 22:54:06.575204106+00:00",
+"steps": 327,
+"calls": 103,
+"maxctx": 511473,
+"models": {
+"Gemini 4 Hydrogen (XHigh)": 103
+},
+"new_in": 3218427,
+"cached_in": 29300959,
+"out": 117517,
+"f9": 57280,
+"f10": 60237
+},
+{
+"cid": "3b1da9a8",
+"agent": "",
+"parent": "",
+"title": "Monograph Review and Summary",
+"lm": "2026-11-19 17:23:55.692014898+00:00",
+"steps": 21,
+"calls": 10,
+"maxctx": 448268,
+"models": {
+"Gemini 4 Hydrogen (High)": 10
+},
+"new_in": 2454607,
+"cached_in": 1245527,
+"out": 65324,
+"f9": 33937,
+"f10": 31387
+},
+{
+"cid": "771cd3ab",
+"agent": "",
+"parent": "",
+"title": "Project Orientation And Setup",
+"lm": "2026-11-20 10:19:50.591883775+00:00",
+"steps": 104,
+"calls": 41,
+"maxctx": 224673,
+"models": {
+"Gemini 4 Hydrogen (High)": 41
+},
+"new_in": 253529,
+"cached_in": 5026607,
+"out": 60469,
+"f9": 16209,
+"f10": 44260
+},
+{
+"cid": "f92e6c2d",
+"agent": "",
+"parent": "",
+"title": "Style Rewriting Pass Setup",
+"lm": "2026-11-20 12:31:12.460993994+00:00",
+"steps": 120,
+"calls": 33,
+"maxctx": 321239,
+"models": {
+"Gemini 4 Hydrogen (High)": 33
+},
+"new_in": 589343,
+"cached_in": 3945391,
+"out": 92285,
+"f9": 58328,
+"f10": 33957
+},
+{
+"cid": "d627e254",
+"agent": "editeur-p3-p5",
+"parent": "3f38c297",
+"title": "",
+"lm": "2026-11-20 14:12:00.893490277+00:00",
+"steps": 85,
+"calls": 22,
+"maxctx": 196637,
+"models": {
+"Gemini 4 Argon (High)": 21,
+"Gemini 4 Hydrogen (Medium)": 1
+},
+"new_in": 378227,
+"cached_in": 2808401,
+"out": 53968,
+"f9": 23746,
+"f10": 30222
+},
+{
+"cid": "0656bc7e",
+"agent": "biblio-check",
+"parent": "3f38c297",
+"title": "",
+"lm": "2026-11-20 14:13:13.430518336+00:00",
+"steps": 165,
+"calls": 35,
+"maxctx": 307342,
+"models": {
+"Gemini 4 Hydrogen (High)": 35
+},
+"new_in": 323008,
+"cached_in": 6272869,
+"out": 53801,
+"f9": 24798,
+"f10": 29003
+},
+{
+"cid": "35d276a6",
+"agent": "editeur-p0-p2",
+"parent": "3f38c297",
+"title": "",
+"lm": "2026-11-20 14:15:33.796743171+00:00",
+"steps": 113,
+"calls": 35,
+"maxctx": 256764,
+"models": {
+"Gemini 4 Argon (High)": 34,
+"Gemini 4 Hydrogen (Medium)": 1
+},
+"new_in": 502427,
+"cached_in": 5623786,
+"out": 63819,
+"f9": 27786,
+"f10": 36033
+},
+{
+"cid": "1f3251fe",
+"agent": "artefacts-p4",
+"parent": "3f38c297",
+"title": "",
+"lm": "2026-11-20 14:18:26.611880303+00:00",
+"steps": 185,
+"calls": 56,
+"maxctx": 282884,
+"models": {
+"Gemini 4 Argon (High)": 44,
+"Gemini 4 Hydrogen (Medium)": 12
+},
+"new_in": 849200,
+"cached_in": 10429282,
+"out": 73485,
+"f9": 20559,
+"f10": 52926
+},
+{
+"cid": "6651a0cd",
+"agent": "verificateur",
+"parent": "3f38c297",
+"title": "",
+"lm": "2026-11-20 14:20:42.914287559+00:00",
+"steps": 104,
+"calls": 27,
+"maxctx": 175813,
+"models": {
+"Gemini 4 Argon (High)": 7,
+"Gemini 4 Argon (Medium)": 5,
+"Gemini 4 Hydrogen (Medium)": 15
+},
+"new_in": 539384,
+"cached_in": 2221969,
+"out": 10465,
+"f9": 4293,
+"f10": 6172
+},
+{
+"cid": "61071a56",
+"agent": "monitor",
+"parent": "3f38c297",
+"title": "",
+"lm": "2026-11-20 14:24:09.487792156+00:00",
+"steps": 84,
+"calls": 22,
+"maxctx": 31593,
+"models": {
+"Gemini 4 Argon (High)": 9,
+"Gemini 4 Argon (Low)": 5,
+"Gemini 4 Hydrogen (Low)": 8
+},
+"new_in": 125528,
+"cached_in": 337444,
+"out": 2690,
+"f9": 1718,
+"f10": 972
+},
+{
+"cid": "3f38c297",
+"agent": "",
+"parent": "",
+"title": "Book Review And Prioritization Strategy",
+"lm": "2026-11-20 14:29:52.242850314+00:00",
+"steps": 261,
+"calls": 90,
+"maxctx": 330219,
+"models": {
+"Gemini 4 Argon (High)": 72,
+"Gemini 4 Hydrogen (Medium)": 2,
+"Gemini 4 Hydrogen (High)": 16
+},
+"new_in": 1991961,
+"cached_in": 15181834,
+"out": 107133,
+"f9": 38599,
+"f10": 68534
+},
+{
+"cid": "6aa07f89",
+"agent": "front",
+"parent": "087dfb52",
+"title": "",
+"lm": "2026-11-20 14:44:02.951270962+00:00",
+"steps": 15,
+"calls": 4,
+"maxctx": 58167,
+"models": {
+"Gemini 4 Hydrogen (High)": 4
+},
+"new_in": 58164,
+"cached_in": 87836,
+"out": 22648,
+"f9": 17972,
+"f10": 4676
+},
+{
+"cid": "54cad9db",
+"agent": "part5",
+"parent": "087dfb52",
+"title": "",
+"lm": "2026-11-20 14:44:17.435051598+00:00",
+"steps": 16,
+"calls": 3,
+"maxctx": 57515,
+"models": {
+"Gemini 4 Hydrogen (High)": 3
+},
+"new_in": 57513,
+"cached_in": 65041,
+"out": 26169,
+"f9": 21556,
+"f10": 4613
+},
+{
+"cid": "4028828a",
+"agent": "part1",
+"parent": "087dfb52",
+"title": "",
+"lm": "2026-11-20 14:44:23.809421836+00:00",
+"steps": 14,
+"calls": 2,
+"maxctx": 58823,
+"models": {
+"Gemini 4 Hydrogen (High)": 2
+},
+"new_in": 58822,
+"cached_in": 11630,
+"out": 29869,
+"f9": 24971,
+"f10": 4898
+},
+{
+"cid": "3b2d5398",
+"agent": "part2",
+"parent": "087dfb52",
+"title": "",
+"lm": "2026-11-20 14:44:35.756344305+00:00",
+"steps": 16,
+"calls": 3,
+"maxctx": 71517,
+"models": {
+"Gemini 4 Hydrogen (High)": 3
+},
+"new_in": 71515,
+"cached_in": 34909,
+"out": 29827,
+"f9": 24523,
+"f10": 5304
+},
+{
+"cid": "9762d10b",
+"agent": "part4",
+"parent": "087dfb52",
+"title": "",
+"lm": "2026-11-20 14:44:36.546573028+00:00",
+"steps": 24,
+"calls": 6,
+"maxctx": 75990,
+"models": {
+"Gemini 4 Hydrogen (High)": 6
+},
+"new_in": 78035,
+"cached_in": 227031,
+"out": 31036,
+"f9": 25225,
+"f10": 5811
+},
+{
+"cid": "d4d0f22d",
+"agent": "part3",
+"parent": "087dfb52",
+"title": "",
+"lm": "2026-11-20 14:45:04.613286143+00:00",
+"steps": 24,
+"calls": 8,
+"maxctx": 89482,
+"models": {
+"Gemini 4 Hydrogen (High)": 8
+},
+"new_in": 148164,
+"cached_in": 323001,
+"out": 33822,
+"f9": 27750,
+"f10": 6072
+},
+{
+"cid": "9d564536",
+"agent": "verifier-prose",
+"parent": "087dfb52",
+"title": "",
+"lm": "2026-11-20 14:46:29.192755381+00:00",
+"steps": 87,
+"calls": 23,
+"maxctx": 283028,
+"models": {
+"Gemini 4 Hydrogen (High)": 23
+},
+"new_in": 289156,
+"cached_in": 2680985,
+"out": 20140,
+"f9": 14293,
+"f10": 5847
+},
+{
+"cid": "ea42c93f",
+"agent": "verifier-fig",
+"parent": "087dfb52",
+"title": "",
+"lm": "2026-11-20 14:47:25.363494716+00:00",
+"steps": 71,
+"calls": 20,
+"maxctx": 138102,
+"models": {
+"Gemini 4 Hydrogen (High)": 20
+},
+"new_in": 146283,
+"cached_in": 1582637,
+"out": 23718,
+"f9": 17963,
+"f10": 5755
+},
+{
+"cid": "8d6641f8",
+"agent": "figures",
+"parent": "087dfb52",
+"title": "",
+"lm": "2026-11-20 14:47:32.64013405+00:00",
+"steps": 60,
+"calls": 11,
+"maxctx": 128806,
+"models": {
+"Gemini 4 Hydrogen (High)": 11
+},
+"new_in": 128796,
+"cached_in": 732996,
+"out": 37286,
+"f9": 28161,
+"f10": 9125
+},
+{
+"cid": "fac146ec",
+"agent": "monitor",
+"parent": "087dfb52",
+"title": "",
+"lm": "2026-11-20 14:49:50.543712361+00:00",
+"steps": 37,
+"calls": 13,
+"maxctx": 31142,
+"models": {
+"Gemini 4 Hydrogen (High)": 13
+},
+"new_in": 45480,
+"cached_in": 229540,
+"out": 2005,
+"f9": 1555,
+"f10": 450
+},
+{
+"cid": "087dfb52",
+"agent": "",
+"parent": "",
+"title": "Agent Swarm For English Claques",
+"lm": "2026-11-20 15:02:54.515245279+00:00",
+"steps": 71,
+"calls": 20,
+"maxctx": 143524,
+"models": {
+"Gemini 4 Hydrogen (High)": 20
+},
+"new_in": 210689,
+"cached_in": 1574119,
+"out": 47095,
+"f9": 11677,
+"f10": 35418
+},
+{
+"cid": "34467045",
+"agent": "v4",
+"parent": "84e68ddf",
+"title": "",
+"lm": "2026-11-20 16:12:07.126518918+00:00",
+"steps": 66,
+"calls": 25,
+"maxctx": 162592,
+"models": {
+"Gemini 4 Hydrogen (Medium)": 25
+},
+"new_in": 177563,
+"cached_in": 2434602,
+"out": 40305,
+"f9": 23632,
+"f10": 16673
+},
+{
+"cid": "1ad194e4",
+"agent": "v3",
+"parent": "84e68ddf",
+"title": "",
+"lm": "2026-11-20 16:12:07.414546607+00:00",
+"steps": 70,
+"calls": 22,
+"maxctx": 201932,
+"models": {
+"Gemini 4 Hydrogen (Medium)": 22
+},
+"new_in": 213590,
+"cached_in": 2945820,
+"out": 48252,
+"f9": 21133,
+"f10": 27119
+},
+{
+"cid": "bbc66c5d",
+"agent": "v5",
+"parent": "84e68ddf",
+"title": "",
+"lm": "2026-11-20 16:12:07.482659513+00:00",
+"steps": 71,
+"calls": 24,
+"maxctx": 192632,
+"models": {
+"Gemini 4 Hydrogen (Medium)": 24
+},
+"new_in": 211796,
+"cached_in": 3154223,
+"out": 44160,
+"f9": 17360,
+"f10": 26800
+},
+{
+"cid": "05e49d04",
+"agent": "v2",
+"parent": "84e68ddf",
+"title": "",
+"lm": "2026-11-20 16:12:07.827508479+00:00",
+"steps": 81,
+"calls": 26,
+"maxctx": 199243,
+"models": {
+"Gemini 4 Hydrogen (Medium)": 26
+},
+"new_in": 217668,
+"cached_in": 3008247,
+"out": 45226,
+"f9": 17320,
+"f10": 27906
+},
+{
+"cid": "b911ba87",
+"agent": "v1",
+"parent": "84e68ddf",
+"title": "",
+"lm": "2026-11-20 16:12:08.450765277+00:00",
+"steps": 65,
+"calls": 20,
+"maxctx": 188755,
+"models": {
+"Gemini 4 Hydrogen (Medium)": 20
+},
+"new_in": 203707,
+"cached_in": 2478633,
+"out": 43085,
+"f9": 22475,
+"f10": 20610
+},
+{
+"cid": "a3288406",
+"agent": "vx",
+"parent": "84e68ddf",
+"title": "",
+"lm": "2026-11-20 16:12:08.719030721+00:00",
+"steps": 98,
+"calls": 28,
+"maxctx": 187095,
+"models": {
+"Gemini 4 Hydrogen (Medium)": 28
+},
+"new_in": 204714,
+"cached_in": 3273047,
+"out": 45459,
+"f9": 23315,
+"f10": 22144
+},
+{
+"cid": "3642707d",
+"agent": "v0",
+"parent": "84e68ddf",
+"title": "",
+"lm": "2026-11-20 16:12:09.538149054+00:00",
+"steps": 46,
+"calls": 13,
+"maxctx": 154186,
+"models": {
+"Gemini 4 Hydrogen (Medium)": 13
+},
+"new_in": 162374,
+"cached_in": 1268259,
+"out": 34184,
+"f9": 17668,
+"f10": 16516
+},
+{
+"cid": "068bc56f",
+"agent": "synthese",
+"parent": "84e68ddf",
+"title": "",
+"lm": "2026-11-20 16:22:18.353640841+00:00",
+"steps": 113,
+"calls": 36,
+"maxctx": 400650,
+"models": {
+"Gemini 4 Hydrogen (High)": 36
+},
+"new_in": 420901,
+"cached_in": 8750018,
+"out": 84155,
+"f9": 28712,
+"f10": 55443
+},
+{
+"cid": "84ad8558",
+"agent": "lecteur-pdf",
+"parent": "84e68ddf",
+"title": "",
+"lm": "2026-11-20 17:23:10.59720462+00:00",
+"steps": 57,
+"calls": 16,
+"maxctx": 637817,
+"models": {
+"Gemini 4 Hydrogen (Medium)": 16
+},
+"new_in": 664779,
+"cached_in": 1716544,
+"out": 20778,
+"f9": 6001,
+"f10": 14777
+},
+{
+"cid": "84e68ddf",
+"agent": "",
+"parent": "",
+"title": "French Academic Monograph Review Resumption",
+"lm": "2026-11-20 18:10:50.395190614+00:00",
+"steps": 594,
+"calls": 166,
+"maxctx": 504686,
+"models": {
+"Gemini 4 Hydrogen (High)": 166
+},
+"new_in": 1049974,
+"cached_in": 27141957,
+"out": 190284,
+"f9": 67374,
+"f10": 122910
+},
+{
+"cid": "0491b338",
+"agent": "",
+"parent": "",
+"title": "Reading Project Files And Monograph",
+"lm": "2026-11-20 22:42:11.79046757+00:00",
+"steps": 299,
+"calls": 107,
+"maxctx": 344022,
+"models": {
+"Gemini 4 Hydrogen (High)": 107
+},
+"new_in": 1398056,
+"cached_in": 19137351,
+"out": 116212,
+"f9": 39972,
+"f10": 76240
+}
+]

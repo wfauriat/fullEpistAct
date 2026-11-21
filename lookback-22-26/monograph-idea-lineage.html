@@ -1,0 +1,333 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Monograph Idea Lineage</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: provenance register. A dated spine of sources (left rule, colour = provenance), then a filterable ledger of ideas. */
+:root {
+  --bg: #f4f6f5;
+  --surface: #ffffff;
+  --fg: #1c2421;
+  --muted: #5b6763;
+  --rule: #d6ddda;
+  --human: #2d6a4f;
+  --human2: #86b8a0;
+  --mixed: #a3660f;
+  --llm: #4a54a6;
+  --band: #f7efe1;
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121715; --surface: #19201d; --fg: #e2e8e5; --muted: #9aa8a2; --rule: #2c3632;
+    --human: #6cc39a; --human2: #3c7a5d; --mixed: #e0a54a; --llm: #9aa3f0; --band: #2a2418; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121715; --surface: #19201d; --fg: #e2e8e5; --muted: #9aa8a2; --rule: #2c3632;
+  --human: #6cc39a; --human2: #3c7a5d; --mixed: #e0a54a; --llm: #9aa3f0; --band: #2a2418; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 15.5px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 4rem;
+}
+main { max-width: 900px; margin: 0 auto; }
+header { padding-block: 2.75rem 1.5rem; border-bottom: 1px solid var(--rule); }
+.eyebrow { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.7rem; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; text-wrap: balance; }
+h1 { font-size: clamp(1.8rem, 4.2vw, 2.45rem); margin: 0 0 0.9rem; }
+h1 em { font-weight: 500; }
+h2 { font-size: 1.5rem; margin: 3rem 0 0.9rem; }
+h3 { font-size: 1.1rem; margin: 1.8rem 0 0.5rem; }
+p, li { max-width: 68ch; }
+p { margin: 0 0 1rem; }
+.lede { font-size: 1.05rem; }
+code { font-family: var(--font-mono); font-size: 0.84em; }
+.mono { font-family: var(--font-mono); }
+
+/* Category chips and legend */
+.chip { display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.12rem 0.5rem; border-radius: 3px; border: 1px solid currentColor; white-space: nowrap; }
+.chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.chip.h { color: var(--human); } .chip.m { color: var(--mixed); } .chip.l { color: var(--llm); }
+.chip.h2 { color: var(--human); border-style: dashed; }
+.chip.h2::before { background: transparent; border: 1.5px solid currentColor; box-sizing: border-box; }
+.legend { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 1.6rem 0 0.4rem; }
+.legend > div { background: var(--surface); padding: 0.9rem 1rem; min-width: 0; }
+.legend p { margin: 0.5rem 0 0; font-size: 0.88rem; color: var(--muted); }
+
+/* Proportion bars */
+.mix { margin: 1.2rem 0 0.5rem; display: grid; grid-template-columns: 150px minmax(0, 1fr) 44px; gap: 0.45rem 0.8rem; align-items: center; font-size: 0.85rem; }
+.mix .lab { color: var(--muted); }
+.mix .bar { display: flex; height: 14px; border-radius: 2px; overflow: hidden; background: var(--rule); }
+.mix .bar i { display: block; height: 100%; }
+.mix .bar i.h { background: var(--human); } .mix .bar i.h2 { background: var(--human2); } .mix .bar i.m { background: var(--mixed); } .mix .bar i.l { background: var(--llm); }
+.mix .n { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.mix .total .lab, .mix .total.n { color: var(--fg); font-weight: 600; }
+.caption { font-size: 0.83rem; color: var(--muted); margin-top: 0.5rem; }
+
+/* Timeline */
+.spine { list-style: none; margin: 1rem 0 0; padding: 0; position: relative; }
+.spine::before { content: ""; position: absolute; left: 112px; top: 0.4rem; bottom: 0.4rem; width: 2px; background: var(--rule); }
+.ev { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 0 28px; padding: 0.65rem 0; position: relative; }
+.ev .when { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); text-align: right; padding-top: 0.15rem; font-variant-numeric: tabular-nums; }
+.ev .dot { position: absolute; left: 107px; top: 1rem; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--bg); }
+.ev.h .dot { background: var(--human); } .ev.h2 .dot { background: var(--bg); box-shadow: inset 0 0 0 2.5px var(--human); } .ev.m .dot { background: var(--mixed); } .ev.l .dot { background: var(--llm); }
+.ev .body { min-width: 0; }
+.ev .head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.6rem; }
+.ev .head strong { font-weight: 600; }
+.ev .body p { margin: 0.25rem 0 0; font-size: 0.92rem; color: var(--muted); }
+.ev .body p q { color: var(--fg); }
+.ev.gap { background: var(--band); border-radius: 4px; margin: 0.4rem 0; padding: 0.9rem 0; }
+.ev.gap .dot { border-radius: 2px; }
+.gaplist { list-style: none; margin: 0.55rem 0 0; padding: 0; display: grid; gap: 0.25rem; font-size: 0.88rem; }
+.gaplist li { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 0.6rem; max-width: none; }
+.gaplist .mono { font-size: 0.76rem; color: var(--muted); padding-top: 0.1rem; }
+.notread { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); border: 1px dashed var(--rule); padding: 0 0.35rem; border-radius: 3px; }
+
+/* Ledger */
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0 1rem; }
+.filters button { font: inherit; font-size: 0.85rem; padding: 0.35rem 0.8rem; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); color: var(--fg); cursor: pointer; }
+.filters button[aria-pressed="true"] { border-color: var(--fg); background: var(--fg); color: var(--bg); }
+.filters button:focus-visible { outline: 2px solid var(--llm); outline-offset: 2px; }
+.tbl { overflow-x: auto; border: 1px solid var(--rule); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--rule); }
+th { font-family: var(--font-mono); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+tr.part td { font-family: var(--font-display); font-weight: 600; font-size: 1rem; background: color-mix(in srgb, var(--rule) 30%, var(--surface)); }
+td.date { font-family: var(--font-mono); font-size: 0.78rem; white-space: nowrap; color: var(--muted); font-variant-numeric: tabular-nums; }
+td.src { color: var(--muted); font-size: 0.85rem; }
+td.cat { white-space: nowrap; }
+tr[hidden] { display: none; }
+
+.callout { border-left: 3px solid var(--llm); background: var(--surface); padding: 0.9rem 1.1rem; margin: 1.4rem 0; }
+.callout p:last-child { margin-bottom: 0; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.82rem; color: var(--muted); }
+
+@media (max-width: 640px) {
+  .legend { grid-template-columns: 1fr; }
+  .spine::before { left: 6px; }
+  .ev { grid-template-columns: minmax(0, 1fr); padding-left: 26px; }
+  .ev .when { text-align: left; }
+  .ev .dot { left: 1px; top: 0.85rem; }
+  .ev.gap { padding-left: 26px; padding-right: 10px; }
+  .gaplist li { grid-template-columns: 1fr; gap: 0; }
+  .mix { grid-template-columns: minmax(0, 1fr) 40px; }
+  .mix .lab { grid-column: 1 / -1; margin-bottom: -0.3rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>
+
+<main>
+<header>
+  <p class="eyebrow">Provenance of ideas · 2020 → Nov 2026</p>
+  <h1>Where the ideas in <em>Agir d'après une représentation du monde</em> come from</h1>
+  <p class="lede">Each idea in the 2026 monograph is dated to its earliest written trace and classed by who wrote that trace: you alone, you working with an LLM, or an LLM working under your direction.</p>
+  <div class="legend">
+    <div><span class="chip h">Human · certain</span><p>The 2022 book: no LLM whatsoever, in the thinking or the writing.</p><p style="margin-top:0.7rem"><span class="chip h2">Human · LLM era</span></p><p>Written by you, with no LLM writing, after your claude.ai chats had begun on 7 Nov 2025, so the thinking may carry their influence. Covers the talk (guaranteed free of LLM writing), the Nov 2025 notes, the Dec 2025 seminar, and your instructions during the build.</p></div>
+    <div><span class="chip m">Mixed</span><p>Your ideas shaped in LLM dialogue (your L3h, L3 and L4): chat transcripts, your own words after the dialogues began, or LLM prose under your editorial control, as in the arXiv article and the essays.</p></div>
+    <div><span class="chip l">LLM</span><p>First written by a model working from its own reading of your material: <em>Failing Differently</em>, the 12 Nov lineage analysis, and the specs and chapters of the build. Includes the literature the models brought in.</p></div>
+  </div>
+  <p class="caption">L0–L4 is the provenance scale from your Nov 2026 housekeeping archive: L0 hand-written, L1 mostly or all AI, L2 AI-assisted training, L3 AI proposal with heavy human editing (L3h when the ideas and formulations are mostly yours), L4 transcript or summary of a human–AI conversation. These labels are coarse and were assigned after the fact, so they are used here as one signal among others (who wrote the text, dates, character counts), never as proof on their own.</p>
+</header>
+
+<section>
+  <h2>The balance, by part of the book</h2>
+  <div class="mix" role="img" aria-label="Share of ideas by provenance for each part of the book">
+    <div class="lab">Part I · Acting</div><div class="bar"><i class="h" style="width:58.33%"></i><i class="h2" style="width:16.67%"></i><i class="m" style="width:8.33%"></i><i class="l" style="width:16.67%"></i></div><div class="n">12</div>
+    <div class="lab">Part II · Detecting</div><div class="bar"><i class="h" style="width:37.5%"></i><i class="m" style="width:37.5%"></i><i class="l" style="width:25%"></i></div><div class="n">16</div>
+    <div class="lab">Part III · Computing</div><div class="bar"><i class="h" style="width:20%"></i><i class="h2" style="width:20%"></i><i class="m" style="width:40%"></i><i class="l" style="width:20%"></i></div><div class="n">5</div>
+    <div class="lab">Part IV · Automation</div><div class="bar"><i class="h" style="width:33.33%"></i><i class="m" style="width:50%"></i><i class="l" style="width:16.67%"></i></div><div class="n">6</div>
+    <div class="lab">Part V · Remedies</div><div class="bar"><i class="h" style="width:50%"></i><i class="m" style="width:16.67%"></i><i class="l" style="width:33.33%"></i></div><div class="n">6</div>
+    <div class="lab">Book design</div><div class="bar"><i class="h2" style="width:100%"></i></div><div class="n">1</div>
+    <div class="lab total">All 46 ideas</div><div class="bar"><i class="h" style="width:41.3%"></i><i class="h2" style="width:8.7%"></i><i class="m" style="width:28.26%"></i><i class="l" style="width:21.74%"></i></div><div class="n total">46</div>
+  </div>
+  <p class="caption">23 human: 19 certain, found in the 2022 book, and 4 written by you in the LLM era. Then 13 mixed and 10 LLM. The counts cover the ideas in the ledger below, which is a selection: they do not weigh how much each idea carries in the book.</p>
+
+  <div class="callout">
+    <p><strong>The core is yours, and its organising machinery came from the models.</strong> Most of Part I and the roots of Part II are already in the 2022 book, the one source written with no LLM at all. The winter 2025 talk restates many of them in your own writing. The criterion that a check is worth something only if it "can fail differently" first appears in your Nov 2026 essay, which you label L3h. The theory of checks built on it (comparator, five conditions, escape probability, "se tromper autrement" as the thesis, two-axis matrix, three-level remedy) was assembled by Claude on 12–14 Nov 2026 out of components you had written.</p>
+  </div>
+</section>
+
+<section>
+  <h2>The dialogue years, measured</h2>
+  <p>The ideation between the talk and the arXiv article ran mostly in claude.ai, and 85 % of those conversations were deleted after their output was harvested into a repository. The export still keeps the dates, sizes and titles of every conversation, and the text of a few. These figures come from that metadata; no message was read.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Measure</th><th>Value</th><th>Scope</th></tr></thead>
+    <tbody>
+      <tr><td>Epistemics conversations that kept their text</td><td class="date">8 · ≈ 26 h</td><td class="src">14 Dec 2025 → 9 Apr 2026</td></tr>
+      <tr><td>Characters you typed in them, against characters the model wrote</td><td class="date">≈ 65 k vs ≈ 560 k</td><td class="src">about 10 % of the text is yours, and it carries the questions, directions and objections</td></tr>
+      <tr><td>Activity on the epistemics thread, Dec 2025 → May 2026</td><td class="date">≈ 66 h</td><td class="src">chat 34 h · Claude Code 24 h · git 9 h (your activity index)</td></tr>
+      <tr><td>Activity on the epistemics thread, Nov 2025 → Nov 2026</td><td class="date">≈ 85 h</td><td class="src">chat 44 h · Claude Code 32 h · git 10 h; the computing line (bridge essay, curricula) is counted separately</td></tr>
+      <tr><td>Writing the talk</td><td class="date">≈ 13 h</td><td class="src">editing time in the file's metadata, late Nov – Dec 2025; no LLM writing, while claude.ai chats were already under way</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Timeline of sources</h2>
+  <ol class="spine">
+    <li class="ev h"><span class="when">Oct 2020<br>– Jul 2021</span><span class="dot"></span><div class="body"><div class="head"><strong><em>Un discours de la méthode au XXIe siècle</em></strong><span class="chip h">Human</span></div><p>Written alone, about 723 h by your own log; legal deposit Feb 2022. Contains the boiling-water rule, possible worlds, the turkey, the two shipowners, calibration and the single decision, the fève, common failure factors, "formaliser c'est choisir" and the manifesto.</p></div></li>
+
+    <li class="ev h2"><span class="when">7 Nov 2025</span><span class="dot"></span><div class="body"><div class="head"><strong>UQ position note (<code>OverviewNotes.md</code>)</strong><span class="chip h2">Human · LLM era</span></div><p>Written by you on the day of your first claude.ai conversation. Reasoning backwards, probability as weight on possible worlds, <q>Le réel se moque de nos anticipations</q>, Pearl, Russell and Norvig, Savage, the move to model-free methods, rising automation, the "ingénieur qualité" role.</p></div></li>
+
+    <li class="ev h2"><span class="when">Late Nov<br>– Dec 2025</span><span class="dot"></span><div class="body"><div class="head"><strong>The talk, a 15-minute video</strong><span class="chip h2">Human · LLM era</span></div><p>No LLM wrote any of it: you guarantee this. Your claude.ai chats had begun, so the thinking may carry their influence. About 13 h of editing. Light or reinforced sailboat, M. X at 5 % and M. Y at 1 ‰; boiling water with salt and the pressure cooker; the Mont-Blanc; the turkey; Russian roulette; guarantees conditional on choices; <q>ne pas courir après la bonne réponse</q>.</p></div></li>
+
+    <li class="ev m"><span class="when">14 Dec 2025</span><span class="dot"></span><div class="body"><div class="head"><strong>"UQ manifesto" chat</strong><span class="chip m">Mixed</span></div><p>64 messages over about 5 h. The phrase "precisely wrong" is already in the manifesto it produced.</p></div></li>
+
+    <li class="ev m"><span class="when">15 Dec 2025</span><span class="dot"></span><div class="body"><div class="head"><strong>The talk submitted for AI critique</strong><span class="chip m">Mixed</span></div><p>Rounds of critique on your text (<code>full_discussion.md</code>), and the AI answers stored beside it. "Epistemic humility" is first used in one of those answers.</p></div></li>
+
+    <li class="ev h2"><span class="when">16 Dec 2025</span><span class="dot"></span><div class="body"><div class="head"><strong>Possible-worlds seminar</strong><span class="chip h2">Human · LLM era</span></div><p>Your talk and framing (L0 by your account), with the LLM excerpts quoted openly as LLM output (<q>Yes Father, I confess I got help reframing</q>).</p></div></li>
+
+    <li class="ev m gap"><span class="when">Dec 2025<br>– May 2026</span><span class="dot"></span><div class="body"><div class="head"><strong>Ideation, mostly in claude.ai</strong><span class="chip m">Mixed</span></div><p>Most of the dialogue that shaped the article happened here, and most conversations were deleted after harvest (see the measures above). The dates below are first written uses, from git and the surviving conversation titles.</p>
+      <ul class="gaplist">
+        <li><span class="mono">25 Dec 2025</span><span>Chat "Cassandra phenomenon in scientific warnings"</span></li>
+        <li><span class="mono">28 Dec 2025</span><span>"Launder" first appears, in the synthesis on epistemic humility</span></li>
+        <li><span class="mono">16 Jan 2026</span><span>"Frame problem" first used, from the chat "Limits and perspectives in machine learning advances" (72 messages, about 6 h)</span></li>
+        <li><span class="mono">16–20 Jan</span><span>AI_Limits treatise, 126 pp., L3h ("LLM as a companion for conceptual research"); its machine-incapacity claims were later dropped</span></li>
+        <li><span class="mono">18 Jan</span><span>"Ontological uncertainty" first used, in the treatise</span></li>
+        <li><span class="mono">20 Jan</span><span>Two ways in for relevance: told, or found out by bumping into it</span></li>
+        <li><span class="mono">25 Jan</span><span>Chat "Frame problem as computational paradox"</span></li>
+        <li><span class="mono">4 Feb</span><span>Value-of-information note: "indeterminacy" of relevance</span></li>
+        <li><span class="mono">25 Feb</span><span>Lay talk <em>When Models Are Confident and Wrong</em>: "laundering", "The Turkey / The Chain"</span></li>
+        <li><span class="mono">27 Mar</span><span>Round-table pack on uncertainty quantification for deep learning</span></li>
+        <li><span class="mono">29–31 Mar</span><span>Chat "convergence on epistemic humility" → <em>The Cost of Precision</em>; structural vs conjunctural</span></li>
+        <li><span class="mono">30 Mar</span><span>An AI map of your corpus coins "bottleneck inversion"</span></li>
+        <li><span class="mono">1 Apr</span><span><em>Precisely Wrong</em> and <em>The Perspectival Trap</em>, both L3h; "the world responds to the action" first written in English</span></li>
+        <li><span class="mono">8 May</span><span>"Make humility cheap"</span></li>
+      </ul></div></li>
+
+    <li class="ev m"><span class="when">11 May 2026</span><span class="dot"></span><div class="body"><div class="head"><strong>Your claims list (<code>corpora_content.md</code>)</strong><span class="chip m">Mixed</span></div><p>Your own words, written after months of dialogue. It states the uncertainty buffer, refusing exploration where consequences are irreversible, no audit of the frame from within, uncertainty stripped along chains, throughput outrunning evaluation, and the satellite phone.</p></div></li>
+
+    <li class="ev m"><span class="when">19 May 2026</span><span class="dot"></span><div class="body"><div class="head"><strong>arXiv article (Fauriat 2026)</strong><span class="chip m">Mixed</span></div><p>L3h by your account: an LLM-written patchwork of several works and discussions, distilled into a heavily edited argumentative spine, with ideas and even formulations mostly yours. About 6.7 h of Claude Code work in one day. Its <em>Note on production</em> says this and claims continuity with the 2022 book. It brings in Challenger and the 2008 mortgage models.</p></div></li>
+
+    <li class="ev m"><span class="when">25 Jul 2026</span><span class="dot"></span><div class="body"><div class="head"><strong><em>Where the Guarantees End</em> (bridge essay)</strong><span class="chip m">Mixed</span></div><p>L3: drafted by Claude from a source document, with thesis, title, venue and scope confirmed by you. It follows the chat "Hierarchical principles of information processing" (7 Jul). Layers as contracts, failures with an address, the jagged frontier, hallucination as an equilibrium, placement of checks, <q>gate the action</q>; METR, Knight Capital, Mars Climate Orbiter, Google Flu Trends.</p></div></li>
+
+    <li class="ev h2"><span class="when">5 Oct 2026</span><span class="dot"></span><div class="body"><div class="head"><strong>Position letter</strong><span class="chip h2">Human · LLM era</span><span class="notread">not read</span></div><p>Your own words according to the earlier lineage map. Not used here.</p></div></li>
+
+    <li class="ev m"><span class="when">3–5 Nov 2026</span><span class="dot"></span><div class="body"><div class="head"><strong><em>Producing faster than we can check</em></strong><span class="chip m">Mixed</span><span class="notread">not read</span></div><p>L3h by your account: signed by you, from the chat "LLMs and scientific reasoning" (3 Nov, 18 of your turns), then refined over 213 Claude Code prompts. According to the lineage map it introduces: a check is worth something only if it "can fail differently"; common-mode failure; polish against understanding; explicit statuses for results.</p></div></li>
+
+    <li class="ev l"><span class="when">12 Nov 2026</span><span class="dot"></span><div class="body"><div class="head"><strong>Lineage analysis by Claude</strong><span class="chip l">LLM</span></div><p>Proposes the book's unifying thesis (<q>every component is in the texts, the assembly is not</q>), the second axis (signalled or silent), and the three layers: attitude, placement, organisation.</p></div></li>
+
+    <li class="ev l"><span class="when">14 Nov 2026</span><span class="dot"></span><div class="body"><div class="head"><strong><em>Failing Differently</em></strong><span class="chip l">LLM</span></div><p>"Claude (Anthropic), at the request of W. Fauriat. Exploratory draft, not checked." Introduces the comparator, the five conditions, the escape probability and the corroded bracket.</p></div></li>
+
+    <li class="ev h2"><span class="when">18–21 Nov 2026</span><span class="dot"></span><div class="body"><div class="head"><strong>Building the monograph</strong><span class="chip h2">Human · LLM era</span><span class="chip l">LLM</span></div><p>Your prompts set the design, the provenance rule, honest statuses, self-critique, the one-shot SEU thread and the sailboat example. The models wrote the specs, the formal apparatus (severity, PPV, M1–M3), most mechanisms and most case studies.</p></div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Ledger of ideas</h2>
+  <p>Each idea is dated to its earliest written trace. Page numbers refer to the printed pages of the 2022 book.</p>
+  <div class="filters" role="group" aria-label="Filter by provenance">
+    <button type="button" id="f-all" data-f="all" aria-pressed="true">All 46</button>
+    <button type="button" id="f-h" data-f="h" aria-pressed="false">Human · 19 + 4</button>
+    <button type="button" id="f-m" data-f="m" aria-pressed="false">Mixed · 13</button>
+    <button type="button" id="f-l" data-f="l" aria-pressed="false">LLM · 10</button>
+  </div>
+  <div class="tbl"><table id="ledger">
+    <thead><tr><th>Idea</th><th>First trace</th><th>Source</th><th>Provenance</th></tr></thead>
+    <tbody>
+      <tr class="part"><td colspan="4">Part I · Acting on a representation</td></tr>
+      <tr data-c="h"><td>Imperfect rules written <code>A ∩ (…) → B</code>; boiling water with salt, then pressure</td><td class="date">2020–21</td><td class="src">2022 book, pp. 124–125; talk</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>Possible worlds; conditional probability as a ratio of worlds</td><td class="date">2020–21</td><td class="src">2022 book, pp. 115–125</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>Deduction valid "pourvu que…"; Hume's problem of induction</td><td class="date">2020–21</td><td class="src">2022 book, pp. 55, 127</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>The world answers the action, not the representation</td><td class="date">2020–21</td><td class="src">2022 book, p. 219; Nov 2025 notes</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>Reasoning backwards</td><td class="date">Nov 2025</td><td class="src">notes; talk</td><td class="cat"><span class="chip h2">Human · LLM era</span></td></tr>
+      <tr data-c="h"><td>Every guarantee is conditional on choices, for deduction and for induction</td><td class="date">Dec 2025</td><td class="src">talk (conclusion)</td><td class="cat"><span class="chip h2">Human · LLM era</span></td></tr>
+      <tr data-c="h"><td>The sailing race: "who is right? nobody"</td><td class="date">2020–21</td><td class="src">2022 book, pp. 219–220 (shipowners); talk (M. X, M. Y)</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>Russian roulette, expected utility, the decision threshold</td><td class="date">2020–21</td><td class="src">2022 book, pp. 165–179; talk. The formula and L/ΔU = 25 were set in the specs</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>Calibration needs repetition and is of limited use for a single decision</td><td class="date">2020–21</td><td class="src">2022 book, p. 185</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="m"><td>The satellite phone</td><td class="date">May 2026</td><td class="src">claims list</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="l"><td>The frame as four prior choices (variables, categories, model class, objective)</td><td class="date">Nov 2026</td><td class="src">build specs</td><td class="cat"><span class="chip l">LLM</span></td></tr>
+      <tr data-c="l"><td>Logarithmic score; the weld inspection example</td><td class="date">Nov 2026</td><td class="src">build specs</td><td class="cat"><span class="chip l">LLM</span></td></tr>
+
+      <tr class="part"><td colspan="4">Part II · What can tell us we are wrong</td></tr>
+      <tr data-c="h"><td>The fève outside the cake: outcomes nobody anticipated</td><td class="date">2020–21</td><td class="src">2022 book, p. 185</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="m"><td>"Ontological uncertainty" as a named third kind</td><td class="date">Jan 2026</td><td class="src">LLM-assisted pass; your claims list</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="h"><td>The loaded die: total probability over hypotheses</td><td class="date">2020–21</td><td class="src">2022 book, p. 231</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>The turkey that reasons by induction</td><td class="date">2020–21</td><td class="src">2022 book, pp. 182–184</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>Common failure factors; redundancy has a cost</td><td class="date">2020–21</td><td class="src">2022 book, p. 206 (physical systems)</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>Chains in series fail more often</td><td class="date">2020–21</td><td class="src">2022 book, pp. 242–245</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>Formalising is choosing, hence the regress of meta-procedures</td><td class="date">2020–21</td><td class="src">2022 book, p. 260</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="m"><td>The frame problem as the name of the argument</td><td class="date">Jan 2026</td><td class="src">LLM-assisted pass; article</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="m"><td>Being told, or finding out by trial</td><td class="date">Jan 2026</td><td class="src">LLM-assisted pass; claims list</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="m"><td>A frame cannot be audited from within</td><td class="date">May 2026</td><td class="src">claims list</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="m"><td>Laundering: conditions lost along chains</td><td class="date">Dec 2025</td><td class="src">LLM-assisted pass; claims list</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="m"><td>Challenger; the 2008 mortgage models</td><td class="date">May 2026</td><td class="src">arXiv article</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="l"><td>"Se tromper autrement" as the book's thesis</td><td class="date">12 Nov 2026</td><td class="src">Claude lineage analysis (assembly of your parts); the "can fail differently" criterion itself is in your 3–5 Nov essay (L3h)</td><td class="cat"><span class="chip l">LLM</span></td></tr>
+      <tr data-c="l"><td>Comparator, the five conditions, escape probability</td><td class="date">14 Nov 2026</td><td class="src"><em>Failing Differently</em></td><td class="cat"><span class="chip l">LLM</span></td></tr>
+      <tr data-c="l"><td>The corroded bracket and its safety factor</td><td class="date">14 Nov 2026</td><td class="src"><em>Failing Differently</em></td><td class="cat"><span class="chip l">LLM</span></td></tr>
+      <tr data-c="l"><td>Severity, PPV and base rate, probability matching, model M1</td><td class="date">Nov 2026</td><td class="src">build specs, literature</td><td class="cat"><span class="chip l">LLM</span></td></tr>
+
+      <tr class="part"><td colspan="4">Part III · From classical computing to AI</td></tr>
+      <tr data-c="h"><td>Machines as formal automata that inherit our frame</td><td class="date">2020–21</td><td class="src">2022 book, pp. 63–65, 260</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>The shift to data-driven, model-free methods</td><td class="date">Nov 2025</td><td class="src">notes; claims list</td><td class="cat"><span class="chip h2">Human · LLM era</span></td></tr>
+      <tr data-c="m"><td>A stack of contracts whose top layer gives them up to gain reach</td><td class="date">Jul 2026</td><td class="src">bridge essay (L3); you restated it in your own words on 18 Nov</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="m"><td>Failure addresses, the jagged frontier, hallucination as an equilibrium</td><td class="date">Jul 2026</td><td class="src">bridge essay (L3); Hoare triples and the hallucination bound added in the build</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="l"><td>The two-axis matrix: in or out of frame, signalled or silent</td><td class="date">12 Nov 2026</td><td class="src">Claude lineage analysis</td><td class="cat"><span class="chip l">LLM</span></td></tr>
+
+      <tr class="part"><td colspan="4">Part IV · Automation and its blind spots</td></tr>
+      <tr data-c="h"><td>Complexity and automation as rising risk</td><td class="date">2020–21</td><td class="src">2022 book, pp. 241–245; Nov 2025 notes</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>Fund competence before means</td><td class="date">2020–21</td><td class="src">2022 book, p. 276</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="m"><td>Production outruns evaluation</td><td class="date">Feb 2026</td><td class="src">LLM-assisted pass; claims list</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="m"><td>Automation brings opacity and erodes reflexivity</td><td class="date">May 2026</td><td class="src">claims list</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="l"><td>Costly signal, Bainbridge's irony, sycophancy, provenance laundering</td><td class="date">Nov 2026</td><td class="src">November essays; build specs</td><td class="cat"><span class="chip l">LLM</span></td></tr>
+      <tr data-c="m"><td>METR, BCG, Knight Capital, Mars Climate Orbiter</td><td class="date">Jul 2026</td><td class="src">bridge essay (L3)</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+
+      <tr class="part"><td colspan="4">Part V · Deciding and protecting ourselves</td></tr>
+      <tr data-c="h"><td>Humility and critical thinking; not chasing the right answer</td><td class="date">2020–21</td><td class="src">2022 manifesto, p. 275; talk</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>Calibrate what repeats, lock what happens once</td><td class="date">2020–21</td><td class="src">2022 book, p. 185</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="h"><td>Explore where it is cheap and reversible, as in "simulation without consequences"</td><td class="date">2020–21</td><td class="src">2022 book, p. 185; claims list on irreversibility</td><td class="cat"><span class="chip h">Human</span></td></tr>
+      <tr data-c="m"><td>The uncertainty buffer, which became the "marge d'humilité"</td><td class="date">May 2026</td><td class="src">claims list; article</td><td class="cat"><span class="chip m">Mixed</span></td></tr>
+      <tr data-c="l"><td>The three-level remedy: attitude, placement, organisation</td><td class="date">12 Nov 2026</td><td class="src">Claude lineage analysis</td><td class="cat"><span class="chip l">LLM</span></td></tr>
+      <tr data-c="l"><td>Injected errors; the four and five questions</td><td class="date">Nov 2026</td><td class="src">build specs</td><td class="cat"><span class="chip l">LLM</span></td></tr>
+
+      <tr class="part"><td colspan="4">Book design</td></tr>
+      <tr data-c="h"><td>Keys before locks, examples before formalism, honest statuses, self-critique, the provenance rule</td><td class="date">18 Nov 2026</td><td class="src">your build prompts</td><td class="cat"><span class="chip h2">Human · LLM era</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Limits of this map</h2>
+  <ul>
+    <li><strong>Only the 2022 book is certain.</strong> You guarantee that it involved no LLM at all, and that no LLM wrote any of the talk. Everything you wrote after 7 Nov 2025, the date of your first claude.ai conversation, may carry the influence of those chats, even where you wrote every word. Many ideas the talk states also appear in the 2022 book (possible worlds, the shipowners, the turkey, roulette), so they count as certain. The four marked "LLM era" have no 2022 trace.</li>
+    <li><strong>Most Dec 2025 – May 2026 dialogues are gone.</strong> 85 % of the claude.ai conversations were deleted after harvest, and only their metadata survives. Everything marked Mixed may hold ideas that are wholly yours, or ideas a model proposed and you kept. Your own account is that the ideas and formulations were mostly yours (L3h), and the character counts above fit that only partly: you typed about a tenth of the text.</li>
+    <li><strong>Git dates are entry dates.</strong> They show when a phrase was written into a repository, not when it was first thought.</li>
+    <li><strong>Some texts were used only through their provenance records:</strong> <em>Precisely Wrong</em>, <em>The Perspectival Trap</em>, the November essay and the October letter. No message in the claude.ai export was read.</li>
+    <li><strong>Three classifications rest mainly on your L-labels.</strong> The bridge essay (L3) and the November essay (L3h) are marked Mixed, and the 16 Dec seminar (L0) Human, because of how you labelled them. The texts themselves were drafted or partly written by a model. Three ledger rows depend on the bridge essay's label: the stack of contracts, failure addresses and the jagged frontier, and the case studies.</li>
+    <li><strong>The ledger is a selection of 46 ideas.</strong> Its counts show where ideas came from, not how much each one weighs in the book.</li>
+  </ul>
+</section>
+
+<footer>Compiled 21 Nov 2026 from the 2022 book (full-text search), your notes and talk, the arXiv article, the essays, the 12 Nov lineage analysis, the build logs, and your Nov 2026 housekeeping archive (claude.ai export metadata, dated lineage of your notes, your provenance answers per artifact). The full report with page references is <code>rapport_genealogie_idees.md</code> in the repository.</footer>
+</main>
+
+<script>
+(function () {
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.filters button'));
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#ledger tbody tr'));
+  function apply(f) {
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.f === f)); });
+    rows.forEach(function (r) {
+      if (r.classList.contains('part')) return;
+      r.hidden = !(f === 'all' || r.dataset.c === f);
+    });
+    rows.forEach(function (r, i) {
+      if (!r.classList.contains('part')) return;
+      var any = false;
+      for (var j = i + 1; j < rows.length && !rows[j].classList.contains('part'); j++) { if (!rows[j].hidden) { any = true; break; } }
+      r.hidden = !any;
+    });
+  }
+  buttons.forEach(function (b) { b.addEventListener('click', function () { apply(b.dataset.f); }); });
+})();
+</script>
+
+</body></html>

@@ -1,0 +1,658 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Monograph Build Lookback</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Layout: engineering build log. Sticky contents rail on wide screens, single reading column, data in mono. Orange = Claude, blue = Gemini (the book's own figure grammar). */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --fg: #1b2230;
+  --muted: #5a6478;
+  --rule: #d9dee7;
+  --accent: #2f4a7a;
+  --claude: #c8641e;
+  --gemini: #2f6fb5;
+  --hatch: #9aa3b4;
+  --font-display: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11151c; --surface: #181e28; --fg: #e3e7ee; --muted: #9aa4b6; --rule: #2c3442;
+    --accent: #9db8e8; --claude: #ec8a45; --gemini: #6aa6e8; --hatch: #5d6678; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11151c; --surface: #181e28; --fg: #e3e7ee; --muted: #9aa4b6; --rule: #2c3442;
+  --accent: #9db8e8; --claude: #ec8a45; --gemini: #6aa6e8; --hatch: #5d6678; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 4rem;
+}
+.shell { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 3rem; }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1.5rem); align-self: start; padding-top: 3rem; font-size: 0.86rem; }
+nav.toc p { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.6rem; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+nav.toc a { color: var(--muted); text-decoration: none; }
+nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent); }
+main { min-width: 0; max-width: 820px; }
+header.top { padding-block: 3rem 1.5rem; border-bottom: 1px solid var(--rule); }
+.eyebrow { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.75rem; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; line-height: 1.25; }
+h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin: 0 0 1rem; }
+h1 em { font-style: italic; font-weight: 500; }
+h2 { font-size: 1.55rem; margin: 3.25rem 0 1rem; padding-top: 0.5rem; }
+h3 { font-size: 1.15rem; margin: 2.2rem 0 0.6rem; }
+h3 .when { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 400; color: var(--muted); margin-left: 0.4rem; white-space: nowrap; }
+p, li { max-width: 68ch; }
+p { margin: 0 0 1rem; }
+ul, ol.steps { padding-left: 1.25rem; margin: 0 0 1rem; }
+li { margin-bottom: 0.35rem; }
+li > ul { margin-top: 0.35rem; }
+a { color: var(--accent); }
+code, .mono { font-family: var(--font-mono); font-size: 0.86em; }
+code { background: color-mix(in srgb, var(--rule) 45%, transparent); padding: 0.05em 0.3em; border-radius: 3px; overflow-wrap: anywhere; }
+strong { font-weight: 600; }
+.lede { font-size: 1.08rem; color: var(--fg); }
+.sources { font-size: 0.92rem; color: var(--muted); }
+.sources ul { margin-top: 0.4rem; }
+.legend { display: flex; flex-wrap: wrap; gap: 1.25rem; font-size: 0.85rem; color: var(--muted); margin: 0.5rem 0 1rem; }
+.legend span { display: inline-flex; align-items: center; gap: 0.45rem; }
+.sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.sw.c { background: var(--claude); } .sw.g { background: var(--gemini); }
+.sw.h { background: repeating-linear-gradient(135deg, var(--hatch) 0 3px, transparent 3px 6px); border: 1px solid var(--hatch); }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 2rem 0 0.5rem; }
+.stat { background: var(--surface); padding: 1rem 1.1rem; min-width: 0; }
+.stat b { display: block; font-family: var(--font-mono); font-weight: 500; font-size: 1.55rem; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.stat span { display: block; font-size: 0.84rem; color: var(--muted); margin-top: 0.3rem; }
+
+/* Tables */
+.tbl { overflow-x: auto; margin: 1rem 0 1.5rem; border: 1px solid var(--rule); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--rule); }
+tr:last-child td { border-bottom: 0; }
+th { font-family: var(--font-mono); font-weight: 500; font-size: 0.74rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: color-mix(in srgb, var(--rule) 25%, var(--surface)); white-space: nowrap; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--font-mono); font-size: 0.85rem; white-space: nowrap; }
+td.t { white-space: nowrap; font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); }
+tr.total td { font-weight: 600; background: color-mix(in srgb, var(--rule) 25%, var(--surface)); }
+.kv td:first-child { width: 34%; font-weight: 600; }
+.vendor { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 0.45rem; vertical-align: 0.1em; }
+.vendor.c { background: var(--claude); } .vendor.g { background: var(--gemini); }
+
+/* Gantt */
+.fig { border: 1px solid var(--rule); background: var(--surface); padding: 1rem 1rem 0.75rem; margin: 1.25rem 0 0.5rem; }
+.fig-scroll { overflow-x: auto; }
+.gantt { min-width: 640px; display: grid; grid-template-columns: 150px 1fr; row-gap: 0.45rem; font-size: 0.82rem; }
+.gantt .lab { color: var(--muted); padding-right: 0.75rem; line-height: 18px; white-space: nowrap; }
+.track { position: relative; height: 18px; background: linear-gradient(90deg, transparent calc(21.62% - 1px), var(--rule) calc(21.62% - 1px) 21.62%, transparent 21.62%, transparent calc(54.05% - 1px), var(--rule) calc(54.05% - 1px) 54.05%, transparent 54.05%, transparent calc(86.49% - 1px), var(--rule) calc(86.49% - 1px) 86.49%, transparent 86.49%); }
+.bar { position: absolute; top: 2px; height: 14px; border-radius: 2px; }
+.bar.c { background: var(--claude); } .bar.g { background: var(--gemini); }
+.bar.mix { background: linear-gradient(180deg, var(--claude) 0 50%, var(--gemini) 50% 100%); }
+.bar.h { background: repeating-linear-gradient(135deg, var(--hatch) 0 3px, transparent 3px 6px); border: 1px solid var(--hatch); }
+.axis { grid-column: 2; position: relative; height: 1.4rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+.axis span { position: absolute; top: 0.2rem; transform: translateX(-50%); white-space: nowrap; }
+.caption { font-size: 0.84rem; color: var(--muted); margin: 0.6rem 0 0; }
+
+/* Stacked bars, output tokens by phase, scale 0 to 2.8 M */
+.bars { display: grid; grid-template-columns: 190px minmax(0, 1fr) 70px; gap: 0.5rem 0.75rem; align-items: center; font-size: 0.84rem; }
+.bars .lab { color: var(--muted); }
+.bars .row { height: 16px; display: flex; background: linear-gradient(90deg, var(--rule) 1px, transparent 1px) 0 0 / 17.857% 100%; }
+.bars .row i { display: block; height: 100%; }
+.bars .row i.c { background: var(--claude); } .bars .row i.g { background: var(--gemini); }
+.bars .val { font-family: var(--font-mono); font-size: 0.8rem; text-align: right; font-variant-numeric: tabular-nums; }
+.bars .ax { grid-column: 2; position: relative; height: 1.2rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+.bars .ax span { position: absolute; transform: translateX(-50%); }
+.bars .ax span:first-child { transform: none; }
+
+.patterns { counter-reset: p; list-style: none; padding: 0; }
+.patterns li { counter-increment: p; padding-left: 2.2rem; position: relative; margin-bottom: 0.8rem; }
+.patterns li::before { content: counter(p); position: absolute; left: 0; top: 0.05rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); border: 1px solid var(--rule); width: 1.5rem; height: 1.5rem; display: grid; place-items: center; border-radius: 50%; background: var(--surface); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.two > div { min-width: 0; }
+.note { border-left: 3px solid var(--hatch); padding: 0.4rem 0 0.4rem 1rem; color: var(--muted); font-size: 0.92rem; margin: 1rem 0; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.82rem; color: var(--muted); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 900px) {
+  .shell { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  nav.toc { display: none; }
+}
+@media (max-width: 620px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .two { grid-template-columns: 1fr; }
+  .bars { grid-template-columns: minmax(0, 1fr) 62px; }
+  .bars .lab { grid-column: 1 / -1; margin-bottom: -0.3rem; }
+  .bars .ax { grid-column: 1; }
+  h2 { font-size: 1.35rem; }
+}
+</style>
+
+<div class="shell">
+<nav class="toc" aria-label="Contents">
+  <p>Contents</p>
+  <ol>
+    <li><a href="#figures">Key figures</a></li>
+    <li><a href="#before">Before the build</a></li>
+    <li><a href="#timeline">Timeline by phase</a></li>
+    <li><a href="#agents">Agents and swarms</a></li>
+    <li><a href="#compute">Compute (tokens)</a></li>
+    <li><a href="#cost">Cost in USD</a></li>
+    <li><a href="#hours">2022 vs 2026 hours</a></li>
+    <li><a href="#lessons">What worked, what rubbed</a></li>
+    <li><a href="#method">Method and limits</a></li>
+    <li><a href="#inventory">Session inventory</a></li>
+  </ol>
+</nav>
+
+<main>
+<header class="top">
+  <p class="eyebrow">Process lookback · 18–21 Nov 2026</p>
+  <h1>How <em>Agir d'après une représentation du monde</em> was built</h1>
+  <p class="lede">The amount of work, the time taken, how the work was organised, how agent sessions and swarms were used, and how much compute was spent, from the first agent prompt (18 Nov, 08:38) to the last commit (21 Nov, 09:29).</p>
+  <div class="legend" aria-hidden="true">
+    <span><i class="sw c"></i>Claude Code (Opus 5.5, Sonnet 5.5)</span>
+    <span><i class="sw g"></i>Antigravity (Gemini 4 Hydrogen, Argon)</span>
+    <span><i class="sw h"></i>Unlogged cloud work</span>
+  </div>
+  <div class="sources">
+    <strong>Sources.</strong>
+    <ul>
+      <li>The git history of this repository: 61 commits on all branches.</li>
+      <li>Claude Code transcripts for this repository (57 JSONL files, subagents included).</li>
+      <li>Antigravity CLI stores: <code>history.jsonl</code>, <code>conversation_summaries.db</code>, and the decoded binary usage records in each <code>conversations/*.db</code>.</li>
+      <li>The project's own logs in <code>monographie/notes/</code>, <code>style/</code>, <code>relecture/</code>, and the memory files.</li>
+    </ul>
+    All times are local time (CET).
+  </div>
+</header>
+
+<section id="figures">
+  <h2>Key figures</h2>
+  <div class="stats">
+    <div class="stat"><b>~73 h</b><span>elapsed, 18 Nov 08:38 → 21 Nov 09:29</span></div>
+    <div class="stat"><b>7 h 22 min</b><span>to a full first draft of all 21 chapter files</span></div>
+    <div class="stat"><b>84</b><span>subagent runs (38 Claude, 46 Gemini)</span></div>
+    <div class="stat"><b>≈ 3,410</b><span>model calls (API turns)</span></div>
+    <div class="stat"><b>≈ 686 M</b><span>input tokens processed, about 95 % from cache</span></div>
+    <div class="stat"><b>≈ 6.3 M</b><span>output tokens, about 38× the finished text</span></div>
+  </div>
+
+  <div class="tbl"><table class="kv">
+    <tbody>
+      <tr><td>Logged agent activity</td><td>About 29 h: the union of all session intervals, with overnight idle time removed. A cloud work block on 19 Nov is not included (see <a href="#method">Method and limits</a>).</td></tr>
+      <tr><td>Commits</td><td>61 on all branches: 37 on <code>main</code>, plus the <code>style-pass</code> and <code>relecture-livre</code> branches. About 145,000 lines inserted.</td></tr>
+      <tr><td>Final product</td><td>277-page PDF (also HTML and DOCX); 21 chapter files, about 102,000 words of Markdown source; 5 part introductions; 4 appendices; 36 figures; 13 generated tables; 69 verified references; a register of 64 terms and 15 symbols. Two derived slide decks: a 3-hour deck of about 50 slides and a short deck of about 19.</td></tr>
+      <tr><td>Process documentation</td><td>97 files in <code>monographie/notes/</code> (about 350,000 words, roughly 3.4 times the length of the book), plus <code>relecture/</code>, <code>style/</code>, and 43,000 words of specs.</td></tr>
+      <tr><td>Top-level sessions</td><td>28 working sessions: 12 Claude Code and 16 Antigravity. In addition, 7 Claude sessions were opened only for <code>/usage</code> or <code>/model</code>.</td></tr>
+      <tr><td>Models</td><td>Claude Opus 5.5, Claude Sonnet 5.5, Gemini 4 Hydrogen (Low to XHigh), Gemini 4 Argon (Low to High).</td></tr>
+      <tr><td>Author prompts</td><td>About 132 substantive prompts (59 to Claude, 73 to Gemini). On top of that: 81 <code>/usage</code> checks, 17 <code>/context</code>, 14 <code>/model</code> and 8 <code>/remote-control</code> commands on the Gemini side alone.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="before">
+  <h2>What came before the build (not measured)</h2>
+  <p>The build turned material that already existed into a book. That material was written by a person; agents built on it but did not create it:</p>
+  <ul>
+    <li>the author's arXiv article (<code>source/frame_problem_article_WF.tex</code>, cited as <code>[@fauriat2026frame]</code>);</li>
+    <li>two essays: <em>Failing Differently</em> and <em>Where the Guarantees End</em>;</li>
+    <li>a talk (<code>TEDLike_pitch_v2.md</code>);</li>
+    <li>an interactive "decision map" built with Claude in earlier sessions.</li>
+  </ul>
+  <p>All of this came out of a research line the author had pursued for several months. A book the author wrote alone in 2022, with no LLM involvement, served as a comparison point for style (<code>style/COMPARAISON_2022_2026.md</code>).</p>
+  <p>None of this earlier work is counted here. The token figures measure turning existing ideas into a book, not producing the ideas.</p>
+</section>
+
+<section id="timeline">
+  <h2>Timeline by phase</h2>
+
+  <div class="fig">
+    <div class="fig-scroll">
+      <div class="gantt" role="img" aria-label="Gantt chart of the seven build phases from 18 November 08:00 to 21 November 10:00">
+        <div class="lab">A · Ideation &amp; specs</div>
+        <div class="track"><span class="bar mix" style="left:0.85%;width:10.57%"></span></div>
+        <div class="lab">B · Drafting &amp; re-reads</div>
+        <div class="track"><span class="bar mix" style="left:11.62%;width:19.39%"></span></div>
+        <div class="lab">C · Cold reads</div>
+        <div class="track"><span class="bar h" style="left:31.01%;width:13.51%"></span><span class="bar g" style="left:45.2%;width:1.28%"></span></div>
+        <div class="lab">D · Style pass</div>
+        <div class="track"><span class="bar mix" style="left:67.79%;width:5.74%"></span></div>
+        <div class="lab">E · Arbitration &amp; audits</div>
+        <div class="track"><span class="bar g" style="left:72.86%;width:4.01%"></span></div>
+        <div class="lab">F · Whole-book review</div>
+        <div class="track"><span class="bar mix" style="left:74.91%;width:7.49%"></span></div>
+        <div class="lab">G · Slides</div>
+        <div class="track"><span class="bar g" style="left:83.92%;width:2.39%"></span><span class="bar g" style="left:99.32%;width:0.68%"></span></div>
+        <div class="axis"><span style="left:0;transform:none">18 Nov 08:00</span><span style="left:21.62%">19 Nov</span><span style="left:54.05%">20 Nov</span><span style="left:86.49%">21 Nov</span></div>
+      </div>
+    </div>
+    <p class="caption">Bars split orange and blue where both vendors worked in the phase. The hatched block on 19 Nov is the cloud clone session, whose exact start time is unknown (it ends with commit <code>7afa571</code> at 16:57).</p>
+  </div>
+
+  <h3>A. Ideation, critique and locked specs <span class="when">18 Nov, 08:38–16:27</span></h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Time</th><th>Agent</th><th>Work</th></tr></thead>
+    <tbody>
+      <tr><td class="t">08:38–10:42</td><td><i class="vendor g"></i>Gemini Argon (High)</td><td>Critique of the "trilogy" (article and two essays). A French interactive map modelled on an earlier artifact. A suggested new thread on one-shot decisions under subjective expected utility (SEU).</td></tr>
+      <tr><td class="t">10:34–13:05</td><td><i class="vendor c"></i>Claude Opus</td><td>Answer to the cross-model critique. Removal of traces of "the author's talk".</td></tr>
+      <tr><td class="t">13:07–16:23</td><td><i class="vendor c"></i>Claude Opus (163 calls, the longest session of the project)</td><td>Interactive map v2 and its idiomatic French version, checked visually with Puppeteer. A critique of <code>course_specs_draft.md</code>, which Gemini had drafted, with the two models critiquing each other until <strong>option D</strong> was agreed. Then, in order: <code>authoring_conventions.md</code>, <code>course_outline.md</code>, <code>content_spec/</code> (7 Part files), <code>BUILDER_START_HERE.md</code>, the <code>monographie/</code> tree (LaTeX template, Lua filter, Makefile, verifier), the terminology register and the bibliography skeleton.</td></tr>
+      <tr><td class="t">13:18–16:24</td><td><i class="vendor g"></i>Gemini Hydrogen (High)</td><td>Extraction of the map's structure. A discussion of the course design, in which the author fixed the provenance rule ("no mention of any previous document… the only reference on my material is the arXiv article").</td></tr>
+    </tbody>
+  </table></div>
+  <p>First commit at 16:27: 115 files and 34,000 lines, all of it specs, critiques and the HTML artifacts.</p>
+  <p><strong>What mattered:</strong> the locked spec stack. It fixed the precedence between documents, the hard rules, terminology owned by one chapter each, statuses fixed per proposition, generated numbers, and <code>make verifier</code>. This is what later let models from two vendors write chapters in parallel without the book drifting apart.</p>
+
+  <h3>B. Drafting and first re-reads <span class="when">18 Nov 16:37 → 19 Nov 06:49</span></h3>
+  <p>The working pattern was <strong>Gemini drafts, Opus re-reads and edits</strong>, chapter by chapter at first, then Part by Part through swarms.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Commit</th><th>Part</th><th>Drafted by</th><th>Re-read by</th></tr></thead>
+    <tbody>
+      <tr><td class="t">17:01</td><td>Preface + ch. 0</td><td><i class="vendor g"></i>Gemini Argon (High)</td><td><i class="vendor c"></i>Claude Opus (17:36–17:54)</td></tr>
+      <tr><td class="t">17:35 / 18:03<br>18:20 / 18:46</td><td>ch. 1 / 2 / 3 / 4</td><td><i class="vendor g"></i>Gemini Hydrogen (XHigh), one session per chapter (15–25 min each)</td><td><i class="vendor c"></i>ch. 1: Opus session; ch. 2–4: <strong>3 parallel Opus subagents</strong> (18:52–19:07), then a full Opus re-read of Part I (20:08 commit)</td></tr>
+      <tr><td class="t">20:49</td><td>Part II (ch. 5–9 + introduction)</td><td><i class="vendor g"></i><strong>Antigravity orchestrator</strong> <code>b465800e</code> running 5 + 1 Hydrogen (XHigh) subagents in parallel</td><td>an Opus "relecteur" subagent running <em>inside Antigravity</em> (the 30 Claude calls on the Gemini side), then Hydrogen</td></tr>
+      <tr><td class="t">22:09</td><td>Part III (ch. 10–13)</td><td><i class="vendor g"></i>Hydrogen (XHigh) batch, same orchestrator</td><td><i class="vendor g"></i>an Argon (High) "relecteur-p3" subagent</td></tr>
+      <tr><td class="t">23:36</td><td>Part IV (ch. 14–16)</td><td><i class="vendor g"></i>Hydrogen (XHigh), "just one for now, as usage limit draws near"</td><td><i class="vendor c"></i>Claude Opus session (23:36–23:54)</td></tr>
+      <tr><td class="t">23:53</td><td>Part V (ch. 17–18)</td><td><i class="vendor g"></i>Hydrogen (XHigh) batch</td><td><i class="vendor c"></i><strong>2 parallel Opus subagents</strong> (23:58–00:22): one re-reads and harmonises Part V, the other <strong>writes the conclusion</strong></td></tr>
+      <tr><td class="t">23:04–23:36</td><td>Part introductions</td><td>—</td><td><i class="vendor c"></i>Claude Opus, rewriting phrasing that read like English</td></tr>
+    </tbody>
+  </table></div>
+  <p>That evening, the Antigravity orchestrator alone ran <strong>21 subagents</strong> over 3 h 40 min. It also ran a low-cost "monitor" agent that watched the others.</p>
+  <p>Between 06:38 and 06:57 the next morning, Opus made small corrections across the book and added a TODO to the outline.</p>
+
+  <h3>C. Cold reads and arbitration <span class="when">19 Nov, cloud clone</span></h3>
+  <p>The 16:57 commit <code>7afa571</code> reads "many edits done in clone environnement": 94 files and about 14,000 lines. It contains:</p>
+  <ul>
+    <li><strong>one fresh, isolated read per chapter by Opus and another by Sonnet</strong>: <code>LECTURE_FRAICHE_{Opus,Sonnet}_chNN.md</code> for 20 chapters, plus readings of the part pages;</li>
+    <li>the lists of points to decide: <code>A_TRANCHER_*</code>, <code>SYNTHESE_A_TRANCHER.md</code> and <code>DECISIONS_SYNTHESE.md</code>;</li>
+    <li>the edits made from them (<code>EDITS_*</code>).</li>
+  </ul>
+  <p>No local transcript of this work exists in either store. It presumably ran as a cloud or remote session, and its compute is <strong>not counted</strong>. At 17:27, a Gemini Hydrogen session read only the rendered PDF and wrote a whole-book review, presumably <code>REVIEW_PASS_LIVRE_ECRAN.md</code>.</p>
+
+  <h3>D. Automated style pass <span class="when">20 Nov, 10:10–14:25</span></h3>
+  <ol class="steps">
+    <li><strong>Diagnosis.</strong> Claude Opus compared the 2026 text with the author's 2022 book (<code>style/COMPARAISON_2022_2026.md</code>). Gemini, separately, wrote <code>STYLE_PASS_SPEC.md</code> and rewrote ch. 0 as a pilot.</li>
+    <li><strong>Pilot failure.</strong> A diff showed the pilot had rewritten <strong>82 % of the sentences</strong> and changed the meaning about 20 times. Spec v3 replaced free rewriting with small, bounded edits.</li>
+    <li><strong>Pipeline.</strong> The first cross-vendor setup run automatically, in one folder on branch <code>style-pass</code>:
+      <ul>
+        <li>Gemini (<code>f92e6c2d</code>) writes <code>style/lots/&lt;ch&gt;/propositions.yaml</code>;</li>
+        <li>Claude watches for new lots with <code>veilleur.py</code>;</li>
+        <li>a mechanical re-check runs;</li>
+        <li>a <strong>fresh Opus <code>juge-style</code> agent</strong> judges each chapter at high effort;</li>
+        <li><code>appliquer_edits.py</code> applies the accepted edits deterministically;</li>
+        <li><code>make verifier</code> runs;</li>
+        <li>each chapter gets its own commit.</li>
+      </ul>
+    </li>
+    <li><strong>Calibration before trust.</strong> Before the run, the judge was tested:
+      <ul>
+        <li>it rejected <strong>30 of 30</strong> known meaning drifts;</li>
+        <li>it accepted 7 of 8 edits that were truly faithful;</li>
+        <li>it also rejected 7 of 8 pilot edits first labelled "faithful", and on inspection 6 of those really did lose some nuance.</li>
+      </ul>
+    </li>
+    <li><strong>Run.</strong> 21 chapter commits between 13:19 and 13:33 (14 minutes): <strong>83 edits applied, 39 rejected</strong>. The result was squash-merged as <code>24702a9</code>.</li>
+  </ol>
+  <p>The author chose to stay out of the loop at this stage and planned one full human reread at the end instead.</p>
+
+  <h3>E. Arbitration, bibliography and calques audit <span class="when">20 Nov, 13:55–16:13</span></h3>
+  <ul>
+    <li><strong>Arbitration swarm</strong> (Antigravity <code>3f38c297</code>, 6 subagents):
+      <ul>
+        <li>roles: <code>editeur-p0-p2</code>, <code>editeur-p3-p5</code>, <code>biblio-check</code>, <code>artefacts-p4</code>, <code>verificateur</code> and <code>monitor</code>;</li>
+        <li>while it ran, the author asked the orchestrator to lower effort as quota ran short ("dial down effort on verificator and monitor, move to hydrogen on editors");</li>
+        <li>result: commit <code>c8acb4f</code> (67 files, 35,000 lines), which applied the P1–P2 arbitrations, generated the P4 artefacts and appendices, and promoted the verified references. <code>159f951</code> then fixed the remaining facts and emptied <code>biblio_a_verifier.bib</code>;</li>
+        <li>the author kept <code>ARBITRAGES_RESTANTS.md</code> "as a testimony".</li>
+      </ul>
+    </li>
+    <li><strong>English-calques swarm</strong> (Antigravity <code>087dfb52</code>, 10 subagents):
+      <ul>
+        <li>roles: 6 Part readers, <code>verifier-prose</code>, <code>verifier-fig</code>, <code>figures</code> and <code>monitor</code>;</li>
+        <li>output: a <strong>report only</strong>, <code>RAPPORT_AUDIT_CALQUES.md</code>. Its edits were deliberately parked for the human reread.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>F. Whole-book review <span class="when">20 Nov, 15:26–18:59</span></h3>
+  <p>The review used a frozen tag (<code>relecture-2026-11-20-base</code>) and the <code>relecture-livre</code> branch.</p>
+  <ul>
+    <li><strong>Design</strong> (Claude Opus <code>e4313594</code>):
+      <ul>
+        <li>a script builds reader dossiers from the rendered HTML (wave 0);</li>
+        <li>readers are <strong>isolated, with no lateral communication</strong>, a choice the author made to keep them independent;</li>
+        <li>no planted errors at that stage.</li>
+      </ul>
+    </li>
+    <li><strong>Wave 1</strong> (16:16–16:32, <em>16 minutes of wall-clock time</em>): <strong>11 readers in parallel</strong>:
+      <ul>
+        <li>10 Sonnet (medium): Parts P0–P5, appendices PA, and themes T1 (argument and statuses), T2 (numbers and models) and T5 (repetition and linear reading);</li>
+        <li>1 Opus (high): "target reader C", who reads the whole book and keeps a journal;</li>
+        <li>result: <strong>328 findings</strong>, routed by <code>router_constats.py</code> into 7 verification lots.</li>
+      </ul>
+    </li>
+    <li><strong>Pause over quota, then a hand-over to the other vendor:</strong>
+      <ul>
+        <li>the author paused the Claude side over usage cost;</li>
+        <li>Claude wrote <code>relecture/REPRISE.md</code> and a resume prompt that swaps Opus and Sonnet for Hydrogen;</li>
+        <li>Antigravity (<code>84e68ddf</code>) picked up the pipeline from those files.</li>
+      </ul>
+    </li>
+    <li><strong>Wave 2</strong> (Antigravity, 17:12–17:30):
+      <ul>
+        <li>7 verifiers, <code>v0</code>–<code>v5</code> and <code>vx</code> (Hydrogen, medium, which the author chose over high);</li>
+        <li>1 <code>synthese</code> agent (Hydrogen, high);</li>
+        <li>result: <code>SYNTHESE_RELECTURE_2026-11-20.md</code> (273 clusters) and <code>TODO_wholebook_reread.md</code>, which includes alternatives and recommendations.</li>
+      </ul>
+    </li>
+    <li><strong>Edit and cold-reader passes:</strong>
+      <ul>
+        <li><code>e97f81b</code>: automated edit pass (82 files, ±1,580 lines);</li>
+        <li>a <code>lecteur-pdf</code> subagent (Hydrogen, medium) read <em>only the PDF</em>. Its context grew to 637,000 tokens, the largest of the project, and it wrote <code>rapport_lecture_pdf.md</code>;</li>
+        <li><code>a6ce4be</code> fixed the table wrapping and prose slips it found.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>G. Teaching slides <span class="when">20 Nov 22:07 → 21 Nov 09:29</span></h3>
+  <p>Antigravity <code>0491b338</code> built a Markdown-to-HTML/PDF/PPTX pipeline in <code>slides/</code>, reusing the book's figures and mathematics. It produced a short "message" deck, then a 3-hour deck, and finally an editable PPTX export.</p>
+</section>
+
+<section id="agents">
+  <h2>How agents and swarms were used</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Swarm</th><th>Orchestrator</th><th class="n">Subagents</th><th>Models (effort)</th><th>Wall clock</th><th>Output</th></tr></thead>
+    <tbody>
+      <tr><td>Part I re-read</td><td><i class="vendor c"></i><code>054db021</code></td><td class="n">3</td><td>Opus</td><td class="t">15 min</td><td>ch. 2–4 edited</td></tr>
+      <tr><td>Parts II–V drafting</td><td><i class="vendor g"></i><code>b465800e</code></td><td class="n">21</td><td>Hydrogen (XHigh), Argon (High), Opus (High); incl. 1 monitor</td><td class="t">3 h 40 min</td><td>ch. 5–18 + introductions drafted and re-read</td></tr>
+      <tr><td>Part V + conclusion</td><td><i class="vendor c"></i><code>6fdce00e</code></td><td class="n">2</td><td>Opus</td><td class="t">24 min</td><td>Part V harmonised; conclusion written</td></tr>
+      <tr><td>Style judges</td><td><i class="vendor c"></i><code>061db681</code></td><td class="n">22</td><td>Opus (<code>juge-style</code> custom agent); 2 calibration + 20 chapter lots</td><td class="t">25 min</td><td>83 / 39 accept / reject verdicts</td></tr>
+      <tr><td>Arbitration and bibliography</td><td><i class="vendor g"></i><code>3f38c297</code></td><td class="n">6</td><td>Argon / Hydrogen (High → Medium → Low); incl. 1 monitor</td><td class="t">~20 min</td><td><code>c8acb4f</code></td></tr>
+      <tr><td>Calques audit</td><td><i class="vendor g"></i><code>087dfb52</code></td><td class="n">10</td><td>Hydrogen (High); incl. 1 monitor</td><td class="t">~20 min</td><td>audit report</td></tr>
+      <tr><td>Whole-book review, wave 1</td><td><i class="vendor c"></i><code>e4313594</code></td><td class="n">11</td><td>10 Sonnet (medium) + 1 Opus (high)</td><td class="t">16 min</td><td>328 findings</td></tr>
+      <tr><td>Review wave 2 + PDF reader</td><td><i class="vendor g"></i><code>84e68ddf</code></td><td class="n">9</td><td>Hydrogen (Medium / High)</td><td class="t">~70 min</td><td>synthesis, TODO, edit pass, cold-reader report</td></tr>
+    </tbody>
+  </table></div>
+  <p>In compute terms, subagents made <strong>56 % of all calls</strong>, produced <strong>53 % of the output tokens</strong>, and took <strong>44 % of the input</strong>. The orchestrators, which carry the long context, took most of the remaining input.</p>
+
+  <h3>Recurring patterns</h3>
+  <ol class="patterns">
+    <li><strong>One vendor produces, the other reviews.</strong> Gemini drafted and Opus re-read; later Gemini proposed and Opus judged. The project applied its own thesis to itself: an error is caught only by a check that can be wrong in a different way.</li>
+    <li><strong>Fresh, isolated readers.</strong> Cold reads, review readers and the PDF-only reader each got a new context and no lateral communication, so their blind spots would not be correlated.</li>
+    <li><strong>Calibrate the judge before trusting it.</strong> The style judge was tested on known drifts and known faithful edits before it was allowed to run unattended.</li>
+    <li><strong>Language models propose; scripts apply.</strong> Edits went through YAML lots, deterministic application, <code>make verifier</code>, and one commit per chapter. No model rewrote prose freely once the pilot had failed.</li>
+    <li><strong>Coordination through files, which makes work resumable.</strong> Lots, <code>constats.json</code>, <code>REPRISE.md</code>, <code>TODO_*</code> and memory files let work survive quota pauses, and even a switch of vendor in the middle of a pipeline.</li>
+    <li><strong>Model and effort tiers chosen under quota pressure.</strong> XHigh for drafting, High for judging, Medium for verifiers, Low for monitors. Effort was lowered while agents were running when quota ran short.</li>
+    <li><strong>A cheap monitor agent</strong> ran in each large Antigravity swarm.</li>
+    <li><strong>The author's role:</strong> setting direction and provenance rules; choosing between options (option D, style "option A", review scale); deciding what not to automate (the calques edits, planted errors, the final human reread); keeping an eye on quota.</li>
+  </ol>
+</section>
+
+<section id="compute">
+  <h2>Compute effort (tokens)</h2>
+
+  <h3>By vendor and model</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Harness</th><th>Model</th><th class="n">Calls</th><th class="n">Input processed</th><th class="n">Of which cached</th><th class="n">Output</th></tr></thead>
+    <tbody>
+      <tr><td><i class="vendor c"></i>Claude Code</td><td>Opus 5.5</td><td class="n">1,180</td><td class="n">327.5 M</td><td class="n">98 % (6.2 M writes)</td><td class="n">2.44 M</td></tr>
+      <tr><td><i class="vendor c"></i>Claude Code</td><td>Sonnet 5.5</td><td class="n">129</td><td class="n">13.6 M</td><td class="n">89 % (1.5 M writes)</td><td class="n">0.45 M</td></tr>
+      <tr><td><i class="vendor g"></i>Antigravity</td><td>Gemini 4 Hydrogen</td><td class="n">1,799</td><td class="n">301.0 M</td><td class="n">92 % (23.6 M new)</td><td class="n">2.91 M</td></tr>
+      <tr><td><i class="vendor g"></i>Antigravity</td><td>Gemini 4 Argon</td><td class="n">273</td><td class="n">40.1 M</td><td class="n">91 % (3.5 M new)</td><td class="n">0.45 M</td></tr>
+      <tr><td><i class="vendor g"></i>Antigravity</td><td>Claude Opus 5.5 (inside Antigravity)</td><td class="n">30</td><td class="n">3.4 M</td><td class="n">92 %</td><td class="n">0.04 M</td></tr>
+      <tr class="total"><td>Total</td><td></td><td class="n">3,411</td><td class="n">≈ 686 M</td><td class="n">≈ 95 %</td><td class="n">≈ 6.28 M</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Output tokens by phase</h3>
+  <div class="fig">
+    <div class="bars" role="img" aria-label="Stacked bar chart of output tokens by phase, Claude and Gemini">
+      <div class="lab">A · Ideation &amp; specs</div><div class="row"><i class="c" style="width:29.61%"></i><i class="g" style="width:4.71%"></i></div><div class="val">0.96 M</div>
+      <div class="lab">B · Drafting &amp; re-reads</div><div class="row"><i class="c" style="width:35.25%"></i><i class="g" style="width:59.25%"></i></div><div class="val">2.65 M</div>
+      <div class="lab">C · PDF read (logged part)</div><div class="row"><i class="g" style="width:2.32%"></i></div><div class="val">0.07 M</div>
+      <div class="lab">D · Style pass</div><div class="row"><i class="c" style="width:14.79%"></i><i class="g" style="width:5.46%"></i></div><div class="val">0.57 M</div>
+      <div class="lab">E · Arbitration &amp; audits</div><div class="row"><i class="g" style="width:23.89%"></i></div><div class="val">0.67 M</div>
+      <div class="lab">F · Whole-book review</div><div class="row"><i class="c" style="width:23.43%"></i><i class="g" style="width:21.29%"></i></div><div class="val">1.25 M</div>
+      <div class="lab">G · Slides</div><div class="row"><i class="g" style="width:4.14%"></i></div><div class="val">0.12 M</div>
+      <div class="ax"><span style="left:0">0</span><span style="left:17.857%">0.5 M</span><span style="left:35.714%">1 M</span><span style="left:53.571%">1.5 M</span><span style="left:71.429%">2 M</span><span style="left:89.286%">2.5 M</span></div>
+    </div>
+  </div>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Phase</th><th class="n">Calls</th><th class="n">Input</th><th class="n">Output</th><th class="n">Share of output</th></tr></thead>
+    <tbody>
+      <tr><td>A. Ideation and specs</td><td class="n">229</td><td class="n">94.7 M</td><td class="n">0.96 M</td><td class="n">15 %</td></tr>
+      <tr><td>B. Drafting and re-reads</td><td class="n">1,714</td><td class="n">308.1 M</td><td class="n">2.65 M</td><td class="n">42 %</td></tr>
+      <tr><td>C. PDF read, 19 Nov (logged part only)</td><td class="n">10</td><td class="n">3.7 M</td><td class="n">0.07 M</td><td class="n">1 %</td></tr>
+      <tr><td>D. Style pass</td><td class="n">332</td><td class="n">105.5 M</td><td class="n">0.57 M</td><td class="n">9 %</td></tr>
+      <tr><td>E. Arbitration, bibliography, calques</td><td class="n">400</td><td class="n">56.4 M</td><td class="n">0.67 M</td><td class="n">11 %</td></tr>
+      <tr><td>F. Whole-book review</td><td class="n">616</td><td class="n">96.4 M</td><td class="n">1.25 M</td><td class="n">20 %</td></tr>
+      <tr><td>G. Slides</td><td class="n">107</td><td class="n">20.5 M</td><td class="n">0.12 M</td><td class="n">2 %</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Reading these numbers</h3>
+  <ul>
+    <li><strong>Output against the book.</strong> About 102,000 words of French Markdown is roughly 160,000–180,000 tokens. Total output of about 6.3 M tokens is therefore around <strong>35–40 times the length of the finished text</strong>. That covers drafts, rewrites, reviews, notes (about 350,000 words), scripts, tool calls and reasoning.</li>
+    <li><strong>Input is dominated by re-reading context.</strong> Each agent turn re-sends its whole context, which is why about 95 % of input came from the cache. The tokens that actually cost compute were about 7.8 M cache writes on Claude, about 27 M uncached input on Gemini, and the 6.3 M output tokens.</li>
+    <li><strong>Context sizes.</strong> Antigravity orchestrators reached a context of about 500,000 tokens; most chapter builders stayed within 200,000–300,000.</li>
+    <li><strong>Quota, not money, was the constraint the author felt.</strong> Both vendors were used on subscription quotas. The traces show 81 <code>/usage</code> checks in Antigravity and 7 Claude sessions opened only to check usage, along with explicit pauses, lowered effort and one switch of vendor. No money cost is given: list prices do not describe what a subscription costs.</li>
+  </ul>
+</section>
+
+<section id="cost">
+  <h2>Cost at public API list prices</h2>
+  <div class="stats">
+    <div class="stat"><b>≈ $259</b><span>logged build, 18–21 Nov, at API list prices</span></div>
+    <div class="stat"><b>$260–360</b><span>plausible all-in, with the unlogged 19 Nov session</span></div>
+    <div class="stat"><b>≈ $1,960</b><span>the same token flow without the prompt cache</span></div>
+  </div>
+
+  <h3>Prices used</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Model (per 1 M tokens)</th><th class="n">Input</th><th class="n">Cache read</th><th class="n">Cache write</th><th class="n">Output</th></tr></thead>
+    <tbody>
+      <tr><td><i class="vendor c"></i>Claude Opus 5.5</td><td class="n">$4.00</td><td class="n">$0.20</td><td class="n">$5 / $8</td><td class="n">$20.00</td></tr>
+      <tr><td><i class="vendor c"></i>Claude Sonnet 5.5</td><td class="n">$2.00</td><td class="n">$0.10</td><td class="n">$2.50 / $4</td><td class="n">$10.00</td></tr>
+      <tr><td><i class="vendor g"></i>Gemini 4 Hydrogen</td><td class="n">$1.50</td><td class="n">$0.075</td><td class="n">—</td><td class="n">$7.50</td></tr>
+      <tr><td><i class="vendor g"></i>Gemini 4 Argon (intro, to 30 Nov)</td><td class="n">$2.00</td><td class="n">$0.10</td><td class="n">—</td><td class="n">$10.00</td></tr>
+    </tbody>
+  </table></div>
+  <p class="caption">Cache writes are shown as 5-minute / 1-hour lifetime. Output prices include thinking. Sources: Anthropic API pricing (as bundled with Claude Code) and <a href="https://aistudio.google.com/docs/pricing">Google's Gemini API pricing page</a>. Every call was priced on its own usage record; all ran on the standard tier, with no fast mode.</p>
+
+  <h3>Result</h3>
+  <div class="tbl"><table>
+    <tbody>
+      <tr><td><i class="vendor c"></i>Claude Code sessions (Opus 5.5 + Sonnet 5.5)</td><td class="n">$163.7</td></tr>
+      <tr><td><i class="vendor g"></i>Antigravity sessions (Hydrogen + Argon, plus 30 Opus calls)</td><td class="n">$95.5</td></tr>
+      <tr class="total"><td>Logged build, 18–21 Nov</td><td class="n">≈ $259</td></tr>
+      <tr><td>Same build with Argon at its standard rate ($4 / $20)</td><td class="n">≈ $274</td></tr>
+      <tr><td>Plus the unlogged 19 Nov cloud session (estimated)</td><td class="n">+ $35–85</td></tr>
+      <tr class="total"><td>Plausible all-in range</td><td class="n">≈ $260–360</td></tr>
+      <tr><td>Not included: this lookback and lineage work</td><td class="n">≈ $10</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Phase</th><th class="n">Cost</th><th class="n">Share</th></tr></thead>
+    <tbody>
+      <tr><td>A. Ideation and specs</td><td class="n">$47.9</td><td class="n">18 %</td></tr>
+      <tr><td>B. Drafting and re-reads</td><td class="n">$107.6</td><td class="n">42 %</td></tr>
+      <tr><td>C. PDF read (logged part)</td><td class="n">$4.3</td><td class="n">2 %</td></tr>
+      <tr><td>D. Style pass</td><td class="n">$38.7</td><td class="n">15 %</td></tr>
+      <tr><td>E. Arbitration, bibliography, calques</td><td class="n">$20.2</td><td class="n">8 %</td></tr>
+      <tr><td>F. Whole-book review</td><td class="n">$36.2</td><td class="n">14 %</td></tr>
+      <tr><td>G. Slides</td><td class="n">$4.4</td><td class="n">2 %</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Reading the figure</h3>
+  <ul>
+    <li><strong>Input cost more than output.</strong> Input accounted for about $179 (69 %) and output for about $80 (31 %). Most of the input was cache reads and writes.</li>
+    <li><strong>The prompt cache was the biggest saving.</strong> At full input prices, the same token flow would have cost about $1,960, roughly 7.5 times more.</li>
+    <li><strong>Two figures for scale.</strong> The book cost about $0.95 per page, or about $2.50 per 1,000 words of source. Opus was the most expensive model: about 60 % of the total for about 35 % of the calls.</li>
+    <li><strong>This is not what you paid.</strong> You ran both vendors on subscriptions, so your actual cash cost is the prorated subscription fees. The usage limits you kept running into are the subscription's way of rationing what would otherwise be this API bill.</li>
+    <li><strong>Uncertainties.</strong> The Gemini token fields were decoded by hand, and if the decoded output excludes thinking, the Gemini cost is understated. A constant 1,528-token field on every Gemini call was not counted, which would add up to about $5. The cloud session is an estimate, not a measurement.</li>
+  </ul>
+</section>
+
+<section id="hours">
+  <h2>Human hours: the 2022 book against the 2026 build</h2>
+  <p><strong>Source.</strong> <code>TimeUnemployment.xlsx</code> is your own time log: 213 entries from 5 Oct 2020 to 28 Jul 2021, with hours estimated by hand. I sorted the entries by label. Your margin subtotals in the sheet (155.25 h to 7 Dec 2020, 431.9 h to 1 Jun 2021) add up to 587 h; my recount of book work over the same span gives 590 h, so the log is internally consistent.</p>
+
+  <div class="stats">
+    <div class="stat"><b>≈ 723 h</b><span>core work on the 2022 book, self-declared</span></div>
+    <div class="stat"><b>145 days</b><span>over about 10 months, about 5 h a day</span></div>
+    <div class="stat"><b>≈ 29 h</b><span>logged agent activity for the 2026 build, over 3 days</span></div>
+  </div>
+
+  <h3>Self-declared hours on the 2022 book</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Category</th><th class="n">Hours</th><th class="n">Days</th><th>Period</th></tr></thead>
+    <tbody>
+      <tr><td>Writing the book ("Writting book")</td><td class="n">572.1</td><td class="n">113</td><td class="t">22 Oct 2020 → 2 Jun 2021</td></tr>
+      <tr><td>Correction and re-reading</td><td class="n">83.7</td><td class="n">15</td><td class="t">Jan → 13 Jul 2021</td></tr>
+      <tr><td>The manifesto (end of Part III)</td><td class="n">43.0</td><td class="n">8</td><td class="t">17 → 27 Jul 2021</td></tr>
+      <tr><td>Thinking about and organising the book (plan, intro, style, A5 print layout)</td><td class="n">24.0</td><td class="n">10</td><td class="t">Oct 2020 → Mar 2021</td></tr>
+      <tr class="total"><td>Core book work</td><td class="n">≈ 723</td><td class="n">145</td><td class="t">≈ 10 months</td></tr>
+      <tr><td>Strategic thinking "and book content" (mixed)</td><td class="n">5.0</td><td class="n">2</td><td class="t">Oct–Nov 2020</td></tr>
+      <tr><td>Background reading (books on AI, Chalmers, <em>Think Bayes</em>, and others)</td><td class="n">44.3</td><td class="n">11</td><td class="t">Oct 2020 → Apr 2021</td></tr>
+      <tr><td>A talk and pitch on the book's themes</td><td class="n">52.5</td><td class="n">15</td><td class="t">Nov 2020 → Jan 2021</td></tr>
+      <tr class="total"><td>Book work and everything around it</td><td class="n">≈ 825</td><td class="n"></td><td></td></tr>
+      <tr><td>Unrelated entries (job search, conferences, online profile, applications)</td><td class="n">128.2</td><td class="n">30</td><td></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">This is a lower bound. The log stops on 28 Jul 2021, but legal deposit was in Feb 2022, so the final edits, layout and publishing steps are not counted. Two "brainstorming / plan" entries (8 h) were left out because they are ambiguous.</p>
+
+  <h3>Comparison</h3>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>2022 book (author alone)</th><th>2026 monograph (agents, under your supervision)</th></tr></thead>
+    <tbody>
+      <tr><td>Text produced</td><td>about 65,000–75,000 words</td><td>about 102,000 words of source, 277 pages</td></tr>
+      <tr><td>Calendar time</td><td>about 10 months, 145 working days</td><td>3 days (73 h elapsed)</td></tr>
+      <tr><td>Hours of work</td><td><strong>≈ 723 h</strong> of core work, self-declared</td><td><strong>≈ 29 h</strong> of logged agent activity, plus the unlogged 19 Nov cloud session. Your own time was not logged; it is bounded above by the session time, roughly 30–40 h of supervision across about 132 prompts</td></tr>
+      <tr><td>Writing rate</td><td>about 100 words per hour of core work</td><td>about 2,500–3,500 words per hour of supervised time</td></tr>
+      <tr><td>Who typed the text</td><td>you</td><td>the models (about 6.3 M output tokens, against about 0.1 M tokens of finished text in 2022)</td></tr>
+      <tr><td>Re-reading and correction</td><td>84 h of correction, plus 43 h for the manifesto</td><td>automated passes only. <strong>Your full human reread is still to come</strong></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>How to read the comparison</h3>
+  <ol class="steps">
+    <li><strong>The ratio is about 20 times in hours, and about 100 times in calendar time.</strong> It compares the writing of a book from settled ideas. It does not compare producing the ideas.</li>
+    <li><strong>The 2026 hours leave out what the build stood on:</strong> the 2022 book itself, where most of Part I and the core of Part II already are (<code>rapport_genealogie_idees.md</code>), and a year of LLM-assisted research from Nov 2025 to Nov 2026 (notes, talk, treatise, arXiv article, essays). Your Nov 2026 housekeeping archive puts the epistemics thread at about 85 h (chat 44 h, Claude Code 32 h, git 10 h), plus about 13 h writing the talk; the computing line behind Part III is counted separately and not included. Counted honestly, the 2026 book rests on at least the same 723 h, plus roughly 100 h of research-line work, plus the build.</li>
+    <li><strong>The two kinds of work differ.</strong> In 2022 the hours went into writing and correcting. In 2026 your time went into deciding (specs, options, arbitration), supervising and checking quota. The prose and most of the mechanisms were produced by the models.</li>
+    <li><strong>The reread is the largest missing item.</strong> In 2022, correction took about 12 % of core hours. A careful human reread of the 277 pages, with light edits, would take about 40 h; at the 2022 correction pace, scaled to the longer text, about 120 h. That would bring the human cost of the 2026 book to roughly 70–160 h, still about 4.5 to 10 times less than in 2022.</li>
+  </ol>
+</section>
+
+<section id="lessons">
+  <h2>What worked, what rubbed</h2>
+  <div class="two">
+    <div>
+      <h3>What worked</h3>
+      <ul>
+        <li><strong>Specs first, then parallel builds.</strong> With a locked structure, a register, fixed statuses, generated numbers and a verifier, about ten agents from two vendors could draft 21 chapters in one evening and still produce a coherent book. The cold reader later praised its terminology for being consistent.</li>
+        <li><strong>Diversity across vendors used as a quality-control device</strong>, not just as extra capacity.</li>
+        <li><strong>Measured automation.</strong> The style pilot's failure (82 % of sentences rewritten) was caught by diffing. The judge was then tested before it was trusted.</li>
+        <li><strong>Resumability.</strong> The whole-book review crossed a quota wall and a change of vendor without losing work.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Friction</h3>
+      <ul>
+        <li><strong>Quota management</strong> cost a large share of the author's attention, and in places decided which model was used.</li>
+        <li><strong>Logs are incomplete.</strong> The 19 Nov cloud session, a full round of Opus and Sonnet cold reads, left no local transcript. It is the largest gap in this lookback.</li>
+        <li><strong>Quality issues left at the end</strong> (from <code>rapport_lecture_pdf.md</code>): the book repeats itself when read linearly; some symbols are reused locally (<i>z</i>, <i>D</i>/<i>C</i>); a few figures dropped glyphs; the empirical base of Parts III–V is thin, which the book itself admits. The English-calques audit is still parked for the human reread.</li>
+        <li><strong>The style is homogeneous.</strong> Phase D found prose more uniform than in the 2022 book, written without an LLM. The conservative style pass only partly corrected it, as intended.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Lessons for a next project</h3>
+  <ol class="steps">
+    <li>Log every session locally, cloud and remote-control sessions included, or export their transcripts. Otherwise the process cannot be audited.</li>
+    <li>Put a light token counter on each phase from the start. Two stores in two different formats had to be decoded after the fact here.</li>
+    <li>Keep "fresh isolated reader → independent verifier → deterministic application" as the default review loop. It was the most reliable pattern in the project.</li>
+    <li>Plan quota tiers in advance (which models and efforts go with which roles) instead of lowering effort in the middle of a swarm.</li>
+    <li>The final human reread remains the comparator no agent replaced. The author kept it on purpose: <code>ARBITRAGES_RESTANTS.md</code>, the calques audit and the TODO are its input.</li>
+  </ol>
+</section>
+
+<section id="method">
+  <h2>Method and limits</h2>
+  <ul>
+    <li><strong>Claude tokens.</strong> Taken from the <code>message.usage</code> of each assistant turn, counted once per <code>message.id</code>, over all top-level and <code>subagents/*.jsonl</code> files of the two Claude project folders for this repository. Output includes reasoning.</li>
+    <li><strong>Gemini tokens.</strong> Taken from the protobuf <code>gen_metadata</code> records of each <code>conversations/&lt;id&gt;.db</code>, decoded by hand. Fields were matched to meanings by checking that they behave consistently, not from documentation:
+      <ul>
+        <li>field 2: new input;</li>
+        <li>field 5: cached input, which grows monotonically through a conversation;</li>
+        <li>field 3: total output, equal to the sum of fields 9 and 10;</li>
+        <li>field 21: model label.</li>
+      </ul>
+      These are reliable to within field interpretation. In particular, it is not clear whether the reasoning tokens are counted inside field 3.</li>
+    <li><strong>Not counted:</strong>
+      <ul>
+        <li>the 19 Nov cloud or "clone" session (commit <code>7afa571</code>, about 40 cold reads plus synthesis and edits). By analogy with the whole-book review, it plausibly adds on the order of <strong>50–150 M input and 1–2 M output tokens</strong>. This is an estimate, not a measurement;</li>
+        <li>the months of research and the earlier artifacts done before 18 Nov.</li>
+      </ul>
+    </li>
+    <li><strong>Active time.</strong> Computed as the union of session intervals (first to last event), with the overnight idle time of session <code>6fdce00e</code> (00:22–06:38) removed. Thinking time between prompts within a session counts as active.</li>
+    <li><strong>Author prompts.</strong> Claude prompts are counted as non-meta user messages; Gemini prompts as <code>history.jsonl</code> entries that are not slash or shell commands.</li>
+  </ul>
+</section>
+
+<section id="inventory">
+  <h2>Session inventory</h2>
+  <h3>Claude Code</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Session</th><th>Date and time</th><th class="n">Calls</th><th class="n">Out</th><th>Subagents</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><code>35e8683a</code></td><td class="t">18/11 10:34–13:05</td><td class="n">27</td><td class="n">315 k</td><td>—</td><td>cross-model critique; provenance clean-up</td></tr>
+      <tr><td><code>d05e1992</code></td><td class="t">18/11 13:07–16:23</td><td class="n">163</td><td class="n">513 k</td><td>—</td><td>French map; specs; conventions; outline; scaffold</td></tr>
+      <tr><td><code>d07499b2</code></td><td class="t">18/11 17:36–17:54</td><td class="n">33</td><td class="n">87 k</td><td>—</td><td>Part 0 re-read</td></tr>
+      <tr><td><code>9db975b5</code></td><td class="t">18/11 17:55–18:07</td><td class="n">18</td><td class="n">67 k</td><td>—</td><td>ch. 1 re-read</td></tr>
+      <tr><td><code>e0340584</code></td><td class="t">18/11 18:24–18:47</td><td class="n">47</td><td class="n">49 k</td><td>—</td><td>build: screen layout, logs</td></tr>
+      <tr><td><code>054db021</code></td><td class="t">18/11 18:48–20:13</td><td class="n">69</td><td class="n">71 k</td><td class="mono">3 (145 calls, 238 k out)</td><td>ch. 2–4 re-read; Part I pass</td></tr>
+      <tr><td><code>97427b14</code></td><td class="t">18/11 23:04–23:36</td><td class="n">37</td><td class="n">64 k</td><td>—</td><td>Part introductions</td></tr>
+      <tr><td><code>b87d18e3</code></td><td class="t">18/11 23:36–23:54</td><td class="n">56</td><td class="n">81 k</td><td>—</td><td>Part IV harmonisation</td></tr>
+      <tr><td><code>6fdce00e</code></td><td class="t">18/11 23:54 → 19/11 06:57</td><td class="n">46</td><td class="n">41 k</td><td class="mono">2 (167 calls, 283 k out)</td><td>Part V + conclusion; morning fixes</td></tr>
+      <tr><td><code>061db681</code></td><td class="t">20/11 10:25–14:01</td><td class="n">175</td><td class="n">313 k</td><td class="mono">22 (83 calls, 100 k out)</td><td>2022/2026 comparison; style-pass orchestration</td></tr>
+      <tr><td><code>e4313594</code></td><td class="t">20/11 15:26–17:14</td><td class="n">76</td><td class="n">101 k</td><td class="mono">11 (164 calls, 552 k out)</td><td>whole-book review, waves 0–1</td></tr>
+      <tr><td>7 empty sessions</td><td class="t">18–20/11</td><td class="n">0</td><td class="n">—</td><td>—</td><td><code>/usage</code>, <code>/model</code>, <code>/exit</code> only</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Antigravity (Gemini) top-level conversations</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Conversation</th><th>Date and time</th><th class="n">Calls</th><th class="n">Out</th><th>Subagents</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><code>bb94fdf6</code></td><td class="t">18/11 08:38–10:42</td><td class="n">20</td><td class="n">102 k</td><td>—</td><td>critique of the trilogy; interactive map</td></tr>
+      <tr><td><code>706678bb</code></td><td class="t">18/11 13:18–16:24</td><td class="n">19</td><td class="n">29 k</td><td>—</td><td>map structure; course specs</td></tr>
+      <tr><td><code>f25721c2</code></td><td class="t">18/11 16:37–17:04</td><td class="n">25</td><td class="n">42 k</td><td>—</td><td>build Part 0</td></tr>
+      <tr><td><code>fa237edf</code> <code>80a934d3</code><br><code>c7591e1c</code> <code>9b6faafb</code></td><td class="t">18/11 17:04–18:50</td><td class="n">130</td><td class="n">274 k</td><td>—</td><td>build ch. 1–4</td></tr>
+      <tr><td><code>b465800e</code></td><td class="t">18/11 20:14–23:56</td><td class="n">103</td><td class="n">117 k</td><td class="mono">21 (838 calls, 1.22 M out)</td><td>orchestrating chapter subagents, Parts II–V</td></tr>
+      <tr><td><code>3b1da9a8</code></td><td class="t">19/11 17:27–18:24</td><td class="n">10</td><td class="n">65 k</td><td>—</td><td>PDF-only review of the book</td></tr>
+      <tr><td><code>771cd3ab</code></td><td class="t">20/11 10:10–12:39</td><td class="n">41</td><td class="n">60 k</td><td>—</td><td>style-pass spec; ch. 0 pilot</td></tr>
+      <tr><td><code>f92e6c2d</code></td><td class="t">20/11 13:05–13:53</td><td class="n">33</td><td class="n">92 k</td><td>—</td><td>style proposer (lots)</td></tr>
+      <tr><td><code>3f38c297</code></td><td class="t">20/11 13:55–15:37</td><td class="n">90</td><td class="n">107 k</td><td class="mono">6 (197 calls, 258 k out)</td><td>arbitrations; bibliography; artefacts</td></tr>
+      <tr><td><code>087dfb52</code></td><td class="t">20/11 15:39–16:52</td><td class="n">20</td><td class="n">47 k</td><td class="mono">10 (93 calls, 257 k out)</td><td>English-calques audit swarm</td></tr>
+      <tr><td><code>84e68ddf</code></td><td class="t">20/11 17:02–20:58</td><td class="n">166</td><td class="n">190 k</td><td class="mono">9 (210 calls, 406 k out)</td><td>review wave 2; edit pass; cold PDF reader</td></tr>
+      <tr><td><code>0491b338</code></td><td class="t">20/11 22:07–23:53 (+ 21/11)</td><td class="n">107</td><td class="n">116 k</td><td>—</td><td>teaching slides</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<footer>Compiled on 21 Nov 2026 from local git history and agent session stores. The same content is kept as Markdown in the repository: <code>rapport_processus_construction.md</code>.</footer>
+</main>
+</div>
+
+</body></html>
