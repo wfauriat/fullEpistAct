@@ -5,6 +5,7 @@ Ce dossier contient les supports de présentation construits avec **Marp** (Mark
 ## Contenu
 
 - `slides_courts.md` / `.html` / `.pdf` / `.pptx` — **Format « message » (35 min, 18 diapositives)** : la thèse centrale, les cinq conditions, le basculement IA/automatisation, le paradoxe $P(E) \times \text{échappement}$ et les trois niveaux de remède.
+- `slides_courts_editable.pptx` (généré par `build_pptx.py`) — version PowerPoint **nativement éditable** (zones de texte, encadrés, notes orales et figures 300 DPI) conçue pour l’import dans **Canva** ou PowerPoint.
 - `slides_3h.md` / `.html` / `.pdf` / `.pptx` — **Format « panorama complet » (3 h, 3 × 55 min, 45 diapositives)** : les 5 parties, les 5 propositions (**P1–P5**), les 3 modèles (**M1–M3**), les 18 figures, les études de cas, deux ateliers pratiques et le bilan épistémique final.
 - `themes/monographie.css` — thème reprenant la palette (`#2a78d6`, `#eb6834`, `#1baf7a`, `#1d232b`) et la typographie de la monographie.
 - `Makefile` — compilation HTML, PDF (avec signets et notes) et PPTX.

@@ -3,9 +3,9 @@ THEME = themes/monographie.css
 CHROME ?= $(shell find $(HOME)/.cache/puppeteer -name chrome-headless-shell -type f 2>/dev/null | head -n 1)
 BROWSER_FLAGS = CHROME_NO_SANDBOX=1 $(MARP) --browser chrome --browser-path "$(CHROME)"
 
-.PHONY: all short 3h pdf pptx 3h-pdf 3h-pptx clean
+.PHONY: all short 3h pdf pptx 3h-pdf 3h-pptx short-editable clean
 
-all: short 3h pdf 3h-pdf pptx 3h-pptx
+all: short 3h pdf 3h-pdf pptx 3h-pptx short-editable
 
 short: slides_courts.html
 
@@ -18,6 +18,11 @@ pdf: slides_courts.pdf
 pptx: slides_courts.pptx
 
 3h-pptx: slides_3h.pptx
+
+short-editable: slides_courts_editable.pptx
+
+slides_courts_editable.pptx: slides_courts.md build_pptx.py
+	.venv/bin/python build_pptx.py slides_courts.md slides_courts_editable.pptx
 
 %.html: %.md $(THEME)
 	$(MARP) --html --allow-local-files --theme $(THEME) $< -o $@

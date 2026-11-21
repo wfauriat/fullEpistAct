@@ -1,8 +1,10 @@
 # Monograph build outputs
 monographie/build/
 
-# Presentation exports (regenerable from Markdown)
+# Presentation exports and local tooling caches
 *.pptx
+slides/.venv/
+slides/.cache/
 
 # Python bytecode and caches
 __pycache__/
