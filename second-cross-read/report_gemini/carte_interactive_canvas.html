@@ -1,0 +1,2116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light dark" />
+<title>Carte conceptuelle infinie — Gouverner nos représentations (W. Fauriat, 2022–2026)</title>
+<style>
+  :root {
+    --bg: #f3f5f9;
+    --grid-dot: #ccd4e0;
+    --surface: #ffffff;
+    --surface-muted: #f7f9fc;
+    --text: #151d28;
+    --text-muted: #4f5d73;
+    --border: #d9e0eb;
+    --shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    --shadow-active: 0 12px 30px rgba(15, 23, 42, 0.16);
+
+    --c-domain: #2563eb;
+    --c-domain-bg: #eff6ff;
+    --c-domain-bd: #bfdbfe;
+
+    --c-issue: #d97706;
+    --c-issue-bg: #fffbeb;
+    --c-issue-bd: #fde68a;
+
+    --c-thinker: #7c3aed;
+    --c-thinker-bg: #f5f3ff;
+    --c-thinker-bd: #ddd6fe;
+
+    --c-remedy: #059669;
+    --c-remedy-bg: #ecfdf5;
+    --c-remedy-bd: #a7f3d0;
+
+    --c-tension: #dc2626;
+    --c-tension-bg: #fef2f2;
+    --c-tension-bd: #fecaca;
+
+    --c-bridge: #9333ea;
+  }
+
+  body.dark {
+    --bg: #0e131b;
+    --grid-dot: #253042;
+    --surface: #171f2b;
+    --surface-muted: #1e2838;
+    --text: #edf2f7;
+    --text-muted: #9aa8bd;
+    --border: #2b384b;
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    --shadow-active: 0 14px 34px rgba(0, 0, 0, 0.65);
+
+    --c-domain: #60a5fa;
+    --c-domain-bg: #17253d;
+    --c-domain-bd: #284573;
+
+    --c-issue: #fbbf24;
+    --c-issue-bg: #2c2111;
+    --c-issue-bd: #5e4318;
+
+    --c-thinker: #a78bfa;
+    --c-thinker-bg: #231b3d;
+    --c-thinker-bd: #443378;
+
+    --c-remedy: #34d399;
+    --c-remedy-bg: #122b23;
+    --c-remedy-bd: #1e5947;
+
+    --c-tension: #f87171;
+    --c-tension-bg: #31171b;
+    --c-tension-bd: #6b262d;
+
+    --c-bridge: #c084fc;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    user-select: none;
+  }
+
+  /* En-tête empilé proprement pour éviter tout chevauchement lors des retours à la ligne */
+  #hud-header {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    pointer-events: none;
+  }
+
+  #topbar {
+    width: 100%;
+    pointer-events: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 11px;
+    background: color-mix(in srgb, var(--surface) 94%, transparent);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    box-shadow: var(--shadow);
+  }
+
+  #subbar {
+    pointer-events: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 9px;
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    box-shadow: var(--shadow);
+    max-width: 100%;
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    border-right: 1px solid var(--border);
+  }
+  .brand-title { font-size: 13.5px; font-weight: 700; letter-spacing: -0.01em; }
+  .brand-sub { font-size: 11px; color: var(--text-muted); }
+
+  .toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px;
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+  }
+
+  .btn {
+    appearance: none;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.14s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+  }
+  .btn:hover { color: var(--text); background: var(--surface); }
+  .btn.active {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+
+  .btn-pill {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.14s ease;
+    white-space: nowrap;
+  }
+  .btn-pill:hover { transform: translateY(-1px); }
+  .btn-pill.off { opacity: 0.4; }
+  .btn-pill.highlight {
+    border-color: var(--c-bridge);
+    background: color-mix(in srgb, var(--c-bridge) 10%, var(--surface));
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--c-bridge) 18%, transparent);
+  }
+  .btn-pill.highlight-blue {
+    border-color: var(--c-domain);
+    background: color-mix(in srgb, var(--c-domain) 10%, var(--surface));
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--c-domain) 18%, transparent);
+  }
+
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+
+  .search-wrap {
+    position: relative;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  #search-input {
+    width: 195px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 12px;
+    outline: none;
+  }
+  #search-input:focus { border-color: var(--c-domain); }
+  #search-results {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 310px;
+    max-height: 290px;
+    overflow-y: auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-active);
+    display: none;
+    z-index: 60;
+  }
+  .search-item {
+    padding: 8px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+  }
+  .search-item:last-child { border-bottom: none; }
+  .search-item:hover { background: var(--surface-muted); }
+
+  .subbar-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    padding: 0 4px;
+  }
+
+  /* Canevas infini */
+  #viewport {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: grab;
+    background-image: radial-gradient(var(--grid-dot) 1.25px, transparent 1.25px);
+    background-size: 26px 26px;
+  }
+  #viewport.panning { cursor: grabbing; }
+
+  #world {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    will-change: transform;
+  }
+
+  .zone-box {
+    position: absolute;
+    border-radius: 18px;
+    border: 1.5px dashed var(--border);
+    background: color-mix(in srgb, var(--surface) 44%, transparent);
+    pointer-events: none;
+    padding: 10px 14px;
+    transition: left 0.24s ease, top 0.24s ease, width 0.24s ease, height 0.24s ease;
+  }
+  .zone-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+  }
+
+  #edges-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: visible;
+  }
+
+  .edge-path {
+    fill: none;
+    stroke: var(--border);
+    stroke-width: 1.9;
+    transition: opacity 0.18s ease, stroke-width 0.18s ease, stroke 0.18s ease;
+  }
+  .edge-path.cross-boundary {
+    stroke: var(--c-bridge);
+    stroke-dasharray: 6 4;
+    stroke-width: 2.1;
+    opacity: 0.72;
+  }
+  .edge-path.dimmed { opacity: 0.1; }
+  .edge-path.active { opacity: 1 !important; stroke-width: 3; }
+
+  .edge-label-bg {
+    fill: var(--surface);
+    stroke: var(--border);
+    stroke-width: 1;
+    rx: 6;
+    ry: 6;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  .edge-label-text {
+    font-size: 11px;
+    font-weight: 600;
+    fill: var(--text);
+    text-anchor: middle;
+    dominant-baseline: central;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  .edge-label-item.show-label .edge-label-bg,
+  .edge-label-item.show-label .edge-label-text { opacity: 0.96; }
+
+  /* Cartes : pas de transition sur width pour garantir des mesures DOM exactes au reflow */
+  .node-card {
+    position: absolute;
+    width: 248px;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 13px;
+    box-shadow: var(--shadow);
+    padding: 11px 13px;
+    cursor: pointer;
+    transition: left 0.24s cubic-bezier(0.22, 1, 0.36, 1),
+                top 0.24s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.16s ease,
+                opacity 0.18s ease,
+                border-color 0.16s ease;
+    user-select: text;
+  }
+  .node-card.no-anim,
+  .node-card.dragging {
+    transition: box-shadow 0.16s ease, border-color 0.16s ease !important;
+  }
+  .node-card.dragging { z-index: 30; }
+  .node-card:hover { box-shadow: var(--shadow-active); z-index: 15; }
+  .node-card.selected {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--node-accent) 32%, transparent), var(--shadow-active);
+    border-color: var(--node-accent);
+    z-index: 20;
+  }
+  .node-card.dimmed { opacity: 0.2; }
+  .node-card.hidden-cat { display: none; }
+
+  .node-card.level-1 { width: 248px; }
+  .node-card.level-2 { width: 295px; }
+  .node-card.level-3 { width: 345px; }
+
+  .node-card[data-cat="domain"]  { --node-accent: var(--c-domain);  border-top: 4px solid var(--c-domain); }
+  .node-card[data-cat="issue"]   { --node-accent: var(--c-issue);   border-top: 4px solid var(--c-issue); }
+  .node-card[data-cat="thinker"] { --node-accent: var(--c-thinker); border-top: 4px solid var(--c-thinker); }
+  .node-card[data-cat="remedy"]  { --node-accent: var(--c-remedy);  border-top: 4px solid var(--c-remedy); }
+  .node-card[data-cat="tension"] { --node-accent: var(--c-tension); border-top: 4px solid var(--c-tension); }
+
+  .node-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+  .node-badges { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+  .badge {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 2px 6px;
+    border-radius: 999px;
+  }
+  .badge-domain  { background: var(--c-domain-bg);  color: var(--c-domain);  border: 1px solid var(--c-domain-bd); }
+  .badge-issue   { background: var(--c-issue-bg);   color: var(--c-issue);   border: 1px solid var(--c-issue-bd); }
+  .badge-thinker { background: var(--c-thinker-bg); color: var(--c-thinker); border: 1px solid var(--c-thinker-bd); }
+  .badge-remedy  { background: var(--c-remedy-bg);  color: var(--c-remedy);  border: 1px solid var(--c-remedy-bd); }
+  .badge-tension { background: var(--c-tension-bg); color: var(--c-tension); border: 1px solid var(--c-tension-bd); }
+  .badge-cross {
+    background: color-mix(in srgb, var(--c-bridge) 14%, var(--surface));
+    color: var(--c-bridge);
+    border: 1px solid color-mix(in srgb, var(--c-bridge) 40%, transparent);
+  }
+
+  .fold-btn {
+    appearance: none;
+    border: 1px solid var(--border);
+    background: var(--surface-muted);
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .fold-btn:hover { color: var(--text); border-color: var(--node-accent); }
+
+  .node-title {
+    margin: 0 0 5px 0;
+    font-size: 14.5px;
+    font-weight: 700;
+    line-height: 1.28;
+    color: var(--text);
+  }
+  .node-summary {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.44;
+    color: var(--text-muted);
+  }
+  .node-essential, .node-technical {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border);
+    font-size: 12.2px;
+    line-height: 1.48;
+    color: var(--text);
+  }
+  .node-card.level-1 .node-essential,
+  .node-card.level-1 .node-technical,
+  .node-card.level-2 .node-technical { display: none; }
+
+  .section-kicker {
+    display: block;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--node-accent);
+    margin-bottom: 4px;
+  }
+
+  .tag-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+  .mini-tag {
+    font-size: 10.5px;
+    padding: 2px 6px;
+    border-radius: 5px;
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  /* Panneau latéral */
+  #inspector {
+    position: fixed;
+    top: 112px;
+    right: 12px;
+    bottom: 14px;
+    width: 340px;
+    max-width: calc(100vw - 24px);
+    background: color-mix(in srgb, var(--surface) 96%, transparent);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow-active);
+    z-index: 35;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #inspector.open { display: flex; }
+  .insp-head {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .insp-body {
+    padding: 12px 14px;
+    overflow-y: auto;
+    font-size: 12.8px;
+    line-height: 1.54;
+    user-select: text;
+  }
+  .insp-block { margin-bottom: 14px; }
+  .insp-block h4 {
+    margin: 0 0 5px 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+  }
+  .conn-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    text-align: left;
+    padding: 7px 9px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface-muted);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .conn-btn:hover { border-color: var(--c-domain); }
+
+  /* Bas gauche + Minimap */
+  #bottom-controls {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    z-index: 35;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 5px 8px;
+    box-shadow: var(--shadow);
+  }
+  #zoom-readout {
+    font-size: 11.5px;
+    font-weight: 700;
+    min-width: 44px;
+    text-align: center;
+    color: var(--text-muted);
+  }
+
+  #minimap {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    width: 184px;
+    height: 120px;
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    z-index: 30;
+    overflow: hidden;
+    cursor: crosshair;
+  }
+  #inspector.open ~ #minimap { right: 362px; }
+  #minimap-canvas { width: 100%; height: 100%; display: block; }
+
+  .help-hint {
+    position: fixed;
+    bottom: 52px;
+    left: 12px;
+    font-size: 11px;
+    color: var(--text-muted);
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    z-index: 25;
+    pointer-events: none;
+  }
+
+  @media (max-width: 980px) {
+    .help-hint { display: none; }
+    #inspector.open ~ #minimap { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="hud-header">
+  <div id="topbar">
+    <div class="brand">
+      <span class="brand-title">Gouverner nos représentations (2022–2026)</span>
+      <span class="brand-sub">Domaines, enjeux et penseurs transfrontaliers</span>
+    </div>
+
+    <div class="toolbar-group" title="Niveau de détail global">
+      <button class="btn active" data-global-level="1">1 · Aperçu</button>
+      <button class="btn" data-global-level="2">2 · Essentiel</button>
+      <button class="btn" data-global-level="3">3 · Approfondi</button>
+    </div>
+
+    <button class="btn-pill" data-cat-filter="domain"><span class="dot" style="background:var(--c-domain)"></span>Domaines</button>
+    <button class="btn-pill" data-cat-filter="issue"><span class="dot" style="background:var(--c-issue)"></span>Enjeux</button>
+    <button class="btn-pill" data-cat-filter="thinker"><span class="dot" style="background:var(--c-thinker)"></span>Penseurs</button>
+    <button class="btn-pill" data-cat-filter="remedy"><span class="dot" style="background:var(--c-remedy)"></span>Remèdes &amp; Cas</button>
+    <button class="btn-pill" data-cat-filter="tension"><span class="dot" style="background:var(--c-tension)"></span>Tensions</button>
+
+    <button class="btn-pill" id="btn-cross-only" title="Mettre en relief les cartes et ponts traversant plusieurs disciplines">
+      <span class="dot" style="background:var(--c-bridge)"></span>Transfrontaliers
+    </button>
+
+    <div class="search-wrap">
+      <input id="search-input" type="search" placeholder="Rechercher auteur, concept…" autocomplete="off" />
+      <div id="search-results"></div>
+      <button class="btn-pill" id="btn-theme">Thème</button>
+    </div>
+  </div>
+
+  <div id="subbar">
+    <span class="subbar-label">Focus rapide :</span>
+    <button class="btn" data-focus-zone="all">Tout cadrer</button>
+    <button class="btn" data-focus-zone="z1">I · Clés</button>
+    <button class="btn" data-focus-zone="z2">II · Cœur 2022→2026</button>
+    <button class="btn" data-focus-zone="z3">III · IA &amp; Humain</button>
+    <button class="btn" data-focus-zone="z4">IV · Pratique &amp; Tensions</button>
+    <span style="width:1px;height:16px;background:var(--border);margin:0 2px"></span>
+    <button class="btn-pill highlight-blue" id="btn-autofocus" title="Recentrer automatiquement sur la carte cliquée et ses voisins">Auto-focus : Actif</button>
+    <button class="btn-pill" id="btn-radial" title="Réarranger autour de la carte sélectionnée (causes à gauche, effets à droite)">Vue centrée sur sélection</button>
+    <button class="btn-pill" id="btn-relayout" title="Resserre et aligne automatiquement les cartes sans chevauchement">Réorganiser</button>
+  </div>
+</div>
+
+<div id="viewport">
+  <div id="world">
+    <div id="zones-layer"></div>
+    <svg id="edges-svg">
+      <defs>
+        <marker id="arrow-std" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 8 5 L 0 9 z" fill="currentColor" opacity="0.65"></path>
+        </marker>
+      </defs>
+      <g id="edges-paths"></g>
+      <g id="edges-labels"></g>
+    </svg>
+    <div id="nodes-layer"></div>
+  </div>
+</div>
+
+<aside id="inspector" aria-label="Panneau de détail">
+  <div class="insp-head">
+    <div>
+      <div id="insp-badges" class="node-badges" style="margin-bottom:6px"></div>
+      <h3 id="insp-title" style="margin:0;font-size:15px;line-height:1.3"></h3>
+    </div>
+    <div style="display:flex;gap:4px">
+      <button class="fold-btn" id="insp-zoom-card" title="Zoomer sur cette carte">⌖</button>
+      <button class="fold-btn" id="insp-close" title="Fermer (Échap)">✕</button>
+    </div>
+  </div>
+  <div class="insp-body" id="insp-body"></div>
+</aside>
+
+<div class="help-hint">Clic : focaliser carte &amp; voisins · Double-clic : zoomer + déplier N3 · Glisser carte : déplacer · Fond / Molette : naviguer</div>
+
+<div id="bottom-controls">
+  <button class="btn" id="zoom-out" title="Dézoomer (-)">−</button>
+  <span id="zoom-readout">100 %</span>
+  <button class="btn" id="zoom-in" title="Zoomer (+)">+</button>
+  <button class="btn" id="fit-all" title="Tout cadrer (0)">Tout cadrer</button>
+</div>
+
+<div id="minimap" title="Cliquer ou glisser pour naviguer">
+  <canvas id="minimap-canvas" width="368" height="240"></canvas>
+</div>
+
+<script>
+(() => {
+  "use strict";
+
+  const CATEGORY_LABELS = {
+    domain: "Domaine",
+    issue: "Enjeu & Question",
+    thinker: "Penseur / Référence",
+    remedy: "Remède / Cas",
+    tension: "Tension critique"
+  };
+
+  const ZONE_DEFS = [
+    { id: "z1", label: "I. Fondements épistémiques, probabilistes et décisionnels (« Forger les clés »)" },
+    { id: "z2", label: "II. Cœur de synthèse : Trajectoire Fauriat (2022 → 2026) & Théorie des contrôles" },
+    { id: "z3", label: "III. Systèmes logiciels, IA contemporaine, économie et facteur humain (« Les serrures »)" },
+    { id: "z4", label: "IV. Pratique de l'action, cas concrets et tensions théoriques" }
+  ];
+
+  const NODES = [
+    {
+      id: "dom-philo", cat: "domain", zone: "z1", col: 0, order: 1,
+      title: "Philosophie des sciences & Épistémologie",
+      summary: "Limites de l'induction, conditions sous-entendues des lois et problème du cadre.",
+      essential: "Comment passer d'observations finies à une règle générale fiable ? Toute loi empirique s'appuie sur une parenthèse silencieuse de circonstances tenues pour acquises (« toutes choses égales par ailleurs »), impossible à clore définitivement.",
+      technical: "Articule le problème humien de l'induction, la nouvelle énigme de Goodman, les provisos de Hempel, les lois ceteris paribus (Cartwright), le problème du cadre en IA (McCarthy & Hayes 1969 ; Fodor ; Dennett) et l'analyse de robustesse (Levins, Wimsatt, Orzack & Sober).",
+      tags: ["Induction", "Ceteris paribus", "Problème du cadre"]
+    },
+    {
+      id: "dom-proba", cat: "domain", zone: "z1", col: 0, order: 2,
+      title: "Probabilités, Statistique & Incertitudes (UQ)",
+      summary: "Degrés de croyance, calibration des prévisionnistes et strates d'ignorance.",
+      essential: "La probabilité mesure un état d'information imparfaite, non une propriété magique du monde. Mais les barres d'erreur ne mesurent le désaccord qu'à l'intérieur des hypothèses admises au départ : elles sont muettes sur ce que le modèle ignore.",
+      technical: "Bayésianisme subjectif (Ramsey, de Finetti, Savage, Lindley) face à Jaynes (entropie maximale) et aux mondes M-ouverts (Bernardo & Smith 1994 ; Kleijn & van der Vaart 2012 ; Grünwald). Règles strictement propres, sévérité de Mayo et V&V (Oberkampf & Roy 2010).",
+      tags: ["Bayésianisme", "Calibration", "Mondes M-ouverts"]
+    },
+    {
+      id: "dom-decision", cat: "domain", zone: "z1", col: 0, order: 3,
+      title: "Théorie de la décision & Rationalité",
+      summary: "Arbitrer sous incertitude quand la perte potentielle excède de loin le gain.",
+      essential: "Choisir une action risquée suppose une probabilité d'échec inférieure à un seuil dicté par le rapport gain/perte. Face à une décision unique et irréversible à enjeu catastrophique, ce seuil tombe sous la résolution de nos statistiques.",
+      technical: "Utilité espérée subjective (von Neumann-Morgenstern, Savage), valeur de l'information (Raiffa-Schlaifer, rebaptisée « exploration statistique » en 2022), rationalité limitée/procédurale (Simon) et décision sous ambiguïté (Gilboa-Schmeidler, Hansen-Sargent).",
+      tags: ["Utilité espérée", "Seuil critique", "Enjeux asymétriques"]
+    },
+    {
+      id: "th-descartes-hume", cat: "thinker", zone: "z1", col: 1, order: 1,
+      title: "Descartes (1637) · Hume · Russell (1912) · Goodman",
+      summary: "Filiation du doute méthodique et des bornes de l'induction.",
+      essential: "Fauriat place son premier livre sous la « morale par provision » de Descartes, puis appuie son traité de 2026 sur le gouffre de Hume et le poulet de Russell (devenu dinde inductiviste chez Chalmers et Taleb) : un passé régulier ne garantit pas l'avenir.",
+      technical: "Descartes (Discours de la méthode, 1637 ; Cogito ergo dubito), David Hume, Bertrand Russell (The Problems of Philosophy, 1912, corrigé en 2026 après une erreur bibliographique en 2022) et la nouvelle énigme de Nelson Goodman.",
+      tags: ["Philosophie", "Induction"]
+    },
+    {
+      id: "th-hempel-cartwright", cat: "thinker", zone: "z1", col: 1, order: 2,
+      title: "Hempel · Cartwright · McCarthy & Hayes · Dennett · Fodor",
+      summary: "Des clauses ceteris paribus au problème du cadre en IA.",
+      essential: "Unifie la philosophie des lois physiques (toujours assorties de réserves tacites) et l'énigme de l'IA symbolique : comment savoir ce qui reste inchangé lors d'une action sans inspecter l'univers entier ?",
+      technical: "Provisos de Carl Hempel, lois ceteris paribus de Nancy Cartwright, problème du cadre (McCarthy & Hayes 1969), élargissement de Jerry Fodor et apologue du robot paralysé de Daniel Dennett.",
+      tags: ["Problème du cadre", "Clauses tacites"]
+    },
+    {
+      id: "th-levins-orzack", cat: "thinker", crossBoundary: true, zone: "z1", col: 1, order: 3,
+      title: "Levins (1966) · Wimsatt · Orzack & Sober (1993)",
+      summary: "Transfrontalier : l'accord de modèles partageant les mêmes erreurs ne prouve rien.",
+      essential: "Levins voyait la vérité comme « l'intersection de mensonges indépendants ». Orzack et Sober répliquent que sans ancrage indépendant dans le réel, des modèles convergents ne forment qu'une intersection de faussetés communes.",
+      technical: "Analyse de robustesse issue de la biologie théorique (Levins 1966 ; Wimsatt), transposée vers les défaillances de mode commun et la critique du prêteur unique.",
+      tags: ["Transfrontalier", "Biologie ↔ Ingénierie"]
+    },
+    {
+      id: "th-mayo-oberkampf", cat: "thinker", crossBoundary: true, zone: "z1", col: 1, order: 4,
+      title: "Mayo · Bernardo & Smith · Kleijn & van der Vaart · Oberkampf & Roy",
+      summary: "Transfrontalier : tests sévères, mondes M-ouverts et vérification/validation.",
+      essential: "Deborah Mayo exige qu'un test ait de fortes chances d'alerter si l'affirmation est fausse ; Oberkampf et Roy distinguent vérifier les équations et valider face au réel.",
+      technical: "Sévérité de Mayo traduite en rapports de vraisemblance ; inférence en régime M-ouvert (Bernardo & Smith 1994 ; Kleijn & van der Vaart 2012 ; Grünwald) ; V&V en simulation numérique (Oberkampf & Roy 2010).",
+      tags: ["Transfrontalier", "Épistémologie ↔ Statistique"]
+    },
+    {
+      id: "th-savage", cat: "thinker", crossBoundary: true, zone: "z1", col: 1, order: 5,
+      title: "Ramsey · de Finetti · Savage (1954) · Lindley · Jaynes",
+      summary: "Transfrontalier : probabilité subjective et distinction petits/grands mondes.",
+      essential: "Fondateurs du bayésianisme subjectif : la probabilité mesure la cohérence des degrés de croyance face à la décision. Jaynes y adjoint le principe d'entropie maximale.",
+      technical: "Frank Ramsey (1926), Bruno de Finetti (1937), Leonard Savage (The Foundations of Statistics, 1954 — petits mondes clos vs grands mondes ouverts), Dennis Lindley et Edwin Jaynes.",
+      tags: ["Transfrontalier", "Probabilités ↔ Décision"]
+    },
+    {
+      id: "th-simon", cat: "thinker", crossBoundary: true, zone: "z1", col: 1, order: 6,
+      title: "von Neumann & Morgenstern · Raiffa & Schlaifer · H. Simon",
+      summary: "Transfrontalier : rationalité normative, valeur d'information et rationalité limitée.",
+      essential: "De l'axiomatique de l'utilité et du coût de collecte d'information jusqu'aux heuristiques adaptatives d'Herbert Simon pour des agents aux ressources finies.",
+      technical: "À noter : en 2022, Fauriat réemploie l'expression « rationalité procédurale » sans citer Simon pour qualifier l'exécution mécanique d'algorithmes, alors que Simon visait les procédures humaines sous contrainte cognitive.",
+      tags: ["Transfrontalier", "Décision ↔ Sciences cognitives"]
+    },
+    {
+      id: "th-ambiguite", cat: "thinker", crossBoundary: true, zone: "z1", col: 1, order: 7,
+      title: "Gilboa & Schmeidler · Hansen & Sargent · Box · Gelman · Kennedy & O'Hagan",
+      summary: "Transfrontalier : décision sous ambiguïté, contrôle robuste et critique de modèle.",
+      essential: "Tout un pan de la recherche formalise la décision quand la vraie loi de probabilité reste inconnue, ou décèle dans les résidus une dérive signalant un mécanisme omis.",
+      technical: "Utilité maxmin (Gilboa-Schmeidler), contrôle robuste (Hansen-Sargent), contrôles prédictifs a posteriori (Box 1980, Gelman) et divergence structurelle de modèle (Kennedy & O'Hagan 2001).",
+      tags: ["Transfrontalier", "Ambiguïté", "Critique de modèle"]
+    },
+    {
+      id: "iss-cadre", cat: "issue", crossBoundary: true, zone: "z1", col: 2, order: 1,
+      title: "Cadre fini & Arrière-plan tacite ouvert",
+      summary: "« Le monde répond à l'action, non à la représentation » : toute règle cache une parenthèse ouverte.",
+      essential: "Dire « l'eau bout à 100 °C » sous-entend eau pure, récipient ouvert et pression normale. Un facteur absent du cadre ne reçoit pas une probabilité nulle : il n'a aucune coordonnée dans le calcul.",
+      technical: "Relie les provisos de Hempel au problème du cadre. Dans la formule des probabilités totales, toute grandeur absente de X demeure invisible à l'inférence, quel que soit le volume de données.",
+      tags: ["Règle tacite", "Monde vs Modèle"]
+    },
+    {
+      id: "iss-ontologique", cat: "issue", crossBoundary: true, zone: "z1", col: 2, order: 2,
+      title: "Incertitude ontologique & Clôture interne",
+      summary: "Aucune rigueur interne au cadre ne certifie ce cadre ni ne détecte un facteur omis constant.",
+      essential: "À côté du hasard résiduel (aléatoire) et du doute sur les paramètres (épistémique), l'incertitude ontologique vise ce que le modèle omet : une ferrure testée en air sec ignore la corrosion marine.",
+      technical: "Proposition 1 & Modèle M3 : deux fonctions calculées sur X sont conditionnellement indépendantes d'un facteur omis Z sachant X ; leur accord ne prouve rien hors cadre, et tout méta-audit déclenche une régression à l'infini.",
+      tags: ["Barres d'erreur", "Modèle M3"]
+    },
+    {
+      id: "iss-enjeux", cat: "issue", crossBoundary: true, zone: "z1", col: 2, order: 3,
+      title: "Décisions uniques à enjeux asymétriques",
+      summary: "Quand la perte excède de loin le gain, le seuil de risque tolérable s'effondre vers zéro.",
+      essential: "Sur des paris répétés, l'historique calibre le prévisionniste. Devant un acte unique et irréversible à enjeu catastrophique, le seuil tolérable tombe bien en deçà de ce que la statistique peut garantir.",
+      technical: "Seuil p* = ΔU / (ΔU + L) issu de Savage : quand L/ΔU → ∞, p* → 0. La rationalité déplace alors l'effort vers la réduction physique de L et la réversibilité.",
+      tags: ["Acte sans appel", "Seuil p*"]
+    },
+
+    {
+      id: "core-fauriat", cat: "issue", crossBoundary: true, zone: "z2", col: 0, order: 1,
+      title: "Trajectoire Fauriat (2022 → 2026)",
+      summary: "De l'essai contre l'objectivité algorithmique (2022) au traité sur l'architecture des contrôles (2026).",
+      essential: "En 2022, Un discours de la méthode au XXIe siècle vulgarise la subjectivité de l'induction via le Pr Seracost et six étudiants. En 2026, Agir d'après une représentation du monde rectifie ses raccourcis et bâtit une théorie générale des contrôles.",
+      technical: "Rectifications majeures : abandon du rejet « par essence » des machines, intégration des règles strictement propres et de la sévérité de Mayo, adoption du problème du cadre et réinterprétation de Challenger (comparabilité et prise en compte).",
+      tags: ["2022 → 2026", "Rectification", "8 champs"]
+    },
+    {
+      id: "iss-controle", cat: "issue", crossBoundary: true, zone: "z2", col: 0, order: 2,
+      title: "Cinq conditions du contrôle & Blanchiment aux interfaces",
+      summary: "Une erreur n'est arrêtée que par un comparateur qui « se trompe autrement » et reste comparable.",
+      essential: "Existence, différence, comparabilité, arrivée à temps et prise en compte avec autorité : si l'une manque, l'erreur passe à coup sûr. Or la séparation des équipes efface souvent les unités et réserves aux frontières (blanchiment).",
+      technical: "Modèle M1 : une chaîne en série additionne les angles morts, tandis qu'un contrôle croisé en parallèle les réduit à l'intersection (B₁ ∩ (B₂ ∪ B_cmp)) — sauf si le blanchiment gonfle B_cmp.",
+      tags: ["5 conditions", "Modèle M1", "Blanchiment"]
+    },
+    {
+      id: "iss-enigme", cat: "issue", crossBoundary: true, zone: "z2", col: 0, order: 3,
+      title: "L'énigme du producteur plus fiable",
+      summary: "Un producteur 10× plus exact peut rendre le système plus risqué si ses rares erreurs échappent.",
+      essential: "Quand les erreurs deviennent rares face à un contrôleur humain fixe, presque toutes les alertes sont fausses : le relecteur se relâche (appariement des probabilités), et les erreurs restantes sont plus subtiles ou corrélées.",
+      technical: "Risque résiduel R = P(E)(1 − s·u) où u ≈ VPP s'effondre quand P(E) baisse à f constant. Cas limite illustratif : 10 % × 1 % = 0,1 % contre 1 % × 90 % = 0,9 % (nuancé au ch. 16 sur le risque moyen vs risque de queue).",
+      tags: ["VPP", "Fausses alertes", "Paradoxe"]
+    },
+
+    {
+      id: "iss-regime", cat: "issue", crossBoundary: true, zone: "z3", col: 0, order: 1,
+      title: "Dépense des garanties & Changement de régime",
+      summary: "Les modèles appris troquent contrat écrit et adresse de panne contre portée statistique.",
+      essential: "Dans la matrice à deux axes (dans/hors cadre × signalée/silencieuse), les contrats formels rendaient les pannes internes bruyantes. Les modèles de langage repeuplent la case des erreurs internes silencieuses sous une prose assurée.",
+      technical: "Frontière en dents de scie (BCG 2023), omissions structurelles vs omissions de saillance, et borne d'hallucination de Kalai-Vempala sur les faits rares sans option d'abstention.",
+      tags: ["Matrice 2 axes", "Dents de scie", "Saillance"]
+    },
+    {
+      id: "iss-erosion", cat: "issue", crossBoundary: true, zone: "z3", col: 0, order: 2,
+      title: "Chaînes d'agents & Érosion de la vigilance",
+      summary: "L'automatisation agit plus vite que le contrôle humain et dissout la friction formatrice.",
+      essential: "Les agents délèguent l'orchestration à la couche la moins garantie. La fluidité supprime le signe révélateur du doute et l'effort lent qui créait des comparateurs internes, tandis que la complaisance renvoie son propre biais à l'auteur.",
+      technical: "Blanchiment textuel inter-agents, perte du signal coûteux de Spence, illusion de vitesse (METR 2025) et transfert de cadre par le brouillon soumis au modèle complaisant.",
+      tags: ["Agents", "Friction", "Complaisance"]
+    },
+    {
+      id: "iss-preteur", cat: "issue", crossBoundary: true, zone: "z3", col: 0, order: 3,
+      title: "Prêteur unique & Blanchiment de provenance",
+      summary: "Puiser producteurs et relecteurs au même modèle corrèle les angles morts à l'échelle collective.",
+      essential: "Un comparateur emprunté au même modèle ne contrôle pas ce modèle. Vingt reformulations d'une même sortie créent l'illusion d'un consensus, menacent les biens communs de connaissance et saturent la relecture.",
+      technical: "Plancher d'échappement incompressible lié aux causes communes c, effondrement récursif (remplacement vs accumulation) et saturation attentionnelle de l'évaluation.",
+      tags: ["Causes communes", "Monoculture", "Saturation"]
+    },
+
+    {
+      id: "dom-surete", cat: "domain", zone: "z3", col: 1, order: 1,
+      title: "Sûreté de fonctionnement & Accidents",
+      summary: "Défaillances de mode commun, couplage fort et dérives organisationnelles.",
+      essential: "Deux systèmes réputés indépendants cèdent souvent ensemble sur les cas ardus parce qu'ils partagent des hypothèses implicites. La sûreté tient aux interfaces et à l'organisation.",
+      technical: "Programmation multiversion (Knight & Leveson 1986 ; Eckhardt & Lee ; Littlewood & Miller), accidents normaux (Perrow 1984), barrières (Reason), STAMP (Leveson) et normalisation de la déviance (Vaughan 1996).",
+      tags: ["Mode commun", "STAMP"]
+    },
+    {
+      id: "dom-logiciel", cat: "domain", zone: "z3", col: 1, order: 2,
+      title: "Génie logiciel & Vérification formelle",
+      summary: "Contrats écrits et adresse de panne contre paramètres statistiques.",
+      essential: "L'informatique classique empile des couches fiables grâce aux contrats explicites et aux pannes localisables. L'IA statistique gagne de la portée en dépensant ces garanties préalables.",
+      technical: "Logique de Hoare, conception par contrat (Meyer), dette technique ML « CACE » (Sculley et al. 2015), moniteur déterministe Simplex (Sha 2001) et autoformalisation vers Lean 4.",
+      tags: ["Contrats", "Adresse", "Simplex"]
+    },
+    {
+      id: "dom-ia", cat: "domain", zone: "z3", col: 1, order: 3,
+      title: "Apprentissage automatique & Modèles de langage",
+      summary: "Dents de scie, hallucinations statistiques, complaisance et effondrement.",
+      essential: "Un modèle de langage produit une prose fluide sans vérification interne de vérité ni abstention, avec une compétence imprévisible et un biais d'acquiescement.",
+      technical: "Dell'Acqua et al. (2023), Kalai & Vempala (2024), entropie sémantique (Farquhar et al. 2024), sycophancy RLHF (Sharma et al. 2024), Shumailov vs Gerstgrasser (2024).",
+      tags: ["LLMs", "Hallucinations", "RLHF"]
+    },
+    {
+      id: "dom-eco", cat: "domain", zone: "z3", col: 1, order: 4,
+      title: "Économie de l'information & Collectif",
+      summary: "Effondrement du signal coûteux et saturation de l'évaluation.",
+      essential: "Quand la belle forme ne coûte plus rien, elle cesse de prouver la rigueur du fond ; la relecture humaine croule sous des textes indiscernables et les erreurs collectives s'alignent.",
+      technical: "Sélection adverse (Akerlof 1970), signalement coûteux (Spence 1973), loi de Goodhart, monoculture algorithmique (Kleinberg & Raghavan 2021) et saturation des pairs.",
+      tags: ["Signal coûteux", "Goodhart", "Monoculture"]
+    },
+    {
+      id: "dom-humain", cat: "domain", zone: "z3", col: 1, order: 5,
+      title: "Facteurs humains & Ergonomie cognitive",
+      summary: "Atrophie des compétences, fausses alarmes et illusion de productivité.",
+      essential: "Confier la relecture passive à un humain érode son expertise, efface les indices de doute et engendre des illusions de vitesse spectaculaires.",
+      technical: "Bainbridge (1983), Bliss, Gilson & Deaton (1995), Buçinca et al. (2021), Budzyń et al. (2025), Vaccaro et al. (2024) et essai METR (Becker et al. 2025 : +19 % temps réel, +20 % gain perçu).",
+      tags: ["Vigilance", "Bainbridge", "METR 2025"]
+    },
+
+    {
+      id: "th-knight-leveson", cat: "thinker", crossBoundary: true, zone: "z3", col: 2, order: 1,
+      title: "Knight & Leveson (1986) · Eckhardt & Lee · Perrow · Reason · Vaughan",
+      summary: "Transfrontalier : les équipes indépendantes échouent ensemble sur les cas difficiles.",
+      essential: "27 programmes écrits indépendamment ont produit des pannes corrélées ; Perrow, Reason et Vaughan montrent comment couplage fort et routine normalisent la déviance.",
+      technical: "Modèles de corrélation de difficulté (Eckhardt & Lee 1985 ; Littlewood & Miller) ; accidents normaux (Perrow 1984) ; fromage suisse (Reason) ; STAMP (Leveson) ; Challenger (Vaughan 1996).",
+      tags: ["Transfrontalier", "Logiciel ↔ Sûreté ↔ Sociologie"]
+    },
+    {
+      id: "th-hoare-sculley", cat: "thinker", crossBoundary: true, zone: "z3", col: 2, order: 2,
+      title: "Hoare · Meyer · Sculley (2015) · Lui Sha (2001) · Lean 4",
+      summary: "Transfrontalier : du contrat formel à l'encadrement Simplex des modèles appris.",
+      essential: "Oppose les contrats explicites (Hoare, Meyer) à l'enchevêtrement ML (Sculley), et reprend le moniteur Simplex (Sha) pour verrouiller un composant incertain.",
+      technical: "Triplets de Hoare, conception par contrat, principe CACE (Sculley et al. 2015), bascule certifiée Simplex (Sha 2001) et autoformalisation Lean 4.",
+      tags: ["Transfrontalier", "Logiciel ↔ IA"]
+    },
+    {
+      id: "th-llm-2024", cat: "thinker", zone: "z3", col: 2, order: 3,
+      title: "Dell'Acqua · Kalai & Vempala · Farquhar · Sharma · Shumailov / Gerstgrasser",
+      summary: "Corpus 2023–2026 sur les failles structurelles des modèles de langage.",
+      essential: "Compétences en dents de scie (BCG 2023), hallucinations sur faits rares, entropie sémantique, complaisance RLHF et effondrement sur données synthétiques.",
+      technical: "Dell'Acqua et al. (2023), Kalai & Vempala (2024), Farquhar et al. (2024), Sharma et al. (2024), Shumailov et al. (2024) nuancé par Gerstgrasser et al. (2024).",
+      tags: ["Travaux 2023–2026"]
+    },
+    {
+      id: "th-akerlof-kleinberg", cat: "thinker", crossBoundary: true, zone: "z3", col: 2, order: 4,
+      title: "Akerlof (1970) · Spence (1973) · Goodhart · Kleinberg & Raghavan (2021)",
+      summary: "Transfrontalier : asymétrie d'information, cible optimisée et monoculture.",
+      essential: "Quand la forme polie devient gratuite, le signal disparaît (Spence, Akerlof) ; quand tous adoptent le même modèle, les erreurs deviennent collectives.",
+      technical: "Sélection adverse (Akerlof 1970), signalement (Spence 1973), loi de Goodhart et monoculture algorithmique (Kleinberg & Raghavan 2021).",
+      tags: ["Transfrontalier", "Économie ↔ IA"]
+    },
+    {
+      id: "th-bainbridge-metr", cat: "thinker", crossBoundary: true, zone: "z3", col: 2, order: 5,
+      title: "Bainbridge (1983) · Bliss · Klein · Buçinca · Budzyń · Vaccaro · METR (2025)",
+      summary: "Transfrontalier : paradoxes de la supervision en industrie, médecine et code.",
+      essential: "L'automate laisse à l'humain les cas les plus ardus tout en érodant ses réflexes ; des études cliniques et logicielles (2024–2025) confirment perte de compétence et illusion de vitesse.",
+      technical: "Bainbridge (1983), Bliss et al. (1995), Gary Klein (2007, pré-mortem), Buçinca et al. (2021), Budzyń et al. (2025), Vaccaro et al. (2024), Becker et al. / METR (2025).",
+      tags: ["Transfrontalier", "Facteurs humains ↔ Médecine/Code"]
+    },
+
+    {
+      id: "cas-historiques", cat: "remedy", zone: "z4", col: 0, order: 1,
+      title: "Cas : Challenger · Mars Orbiter · Knight Capital · Mata v. Avianca",
+      summary: "Quatre épisodes réels illustrant chaque rupture des cinq conditions de contrôle.",
+      essential: "Challenger (1986) : données non comparables et autorité. Mars Orbiter (1999) : blanchiment d'unités. Knight Capital (2012) : cadence trop rapide. Mata v. Avianca (2023) : jurisprudence inventée.",
+      technical: "Illustre concrètement les ruptures de comparabilité, de prise en compte, d'arrivée à temps et d'ancrage sur sources primaires.",
+      tags: ["Études de cas", "1986–2023"]
+    },
+    {
+      id: "rem-bacs-verrous", cat: "remedy", zone: "z4", col: 1, order: 1,
+      title: "Marge d'humilité, Bacs à sable & Verrous",
+      summary: "Explorer là où l'erreur est réversible ; verrouiller devant l'irréversible.",
+      essential: "Laisser les modèles statistiques explorer dans un « bac à sable » peu coûteux où le réel détrompe sans drame, et confier les frontières irréversibles à des « verrous » classiques vérifiés.",
+      technical: "Modèle M2 (marge d'humilité b devant l'exposition z hors cadre) couplé à l'architecture Simplex : seuls des composants spécifiés autorisent le franchissement critique.",
+      tags: ["Architecture", "Réversibilité"]
+    },
+    {
+      id: "rem-trois-niveaux", cat: "remedy", zone: "z4", col: 2, order: 1,
+      title: "Remède à trois niveaux (Individu · Flux · Organisation)",
+      summary: "Attente écrite, pré-mortem, problème nu, ancrage primaire et erreurs injectées.",
+      essential: "Individu : écrire son attente avant l'IA et soumettre le problème nu. Flux : maîtriser la couche inférieure et vérifier les sources primaires. Organisation : plafonner le débit et injecter des erreurs tests.",
+      technical: "Inspiré du TIP aérien et des tests par mutation : les erreurs injectées mesurent le taux d'échappement réel des relecteurs.",
+      tags: ["Attitude", "Placement", "Erreurs injectées"]
+    },
+
+    {
+      id: "ten-tautologie", cat: "tension", zone: "z4", col: 0, order: 2,
+      title: "Tension 1 : Épures analytiques vs Ponts non étalonnés",
+      summary: "Les théorèmes découlent des définitions, mais leurs paramètres réels restent à mesurer.",
+      essential: "L'audace du livre tient aux ponts entre modèles épurés et organisations réelles (causes communes, relâchement) — mais ces grandeurs restent des hypothèses de travail illustratives.",
+      technical: "L'ensemble des figures de 2026 repose sur des valeurs pédagogiques : l'étalonnage empirique des flux réels assistés par l'IA reste à accomplir.",
+      tags: ["Étalonnage", "Hypothèses"]
+    },
+    {
+      id: "ten-marge", cat: "tension", zone: "z4", col: 1, order: 2,
+      title: "Tension 2 : Dilemme de la marge d'humilité",
+      summary: "Sans formule, la marge b oscille entre arbitraire et abstention paralysante.",
+      essential: "Aux enjeux catastrophiques, le seuil p* est si infime que toute marge additive plausible condamnerait à ne plus agir — alors que l'ingénierie agit par défense physique.",
+      technical: "Souligne le manque de dialogue avec les théories formelles de l'ambiguïté (Gilboa-Schmeidler, Hansen-Sargent) et la discordance de modèle (Kennedy-O'Hagan).",
+      tags: ["Abstention", "Ambiguïté"]
+    },
+    {
+      id: "ten-porosite", cat: "tension", zone: "z4", col: 2, order: 2,
+      title: "Tension 3 : Porosité « dans / hors du cadre »",
+      summary: "Entre oubli structurel et saillance, la coupure binaire devient une affaire de degré.",
+      essential: "L'examen des résidus (Box, Gelman) trahit parfois une faille sans la nommer ; et dans un LLM, une meilleure consigne peut réveiller une connaissance latente sans apport externe.",
+      technical: "Les couches basses classiques reposent aussi sur un arrière-plan physique tacite (exécution spéculative), tandis que l'interprétabilité mécaniste esquisse des « adresses » neuronales.",
+      tags: ["Saillance", "Critique de modèle"]
+    },
+    {
+      id: "ten-retournement", cat: "tension", zone: "z4", col: 3, order: 2,
+      title: "Tension 4 : Modèle partagé (moyenne vs queue)",
+      summary: "Au ch. 16, le modèle partagé baisse le risque moyen mais concentre le risque de queue.",
+      essential: "L'énigme d'ouverture (9× plus risqué) est un cas limite. Avec les paramètres réalistes du ch. 16, l'erreur moyenne diminue de moitié — mais les défaillances restantes deviennent simultanées.",
+      technical: "Distinguer explicitement fréquence moyenne d'erreur et catastrophe corrélée rare affermit la thèse sans dépendre d'un cas arithmétique extrême.",
+      tags: ["Risque moyen", "Risque de queue"]
+    },
+    {
+      id: "ten-eco-pol", cat: "tension", zone: "z4", col: 4, order: 2,
+      title: "Tension 5 : Économie politique, droit & fatras sécuritaire",
+      summary: "Rationner le débit se heurte à la concurrence, au contournement et à la bureaucratie.",
+      essential: "Sans droit de la responsabilité, assurance ni normes sectorielles (DO-178C, ISO 26262), comment tenir face à la prime à la vitesse ? Trop de procédures créent du fatras sécuritaire ou une IA clandestine.",
+      technical: "Inclut les surcoûts matériels/latence (5×–10× d'inférence) et la tension réflexive d'un livre co-exploré avec des LLM anglophones.",
+      tags: ["Régulation", "Contournement"]
+    }
+  ];
+
+  const EDGES = [
+    { from: "dom-philo", to: "iss-cadre", label: "fonde" },
+    { from: "dom-proba", to: "iss-ontologique", label: "borne les barres d'erreur" },
+    { from: "dom-decision", to: "iss-enjeux", label: "effondrement de p*" },
+    { from: "dom-surete", to: "iss-controle", label: "causes communes" },
+    { from: "dom-logiciel", to: "iss-regime", label: "contrats vs poids" },
+    { from: "dom-ia", to: "iss-regime", label: "dents de scie" },
+    { from: "dom-ia", to: "iss-erosion", label: "fluidité & complaisance" },
+    { from: "dom-eco", to: "iss-preteur", label: "signal & monoculture" },
+    { from: "dom-humain", to: "iss-erosion", label: "atrophie & illusion" },
+    { from: "dom-humain", to: "iss-enigme", label: "appariement" },
+
+    { from: "iss-cadre", to: "iss-ontologique", label: "laisse hors cadre" },
+    { from: "iss-ontologique", to: "iss-enjeux", label: "menace l'acte unique" },
+    { from: "iss-enjeux", to: "iss-controle", label: "exige un comparateur" },
+    { from: "iss-cadre", to: "core-fauriat", label: "fil conducteur" },
+    { from: "core-fauriat", to: "iss-controle", label: "apport majeur 2026" },
+    { from: "iss-controle", to: "iss-enigme", label: "chute de VPP" },
+    { from: "iss-controle", to: "iss-regime", label: "perte de comparabilité" },
+    { from: "iss-regime", to: "iss-erosion", label: "efface le doute" },
+    { from: "iss-erosion", to: "iss-preteur", label: "amplification collective" },
+
+    { from: "th-descartes-hume", to: "dom-philo", label: "induction" },
+    { from: "th-hempel-cartwright", to: "dom-philo", label: "ceteris paribus" },
+    { from: "th-hempel-cartwright", to: "iss-cadre", label: "cadre & provisos", cross: true },
+    { from: "th-levins-orzack", to: "dom-philo", label: "robustesse", cross: true },
+    { from: "th-levins-orzack", to: "iss-controle", label: "intersection de faussetés", cross: true },
+
+    { from: "th-savage", to: "dom-proba", label: "degré de croyance", cross: true },
+    { from: "th-savage", to: "dom-decision", label: "utilité espérée", cross: true },
+    { from: "th-mayo-oberkampf", to: "dom-proba", label: "sévérité & M-ouvert", cross: true },
+    { from: "th-mayo-oberkampf", to: "dom-logiciel", label: "V&V simulation", cross: true },
+    { from: "th-simon", to: "dom-decision", label: "rationalité limitée", cross: true },
+    { from: "th-simon", to: "core-fauriat", label: "réemploi 2022", cross: true },
+    { from: "th-ambiguite", to: "dom-decision", label: "maxmin & robustesse" },
+    { from: "th-ambiguite", to: "ten-marge", label: "alternative formelle", cross: true },
+    { from: "th-ambiguite", to: "ten-porosite", label: "dérive des résidus", cross: true },
+
+    { from: "th-knight-leveson", to: "dom-surete", label: "STAMP & mode commun", cross: true },
+    { from: "th-knight-leveson", to: "dom-logiciel", label: "multiversion 1986", cross: true },
+    { from: "th-hoare-sculley", to: "dom-logiciel", label: "contrats & CACE", cross: true },
+    { from: "th-hoare-sculley", to: "dom-ia", label: "dette technique ML", cross: true },
+    { from: "th-hoare-sculley", to: "rem-bacs-verrous", label: "Simplex", cross: true },
+
+    { from: "th-llm-2024", to: "dom-ia", label: "preuves 2023–2026" },
+    { from: "th-akerlof-kleinberg", to: "dom-eco", label: "signal & monoculture", cross: true },
+    { from: "th-akerlof-kleinberg", to: "dom-ia", label: "Goodhart & effondrement", cross: true },
+    { from: "th-bainbridge-metr", to: "dom-humain", label: "ironie & METR 2025", cross: true },
+    { from: "th-bainbridge-metr", to: "dom-surete", label: "fausses alarmes", cross: true },
+
+    { from: "iss-enjeux", to: "rem-bacs-verrous", label: "appelle" },
+    { from: "iss-controle", to: "rem-trois-niveaux", label: "restaure C₁–C₅" },
+    { from: "iss-controle", to: "cas-historiques", label: "illustré par" },
+    { from: "iss-regime", to: "cas-historiques", label: "Mata v. Avianca" },
+
+    { from: "iss-ontologique", to: "ten-tautologie", label: "statut logique" },
+    { from: "rem-bacs-verrous", to: "ten-marge", label: "limite de b" },
+    { from: "iss-regime", to: "ten-porosite", label: "saillance vs structure" },
+    { from: "iss-enigme", to: "ten-retournement", label: "nuance ch. 16" },
+    { from: "rem-trois-niveaux", to: "ten-eco-pol", label: "obstacle collectif" },
+    { from: "iss-preteur", to: "ten-eco-pol", label: "coût & régulation" }
+  ];
+
+  const state = {
+    tx: 40,
+    ty: 110,
+    zoom: 0.72,
+    globalLevel: 1,
+    nodeLevels: {},
+    hiddenCats: new Set(),
+    crossOnly: false,
+    autoFocus: true,
+    radialMode: false,
+    selectedId: null,
+    positions: {},
+    zoneBounds: {}
+  };
+
+  const hudHeader = document.getElementById("hud-header");
+  const viewport = document.getElementById("viewport");
+  const world = document.getElementById("world");
+  const zonesLayer = document.getElementById("zones-layer");
+  const edgesSvg = document.getElementById("edges-svg");
+  const edgesPathsGroup = document.getElementById("edges-paths");
+  const edgesLabelsGroup = document.getElementById("edges-labels");
+  const nodesLayer = document.getElementById("nodes-layer");
+  const inspector = document.getElementById("inspector");
+  const inspBadges = document.getElementById("insp-badges");
+  const inspTitle = document.getElementById("insp-title");
+  const inspBody = document.getElementById("insp-body");
+  const zoomReadout = document.getElementById("zoom-readout");
+  const minimap = document.getElementById("minimap");
+  const minimapCanvas = document.getElementById("minimap-canvas");
+  const searchInput = document.getElementById("search-input");
+  const searchResults = document.getElementById("search-results");
+
+  const nodeMap = new Map(NODES.map(n => [n.id, n]));
+  const cardEls = new Map();
+  const zoneEls = new Map();
+  const edgeEls = [];
+  let worldBounds = { w: 2600, h: 1800 };
+  let animFrame = null;
+  let activeDrag = null;
+
+  function escHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function getHudBottom() {
+    const rect = hudHeader.getBoundingClientRect();
+    return Math.ceil(rect.bottom + 8);
+  }
+
+  function syncHudInsets() {
+    const topPx = getHudBottom();
+    inspector.style.top = `${topPx}px`;
+  }
+
+  function applyTransform() {
+    world.style.transform = `translate3d(${state.tx}px, ${state.ty}px, 0) scale(${state.zoom})`;
+    viewport.style.backgroundPosition = `${state.tx}px ${state.ty}px`;
+    const gridStep = Math.max(12, 26 * state.zoom);
+    viewport.style.backgroundSize = `${gridStep}px ${gridStep}px`;
+    zoomReadout.textContent = `${Math.round(state.zoom * 100)} %`;
+    drawMinimap();
+  }
+
+  function animateCameraTo(targetTx, targetTy, targetZoom, duration = 320) {
+    if (animFrame) cancelAnimationFrame(animFrame);
+    const startTx = state.tx, startTy = state.ty, startZ = state.zoom;
+    const t0 = performance.now();
+    function step(now) {
+      const p = Math.min(1, (now - t0) / duration);
+      const ease = 1 - Math.pow(1 - p, 3);
+      state.tx = startTx + (targetTx - startTx) * ease;
+      state.ty = startTy + (targetTy - startTy) * ease;
+      state.zoom = startZ + (targetZoom - startZ) * ease;
+      applyTransform();
+      if (p < 1) {
+        animFrame = requestAnimationFrame(step);
+      } else {
+        animFrame = null;
+      }
+    }
+    animFrame = requestAnimationFrame(step);
+  }
+
+  function getNodeLevel(id) {
+    return state.nodeLevels[id] || state.globalLevel;
+  }
+
+  function isNodeVisible(node) {
+    if (!node) return false;
+    return !state.hiddenCats.has(node.cat);
+  }
+
+  function renderZoneShells() {
+    zonesLayer.innerHTML = "";
+    zoneEls.clear();
+    for (const z of ZONE_DEFS) {
+      const el = document.createElement("div");
+      el.className = "zone-box";
+      el.innerHTML = `<div class="zone-label">${escHtml(z.label)}</div>`;
+      zonesLayer.appendChild(el);
+      zoneEls.set(z.id, el);
+    }
+  }
+
+  function createNodes() {
+    nodesLayer.innerHTML = "";
+    cardEls.clear();
+    for (const node of NODES) {
+      const card = document.createElement("article");
+      card.className = `node-card level-${getNodeLevel(node.id)}`;
+      card.dataset.id = node.id;
+      card.dataset.cat = node.cat;
+
+      const crossBadge = node.crossBoundary
+        ? `<span class="badge badge-cross">Transfrontalier</span>`
+        : "";
+      const tagsHtml = (node.tags || []).map(t => `<span class="mini-tag">${escHtml(t)}</span>`).join("");
+
+      card.innerHTML = `
+        <div class="node-header">
+          <div class="node-badges">
+            <span class="badge badge-${node.cat}">${escHtml(CATEGORY_LABELS[node.cat])}</span>
+            ${crossBadge}
+          </div>
+          <button class="fold-btn" data-action="cycle-level" title="Plier / déplier cette carte"></button>
+        </div>
+        <h3 class="node-title">${escHtml(node.title)}</h3>
+        <p class="node-summary">${escHtml(node.summary)}</p>
+        <div class="node-essential">
+          <span class="section-kicker">Idée &amp; mécanisme</span>
+          <div>${escHtml(node.essential)}</div>
+          <div class="tag-list">${tagsHtml}</div>
+        </div>
+        <div class="node-technical">
+          <span class="section-kicker">Précisions &amp; références</span>
+          <div>${escHtml(node.technical)}</div>
+        </div>
+      `;
+
+      updateCardLevelVisual(card, getNodeLevel(node.id));
+      attachCardEvents(card, node);
+      nodesLayer.appendChild(card);
+      cardEls.set(node.id, card);
+    }
+  }
+
+  function updateCardLevelVisual(card, lvl) {
+    card.classList.remove("level-1", "level-2", "level-3");
+    card.classList.add(`level-${lvl}`);
+    card.querySelector('[data-action="cycle-level"]').textContent = { 1: "N1 +", 2: "N2 +", 3: "N3 −" }[lvl];
+  }
+
+  function createEdges() {
+    edgesPathsGroup.innerHTML = "";
+    edgesLabelsGroup.innerHTML = "";
+    edgeEls.length = 0;
+
+    for (const edge of EDGES) {
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.classList.add("edge-path");
+      if (edge.cross) path.classList.add("cross-boundary");
+      path.setAttribute("marker-end", "url(#arrow-std)");
+      edgesPathsGroup.appendChild(path);
+
+      const labelG = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      labelG.classList.add("edge-label-item");
+
+      const bg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      bg.classList.add("edge-label-bg");
+      const txt = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      txt.classList.add("edge-label-text");
+      txt.textContent = edge.label;
+
+      labelG.appendChild(bg);
+      labelG.appendChild(txt);
+      edgesLabelsGroup.appendChild(labelG);
+
+      edgeEls.push({ edge, path, labelG, bg, txt });
+    }
+  }
+
+  function setCardPos(id, x, y, instant = false) {
+    const card = cardEls.get(id);
+    state.positions[id] = { x, y };
+    if (!card) return;
+    if (instant) card.classList.add("no-anim");
+    card.style.left = `${x}px`;
+    card.style.top = `${y}px`;
+    if (instant) {
+      void card.offsetWidth;
+      card.classList.remove("no-anim");
+    }
+  }
+
+  function syncVisibilityClasses() {
+    for (const node of NODES) {
+      const card = cardEls.get(node.id);
+      if (card) card.classList.toggle("hidden-cat", !isNodeVisible(node));
+    }
+  }
+
+  function computeStructuredLayout(instant = false) {
+    // Rend d'abord visibles les cartes actives avant de mesurer leurs dimensions réelles
+    syncVisibilityClasses();
+    void nodesLayer.offsetHeight;
+
+    const gapX = 38;
+    const gapY = 22;
+    const zonePadX = 24;
+    const zonePadTop = 44;
+    const zonePadBot = 24;
+    const zoneGapX = 48;
+    const zoneGapY = 48;
+
+    function layoutZoneCols(zoneId, startX, startY) {
+      const items = NODES.filter(n => n.zone === zoneId && isNodeVisible(n));
+      const el = zoneEls.get(zoneId);
+      if (!items.length) {
+        el.style.display = "none";
+        state.zoneBounds[zoneId] = null;
+        return { x: startX, y: startY, w: 0, h: 0 };
+      }
+      el.style.display = "";
+
+      const colsMap = new Map();
+      for (const n of items) {
+        if (!colsMap.has(n.col)) colsMap.set(n.col, []);
+        colsMap.get(n.col).push(n);
+      }
+      const colKeys = [...colsMap.keys()].sort((a, b) => a - b);
+
+      let curX = startX + zonePadX;
+      let maxBot = startY + zonePadTop;
+
+      for (const ck of colKeys) {
+        const colNodes = colsMap.get(ck).sort((a, b) => a.order - b.order);
+        let colW = 0;
+        for (const n of colNodes) {
+          const card = cardEls.get(n.id);
+          colW = Math.max(colW, card ? card.offsetWidth : 260);
+        }
+        let curY = startY + zonePadTop;
+        for (const n of colNodes) {
+          const card = cardEls.get(n.id);
+          const h = card ? card.offsetHeight : 110;
+          setCardPos(n.id, curX, curY, instant);
+          curY += h + gapY;
+        }
+        maxBot = Math.max(maxBot, curY - gapY);
+        curX += colW + gapX;
+      }
+
+      const w = Math.max(320, curX - gapX + zonePadX - startX);
+      const h = Math.max(180, maxBot + zonePadBot - startY);
+      el.style.left = `${startX}px`;
+      el.style.top = `${startY}px`;
+      el.style.width = `${w}px`;
+      el.style.height = `${h}px`;
+      const bounds = { x: startX, y: startY, w, h };
+      state.zoneBounds[zoneId] = bounds;
+      return bounds;
+    }
+
+    const b1 = layoutZoneCols("z1", 40, 40);
+    const z2X = b1.w ? 40 + b1.w + zoneGapX : 40;
+    const b2 = layoutZoneCols("z2", z2X, 40);
+    const z3X = b2.w ? z2X + b2.w + zoneGapX : z2X;
+    const b3 = layoutZoneCols("z3", z3X, 40);
+
+    const topMaxH = Math.max(b1.h, b2.h, b3.h);
+    const z4Y = topMaxH ? 40 + topMaxH + zoneGapY : 40;
+
+    const z4Items = NODES.filter(n => n.zone === "z4" && isNodeVisible(n));
+    const z4El = zoneEls.get("z4");
+    let b4 = { x: 40, y: z4Y, w: 0, h: 0 };
+    if (!z4Items.length) {
+      z4El.style.display = "none";
+      state.zoneBounds["z4"] = null;
+    } else {
+      z4El.style.display = "";
+      const row1 = z4Items.filter(n => n.order === 1).sort((a, b) => a.col - b.col);
+      const row2 = z4Items.filter(n => n.order === 2).sort((a, b) => a.col - b.col);
+
+      let maxRowW = 0;
+      let curY = z4Y + zonePadTop;
+
+      for (const row of [row1, row2]) {
+        if (!row.length) continue;
+        let curX = 40 + zonePadX;
+        let rowMaxH = 0;
+        for (const n of row) {
+          const card = cardEls.get(n.id);
+          const w = card ? card.offsetWidth : 260;
+          const h = card ? card.offsetHeight : 120;
+          setCardPos(n.id, curX, curY, instant);
+          curX += w + gapX;
+          rowMaxH = Math.max(rowMaxH, h);
+        }
+        maxRowW = Math.max(maxRowW, curX - gapX + zonePadX - 40);
+        curY += rowMaxH + gapY;
+      }
+
+      const rightMost = Math.max(
+        b1.w ? b1.x + b1.w : 0,
+        b2.w ? b2.x + b2.w : 0,
+        b3.w ? b3.x + b3.w : 0
+      );
+      const targetW = Math.max(maxRowW, rightMost ? rightMost - 40 : 800);
+      const h = Math.max(180, curY - gapY + zonePadBot - z4Y);
+      z4El.style.left = "40px";
+      z4El.style.top = `${z4Y}px`;
+      z4El.style.width = `${targetW}px`;
+      z4El.style.height = `${h}px`;
+      b4 = { x: 40, y: z4Y, w: targetW, h };
+      state.zoneBounds["z4"] = b4;
+    }
+
+    const rightBound = (b) => (b.w ? b.x + b.w : 0);
+    const bottomBound = (b) => (b.h ? b.y + b.h : 0);
+    worldBounds = {
+      w: Math.max(rightBound(b1), rightBound(b2), rightBound(b3), rightBound(b4), 1200) + 80,
+      h: Math.max(bottomBound(b1), bottomBound(b2), bottomBound(b3), bottomBound(b4), 800) + 80
+    };
+    edgesSvg.setAttribute("width", worldBounds.w);
+    edgesSvg.setAttribute("height", worldBounds.h);
+  }
+
+  function computeRadialLayout(centerId, instant = false) {
+    const centerNode = nodeMap.get(centerId);
+    if (!centerNode || !isNodeVisible(centerNode)) {
+      state.radialMode = false;
+      document.getElementById("btn-radial").classList.remove("highlight-blue");
+      return computeStructuredLayout(instant);
+    }
+
+    syncVisibilityClasses();
+    void nodesLayer.offsetHeight;
+    for (const el of zoneEls.values()) el.style.display = "none";
+
+    const incoming = [];
+    const outgoing = [];
+    const others = [];
+    const inIds = new Set(), outIds = new Set();
+
+    for (const e of EDGES) {
+      if (e.to === centerId && isNodeVisible(nodeMap.get(e.from))) inIds.add(e.from);
+      if (e.from === centerId && isNodeVisible(nodeMap.get(e.to))) outIds.add(e.to);
+    }
+
+    for (const n of NODES) {
+      if (!isNodeVisible(n) || n.id === centerId) continue;
+      if (inIds.has(n.id)) incoming.push(n);
+      else if (outIds.has(n.id)) outgoing.push(n);
+      else others.push(n);
+    }
+
+    const gapY = 20;
+    const gapX = 95;
+    const centerCard = cardEls.get(centerId);
+    const cw = centerCard.offsetWidth || 270;
+    const ch = centerCard.offsetHeight || 130;
+
+    const inMaxW = incoming.reduce((m, n) => Math.max(m, cardEls.get(n.id)?.offsetWidth || 260), 260);
+    const inH = incoming.reduce((acc, n) => acc + (cardEls.get(n.id)?.offsetHeight || 110) + gapY, incoming.length ? -gapY : 0);
+    const outH = outgoing.reduce((acc, n) => acc + (cardEls.get(n.id)?.offsetHeight || 110) + gapY, outgoing.length ? -gapY : 0);
+
+    const maxFocusH = Math.max(ch, inH, outH);
+    const cy = Math.max(80 + maxFocusH / 2, 360);
+    const centerX = incoming.length ? 80 + inMaxW + gapX : 80;
+
+    setCardPos(centerId, centerX, cy - ch / 2, instant);
+
+    function stackCol(arr, colX, totalH) {
+      let y = cy - totalH / 2;
+      for (const n of arr) {
+        const card = cardEls.get(n.id);
+        const h = card.offsetHeight || 110;
+        setCardPos(n.id, colX, y, instant);
+        y += h + gapY;
+      }
+    }
+
+    if (incoming.length) stackCol(incoming, 80, inH);
+    if (outgoing.length) stackCol(outgoing, centerX + cw + gapX, outH);
+
+    // Grille propre multi-colonnes pour les cartes hors voisinage direct
+    const gridStartY = cy + maxFocusH / 2 + 80;
+    const colsCount = 5;
+    let curY = gridStartY;
+    let maxRight = centerX + cw + (outgoing.length ? gapX + 350 : 120);
+
+    for (let i = 0; i < others.length; i += colsCount) {
+      const row = others.slice(i, i + colsCount);
+      let curX = 80;
+      let rowMaxH = 0;
+      for (const n of row) {
+        const card = cardEls.get(n.id);
+        const w = card.offsetWidth || 250;
+        const h = card.offsetHeight || 110;
+        setCardPos(n.id, curX, curY, instant);
+        curX += w + 28;
+        rowMaxH = Math.max(rowMaxH, h);
+      }
+      maxRight = Math.max(maxRight, curX);
+      curY += rowMaxH + 22;
+    }
+
+    worldBounds = { w: Math.max(1600, maxRight + 60), h: Math.max(900, curY + 60) };
+    edgesSvg.setAttribute("width", worldBounds.w);
+    edgesSvg.setAttribute("height", worldBounds.h);
+  }
+
+  function applyCurrentLayout(instant = false) {
+    if (state.radialMode && state.selectedId && isNodeVisible(nodeMap.get(state.selectedId))) {
+      computeRadialLayout(state.selectedId, instant);
+    } else {
+      state.radialMode = false;
+      document.getElementById("btn-radial").classList.remove("highlight-blue");
+      computeStructuredLayout(instant);
+    }
+    updateEdgesGeometry();
+    drawMinimap();
+  }
+
+  function getCardRect(id) {
+    const pos = state.positions[id] || { x: 0, y: 0 };
+    const card = cardEls.get(id);
+    const w = card ? card.offsetWidth || 260 : 260;
+    const h = card ? card.offsetHeight || 120 : 120;
+    return { x: pos.x, y: pos.y, w, h, cx: pos.x + w / 2, cy: pos.y + h / 2 };
+  }
+
+  function chooseSide(a, b) {
+    const dx = b.cx - a.cx;
+    const dy = b.cy - a.cy;
+    if (Math.abs(dx) * 0.8 > Math.abs(dy)) {
+      return dx >= 0 ? { fromSide: "right", toSide: "left", horiz: true } : { fromSide: "left", toSide: "right", horiz: true };
+    }
+    return dy >= 0 ? { fromSide: "bottom", toSide: "top", horiz: false } : { fromSide: "top", toSide: "bottom", horiz: false };
+  }
+
+  function pointOnSide(r, side, t) {
+    const span = 0.6;
+    const f = 0.5 + (t - 0.5) * span;
+    if (side === "right")  return { x: r.x + r.w, y: r.y + r.h * f };
+    if (side === "left")   return { x: r.x,       y: r.y + r.h * f };
+    if (side === "bottom") return { x: r.x + r.w * f, y: r.y + r.h };
+    return { x: r.x + r.w * f, y: r.y };
+  }
+
+  function updateEdgesGeometry() {
+    const visibleEdges = [];
+    const portBuckets = new Map();
+
+    for (const item of edgeEls) {
+      const fromNode = nodeMap.get(item.edge.from);
+      const toNode = nodeMap.get(item.edge.to);
+      const visible = isNodeVisible(fromNode) && isNodeVisible(toNode);
+      item.path.style.display = visible ? "" : "none";
+      item.labelG.style.display = visible ? "" : "none";
+      if (!visible) continue;
+
+      const a = getCardRect(item.edge.from);
+      const b = getCardRect(item.edge.to);
+      const sides = chooseSide(a, b);
+      visibleEdges.push({ item, a, b, sides });
+
+      const kFrom = `${item.edge.from}:${sides.fromSide}`;
+      const kTo = `${item.edge.to}:${sides.toSide}`;
+      if (!portBuckets.has(kFrom)) portBuckets.set(kFrom, []);
+      if (!portBuckets.has(kTo)) portBuckets.set(kTo, []);
+      portBuckets.get(kFrom).push({ item, otherRect: b, isFrom: true });
+      portBuckets.get(kTo).push({ item, otherRect: a, isFrom: false });
+    }
+
+    // Trier chaque port selon la coordonnée transversale du voisin pour éviter les croisements inutiles
+    const portPos = new Map();
+    for (const [key, entries] of portBuckets.entries()) {
+      const side = key.split(":")[1];
+      const verticalSide = side === "left" || side === "right";
+      entries.sort((u, v) => verticalSide ? (u.otherRect.cy - v.otherRect.cy) : (u.otherRect.cx - v.otherRect.cx));
+      entries.forEach((ent, idx) => {
+        const t = (idx + 1) / (entries.length + 1);
+        portPos.set(`${ent.item.edge.from}->${ent.item.edge.to}:${ent.isFrom ? "f" : "t"}`, t);
+      });
+    }
+
+    const placedLabels = [];
+    for (const { item, a, b, sides } of visibleEdges) {
+      const tFrom = portPos.get(`${item.edge.from}->${item.edge.to}:f`) ?? 0.5;
+      const tTo = portPos.get(`${item.edge.from}->${item.edge.to}:t`) ?? 0.5;
+      const p1 = pointOnSide(a, sides.fromSide, tFrom);
+      const p2 = pointOnSide(b, sides.toSide, tTo);
+      const dx = p2.x - p1.x;
+      const dy = p2.y - p1.y;
+
+      const d = sides.horiz
+        ? `M ${p1.x} ${p1.y} C ${p1.x + dx * 0.5} ${p1.y}, ${p2.x - dx * 0.5} ${p2.y}, ${p2.x} ${p2.y}`
+        : `M ${p1.x} ${p1.y} C ${p1.x} ${p1.y + dy * 0.5}, ${p2.x} ${p2.y - dy * 0.5}, ${p2.x} ${p2.y}`;
+      item.path.setAttribute("d", d);
+
+      let mx = (p1.x + p2.x) / 2;
+      let my = (p1.y + p2.y) / 2;
+      const labelW = Math.max(52, item.edge.label.length * 6.3 + 14);
+      const labelH = 20;
+
+      // Léger décalage vertical si une étiquette active chevauche une autre étiquette déjà placée
+      if (item.labelG.classList.contains("show-label")) {
+        for (let step = 0; step < 6; step++) {
+          const hit = placedLabels.some(pl =>
+            Math.abs(mx - pl.x) < (labelW + pl.w) / 2 + 4 &&
+            Math.abs(my - pl.y) < labelH + 3
+          );
+          if (!hit) break;
+          my += (step % 2 === 0 ? 1 : -1) * (Math.floor(step / 2) + 1) * 23;
+        }
+        placedLabels.push({ x: mx, y: my, w: labelW });
+      }
+
+      item.txt.setAttribute("x", mx);
+      item.txt.setAttribute("y", my);
+      item.bg.setAttribute("x", mx - labelW / 2);
+      item.bg.setAttribute("y", my - labelH / 2);
+      item.bg.setAttribute("width", labelW);
+      item.bg.setAttribute("height", labelH);
+    }
+  }
+
+  function refreshVisibilityAndFocus() {
+    if (state.selectedId && !isNodeVisible(nodeMap.get(state.selectedId))) {
+      state.selectedId = null;
+      inspector.classList.remove("open");
+    }
+
+    const selected = state.selectedId;
+    const neighborSet = new Set();
+    if (selected) {
+      neighborSet.add(selected);
+      for (const e of EDGES) {
+        if (e.from === selected && isNodeVisible(nodeMap.get(e.to))) neighborSet.add(e.to);
+        if (e.to === selected && isNodeVisible(nodeMap.get(e.from))) neighborSet.add(e.from);
+      }
+    }
+
+    for (const node of NODES) {
+      const card = cardEls.get(node.id);
+      const visible = isNodeVisible(node);
+      card.classList.toggle("hidden-cat", !visible);
+      card.classList.toggle("selected", node.id === selected);
+
+      let dimmed = false;
+      if (selected && !neighborSet.has(node.id)) dimmed = true;
+      if (!selected && state.crossOnly && !node.crossBoundary) dimmed = true;
+      card.classList.toggle("dimmed", dimmed);
+    }
+
+    for (const item of edgeEls) {
+      const { from, to, cross } = item.edge;
+      const isDirect = selected && (from === selected || to === selected);
+      let dimmed = false;
+      if (selected && !isDirect) dimmed = true;
+      if (!selected && state.crossOnly && !cross) dimmed = true;
+
+      item.path.classList.toggle("dimmed", dimmed);
+      item.path.classList.toggle("active", Boolean(isDirect) || (!selected && state.crossOnly && cross));
+      item.labelG.classList.toggle("show-label", Boolean(isDirect) || (!selected && state.crossOnly && cross));
+
+      if (isDirect) {
+        const accentCat = nodeMap.get(selected).cat;
+        item.path.style.stroke = cross ? "var(--c-bridge)" : `var(--c-${accentCat})`;
+      } else {
+        item.path.style.stroke = "";
+      }
+    }
+
+    updateEdgesGeometry();
+    drawMinimap();
+  }
+
+  function fitBox(minX, minY, maxX, maxY, minZoom = 0.45, maxZoom = 1.15, animate = true) {
+    const pad = 40;
+    const inspOpen = inspector.classList.contains("open");
+    const inspW = inspOpen ? Math.min(356, viewport.clientWidth * 0.42) : 0;
+    const topH = getHudBottom();
+    const vw = Math.max(280, viewport.clientWidth - inspW);
+    const vh = Math.max(220, viewport.clientHeight - topH - 28);
+    const sx = vw / Math.max(1, maxX - minX + pad * 2);
+    const sy = vh / Math.max(1, maxY - minY + pad * 2);
+    const z = Math.min(maxZoom, Math.max(minZoom, Math.min(sx, sy)));
+    const tx = (vw - (maxX - minX) * z) / 2 - minX * z;
+    const ty = topH + (vh - (maxY - minY) * z) / 2 - minY * z;
+    if (animate) animateCameraTo(tx, ty, z);
+    else { state.tx = tx; state.ty = ty; state.zoom = z; applyTransform(); }
+  }
+
+  function fitAll(animate = true) {
+    const visible = NODES.filter(isNodeVisible);
+    if (!visible.length) return;
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    for (const n of visible) {
+      const r = getCardRect(n.id);
+      minX = Math.min(minX, r.x);
+      minY = Math.min(minY, r.y);
+      maxX = Math.max(maxX, r.x + r.w);
+      maxY = Math.max(maxY, r.y + r.h);
+    }
+    fitBox(minX, minY, maxX, maxY, 0.34, 1.05, animate);
+  }
+
+  function fitSelectionNeighborhood(id) {
+    const ids = new Set([id]);
+    for (const e of EDGES) {
+      if (e.from === id && isNodeVisible(nodeMap.get(e.to))) ids.add(e.to);
+      if (e.to === id && isNodeVisible(nodeMap.get(e.from))) ids.add(e.from);
+    }
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    for (const nid of ids) {
+      const r = getCardRect(nid);
+      minX = Math.min(minX, r.x);
+      minY = Math.min(minY, r.y);
+      maxX = Math.max(maxX, r.x + r.w);
+      maxY = Math.max(maxY, r.y + r.h);
+    }
+    fitBox(minX, minY, maxX, maxY, 0.6, 1.08, true);
+  }
+
+  function focusZone(zoneId) {
+    if (zoneId === "all") return fitAll(true);
+    const b = state.zoneBounds[zoneId];
+    if (!b) return;
+    fitBox(b.x, b.y, b.x + b.w, b.y + b.h, 0.52, 1.08, true);
+  }
+
+  function openInspector(id) {
+    const node = nodeMap.get(id);
+    if (!node) return;
+    syncHudInsets();
+    inspBadges.innerHTML = `
+      <span class="badge badge-${node.cat}">${escHtml(CATEGORY_LABELS[node.cat])}</span>
+      ${node.crossBoundary ? '<span class="badge badge-cross">Transfrontalier</span>' : ""}
+    `;
+    inspTitle.textContent = node.title;
+
+    const links = EDGES.filter(e => e.from === id || e.to === id);
+    const linksHtml = links.map(e => {
+      const isOut = e.from === id;
+      const other = nodeMap.get(isOut ? e.to : e.from);
+      const arrow = isOut ? "→" : "←";
+      return `
+        <button class="conn-btn" data-jump="${other.id}">
+          <span><strong>${arrow} ${escHtml(other.title)}</strong><br><span style="color:var(--text-muted)">${escHtml(e.label)}</span></span>
+          <span class="badge badge-${other.cat}">${escHtml(CATEGORY_LABELS[other.cat])}</span>
+        </button>
+      `;
+    }).join("");
+
+    inspBody.innerHTML = `
+      <div class="insp-block"><h4>Aperçu</h4><div>${escHtml(node.summary)}</div></div>
+      <div class="insp-block"><h4>Idée &amp; mécanisme</h4><div>${escHtml(node.essential)}</div></div>
+      <div class="insp-block"><h4>Précisions &amp; références</h4><div>${escHtml(node.technical)}</div></div>
+      <div class="insp-block"><h4>Interactions (${links.length})</h4>${linksHtml}</div>
+    `;
+
+    inspBody.querySelectorAll("[data-jump]").forEach(btn => {
+      btn.addEventListener("click", () => focusNode(btn.dataset.jump, true));
+    });
+    inspector.classList.add("open");
+  }
+
+  function selectNode(id, triggerAutoFocus = true) {
+    state.selectedId = id;
+    if (id) {
+      openInspector(id);
+    } else {
+      inspector.classList.remove("open");
+      if (state.radialMode) {
+        state.radialMode = false;
+        document.getElementById("btn-radial").classList.remove("highlight-blue");
+        applyCurrentLayout();
+      }
+    }
+    if (state.radialMode && id) {
+      computeRadialLayout(id);
+    }
+    refreshVisibilityAndFocus();
+    if (id && ((triggerAutoFocus && state.autoFocus) || state.radialMode)) {
+      fitSelectionNeighborhood(id);
+    }
+  }
+
+  function focusNode(id, forceZoom = false) {
+    const node = nodeMap.get(id);
+    if (!node) return;
+    if (state.hiddenCats.has(node.cat)) {
+      state.hiddenCats.delete(node.cat);
+      document.querySelector(`[data-cat-filter="${node.cat}"]`)?.classList.remove("off");
+      applyCurrentLayout(true);
+    }
+    selectNode(id, true);
+    if (forceZoom && !state.autoFocus) {
+      const r = getCardRect(id);
+      fitBox(r.x, r.y, r.x + r.w, r.y + r.h, 0.85, 1.05, true);
+    }
+  }
+
+  function attachCardEvents(card, node) {
+    card.addEventListener("mousedown", (e) => {
+      if (e.target.closest("button")) return;
+      e.stopPropagation();
+      activeDrag = {
+        node,
+        card,
+        moved: false,
+        startX: e.clientX,
+        startY: e.clientY,
+        origX: state.positions[node.id].x,
+        origY: state.positions[node.id].y
+      };
+    });
+
+    card.addEventListener("dblclick", (e) => {
+      if (e.target.closest("button")) return;
+      e.stopPropagation();
+      state.nodeLevels[node.id] = 3;
+      updateCardLevelVisual(card, 3);
+      applyCurrentLayout();
+      selectNode(node.id, false);
+      const r = getCardRect(node.id);
+      fitBox(r.x, r.y, r.x + r.w, r.y + r.h, 0.95, 1.08, true);
+    });
+
+    card.querySelector('[data-action="cycle-level"]').addEventListener("click", (e) => {
+      e.stopPropagation();
+      const cur = getNodeLevel(node.id);
+      const next = cur === 3 ? 1 : cur + 1;
+      state.nodeLevels[node.id] = next;
+      updateCardLevelVisual(card, next);
+      applyCurrentLayout();
+      if (state.selectedId === node.id && state.autoFocus) {
+        fitSelectionNeighborhood(node.id);
+      }
+    });
+  }
+
+  let panActive = false, panMoved = false, panStartX = 0, panStartY = 0, panOrigTx = 0, panOrigTy = 0;
+  let miniDrag = false;
+
+  viewport.addEventListener("mousedown", (e) => {
+    if (e.target.closest(".node-card")) return;
+    if (animFrame) { cancelAnimationFrame(animFrame); animFrame = null; }
+    panActive = true;
+    panMoved = false;
+    panStartX = e.clientX;
+    panStartY = e.clientY;
+    panOrigTx = state.tx;
+    panOrigTy = state.ty;
+    viewport.classList.add("panning");
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (activeDrag) {
+      const dx = (e.clientX - activeDrag.startX) / state.zoom;
+      const dy = (e.clientY - activeDrag.startY) / state.zoom;
+      if (Math.hypot(dx, dy) > 4) {
+        activeDrag.moved = true;
+        activeDrag.card.classList.add("dragging");
+      }
+      if (activeDrag.moved) {
+        const nx = activeDrag.origX + dx;
+        const ny = activeDrag.origY + dy;
+        state.positions[activeDrag.node.id] = { x: nx, y: ny };
+        activeDrag.card.style.left = `${nx}px`;
+        activeDrag.card.style.top = `${ny}px`;
+        updateEdgesGeometry();
+        drawMinimap();
+      }
+      return;
+    }
+    if (panActive) {
+      const dx = e.clientX - panStartX;
+      const dy = e.clientY - panStartY;
+      if (Math.hypot(dx, dy) > 4) panMoved = true;
+      state.tx = panOrigTx + dx;
+      state.ty = panOrigTy + dy;
+      applyTransform();
+      return;
+    }
+    if (miniDrag) {
+      jumpFromMinimap(e);
+    }
+  });
+
+  window.addEventListener("mouseup", (e) => {
+    if (activeDrag) {
+      const d = activeDrag;
+      activeDrag = null;
+      d.card.classList.remove("dragging");
+      if (!d.moved && e.detail < 2) {
+        selectNode(state.selectedId === d.node.id ? null : d.node.id, true);
+      }
+    }
+    if (panActive) {
+      panActive = false;
+      viewport.classList.remove("panning");
+      if (!panMoved && state.selectedId) selectNode(null);
+    }
+    miniDrag = false;
+  });
+
+  function zoomAt(factor, clientX, clientY) {
+    if (animFrame) { cancelAnimationFrame(animFrame); animFrame = null; }
+    const newZoom = Math.min(2.2, Math.max(0.28, state.zoom * factor));
+    const ratio = newZoom / state.zoom;
+    state.tx = clientX - (clientX - state.tx) * ratio;
+    state.ty = clientY - (clientY - state.ty) * ratio;
+    state.zoom = newZoom;
+    applyTransform();
+  }
+
+  viewport.addEventListener("wheel", (e) => {
+    e.preventDefault();
+    const factor = e.deltaY < 0 ? 1.11 : 0.9;
+    zoomAt(factor, e.clientX, e.clientY);
+  }, { passive: false });
+
+  function drawMinimap() {
+    const ctx = minimapCanvas.getContext("2d");
+    const mw = minimapCanvas.width;
+    const mh = minimapCanvas.height;
+    ctx.clearRect(0, 0, mw, mh);
+
+    const sx = mw / worldBounds.w;
+    const sy = mh / worldBounds.h;
+    const palette = {
+      domain: "#2563eb",
+      issue: "#d97706",
+      thinker: "#7c3aed",
+      remedy: "#059669",
+      tension: "#dc2626"
+    };
+
+    for (const n of NODES) {
+      if (!isNodeVisible(n)) continue;
+      const r = getCardRect(n.id);
+      ctx.fillStyle = palette[n.cat];
+      ctx.globalAlpha = n.id === state.selectedId ? 1 : 0.8;
+      ctx.fillRect(r.x * sx, r.y * sy, Math.max(6, r.w * sx), Math.max(4, r.h * sy));
+    }
+
+    ctx.globalAlpha = 1;
+    ctx.strokeStyle = document.body.classList.contains("dark") ? "#f8fafc" : "#0f172a";
+    ctx.lineWidth = 2;
+    const vx = (-state.tx / state.zoom) * sx;
+    const vy = (-state.ty / state.zoom) * sy;
+    const vw = (viewport.clientWidth / state.zoom) * sx;
+    const vh = (viewport.clientHeight / state.zoom) * sy;
+    ctx.strokeRect(vx, vy, vw, vh);
+  }
+
+  function jumpFromMinimap(e) {
+    const rect = minimap.getBoundingClientRect();
+    const rx = (e.clientX - rect.left) / rect.width;
+    const ry = (e.clientY - rect.top) / rect.height;
+    state.tx = viewport.clientWidth / 2 - rx * worldBounds.w * state.zoom;
+    state.ty = viewport.clientHeight / 2 - ry * worldBounds.h * state.zoom;
+    applyTransform();
+  }
+  minimap.addEventListener("mousedown", (e) => { e.stopPropagation(); miniDrag = true; jumpFromMinimap(e); });
+
+  // Contrôles UI
+  document.querySelectorAll("[data-global-level]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const lvl = Number(btn.dataset.globalLevel);
+      state.globalLevel = lvl;
+      state.nodeLevels = {};
+      document.querySelectorAll("[data-global-level]").forEach(b => b.classList.toggle("active", b === btn));
+      for (const n of NODES) updateCardLevelVisual(cardEls.get(n.id), lvl);
+      applyCurrentLayout();
+      if (state.selectedId && state.autoFocus) fitSelectionNeighborhood(state.selectedId);
+      else fitAll(true);
+    });
+  });
+
+  document.querySelectorAll("[data-cat-filter]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const cat = btn.dataset.catFilter;
+      if (state.hiddenCats.has(cat)) {
+        state.hiddenCats.delete(cat);
+        btn.classList.remove("off");
+      } else {
+        state.hiddenCats.add(cat);
+        btn.classList.add("off");
+      }
+      if (state.selectedId && !isNodeVisible(nodeMap.get(state.selectedId))) {
+        state.selectedId = null;
+        state.radialMode = false;
+        document.getElementById("btn-radial").classList.remove("highlight-blue");
+        inspector.classList.remove("open");
+      }
+      applyCurrentLayout(false);
+      refreshVisibilityAndFocus();
+    });
+  });
+
+  document.querySelectorAll("[data-focus-zone]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (state.radialMode) {
+        state.radialMode = false;
+        document.getElementById("btn-radial").classList.remove("highlight-blue");
+        applyCurrentLayout();
+      }
+      focusZone(btn.dataset.focusZone);
+    });
+  });
+
+  document.getElementById("btn-cross-only").addEventListener("click", (e) => {
+    state.crossOnly = !state.crossOnly;
+    e.currentTarget.classList.toggle("highlight", state.crossOnly);
+    refreshVisibilityAndFocus();
+  });
+
+  document.getElementById("btn-autofocus").addEventListener("click", (e) => {
+    state.autoFocus = !state.autoFocus;
+    e.currentTarget.textContent = state.autoFocus ? "Auto-focus : Actif" : "Auto-focus : Manuel";
+    e.currentTarget.classList.toggle("highlight-blue", state.autoFocus);
+  });
+
+  document.getElementById("btn-radial").addEventListener("click", (e) => {
+    if (!state.selectedId || !isNodeVisible(nodeMap.get(state.selectedId))) {
+      const fallback = NODES.find(isNodeVisible);
+      if (!fallback) return;
+      selectNode(nodeMap.has("core-fauriat") && isNodeVisible(nodeMap.get("core-fauriat")) ? "core-fauriat" : fallback.id, false);
+    }
+    state.radialMode = !state.radialMode;
+    e.currentTarget.classList.toggle("highlight-blue", state.radialMode);
+    applyCurrentLayout();
+    if (state.radialMode) fitSelectionNeighborhood(state.selectedId);
+    else fitAll(true);
+  });
+
+  document.getElementById("btn-relayout").addEventListener("click", () => {
+    state.radialMode = false;
+    document.getElementById("btn-radial").classList.remove("highlight-blue");
+    applyCurrentLayout();
+    fitAll(true);
+  });
+
+  const themeBtn = document.getElementById("btn-theme");
+  const systemDarkQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  let themeManualOverride = false;
+
+  function applyTheme(isDark, isAuto = false) {
+    document.body.classList.toggle("dark", isDark);
+    themeBtn.textContent = isAuto
+      ? (isDark ? "Thème : Auto (Sombre)" : "Thème : Auto (Clair)")
+      : (isDark ? "Thème : Sombre" : "Thème : Clair");
+    if (Object.keys(state.positions).length) drawMinimap();
+  }
+
+  applyTheme(Boolean(systemDarkQuery && systemDarkQuery.matches), true);
+
+  if (systemDarkQuery) {
+    const onSystemThemeChange = (e) => {
+      if (!themeManualOverride) applyTheme(e.matches, true);
+    };
+    if (systemDarkQuery.addEventListener) systemDarkQuery.addEventListener("change", onSystemThemeChange);
+    else if (systemDarkQuery.addListener) systemDarkQuery.addListener(onSystemThemeChange);
+  }
+
+  themeBtn.addEventListener("click", () => {
+    themeManualOverride = true;
+    applyTheme(!document.body.classList.contains("dark"), false);
+  });
+
+  document.getElementById("insp-close").addEventListener("click", () => selectNode(null));
+  document.getElementById("insp-zoom-card").addEventListener("click", () => {
+    if (!state.selectedId) return;
+    const r = getCardRect(state.selectedId);
+    fitBox(r.x, r.y, r.x + r.w, r.y + r.h, 0.95, 1.08, true);
+  });
+
+  document.getElementById("zoom-in").addEventListener("click", () => zoomAt(1.18, viewport.clientWidth / 2, viewport.clientHeight / 2));
+  document.getElementById("zoom-out").addEventListener("click", () => zoomAt(0.85, viewport.clientWidth / 2, viewport.clientHeight / 2));
+  document.getElementById("fit-all").addEventListener("click", () => fitAll(true));
+
+  searchInput.addEventListener("input", () => {
+    const q = searchInput.value.trim().toLowerCase();
+    if (!q) { searchResults.style.display = "none"; return; }
+    const matches = NODES.filter(n =>
+      n.title.toLowerCase().includes(q) ||
+      n.summary.toLowerCase().includes(q) ||
+      n.essential.toLowerCase().includes(q) ||
+      (n.tags || []).some(t => t.toLowerCase().includes(q))
+    ).slice(0, 10);
+
+    if (!matches.length) {
+      searchResults.innerHTML = `<div class="search-item" style="color:var(--text-muted)">Aucun résultat</div>`;
+    } else {
+      searchResults.innerHTML = matches.map(m => `
+        <div class="search-item" data-pick="${m.id}">
+          <span class="dot" style="background:var(--c-${m.cat})"></span>
+          <span><strong>${escHtml(m.title)}</strong></span>
+        </div>
+      `).join("");
+      searchResults.querySelectorAll("[data-pick]").forEach(item => {
+        item.addEventListener("click", () => {
+          searchResults.style.display = "none";
+          searchInput.value = "";
+          focusNode(item.dataset.pick, true);
+        });
+      });
+    }
+    searchResults.style.display = "block";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-wrap")) searchResults.style.display = "none";
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (document.activeElement === searchInput) return;
+    if (e.key === "Escape") selectNode(null);
+    if (e.key === "0") fitAll(true);
+    if (e.key === "+" || e.key === "=") zoomAt(1.15, viewport.clientWidth / 2, viewport.clientHeight / 2);
+    if (e.key === "-") zoomAt(0.87, viewport.clientWidth / 2, viewport.clientHeight / 2);
+    if (["1", "2", "3"].includes(e.key)) {
+      document.querySelector(`[data-global-level="${e.key}"]`)?.click();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    syncHudInsets();
+    drawMinimap();
+  });
+
+  // Initialisation
+  renderZoneShells();
+  createNodes();
+  createEdges();
+  requestAnimationFrame(() => {
+    syncHudInsets();
+    applyCurrentLayout(true);
+    refreshVisibilityAndFocus();
+    fitAll(false);
+  });
+})();
+</script>
+</body>
+</html>
