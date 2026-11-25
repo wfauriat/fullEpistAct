@@ -3,6 +3,7 @@ monographie/build/
 
 # Presentation exports and local tooling caches
 *.pptx
+slides/*.pdf
 slides/.venv/
 slides/.cache/
 
